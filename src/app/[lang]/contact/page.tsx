@@ -89,7 +89,7 @@ export default async function ContactPage({
           <p style={{ color: 'var(--text-muted)', fontSize: '0.92rem', lineHeight: 1.7, marginBottom: '1.75rem' }}>
             {lang === 'ta'
               ? 'முனைவர் அரவிந்தன் அவர்களின் அங்கீகரிக்கப்பட்ட அதிகாரப்பூர்வ வலைத்தளங்கள் மற்றும் கல்வி நிறுவன இணையதளங்கள்:'
-              : 'Authorized digital entities directly affiliated with Dr. J. Arawindhan Ji:'}
+              : 'Authorized digital entities directly affiliated with Dr. J. Arawindhan:'}
           </p>
 
           <div className="grid-3">

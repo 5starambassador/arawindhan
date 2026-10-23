@@ -13,7 +13,7 @@ export const mediaArticles = [
       ta: 'செயற்கை நுண்ணறிவு புதிதாக எதையும் உருவாக்குவதில்லை; ஏற்கனவே உள்ளவற்றிலிருந்து புதிய வடிவங்களை உருவாக்குகிறது. மனிதன் அதனுடன் போட்டி போடாமல், இணைந்து செயல்படும்போது குவாண்டம் நுண்ணறிவு பிறக்கிறது.',
     },
     fullContent: {
-      en: `Most educational institutions approach Artificial Intelligence with either panic or blind fascination. Dr. J. Arawindhan Ji presents an alternative pedagogical paradigm: Human Intelligence (HI) combined with Artificial Intelligence (AI) produces Quantum Intelligence (QI).
+      en: `Most educational institutions approach Artificial Intelligence with either panic or blind fascination. Dr. J. Arawindhan presents an alternative pedagogical paradigm: Human Intelligence (HI) combined with Artificial Intelligence (AI) produces Quantum Intelligence (QI).
 
 In his address to visiting school principals at the ACHARIYA Centre of Excellence (September 2026), he outlined the Direct, Deep, and Divergent Model:
 • X represents what is directly taught: the physical textbook and outer factual world.
@@ -45,7 +45,7 @@ While traditional schooling treats Listening, Speaking, Reading, and Writing (LS
       ta: 'தென்னிந்தியா முழுவதும் 101 பள்ளிகளாக ஆச்சாரியாவை வளர்த்தெடுத்த வகுப்பறை உத்திகள் மற்றும் நிர்வாக நெறிமுறைகள் குறித்த இருநாள் உரை.',
     },
     fullContent: {
-      en: `Hosting over 80 visiting school principals and academic directors at the ACHARIYA Central Campus in Puducherry, Dr. J. Arawindhan Ji unpacked the operational machinery of ACHARIYA's 25-year journey.
+      en: `Hosting over 80 visiting school principals and academic directors at the ACHARIYA Central Campus in Puducherry, Dr. J. Arawindhan unpacked the operational machinery of ACHARIYA's 25-year journey.
 
 Key takeaways highlighted during the conclave:
 1. Brain Activity Over Ability: Why ranking students against a single bell curve stifles latent genius, and how physical Five Arts training directly expands working memory.
@@ -73,7 +73,7 @@ Key takeaways highlighted during the conclave:
       ta: '“தேர்வுக்கு மட்டுமே தயார்படுத்தும் பள்ளி குழந்தைக்கு இழைக்கப்படும் அநீதி. முழு மூளையையும் தயார்படுத்தும் பள்ளியே வாழ்வுக்கு மனிதனைத் தயார்படுத்துகிறது.”',
     },
     fullContent: {
-      en: `Upon receiving the prestigious Holistic Education Award at the News7 Tamil Aatral Migu Asiriyar Virudhugal 2026, Dr. J. Arawindhan Ji dedicated the honor to the more than 2,000 educators and 14,000 learners across the ACHARIYA network.
+      en: `Upon receiving the prestigious Holistic Education Award at the News7 Tamil Aatral Migu Asiriyar Virudhugal 2026, Dr. J. Arawindhan dedicated the honor to the more than 2,000 educators and 14,000 learners across the ACHARIYA network.
 
 He reaffirmed the foundational premise that education is not a competition for marks, but a sacred journey of awakening human potential:
 “When a child learns to juggle three balls, balance on a Malkhamb pole, practice Silambam with courage, and sit in Golden Smile Meditation with a quiet heart—they carry a fearlessness that no examination paper can shake. That is the holistic human being India and the world require today.”`,

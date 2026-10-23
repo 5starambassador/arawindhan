@@ -508,7 +508,7 @@ export default async function HomePage({
           <SectionHeader
             badge={lang === 'ta' ? 'செயற்கை நுண்ணறிவு & கல்வி' : 'FUTURISTIC AI REASONING & THOUGHT LEADERSHIP'}
             title={lang === 'ta' ? 'மனித நுண்ணறிவு + AI = குவாண்டம் நுண்ணறிவு' : 'Human Intelligence + AI = Quantum Intelligence'}
-            subtitle={lang === 'ta' ? 'மாறிவரும் AI யுகத்தில் கல்வியை அணுகும் புரட்சிகரப் பார்வை. நிகழ்நேர அறிவுத் தள வினா-விடை கன்சோல்.' : 'Interactive reasoning terminal synthesizing Dr. J. Arawindhan Ji’s codified philosophies, exhibits, and verified claims.'}
+            subtitle={lang === 'ta' ? 'மாறிவரும் AI யுகத்தில் கல்வியை அணுகும் புரட்சிகரப் பார்வை. நிகழ்நேர அறிவுத் தள வினா-விடை கன்சோல்.' : 'Interactive reasoning terminal synthesizing Dr. J. Arawindhan’s codified philosophies, exhibits, and verified claims.'}
           />
 
           <NeuralTerminal lang={lang} />

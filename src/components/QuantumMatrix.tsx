@@ -127,7 +127,7 @@ const INTELLIGENCE_NODES: IntelligenceNode[] = [
     category: 'Arawindhan Creation',
     hemisphere: 'Whole-Brain Interhemispheric',
     description: {
-      en: 'Proprietary framework by Dr. Arawindhan Ji: cultivating wealth ethics, value creation, and asset literacy from Grade 1.',
+      en: 'Proprietary framework by Dr. Arawindhan: cultivating wealth ethics, value creation, and asset literacy from Grade 1.',
       ta: 'முனைவர் அரவிந்தன் அவர்களின் பிரத்யேகப் படைப்பு: குழந்தைப் பருவத்திலிருந்தே செல்வம், மதிப்பு மற்றும் பொருளாதார அறிவு வளர்த்தல்.',
     },
     exercise: { en: 'Campus Micro-Economy & Entrepreneurship Incubators', ta: 'வளாக சிறு-பொருளாதாரம் & புத்தாக்கத் தொழில் தொடக்கம்' },
@@ -140,7 +140,7 @@ const INTELLIGENCE_NODES: IntelligenceNode[] = [
     category: 'Arawindhan Creation',
     hemisphere: 'Whole-Brain Interhemispheric',
     description: {
-      en: 'Proprietary framework by Dr. Arawindhan Ji: transforming impulse into intuition, resilience under failure, and compassionate power.',
+      en: 'Proprietary framework by Dr. Arawindhan: transforming impulse into intuition, resilience under failure, and compassionate power.',
       ta: 'முனைவர் அரவிந்தன் அவர்களின் பிரத்யேகப் படைப்பு: உணர்ச்சிகளை அறிவாற்றலாக மாற்றி, தோல்விகளை வெற்றியாக்கும் மன உறுதி.',
     },
     exercise: { en: 'WOW Supplements & Emotional Balance Journaling', ta: 'WOW துணைப் பயிற்சிகள் & உணர்ச்சி சமநிலை பதிவேடு' },
@@ -232,7 +232,7 @@ export const QuantumMatrix: React.FC<QuantumMatrixProps> = ({ lang }) => {
           <p style={{ margin: '0.35rem 0 0 0', color: '#64748B', fontSize: '0.9rem' }}>
             {lang === 'ta'
               ? 'கார்ட்னரின் 8 நுண்ணறிவுகளுடன் முனைவர் அரவிந்தன் சேர்த்த நிதி & உணர்ச்சி நுண்ணறிவு மற்றும் குவாண்டம் ஒருங்கிணைப்பு.'
-              : 'Howard Gardner’s 8 + Dr. Arawindhan Ji’s Financial & Emotional Intelligences + Quantum Suprasapien Synthesis.'}
+              : 'Howard Gardner’s 8 + Dr. Arawindhan’s Financial & Emotional Intelligences + Quantum Suprasapien Synthesis.'}
           </p>
         </div>
 

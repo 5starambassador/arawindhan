@@ -1,7 +1,7 @@
 export const innerJourneyData = {
   spiritualTitle: {
-    en: 'Santoshi Shri. Arawindhan Ji',
-    ta: 'சந்தோஷி ஸ்ரீ அரவிந்தன் ஜி',
+    en: 'Santoshi Shri. Arawindhan',
+    ta: 'சந்தோஷி ஸ்ரீ அரவிந்தன்',
   },
   spiritualRoles: {
     en: 'Spiritual Master • Mahaavadhani • Spiritual Guide to Inner Transformation',
@@ -72,7 +72,7 @@ export const innerJourneyData = {
     },
     dateNote: 'Annual Convergence Held on December 21st in Puducherry',
     description: {
-      en: 'The annual flagship spiritual convergence gathering thousands of seekers, teachers, and families in Puducherry. Features mass Oneness Meditation, Seven Chakra pyramid energy activation, and discourses on conscious living by Santoshi Shri Arawindhan Ji.',
+      en: 'The annual flagship spiritual convergence gathering thousands of seekers, teachers, and families in Puducherry. Features mass Oneness Meditation, Seven Chakra pyramid energy activation, and discourses on conscious living by Santoshi Shri Arawindhan.',
       ta: 'ஆண்டுதோறும் டிசம்பர் 21 அன்று புதுச்சேரியில் நடைபெறும் மாபெரும் ஆன்மீக சங்கமம். ஆயிரக்கணக்கான மக்கள் ஒன்று கூடி ஒருமை தியானம், பிரமிடு ஆற்றல் தியானம் மற்றும் சந்தோஷி ஸ்ரீ அரவிந்தன் அவர்களின் மெய்யறிவு உரைகளைக் கேட்டுப் பயன்பெறுகின்றனர்.',
     },
   },

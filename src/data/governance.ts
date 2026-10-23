@@ -10,7 +10,7 @@ export const governanceData = {
   fiveStepChain: [
     {
       step: '1. Approved',
-      role: 'Chief Mentor (Dr. J. Arawindhan Ji)',
+      role: 'Chief Mentor (Dr. J. Arawindhan)',
       tamilStep: '1. ஒப்புதல் (Approved)',
       action: {
         en: 'Defines and approves the concept, standard of excellence, and philosophical intent.',

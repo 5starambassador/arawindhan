@@ -23,7 +23,7 @@ export default async function BooksPage({
       <div className="container">
         <SectionHeader
           badge={lang === 'ta' ? 'வெளியீடுகள் & சிந்தனை' : 'PUBLICATIONS & INTELLECTUAL OUTPUT'}
-          title={lang === 'ta' ? 'முனைவர் அரவிந்தன் ஜி அவர்களின் நூல்கள்' : 'Books & Publications by Dr. J. Arawindhan Ji'}
+          title={lang === 'ta' ? 'முனைவர் அரவிந்தன் அவர்களின் நூல்கள்' : 'Books & Publications by Dr. J. Arawindhan'}
           subtitle={lang === 'ta' ? 'கல்வி, தலைமைத்துவம், மனித ஆற்றல் மற்றும் ஆன்மீக விழிப்புணர்வு குறித்த ஏழு முக்கிய படைப்புகள்.' : 'A structured catalogue of published works and institutional editions shaping educators, parents, and leaders.'}
         />
 

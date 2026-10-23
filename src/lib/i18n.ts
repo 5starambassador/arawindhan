@@ -22,8 +22,8 @@ export const navigationLinks: NavLink[] = [
 
 export const uiLabels = {
   platformTitle: {
-    en: 'Dr. J. Arawindhan Ji',
-    ta: 'முனைவர் ஜே. அரவிந்தன் ஜி',
+    en: 'Dr. J. Arawindhan',
+    ta: 'முனைவர் ஜே. அரவிந்தன்',
   },
   platformTagline: {
     en: 'Global Digital Authority & Knowledge Platform',
@@ -86,7 +86,7 @@ export const uiLabels = {
     ta: 'அதிகாரப்பூர்வ சரிபார்ப்பு மையம்',
   },
   footerDisclaimer: {
-    en: 'This official digital knowledge platform documents the educational systems, enterprises, publications, and philosophies founded and led by Dr. J. Arawindhan Ji. Every factual statement is cross-referenced with institutional primary documents.',
-    ta: 'முனைவர் ஜே. அரவிந்தன் ஜி அவர்களின் கல்விப் புத்தாக்கங்கள், நிறுவனங்கள், வெளியீடுகள் மற்றும் தத்துவங்களை ஆவணப்படுத்தும் அதிகாரப்பூர்வ தளம். அனைத்து தகவல்களும் மூல ஆவணங்களுடன் சரிபார்க்கப்பட்டவை.',
+    en: 'This official digital knowledge platform documents the educational systems, enterprises, publications, and philosophies founded and led by Dr. J. Arawindhan. Every factual statement is cross-referenced with institutional primary documents.',
+    ta: 'முனைவர் ஜே. அரவிந்தன் அவர்களின் கல்விப் புத்தாக்கங்கள், நிறுவனங்கள், வெளியீடுகள் மற்றும் தத்துவங்களை ஆவணப்படுத்தும் அதிகாரப்பூர்வ தளம். அனைத்து தகவல்களும் மூல ஆவணங்களுடன் சரிபார்க்கப்பட்டவை.',
   },
 };

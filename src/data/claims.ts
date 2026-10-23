@@ -451,7 +451,7 @@ export const MASTER_CLAIMS: MasterClaim[] = [
   {
     id: 'CLM-028',
     category: 'Spiritual',
-    statement: 'Santoshi Shri Arawindhan Ji founded Divya Yogam and Divine Grace Foundation in 2000.',
+    statement: 'Santoshi Shri Arawindhan founded Divya Yogam and Divine Grace Foundation in 2000.',
     sourceDocument: 'Spiritual Portfolio',
     sourceLocation: 'Page 1-3 & Page 10',
     supportingEvidence: 'Divine Grace Trust registration deeds and spiritual gathering records',

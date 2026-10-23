@@ -24,7 +24,7 @@ export default async function RecognitionPage({
         <SectionHeader
           badge={lang === 'ta' ? 'விருதுகள் & சாதனைகள்' : 'ACHIEVEMENT & RECOGNITION ARCHIVE'}
           title={lang === 'ta' ? 'தேசிய விருதுகள், உலக சாதனைகள் & சிறப்புகள்' : 'Verified Honours, Institutional Accolades & 600+ World Records'}
-          subtitle={lang === 'ta' ? 'முனைவர் அரவிந்தன் ஜி, ஆச்சாரியா நிறுவனங்கள் மற்றும் மாணவர்கள் 25 ஆண்டுகளில் வென்ற பெருமைகள்.' : 'The “great-grandchildren”: outcomes that speak for 25 years of systematic educational engineering.'}
+          subtitle={lang === 'ta' ? 'முனைவர் அரவிந்தன், ஆச்சாரியா நிறுவனங்கள் மற்றும் மாணவர்கள் 25 ஆண்டுகளில் வென்ற பெருமைகள்.' : 'The “great-grandchildren”: outcomes that speak for 25 years of systematic educational engineering.'}
         />
 
         {/* World Records Banner */}
@@ -106,7 +106,7 @@ export default async function RecognitionPage({
         {/* Personal Honours Section */}
         <div style={{ marginBottom: '4rem' }}>
           <h3 className="font-serif heading-gold" style={{ fontSize: '1.8rem', marginBottom: '1.5rem', textAlign: 'center', fontWeight: 800 }}>
-            {lang === 'ta' ? 'முனைவர் அரவிந்தன் அவர்களுக்கு வழங்கப்பட்ட தனிநபர் கௌரவங்கள்' : 'Personal Honours Conferred on Dr. J. Arawindhan Ji'}
+            {lang === 'ta' ? 'முனைவர் அரவிந்தன் அவர்களுக்கு வழங்கப்பட்ட தனிநபர் கௌரவங்கள்' : 'Personal Honours Conferred on Dr. J. Arawindhan'}
           </h3>
 
           <div className="grid-2">

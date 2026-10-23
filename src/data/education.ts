@@ -17,7 +17,7 @@ export const educationalExhibits: EducationalExhibit[] = [
       ta: 'பன்முகத் திறன்களை ஒரே நேரத்தில் வளர்க்கும் செவ்வியல் அவதானக் கலையின் நவீன வடிவம்.',
     },
     whatItIs: {
-      en: "ACHARIYA's proprietary multiple-intelligence curriculum. It works with eight of Howard Gardner's intelligences, sets musical intelligence aside, and adds two of Dr. Arawindhan Ji's own: Financial Intelligence (FI) and Emotional Intelligence (EI). Beyond these sits Quantum Intelligence, which trains children as 'Suprasapiens'.",
+      en: "ACHARIYA's proprietary multiple-intelligence curriculum. It works with eight of Howard Gardner's intelligences, sets musical intelligence aside, and adds two of Dr. Arawindhan's own: Financial Intelligence (FI) and Emotional Intelligence (EI). Beyond these sits Quantum Intelligence, which trains children as 'Suprasapiens'.",
       ta: 'ஆச்சாரியாவின் தனியுரிமை பெற்ற பன்முக நுண்ணறிவுப் பாடத்திட்டம். ஹோவர்ட் கார்ட்னரின் 8 நுண்ணறிவுகளுடன், முனைவர் அரவிந்தன் அவர்கள் வடிவமைத்த நிதி நுண்ணறிவு (FI) மற்றும் உணர்ச்சி நுண்ணறிவு (EI) ஆகியவற்றை இணைத்து, குவாண்டம் நுண்ணறிவு மூலம் குழந்தைகளை "சுப்ராசேபியன்ஸ்" (Suprasapiens) ஆக உருவாக்குகிறது.',
     },
     howItWorks: {
@@ -119,7 +119,7 @@ export const educationalExhibits: EducationalExhibit[] = [
       ta: 'திறனை விட மூளையின் செயல்பாடே முக்கியம்: மதிப்பெண் என்பது நினைவுகூர்தல் மட்டுமே; மூளையின் ஆற்றலே அடிப்படை.',
     },
     whatItIs: {
-      en: "Dr. Arawindhan Ji's core philosophy made practical. While traditional schooling measures recall through exam marks, Brain Activity is the engine of mental muscle that can be trained through repetition, challenge, and recovery. Two children may both score 95%, but possess completely different brain architecture; ACHARIYA develops the deeper capacity.",
+      en: "Dr. Arawindhan's core philosophy made practical. While traditional schooling measures recall through exam marks, Brain Activity is the engine of mental muscle that can be trained through repetition, challenge, and recovery. Two children may both score 95%, but possess completely different brain architecture; ACHARIYA develops the deeper capacity.",
       ta: 'பாரம்பரிய பள்ளிகள் மதிப்பெண்களை மட்டுமே அளவிடுகின்றன. ஆனால் முனைவர் அரவிந்தன் அவர்களின் கோட்பாட்டின்படி, மூளை செயல்பாடு என்பது பயிற்சியினால் வளர்க்கப்படக்கூடிய ஒரு தசை. இரு மாணவர்கள் 95% பெற்றாலும், ஒருவர் மனப்பாடம் செய்திருக்கலாம், மற்றொருவர் சிந்திக்கும் திறன் பெற்றிருப்பார். ஆச்சாரியா சிந்தனைத் திறனை வளர்க்கிறது.',
     },
     howItWorks: {

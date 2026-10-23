@@ -17,7 +17,7 @@ const PRESETS: QueryPreset[] = [
   {
     id: 'q1',
     query: {
-      en: 'What is the core pedagogical thesis of Dr. J. Arawindhan Ji?',
+      en: 'What is the core pedagogical thesis of Dr. J. Arawindhan?',
       ta: 'முனைவர் அரவிந்தன் அவர்களின் கல்வித் தத்துவத்தின் மையம் என்ன?',
     },
     claimId: 'CLM-016',

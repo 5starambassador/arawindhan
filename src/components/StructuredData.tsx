@@ -19,11 +19,11 @@ export const StructuredData: React.FC<StructuredDataProps> = ({
     {
       '@type': 'Person',
       '@id': 'https://www.arawindhan.com/#person',
-      name: 'Dr. J. Arawindhan Ji',
+      name: 'Dr. J. Arawindhan',
       alternateName: [
-        'Santoshi Shri. Arawindhan Ji',
+        'Santoshi Shri. Arawindhan',
         'Dr. J. Arawindhan',
-        'முனைவர் ஜே. அரவிந்தன் ஜி',
+        'முனைவர் ஜே. அரவிந்தன்',
       ],
       jobTitle: 'Founder, Chief Mentor & Managing Director',
       worksFor: {
@@ -74,7 +74,7 @@ export const StructuredData: React.FC<StructuredDataProps> = ({
       name: data.book.title,
       author: {
         '@type': 'Person',
-        name: 'Dr. J. Arawindhan Ji',
+        name: 'Dr. J. Arawindhan',
       },
       description: data.book.summary,
       inLanguage: ['en', 'ta'],

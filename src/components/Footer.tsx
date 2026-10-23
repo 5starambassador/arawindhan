@@ -98,8 +98,8 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
               }}
             >
               {lang === 'ta'
-                ? 'முனைவர் ஜே. அரவிந்தன் ஜி அவர்களின் 25 ஆண்டுகால கல்விப் புத்தாக்கங்கள், நிறுவனங்கள், நூல்கள் மற்றும் மெய்யறிவுப் பணிகளை ஆவணப்படுத்தும் அதிகாரப்பூர்வ அறிவுத் தளம். ஒவ்வொரு கூற்றும் முதன்மை ஆதாரங்களோடு சரிபார்க்கப்பட்டது.'
-                : 'Official digital knowledge platform documenting the educational systems, enterprises, publications, and philosophies founded and led by Dr. J. Arawindhan Ji. Every statement is cross-referenced with institutional primary documents.'}
+                ? 'முனைவர் ஜே. அரவிந்தன் அவர்களின் 25 ஆண்டுகால கல்விப் புத்தாக்கங்கள், நிறுவனங்கள், நூல்கள் மற்றும் மெய்யறிவுப் பணிகளை ஆவணப்படுத்தும் அதிகாரப்பூர்வ அறிவுத் தளம். ஒவ்வொரு கூற்றும் முதன்மை ஆதாரங்களோடு சரிபார்க்கப்பட்டது.'
+                : 'Official digital knowledge platform documenting the educational systems, enterprises, publications, and philosophies founded and led by Dr. J. Arawindhan. Every statement is cross-referenced with institutional primary documents.'}
             </p>
 
             {/* Interactive Verification Vault Button */}
@@ -341,7 +341,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
           }}
         >
           <div>
-            © {new Date().getFullYear()} Dr. J. Arawindhan Ji. {lang === 'ta' ? 'அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.' : 'All Rights Reserved.'}
+            © {new Date().getFullYear()} Dr. J. Arawindhan. {lang === 'ta' ? 'அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.' : 'All Rights Reserved.'}
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>

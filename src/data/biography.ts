@@ -2,12 +2,12 @@ import { AvatarPhase } from '@/types';
 
 export const biographyData = {
   name: {
-    en: 'Dr. J. Arawindhan Ji',
-    ta: 'முனைவர் ஜே. அரவிந்தன் ஜி',
+    en: 'Dr. J. Arawindhan',
+    ta: 'முனைவர் ஜே. அரவிந்தன்',
   },
   spiritualName: {
-    en: 'Santoshi Shri. Arawindhan Ji',
-    ta: 'சந்தோஷி ஸ்ரீ அரவிந்தன் ஜி',
+    en: 'Santoshi Shri. Arawindhan',
+    ta: 'சந்தோஷி ஸ்ரீ அரவிந்தன்',
   },
   roles: {
     en: 'Founder, Chief Mentor & Managing Director, ACHARIYA World Class Education | Educationist | Entrepreneur | Spiritual Master',

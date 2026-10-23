@@ -11,12 +11,12 @@ export const faqsList: FAQItem[] = [
     id: 'FAQ-01',
     category: 'Identity & Biography',
     question: {
-      en: 'Who is Dr. J. Arawindhan Ji?',
-      ta: 'முனைவர் ஜே. அரவிந்தன் ஜி யார்?',
+      en: 'Who is Dr. J. Arawindhan?',
+      ta: 'முனைவர் ஜே. அரவிந்தன் யார்?',
     },
     answer: {
-      en: 'Dr. J. Arawindhan Ji is an Indian educationist, entrepreneur, author, and spiritual guide. Trained as a Mechanical Engineer, he founded ACHARIYA World Class Education in Puducherry in 2000. Over 25 years, he has built an ecosystem of 18 higher education colleges, 101 schools, 61+ companies, and over 302 educational initiatives across Tamil Nadu, Puducherry, Kerala, and Andhra Pradesh.',
-      ta: 'முனைவர் ஜே. அரவிந்தன் ஜி ஒரு இந்திய கல்வியியலாளர், தொழில்முனைவோர், எழுத்தாளர் மற்றும் ஆன்மீக வழிகாட்டி ஆவார். மெக்கானிக்கல் பொறியாளரான இவர், 2000-ஆம் ஆண்டு புதுச்சேரியில் ஆச்சாரியா கல்வி நிறுவனத்தை நிறுவினார். 25 ஆண்டுகளில் 18 கல்லூரிகள், 101 பள்ளிகள், 61+ நிறுவனங்கள் மற்றும் 302+ கல்வி முன்முயற்சிகளைக் கொண்ட மாபெரும் அமைப்பை உருவாக்கியுள்ளார்.',
+      en: 'Dr. J. Arawindhan is an Indian educationist, entrepreneur, author, and spiritual guide. Trained as a Mechanical Engineer, he founded ACHARIYA World Class Education in Puducherry in 2000. Over 25 years, he has built an ecosystem of 18 higher education colleges, 101 schools, 61+ companies, and over 302 educational initiatives across Tamil Nadu, Puducherry, Kerala, and Andhra Pradesh.',
+      ta: 'முனைவர் ஜே. அரவிந்தன் ஒரு இந்திய கல்வியியலாளர், தொழில்முனைவோர், எழுத்தாளர் மற்றும் ஆன்மீக வழிகாட்டி ஆவார். மெக்கானிக்கல் பொறியாளரான இவர், 2000-ஆம் ஆண்டு புதுச்சேரியில் ஆச்சாரியா கல்வி நிறுவனத்தை நிறுவினார். 25 ஆண்டுகளில் 18 கல்லூரிகள், 101 பள்ளிகள், 61+ நிறுவனங்கள் மற்றும் 302+ கல்வி முன்முயற்சிகளைக் கொண்ட மாபெரும் அமைப்பை உருவாக்கியுள்ளார்.',
     },
     relatedLink: '/biography',
   },
@@ -76,12 +76,12 @@ export const faqsList: FAQItem[] = [
     id: 'FAQ-06',
     category: 'Books & Publications',
     question: {
-      en: 'Which books has Dr. J. Arawindhan Ji authored?',
-      ta: 'முனைவர் ஜே. அரவிந்தன் ஜி எழுதிய நூல்கள் யாவை?',
+      en: 'Which books has Dr. J. Arawindhan authored?',
+      ta: 'முனைவர் ஜே. அரவிந்தன் எழுதிய நூல்கள் யாவை?',
     },
     answer: {
-      en: 'Dr. J. Arawindhan Ji has authored seven major books in institutional and public circulation: 1. The Shambala Book (Inner consciousness & meditation), 2. WOW Parenting (Family and school co-learning), 3. Financial Intelligence (Wealth literacy for youth), 4. Emotional Intelligence (Self-regulation and empathy), 5. Master Stroke (Strategic leadership & systems), 6. Young Scientist (Experiential STEM discovery), and 7. Iravadh (The 21 levels of teacher evolution).',
-      ta: 'முனைவர் அரவிந்தன் ஜி ஏழு முக்கிய நூல்களை எழுதியுள்ளார்: 1. தி ஷாம்பாலா (ஆன்மீக விழிப்புணர்வு & தியானம்), 2. வாவ் பேரண்டிங் (பெற்றோர் வழிகாட்டல்), 3. நிதி நுண்ணறிவு (பொருளாதார மேலாண்மை), 4. உணர்ச்சி நுண்ணறிவு (உளவியல் சமநிலை), 5. மாஸ்டர் ஸ்ட்ரோக் (தலைமைத்துவ நெறிமுறைகள்), 6. இளம் விஞ்ஞானி (செய்முறை அறிவியல்), மற்றும் 7. ஐராவத் (ஆசிரியரின் 21 பரிணாம நிலைகள்).',
+      en: 'Dr. J. Arawindhan has authored seven major books in institutional and public circulation: 1. The Shambala Book (Inner consciousness & meditation), 2. WOW Parenting (Family and school co-learning), 3. Financial Intelligence (Wealth literacy for youth), 4. Emotional Intelligence (Self-regulation and empathy), 5. Master Stroke (Strategic leadership & systems), 6. Young Scientist (Experiential STEM discovery), and 7. Iravadh (The 21 levels of teacher evolution).',
+      ta: 'முனைவர் அரவிந்தன் ஏழு முக்கிய நூல்களை எழுதியுள்ளார்: 1. தி ஷாம்பாலா (ஆன்மீக விழிப்புணர்வு & தியானம்), 2. வாவ் பேரண்டிங் (பெற்றோர் வழிகாட்டல்), 3. நிதி நுண்ணறிவு (பொருளாதார மேலாண்மை), 4. உணர்ச்சி நுண்ணறிவு (உளவியல் சமநிலை), 5. மாஸ்டர் ஸ்ட்ரோக் (தலைமைத்துவ நெறிமுறைகள்), 6. இளம் விஞ்ஞானி (செய்முறை அறிவியல்), மற்றும் 7. ஐராவத் (ஆசிரியரின் 21 பரிணாம நிலைகள்).',
     },
     relatedLink: '/books',
   },
@@ -89,12 +89,12 @@ export const faqsList: FAQItem[] = [
     id: 'FAQ-07',
     category: 'Spiritual & Inner Journey',
     question: {
-      en: 'What is Divya Yogam and who is Santoshi Shri Arawindhan Ji?',
-      ta: 'திவ்ய யோகம் என்றால் என்ன? சந்தோஷி ஸ்ரீ அரவிந்தன் ஜி யார்?',
+      en: 'What is Divya Yogam and who is Santoshi Shri Arawindhan?',
+      ta: 'திவ்ய யோகம் என்றால் என்ன? சந்தோஷி ஸ்ரீ அரவிந்தன் யார்?',
     },
     answer: {
-      en: 'In spiritual contexts, Dr. Arawindhan is revered as Santoshi Shri Arawindhan Ji. Conceived in 2000 through the Divine Grace Foundation, Divya Yogam is a non-dogmatic path of inner inquiry grounded in the creed: "Develop the human. Awaken the being." It features a Seven-Step Inner Journey (Awareness to Awakening), Oneness Meditation, and the annual Maha Shambala spiritual convergence held in Puducherry every December since 2012.',
-      ta: 'ஆன்மீக தளத்தில் இவர் சந்தோஷி ஸ்ரீ அரவிந்தன் ஜி என்று அழைக்கப்படுகிறார். 2000-ஆம் ஆண்டு தொடங்கப்பட்ட திவ்ய யோகம், "மனிதனை மேம்படுத்து. ஆன்மாவை விழிப்படையச் செய்" என்ற தத்துவத்தின் அடிப்படையில் இயங்கும் ஆன்மீகப் பாதை. இதில் 7 படிநிலை உள்முகப் பயணம், ஒருமை தியானம் மற்றும் 2012 முதல் ஆண்டுதோறும் புதுச்சேரியில் நடைபெறும் மகா ஷாம்பாலா ஆன்மீக சங்கமம் ஆகியவை முக்கியத்துவம் வாய்ந்தவை.',
+      en: 'In spiritual contexts, Dr. Arawindhan is revered as Santoshi Shri Arawindhan. Conceived in 2000 through the Divine Grace Foundation, Divya Yogam is a non-dogmatic path of inner inquiry grounded in the creed: "Develop the human. Awaken the being." It features a Seven-Step Inner Journey (Awareness to Awakening), Oneness Meditation, and the annual Maha Shambala spiritual convergence held in Puducherry every December since 2012.',
+      ta: 'ஆன்மீக தளத்தில் இவர் சந்தோஷி ஸ்ரீ அரவிந்தன் என்று அழைக்கப்படுகிறார். 2000-ஆம் ஆண்டு தொடங்கப்பட்ட திவ்ய யோகம், "மனிதனை மேம்படுத்து. ஆன்மாவை விழிப்படையச் செய்" என்ற தத்துவத்தின் அடிப்படையில் இயங்கும் ஆன்மீகப் பாதை. இதில் 7 படிநிலை உள்முகப் பயணம், ஒருமை தியானம் மற்றும் 2012 முதல் ஆண்டுதோறும் புதுச்சேரியில் நடைபெறும் மகா ஷாம்பாலா ஆன்மீக சங்கமம் ஆகியவை முக்கியத்துவம் வாய்ந்தவை.',
     },
     relatedLink: '/inner-journey',
   },
@@ -103,7 +103,7 @@ export const faqsList: FAQItem[] = [
     category: 'Honours & Awards',
     question: {
       en: 'What major awards and recognitions have been conferred on Dr. Arawindhan?',
-      ta: 'முனைவர் அரவிந்தன் ஜி பெற்றுள்ள முக்கிய விருதுகள் மற்றும் அங்கீகாரங்கள் யாவை?',
+      ta: 'முனைவர் அரவிந்தன் பெற்றுள்ள முக்கிய விருதுகள் மற்றும் அங்கீகாரங்கள் யாவை?',
     },
     answer: {
       en: 'His documented honours include the Holistic Education Award at the News7 Tamil Aatral Migu Asiriyar Virudhugal 2026, the Edu Icon Award from The Times of India, the Trendsetter Award from Times Interact, the Outstanding Youth Award in Academics & Leadership from JCI India, and the Alumnus of the Decade Award from Infinite Thoughts Journal. Institutionally, ACHARIYA holds the British Council International School Award, ISO & NAAC accreditations, and Swachh Vidyalaya Puraskar from the Government of India.',

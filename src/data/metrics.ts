@@ -8,7 +8,7 @@ export const coreMetrics: MetricItem[] = [
       ta: 'கல்விப் பணி ஆண்டுகள் (2000 முதல்)',
     },
     detail: {
-      en: 'Founded in 2000 in Puducherry by Dr. J. Arawindhan Ji',
+      en: 'Founded in 2000 in Puducherry by Dr. J. Arawindhan',
       ta: '2000-ஆம் ஆண்டு புதுச்சேரியில் நிறுவப்பட்டது',
     },
     claimId: 'CLM-001',

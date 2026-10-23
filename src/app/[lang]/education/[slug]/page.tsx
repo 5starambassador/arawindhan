@@ -98,8 +98,8 @@ export default async function ExhibitDetailPage({
             </h3>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.75 }}>
               {lang === 'ta'
-                ? 'முனைவர் ஜே. அரவிந்தன் ஜி அவர்களால் 2000-ஆம் ஆண்டு முதல் தனிப்பட்ட முறையில் வடிவமைக்கப்பட்டு, ஆச்சாரியா சிறப்பு மேன்மை மையம் (Centre of Excellence) மற்றும் ஆசிரியப் பயிற்சி அகாடமிகள் மூலம் செறிவூட்டப்பட்டது.'
-                : 'Conceived and designed by Dr. J. Arawindhan Ji since 2000; codified, tested, and scaled across campuses through the ACHARIYA Centre of Excellence (CoE) and faculty development academies.'}
+                ? 'முனைவர் ஜே. அரவிந்தன் அவர்களால் 2000-ஆம் ஆண்டு முதல் தனிப்பட்ட முறையில் வடிவமைக்கப்பட்டு, ஆச்சாரியா சிறப்பு மேன்மை மையம் (Centre of Excellence) மற்றும் ஆசிரியப் பயிற்சி அகாடமிகள் மூலம் செறிவூட்டப்பட்டது.'
+                : 'Conceived and designed by Dr. J. Arawindhan since 2000; codified, tested, and scaled across campuses through the ACHARIYA Centre of Excellence (CoE) and faculty development academies.'}
             </p>
           </div>
 
