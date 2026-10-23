@@ -253,9 +253,29 @@ export default async function InnerJourneyPage({
             subtitle={lang === 'ta' ? 'உடல், மனம், இதயம், புத்தி மற்றும் விழிப்புணர்வு ஒருங்கிணைந்த வாழ்வு.' : 'Embracing the whole human being through awareness, stillness, and conscious action.'}
           />
 
-          <div className="grid-3">
+          <div
+            style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              justifyContent: 'center',
+              gap: '1.5rem',
+            }}
+          >
             {innerJourneyData.fivePrinciples.map((p) => (
-              <div key={p.number} className="card-premium" style={{ borderRadius: '16px' }}>
+              <div
+                key={p.number}
+                className="card-premium"
+                style={{
+                  flex: '1 1 300px',
+                  maxWidth: '340px',
+                  borderRadius: '16px',
+                  padding: '1.75rem',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  border: '1px solid #E2E8F0',
+                  boxShadow: '0 4px 16px rgba(15, 23, 42, 0.04)',
+                }}
+              >
                 <div
                   style={{
                     color: '#B45309',
