@@ -63,7 +63,7 @@ export default async function BookDetailPage({
             marginBottom: '2.5rem',
           }}
         >
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.25rem', flexWrap: 'wrap', gap: '0.5rem' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', flexWrap: 'wrap', gap: '0.5rem' }}>
             <span
               style={{
                 background: '#FFFBEB',
@@ -81,21 +81,65 @@ export default async function BookDetailPage({
             <ClaimBadge claimId={book.claimId} status="SOURCE_CLAIM" language={lang} />
           </div>
 
-          <h1 className="font-serif heading-gold" style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', marginBottom: '0.5rem', fontWeight: 800 }}>
-            {book.title[lang]}
-          </h1>
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+              gap: '2.5rem',
+              alignItems: 'start',
+              marginBottom: '2rem',
+            }}
+          >
+            {/* Book Cover Visual Art */}
+            {book.coverImage && (
+              <div style={{ textAlign: 'center' }}>
+                <div
+                  style={{
+                    maxWidth: '280px',
+                    margin: '0 auto',
+                    borderRadius: '16px',
+                    overflow: 'hidden',
+                    border: '2px solid #FDE68A',
+                    boxShadow: '0 20px 40px -15px rgba(217, 119, 6, 0.35), 0 0 0 6px #FFFBEB',
+                    background: '#FFFFFF',
+                  }}
+                >
+                  <img
+                    src={book.coverImage}
+                    alt={book.title[lang]}
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                      display: 'block',
+                      objectFit: 'cover',
+                    }}
+                  />
+                </div>
+                <div style={{ marginTop: '0.75rem', fontSize: '0.78rem', color: 'var(--text-muted)', fontWeight: 600 }}>
+                  {lang === 'ta' ? 'அதிகாரப்பூர்வ நூல் அட்டை' : 'Official Published Edition'}
+                </div>
+              </div>
+            )}
 
-          <div style={{ color: 'var(--text-gold)', fontSize: '1.05rem', fontWeight: 700, marginBottom: '0.85rem' }}>
-            {lang === 'ta' ? 'ஆசிரியர்:' : 'Author:'} {book.author[lang]}
+            {/* Book Metadata & Synopsis */}
+            <div>
+              <h1 className="font-serif heading-gold" style={{ fontSize: 'clamp(2rem, 3.5vw, 2.6rem)', marginBottom: '0.5rem', fontWeight: 800, lineHeight: 1.2 }}>
+                {book.title[lang]}
+              </h1>
+
+              <div style={{ color: 'var(--text-gold)', fontSize: '1.05rem', fontWeight: 700, marginBottom: '0.85rem' }}>
+                {lang === 'ta' ? 'ஆசிரியர்:' : 'Author:'} {book.author[lang]}
+              </div>
+
+              <p style={{ color: 'var(--text-muted)', fontSize: '1.05rem', fontStyle: 'italic', marginBottom: '1.25rem' }}>
+                {book.tagline[lang]}
+              </p>
+
+              <p style={{ color: 'var(--text-secondary)', fontSize: '1.02rem', lineHeight: 1.8, marginBottom: '1.5rem' }}>
+                {book.summary[lang]}
+              </p>
+            </div>
           </div>
-
-          <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', fontStyle: 'italic', marginBottom: '1.75rem' }}>
-            {book.tagline[lang]}
-          </p>
-
-          <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: 1.85, marginBottom: '2rem' }}>
-            {book.summary[lang]}
-          </p>
 
           {/* Reading Snippet Quote */}
           {book.readMoreSnippet && (

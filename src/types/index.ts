@@ -42,6 +42,7 @@ export interface BookItem {
   keyThemes: { en: string[]; ta: string[] };
   targetAudience: { en: string; ta: string };
   readMoreSnippet?: { en: string; ta: string };
+  coverImage?: string;
 }
 
 export interface InstitutionEntry {

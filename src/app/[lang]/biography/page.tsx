@@ -72,9 +72,54 @@ export default async function BiographyPage({
             {lang === 'ta' ? 'மெக்கானிக்கல் பொறியியலில் இருந்து மனித ஆளுமைப் புரட்சி வரை' : 'From Mechanical Engineering to Awakening Human Potential'}
           </h3>
 
-          <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: 1.85, marginBottom: '1.5rem' }}>
+          <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: 1.85, marginBottom: '2rem' }}>
             {biographyData.overview[lang]}
           </p>
+
+          {/* Bespoke 28-Year Odyssey & Campus Vision Visual Showcase */}
+          <div
+            style={{
+              position: 'relative',
+              borderRadius: '16px',
+              overflow: 'hidden',
+              marginBottom: '2rem',
+              border: '2px solid #FDE68A',
+              boxShadow: '0 12px 30px -8px rgba(217, 119, 6, 0.2)',
+              maxHeight: '380px',
+            }}
+          >
+            <img
+              src="/images/biography_vision.jpg"
+              alt="28 Years of Vision: Engineering Blueprints Expanding into World-Class Campuses"
+              style={{
+                width: '100%',
+                height: '380px',
+                objectFit: 'cover',
+                objectPosition: 'center',
+                display: 'block',
+              }}
+            />
+            <div
+              style={{
+                position: 'absolute',
+                bottom: 0,
+                left: 0,
+                right: 0,
+                padding: '1.25rem 1.75rem',
+                background: 'linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.25) 60%, transparent 100%)',
+                color: '#FFFFFF',
+              }}
+            >
+              <div style={{ fontSize: '0.8rem', fontWeight: 800, color: '#FEF3C7', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                {lang === 'ta' ? '28 ஆண்டு தொலைநோக்கு • பொறியியல் முதல் பல்கலைக்கழகங்கள் வரை' : 'The 28-Year Odyssey: From Engineering Blueprints to 101 Campuses'}
+              </div>
+              <div style={{ fontSize: '0.88rem', color: '#E2E8F0', marginTop: '0.2rem' }}>
+                {lang === 'ta'
+                  ? 'புதுச்சேரியில் ஒரு மெக்கானிக்கல் பொறியாளரின் வரைகலையிலிருந்து 14,000+ மாணவர்கள் கற்கும் பெரும் பல்கலைக்கழகச் சூழலியலாக விரிவடைந்த வரலாறு.'
+                  : 'Synthesizing technical precision, institutional governance, and an unshakeable belief in every student\'s unique kingdom of intelligences.'}
+              </div>
+            </div>
+          </div>
 
           {/* 1998 Origin Bedrock Box from MD Magazine */}
           <div

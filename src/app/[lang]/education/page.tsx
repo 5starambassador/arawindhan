@@ -27,6 +27,56 @@ export default async function EducationPage({
           subtitle={lang === 'ta' ? 'ஒவ்வொரு குழந்தையையும் அவர்களின் தனித்துவமான நுண்ணறிவு சாம்ராஜ்யத்தில் ஆளுமை பெறச் செய்யும் தனித்துவ அமைப்புகள்.' : 'Proprietary curricula, frameworks, and whole-brain learning systems designed and run across ACHARIYA campuses.'}
         />
 
+        {/* Bespoke Whole-Brain Classroom Visual Showcase */}
+        <div
+          style={{
+            position: 'relative',
+            borderRadius: '20px',
+            overflow: 'hidden',
+            marginBottom: '3rem',
+            border: '2px solid #FDE68A',
+            boxShadow: '0 15px 35px -10px rgba(217, 119, 6, 0.2)',
+            maxHeight: '380px',
+          }}
+        >
+          <img
+            src="/images/education_hero.jpg"
+            alt="Whole-Brain Modern Learning Architecture across ACHARIYA Classrooms"
+            style={{
+              width: '100%',
+              height: '380px',
+              objectFit: 'cover',
+              objectPosition: 'center',
+              display: 'block',
+            }}
+          />
+          <div
+            style={{
+              position: 'absolute',
+              bottom: 0,
+              left: 0,
+              right: 0,
+              padding: '1.5rem 2rem',
+              background: 'linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.25) 60%, transparent 100%)',
+              color: '#FFFFFF',
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '0.4rem' }}>
+              <span style={{ background: '#D97706', color: '#FFFFFF', padding: '0.2rem 0.65rem', borderRadius: '4px', fontSize: '0.75rem', fontWeight: 800 }}>
+                WHOLE-BRAIN PEDAGOGY
+              </span>
+              <span style={{ color: '#FEF3C7', fontSize: '0.85rem', fontWeight: 700 }}>
+                {lang === 'ta' ? 'திறனை விட மூளையின் செயல்பாடே பிரதானம்' : 'Brain Activity Over Ability — 10 Living Curricular Systems'}
+              </span>
+            </div>
+            <p style={{ color: '#E2E8F0', fontSize: '0.92rem', margin: 0, maxWidth: '800px', lineHeight: 1.6 }}>
+              {lang === 'ta'
+                ? 'ஆச்சாரியாவில் வடிவமைக்கப்பட்ட 10 தனித்துவக் கல்வி அமைப்புகளும் மாணவர்களின் பகுப்பாய்வு, நினைவாற்றல், வேகக் கணக்கீடு மற்றும் தலைமைப் பண்புகளைப் பயிற்றுவிக்கும் கள ஆய்வுக் கூடங்கள்.'
+                : 'Pioneered by Dr. J. Arawindhan: turning classrooms into interactive incubators of cognitive agility, mental abacus speed, and deep creative resilience.'}
+            </p>
+          </div>
+        </div>
+
         <div className="grid-2">
           {educationalExhibits.map((exhibit) => (
             <div key={exhibit.id} className="card-premium" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>

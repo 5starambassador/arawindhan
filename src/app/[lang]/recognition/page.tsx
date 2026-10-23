@@ -91,7 +91,7 @@ export default async function RecognitionPage({
             </div>
           </div>
 
-          <div style={{ background: '#FFFFFF', padding: '1.25rem', borderRadius: 'var(--radius-sm)', border: '1px solid #FDE68A', boxShadow: 'var(--shadow-sm)' }}>
+          <div style={{ background: '#FFFFFF', padding: '1.25rem', borderRadius: 'var(--radius-sm)', border: '1px solid #FDE68A', boxShadow: 'var(--shadow-sm)', marginBottom: '1.75rem' }}>
             <h4 style={{ color: 'var(--gold-glow)', fontSize: '0.95rem', fontWeight: 800, marginBottom: '0.5rem' }}>
               {lang === 'ta' ? 'சாதனைகளின் சிறப்பம்சங்கள்:' : 'Key Cognitive & Physical Record Domains:'}
             </h4>
@@ -100,6 +100,50 @@ export default async function RecognitionPage({
                 <li key={i}>{h[lang]}</li>
               ))}
             </ul>
+          </div>
+
+          {/* Student World Record Digital Visual Showcase */}
+          <div
+            style={{
+              position: 'relative',
+              borderRadius: '16px',
+              overflow: 'hidden',
+              border: '2px solid #FDE68A',
+              boxShadow: '0 15px 35px -10px rgba(217, 119, 6, 0.25)',
+              maxHeight: '380px',
+            }}
+          >
+            <img
+              src="/images/records_showcase.jpg"
+              alt="ACHARIYA Mass Cognitive & Physical World Records Achievement"
+              style={{
+                width: '100%',
+                height: '380px',
+                objectFit: 'cover',
+                objectPosition: 'center',
+                display: 'block',
+              }}
+            />
+            <div
+              style={{
+                position: 'absolute',
+                bottom: 0,
+                left: 0,
+                right: 0,
+                padding: '1.25rem 1.75rem',
+                background: 'linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.25) 70%, transparent 100%)',
+                color: '#FFFFFF',
+              }}
+            >
+              <div style={{ fontSize: '0.82rem', fontWeight: 800, color: '#FEF3C7', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                {lang === 'ta' ? 'அங்கீகரிக்கப்பட்ட உலக சாதனை அரங்கம்' : 'Cognitive & Martial Record Archive • 600+ World Records'}
+              </div>
+              <div style={{ fontSize: '0.88rem', color: '#E2E8F0', marginTop: '0.2rem' }}>
+                {lang === 'ta'
+                  ? 'கின்னஸ் மற்றும் பல்வேறு சர்வதேச சாதனை அமைப்புகளால் அங்கீகரிக்கப்பட்ட ஆச்சாரியா மாணவர்களின் பேரணி.'
+                  : 'Mass cognitive abacus calculation, memory feats, and disciplined martial arts cultivated across ACHARIYA campuses.'}
+              </div>
+            </div>
           </div>
         </div>
 
@@ -143,6 +187,51 @@ export default async function RecognitionPage({
           <h3 className="font-serif heading-gold" style={{ fontSize: '1.8rem', marginBottom: '1.5rem', textAlign: 'center', fontWeight: 800 }}>
             {lang === 'ta' ? '540+ தேசிய விருதுகள் & கல்வி நிறுவன அங்கீகாரங்கள்' : '540+ Institutional Accolades & National Quality Accreditations'}
           </h3>
+
+          {/* National Educational Awards Trophy Showcase */}
+          <div
+            style={{
+              position: 'relative',
+              borderRadius: '16px',
+              overflow: 'hidden',
+              marginBottom: '2.5rem',
+              border: '2px solid #E2E8F0',
+              boxShadow: '0 12px 30px -8px rgba(15, 23, 42, 0.1)',
+              maxHeight: '340px',
+            }}
+          >
+            <img
+              src="/images/awards_trophy.jpg"
+              alt="National Educational Leadership Accolades & Lifetime Honours"
+              style={{
+                width: '100%',
+                height: '340px',
+                objectFit: 'cover',
+                objectPosition: 'center',
+                display: 'block',
+              }}
+            />
+            <div
+              style={{
+                position: 'absolute',
+                bottom: 0,
+                left: 0,
+                right: 0,
+                padding: '1.25rem 1.75rem',
+                background: 'linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, transparent 100%)',
+                color: '#FFFFFF',
+              }}
+            >
+              <div style={{ fontSize: '0.8rem', fontWeight: 800, color: '#FEF3C7', textTransform: 'uppercase' }}>
+                {lang === 'ta' ? 'கல்வித் தலைமைத்துவ கௌரவம் & வாழ்நாள் சாதனையாளர் விருதுகள்' : 'National Educational Leadership & Lifetime Honour Accolades'}
+              </div>
+              <div style={{ fontSize: '0.88rem', color: '#E2E8F0', marginTop: '0.2rem' }}>
+                {lang === 'ta'
+                  ? '25 ஆண்டுகளில் முனைவர் ஜே. அரவிந்தன் மற்றும் ஆச்சாரியா கல்வி நிறுவனங்களுக்கு வழங்கப்பட்ட 540+ தேசிய மற்றும் சர்வதேச சிறப்புகள்.'
+                  : 'Documenting 540+ national and global awards recognizing educational pioneering and institutional excellence.'}
+              </div>
+            </div>
+          </div>
 
           <div
             style={{

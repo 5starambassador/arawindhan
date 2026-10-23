@@ -361,7 +361,35 @@ export default async function HomePage({
 
           <div className="grid-3">
             {booksList.slice(0, 3).map((book) => (
-              <div key={book.id} className="card-premium">
+              <div key={book.id} className="card-premium" style={{ display: 'flex', flexDirection: 'column' }}>
+                {book.coverImage && (
+                  <div
+                    style={{
+                      height: '210px',
+                      borderRadius: '12px',
+                      overflow: 'hidden',
+                      marginBottom: '1.25rem',
+                      background: 'linear-gradient(145deg, #FFFBEB 0%, #FEF3C7 100%)',
+                      border: '1px solid #FDE68A',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      padding: '0.75rem',
+                    }}
+                  >
+                    <img
+                      src={book.coverImage}
+                      alt={book.title[lang]}
+                      style={{
+                        maxHeight: '100%',
+                        maxWidth: '100%',
+                        objectFit: 'contain',
+                        borderRadius: '6px',
+                        boxShadow: '0 8px 20px rgba(0,0,0,0.15)',
+                      }}
+                    />
+                  </div>
+                )}
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.75rem' }}>
                   <span style={{ fontSize: '0.78rem', color: 'var(--gold-glow)', fontWeight: 700, textTransform: 'uppercase' }}>
                     {book.status}
@@ -374,7 +402,7 @@ export default async function HomePage({
                 <p style={{ color: 'var(--text-muted)', fontSize: '0.86rem', fontStyle: 'italic', marginBottom: '1rem' }}>
                   {book.tagline[lang]}
                 </p>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: 1.7, marginBottom: '1.25rem' }}>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: 1.7, marginBottom: '1.25rem', flex: 1 }}>
                   {book.summary[lang]}
                 </p>
                 <Link
@@ -387,6 +415,7 @@ export default async function HomePage({
                     fontWeight: 700,
                     fontSize: '0.88rem',
                     textDecoration: 'none',
+                    marginTop: 'auto',
                   }}
                 >
                   <span>{lang === 'ta' ? 'நூல் விபரம் & சாரம்' : 'View Book Details'}</span>
@@ -474,6 +503,56 @@ export default async function HomePage({
             title={lang === 'ta' ? 'விருதுகள் & 600+ உலக சாதனைகள்' : 'Verified Accolades & 600+ Student World Records'}
             subtitle={lang === 'ta' ? 'கல்வியியல் தலைமைத்துவத்திற்கான தேசிய விருதுகள் மற்றும் மாணவர் சாதனைகள்.' : 'National awards conferred by leading media, organizations, and global bodies.'}
           />
+
+          {/* Bespoke 600+ World Records Visual Showcase */}
+          <div
+            style={{
+              position: 'relative',
+              borderRadius: '20px',
+              overflow: 'hidden',
+              marginBottom: '3rem',
+              border: '2px solid #FDE68A',
+              boxShadow: '0 20px 40px -15px rgba(217, 119, 6, 0.25)',
+              maxHeight: '380px',
+            }}
+          >
+            <img
+              src="/images/records_showcase.jpg"
+              alt="ACHARIYA Mass Cognitive & Physical World Records Achievement"
+              style={{
+                width: '100%',
+                height: '380px',
+                objectFit: 'cover',
+                objectPosition: 'center',
+                display: 'block',
+              }}
+            />
+            <div
+              style={{
+                position: 'absolute',
+                bottom: 0,
+                left: 0,
+                right: 0,
+                padding: '1.5rem 2rem',
+                background: 'linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.25) 60%, transparent 100%)',
+                color: '#FFFFFF',
+              }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '0.4rem' }}>
+                <span style={{ background: '#D97706', color: '#FFFFFF', padding: '0.2rem 0.65rem', borderRadius: '4px', fontSize: '0.75rem', fontWeight: 800 }}>
+                  600+ WORLD RECORDS
+                </span>
+                <span style={{ color: '#FEF3C7', fontSize: '0.85rem', fontWeight: 700 }}>
+                  {lang === 'ta' ? 'மாணவர்களின் உலக சாதனை அரங்கம்' : 'Guinness & Global Cognitive Records Archive'}
+                </span>
+              </div>
+              <p style={{ color: '#E2E8F0', fontSize: '0.92rem', margin: 0, maxWidth: '800px', lineHeight: 1.6 }}>
+                {lang === 'ta'
+                  ? 'கின்னஸ் மற்றும் பல்வேறு சர்வதேச சாதனை அமைப்புகளால் அங்கீகரிக்கப்பட்ட ஆச்சாரியா மாணவர்களின் பேரணி.'
+                  : 'Documenting mass cognitive speed, memory feats, and disciplined martial arts cultivated across ACHARIYA campuses.'}
+              </p>
+            </div>
+          </div>
 
           <div className="grid-3" style={{ marginBottom: '2.5rem' }}>
             {personalHonours.slice(0, 3).map((honour) => (

@@ -71,30 +71,30 @@ export default async function BooksPage({
                   <ClaimBadge claimId={book.claimId} status="SOURCE_CLAIM" language={lang} />
                 </div>
 
-                {/* Book Spine Icon Representation */}
+                {/* Book Cover Image */}
                 <div
                   style={{
-                    height: '140px',
-                    borderRadius: 'var(--radius-sm)',
-                    background: 'linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%)',
-                    border: '1px solid #FDE68A',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'center',
+                    height: '240px',
+                    borderRadius: '12px',
+                    overflow: 'hidden',
                     marginBottom: '1.25rem',
-                    textAlign: 'center',
-                    padding: '1rem',
-                    boxShadow: 'var(--shadow-sm)',
+                    position: 'relative',
+                    boxShadow: '0 8px 24px -4px rgba(15, 23, 42, 0.12)',
+                    border: '1px solid #E2E8F0',
+                    background: '#FAF8F5',
                   }}
                 >
-                  <BookOpen size={32} color="var(--gold-primary)" style={{ marginBottom: '0.5rem' }} />
-                  <div className="font-serif" style={{ fontSize: '1.05rem', fontWeight: 800, color: '#78350F' }}>
-                    {book.title[lang]}
-                  </div>
-                  <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>
-                    {book.edition}
-                  </div>
+                  <img
+                    src={book.coverImage || '/images/books/shambala_book.jpg'}
+                    alt={book.title[lang]}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      objectPosition: 'top center',
+                      display: 'block',
+                    }}
+                  />
                 </div>
 
                 <h3 className="font-serif heading-gold" style={{ fontSize: '1.35rem', marginBottom: '0.35rem', fontWeight: 800 }}>

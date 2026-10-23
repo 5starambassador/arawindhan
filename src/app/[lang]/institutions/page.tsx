@@ -386,6 +386,51 @@ export default function InstitutionsPage({
               : 'Partnering with founders Ruiko & Hirotada Henmi (Heguru Japan), Dr. J. Arawindhan serves as the National Master Franchise Holder & Managing Director, establishing 10+ state-of-the-art right-brain neuroplasticity centres across India.'}
           </p>
 
+          {/* Bespoke Heguru Right-Brain Learning Architecture Showcase */}
+          <div
+            style={{
+              position: 'relative',
+              borderRadius: '16px',
+              overflow: 'hidden',
+              marginBottom: '2rem',
+              border: '2px solid #FDE68A',
+              boxShadow: '0 12px 30px -8px rgba(217, 119, 6, 0.2)',
+              maxHeight: '360px',
+            }}
+          >
+            <img
+              src="/images/heguru_center.jpg"
+              alt="Heguru India Right-Brain Neuroplasticity Learning Environment"
+              style={{
+                width: '100%',
+                height: '360px',
+                objectFit: 'cover',
+                objectPosition: 'center',
+                display: 'block',
+              }}
+            />
+            <div
+              style={{
+                position: 'absolute',
+                bottom: 0,
+                left: 0,
+                right: 0,
+                padding: '1.25rem 1.75rem',
+                background: 'linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.2) 65%, transparent 100%)',
+                color: '#FFFFFF',
+              }}
+            >
+              <div style={{ fontSize: '0.8rem', fontWeight: 800, color: '#FEF3C7', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                {lang === 'ta' ? 'ஹெகுரு நரம்பியல் ஆய்வுக் கூடம் • ஆரம்பக்கால மூளைப் பயிற்சி' : 'Heguru Neuroplasticity Architecture • Early Childhood Right-Brain Acceleration'}
+              </div>
+              <div style={{ fontSize: '0.88rem', color: '#E2E8F0', marginTop: '0.2rem' }}>
+                {lang === 'ta'
+                  ? 'ஜப்பானிய மரபுசார் அமைப்பில் அமைக்கப்பட்ட உயர் தர மூளைத்திறன் மேம்பாட்டு மையம்.'
+                  : '10+ centres across India equipping infants and young learners with photographic memory, speed computation, and emotional calm.'}
+              </div>
+            </div>
+          </div>
+
           <div
             style={{
               display: 'grid',

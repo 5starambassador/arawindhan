@@ -26,6 +26,56 @@ export default async function MediaPage({
           subtitle={lang === 'ta' ? 'கல்வியாளர்கள், தலைவர்கள் மற்றும் சமூகத்திற்கான முனைவர் அரவிந்தன் அவர்களின் தொலைநோக்குப் பகிர்வுகள்.' : 'Codified frameworks, keynote speeches to school leaders, and perspectives on Artificial Intelligence.'}
         />
 
+        {/* Bespoke Global Keynote Stage Visual Banner */}
+        <div
+          style={{
+            position: 'relative',
+            borderRadius: '20px',
+            overflow: 'hidden',
+            marginBottom: '3rem',
+            border: '2px solid #FDE68A',
+            boxShadow: '0 15px 35px -10px rgba(217, 119, 6, 0.2)',
+            maxHeight: '380px',
+          }}
+        >
+          <img
+            src="/images/media_hero.jpg"
+            alt="International Educational Leadership Keynote Address on Human Intelligence & AI"
+            style={{
+              width: '100%',
+              height: '380px',
+              objectFit: 'cover',
+              objectPosition: 'center',
+              display: 'block',
+            }}
+          />
+          <div
+            style={{
+              position: 'absolute',
+              bottom: 0,
+              left: 0,
+              right: 0,
+              padding: '1.5rem 2rem',
+              background: 'linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.25) 60%, transparent 100%)',
+              color: '#FFFFFF',
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '0.4rem' }}>
+              <span style={{ background: '#D97706', color: '#FFFFFF', padding: '0.2rem 0.65rem', borderRadius: '4px', fontSize: '0.75rem', fontWeight: 800 }}>
+                KEYNOTE LEADERSHIP
+              </span>
+              <span style={{ color: '#FEF3C7', fontSize: '0.85rem', fontWeight: 700 }}>
+                {lang === 'ta' ? 'சர்வதேச கல்வி மாநாட்டுத் தலைமை உரை' : 'Global Summit: Human Intelligence & AI in Education'}
+              </span>
+            </div>
+            <p style={{ color: '#E2E8F0', fontSize: '0.92rem', margin: 0, maxWidth: '800px', lineHeight: 1.6 }}>
+              {lang === 'ta'
+                ? 'பள்ளி முதல்வர்கள், ஆசிரியர்கள் மற்றும் சர்வதேசக் கல்வியாளர்கள் மத்தியில் “மனித நுண்ணறிவு + AI = குவாண்டம் நுண்ணறிவு” என்ற பார்வையை முன்வைக்கும் சிந்தனைத் தலைமை.'
+                : 'Codified thought leadership: synthesizing cognitive neuroscience, character pedagogy, and generative AI for next-generation learners.'}
+            </p>
+          </div>
+        </div>
+
         {/* Featured Keynotes */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem', marginBottom: '4rem' }}>
           {mediaArticles.map((article) => (

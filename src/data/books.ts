@@ -4,6 +4,7 @@ export const booksList: BookItem[] = [
   {
     id: 'BK-001',
     slug: 'shambala-book',
+    coverImage: '/images/books/shambala_book.jpg',
     title: {
       en: 'The Shambala Book',
       ta: 'தி ஷாம்பாலா நூல் (The Shambala Book)',
@@ -50,6 +51,7 @@ export const booksList: BookItem[] = [
   {
     id: 'BK-002',
     slug: 'wow-parenting-book',
+    coverImage: '/images/books/wow_parenting.jpg',
     title: {
       en: 'WOW Parenting',
       ta: 'வாவ் (WOW) பேரண்டிங்',
@@ -96,6 +98,7 @@ export const booksList: BookItem[] = [
   {
     id: 'BK-003',
     slug: 'financial-intelligence',
+    coverImage: '/images/books/financial_intelligence.jpg',
     title: {
       en: 'Financial Intelligence (FI)',
       ta: 'நிதி நுண்ணறிவு (Financial Intelligence)',
@@ -142,6 +145,7 @@ export const booksList: BookItem[] = [
   {
     id: 'BK-004',
     slug: 'emotional-intelligence',
+    coverImage: '/images/books/emotional_intelligence.jpg',
     title: {
       en: 'Emotional Intelligence (EI)',
       ta: 'உணர்ச்சி நுண்ணறிவு (Emotional Intelligence)',
@@ -188,6 +192,7 @@ export const booksList: BookItem[] = [
   {
     id: 'BK-005',
     slug: 'master-stroke',
+    coverImage: '/images/books/master_stroke.jpg',
     title: {
       en: 'Master Stroke',
       ta: 'மாஸ்டர் ஸ்ட்ரோக் (Master Stroke)',
@@ -234,6 +239,7 @@ export const booksList: BookItem[] = [
   {
     id: 'BK-006',
     slug: 'young-scientist',
+    coverImage: '/images/books/young_scientist.jpg',
     title: {
       en: 'Young Scientist',
       ta: 'இளம் விஞ்ஞானி (Young Scientist)',
@@ -280,6 +286,7 @@ export const booksList: BookItem[] = [
   {
     id: 'BK-007',
     slug: 'iravadh-book',
+    coverImage: '/images/books/airavatha.jpg',
     title: {
       en: 'Iravadh',
       ta: 'ஐராவத் (Iravadh)',

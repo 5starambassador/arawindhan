@@ -353,28 +353,59 @@ export default async function InnerJourneyPage({
           }}
         >
           {/* Maha Shambala Card */}
-          <div className="card-premium" style={{ border: '1px solid #FDE68A', borderRadius: '16px' }}>
+          <div className="card-premium" style={{ border: '1px solid #FDE68A', borderRadius: '16px', display: 'flex', flexDirection: 'column' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.75rem' }}>
               <span style={{ color: '#B45309', fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em' }}>
-                ANNUAL CONVERGENCE
+                ANNUAL CONVERGENCE & SACRED TREATISE
               </span>
               <ClaimBadge claimId="CLM-029" status="CONFIRMED" language={lang} />
             </div>
-            <h3
-              style={{
-                fontFamily: 'var(--font-serif)',
-                fontSize: '1.45rem',
-                fontWeight: 700,
-                color: '#0F172A',
-                marginBottom: '0.5rem',
-              }}
-            >
-              {innerJourneyData.mahaShambala.title[lang]}
-            </h3>
+
+            <div style={{ display: 'flex', gap: '1.25rem', alignItems: 'center', marginBottom: '1.25rem' }}>
+              <div
+                style={{
+                  width: '90px',
+                  height: '130px',
+                  borderRadius: '8px',
+                  overflow: 'hidden',
+                  flexShrink: 0,
+                  border: '1.5px solid #FDE68A',
+                  boxShadow: '0 8px 16px rgba(180, 83, 9, 0.2)',
+                  background: '#FFFFFF',
+                }}
+              >
+                <img
+                  src="/images/shambala_book.jpg"
+                  alt="Maha Shambala - The Mystery Behind Awakening"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                  }}
+                />
+              </div>
+              <div>
+                <h3
+                  style={{
+                    fontFamily: 'var(--font-serif)',
+                    fontSize: '1.35rem',
+                    fontWeight: 700,
+                    color: '#0F172A',
+                    marginBottom: '0.35rem',
+                  }}
+                >
+                  {innerJourneyData.mahaShambala.title[lang]}
+                </h3>
+                <div style={{ fontSize: '0.8rem', color: '#B45309', fontWeight: 700 }}>
+                  {lang === 'ta' ? 'அதிகாரப்பூர்வ நூல் & ஆன்மீக சங்கமம்' : 'Official Published Work & Spiritual Convergence'}
+                </div>
+              </div>
+            </div>
+
             <p style={{ color: '#475569', fontSize: '0.94rem', lineHeight: 1.7, marginBottom: '1.25rem' }}>
               {innerJourneyData.mahaShambala.description[lang]}
             </p>
-            <div style={{ background: '#FAF8F5', padding: '0.85rem 1rem', borderRadius: '8px', fontSize: '0.85rem', color: '#1E293B', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <div style={{ background: '#FAF8F5', padding: '0.85rem 1rem', borderRadius: '8px', fontSize: '0.85rem', color: '#1E293B', display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: 'auto' }}>
               <Calendar size={15} color="#D97706" />
               <span>{innerJourneyData.mahaShambala.dateNote}</span>
             </div>
