@@ -144,9 +144,29 @@ export default async function RecognitionPage({
             {lang === 'ta' ? '540+ தேசிய விருதுகள் & கல்வி நிறுவன அங்கீகாரங்கள்' : '540+ Institutional Accolades & National Quality Accreditations'}
           </h3>
 
-          <div className="grid-3">
+          <div
+            style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              justifyContent: 'center',
+              gap: '1.5rem',
+            }}
+          >
             {institutionalAccolades.map((acc) => (
-              <div key={acc.id} className="card-premium">
+              <div
+                key={acc.id}
+                className="card-premium"
+                style={{
+                  flex: '1 1 300px',
+                  maxWidth: '350px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  borderRadius: '16px',
+                  padding: '1.75rem',
+                  border: '1px solid #E2E8F0',
+                  boxShadow: '0 4px 16px rgba(15, 23, 42, 0.04)',
+                }}
+              >
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.75rem' }}>
                   <Trophy size={20} color="#059669" />
                   <ClaimBadge claimId={acc.claimId} status={acc.verificationStatus} language={lang} />
@@ -160,7 +180,7 @@ export default async function RecognitionPage({
                   {acc.conferredBy[lang]}
                 </div>
 
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.88rem', lineHeight: 1.65 }}>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.88rem', lineHeight: 1.65, margin: 0, marginTop: 'auto' }}>
                   {acc.details[lang]}
                 </p>
               </div>
