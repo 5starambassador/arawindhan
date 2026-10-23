@@ -386,7 +386,14 @@ export default function InstitutionsPage({
               : 'Partnering with founders Ruiko & Hirotada Henmi (Heguru Japan), Dr. J. Arawindhan serves as the National Master Franchise Holder & Managing Director, establishing 10+ state-of-the-art right-brain neuroplasticity centres across India.'}
           </p>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.25rem' }}>
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
+              gap: '1.25rem',
+              alignItems: 'stretch',
+            }}
+          >
             {heguruMilestones.map((milestone) => (
               <div
                 key={milestone.year}
@@ -394,19 +401,59 @@ export default function InstitutionsPage({
                   background: '#FFFFFF',
                   border: '1px solid #E2E8F0',
                   borderRadius: '14px',
-                  padding: '1.25rem',
+                  padding: '1.35rem',
                   boxShadow: '0 2px 8px rgba(15, 23, 42, 0.03)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  height: '100%',
                 }}
               >
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
-                  <span style={{ background: '#D97706', color: '#FFFFFF', fontSize: '0.75rem', fontWeight: 800, padding: '0.15rem 0.5rem', borderRadius: '6px', fontFamily: 'monospace' }}>
+                <div
+                  style={{
+                    display: 'flex',
+                    alignItems: 'flex-start',
+                    gap: '0.65rem',
+                    marginBottom: '0.85rem',
+                    minHeight: '2.65rem',
+                  }}
+                >
+                  <span
+                    style={{
+                      background: 'linear-gradient(135deg, #D97706 0%, #B45309 100%)',
+                      color: '#FFFFFF',
+                      fontSize: '0.78rem',
+                      fontWeight: 800,
+                      padding: '0.2rem 0.55rem',
+                      borderRadius: '6px',
+                      fontFamily: 'monospace',
+                      flexShrink: 0,
+                      marginTop: '0.1rem',
+                      boxShadow: '0 2px 6px rgba(217, 119, 6, 0.25)',
+                    }}
+                  >
                     {milestone.year}
                   </span>
-                  <span style={{ fontSize: '0.86rem', fontWeight: 700, color: '#0F172A' }}>
+                  <h4
+                    style={{
+                      fontSize: '0.94rem',
+                      fontWeight: 800,
+                      color: '#0F172A',
+                      margin: 0,
+                      lineHeight: 1.35,
+                      fontFamily: 'var(--font-heading)',
+                    }}
+                  >
                     {milestone.cities[lang]}
-                  </span>
+                  </h4>
                 </div>
-                <p style={{ color: '#64748B', fontSize: '0.84rem', lineHeight: 1.6, margin: 0 }}>
+                <p
+                  style={{
+                    color: '#475569',
+                    fontSize: '0.86rem',
+                    lineHeight: 1.65,
+                    margin: 0,
+                  }}
+                >
                   {milestone.details[lang]}
                 </p>
               </div>
