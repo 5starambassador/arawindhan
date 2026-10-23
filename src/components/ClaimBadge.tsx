@@ -32,15 +32,46 @@ export const ClaimBadge: React.FC<ClaimBadgeProps> = ({
     text = language === 'ta' ? 'ஒப்பீட்டுத் தரவு' : 'Dual-Sourced';
   }
 
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(
+        new CustomEvent('open-claim-modal', {
+          detail: { claimId },
+        })
+      );
+    }
+  };
+
   return (
-    <span
+    <button
+      type="button"
+      onClick={handleClick}
       className={badgeClass}
-      title={`${language === 'ta' ? 'சான்று எண்' : 'Claim ID'}: ${claimId}`}
-      style={{ display: 'inline-flex', alignItems: 'center', cursor: 'help' }}
+      title={`${language === 'ta' ? 'சான்று எண்' : 'Claim ID'}: ${claimId} (Click to inspect evidence)`}
+      style={{
+        display: 'inline-flex',
+        alignItems: 'center',
+        gap: '4px',
+        cursor: 'pointer',
+        border: 'none',
+        padding: '0.2rem 0.55rem',
+        borderRadius: '999px',
+        transition: 'transform 0.15s ease, box-shadow 0.15s ease',
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.transform = 'translateY(-1px)';
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.transform = 'none';
+      }}
     >
       <Icon size={12} />
       <span>{text}</span>
-      <span style={{ opacity: 0.75, fontSize: '0.68rem', marginLeft: '2px' }}>({claimId})</span>
-    </span>
+      <span style={{ opacity: 0.8, fontSize: '0.68rem', marginLeft: '2px', fontFamily: 'monospace', fontWeight: 700 }}>
+        ({claimId})
+      </span>
+    </button>
   );
 };

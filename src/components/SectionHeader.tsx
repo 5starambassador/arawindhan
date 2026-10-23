@@ -17,25 +17,26 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
     <div
       style={{
         textAlign: centered ? 'center' : 'left',
-        marginBottom: '3rem',
-        maxWidth: centered ? '800px' : '100%',
-        margin: centered ? '0 auto 3rem auto' : '0 0 3rem 0',
+        marginBottom: '2.75rem',
+        maxWidth: centered ? '820px' : '100%',
+        margin: centered ? '0 auto 2.75rem auto' : '0 0 2.75rem 0',
       }}
     >
       {badge && (
-        <div style={{ marginBottom: '0.75rem' }}>
+        <div style={{ marginBottom: '0.85rem' }}>
           <span
             style={{
               display: 'inline-block',
-              background: 'rgba(212, 175, 55, 0.1)',
-              border: '1px solid rgba(212, 175, 55, 0.35)',
-              color: 'var(--gold-glow)',
-              padding: '0.25rem 0.85rem',
+              background: '#FFFBEB',
+              border: '1px solid #FDE68A',
+              color: '#B45309',
+              padding: '0.3rem 0.95rem',
               borderRadius: '9999px',
-              fontSize: '0.8rem',
+              fontSize: '0.75rem',
               fontWeight: 700,
-              letterSpacing: '0.08em',
+              letterSpacing: '0.1em',
               textTransform: 'uppercase',
+              boxShadow: '0 1px 3px rgba(217, 119, 6, 0.08)',
             }}
           >
             {badge}
@@ -43,12 +44,14 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
         </div>
       )}
       <h2
-        className="font-serif heading-gold"
         style={{
-          fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)',
+          fontFamily: 'var(--font-serif)',
+          color: '#0F172A',
+          fontSize: 'clamp(2rem, 3.8vw, 2.75rem)',
           fontWeight: 700,
-          lineHeight: 1.25,
-          marginBottom: '1rem',
+          lineHeight: 1.22,
+          letterSpacing: '-0.015em',
+          marginBottom: '0.85rem',
         }}
       >
         {title}
@@ -56,9 +59,12 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
       {subtitle && (
         <p
           style={{
-            color: 'var(--text-muted)',
+            color: '#475569',
             fontSize: '1.05rem',
             lineHeight: 1.7,
+            fontWeight: 400,
+            maxWidth: '720px',
+            margin: centered ? '0 auto' : '0',
           }}
         >
           {subtitle}

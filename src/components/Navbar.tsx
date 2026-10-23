@@ -45,22 +45,44 @@ export const Navbar: React.FC<NavbarProps> = ({ lang }) => {
           >
             JA
           </div>
-          <div>
-            <div
-              className="font-serif heading-gold"
-              style={{ fontSize: '1.15rem', fontWeight: 800, letterSpacing: '0.01em', lineHeight: 1.2 }}
-            >
-              {uiLabels.platformTitle[lang]}
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
+              <span
+                style={{
+                  fontSize: '1.08rem',
+                  fontWeight: 800,
+                  fontFamily: 'var(--font-serif)',
+                  color: '#0F172A',
+                  letterSpacing: '0.01em',
+                  lineHeight: 1.2,
+                }}
+              >
+                {uiLabels.platformTitle[lang]}
+              </span>
+              <span
+                title="Verified Official Digital Entity"
+                style={{ display: 'inline-flex', alignItems: 'center', color: '#059669' }}
+              >
+                <ShieldCheck size={14} />
+              </span>
             </div>
-            <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '0.35rem', fontWeight: 500 }}>
-              <span>{uiLabels.platformTagline[lang]}</span>
-              <ShieldCheck size={13} color="#059669" />
+            <div
+              style={{
+                fontSize: '0.7rem',
+                color: '#64748B',
+                fontWeight: 500,
+                letterSpacing: '0.02em',
+                lineHeight: 1.25,
+                whiteSpace: 'nowrap',
+              }}
+            >
+              {uiLabels.platformTagline[lang]}
             </div>
           </div>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav style={{ display: 'none', alignItems: 'center', gap: '1.25rem' }} className="desktop-nav">
+        <nav style={{ display: 'none', alignItems: 'center', gap: '1.05rem' }} className="desktop-nav">
           <style jsx>{`
             @media (min-width: 1024px) {
               .desktop-nav {
@@ -80,12 +102,14 @@ export const Navbar: React.FC<NavbarProps> = ({ lang }) => {
                 href={fullHref}
                 style={{
                   textDecoration: 'none',
-                  fontSize: '0.88rem',
+                  fontSize: '0.82rem',
                   fontWeight: isActive ? 700 : 500,
-                  color: isActive ? 'var(--gold-glow)' : 'var(--text-main)',
+                  color: isActive ? '#B45309' : '#1E293B',
                   transition: 'var(--transition)',
-                  borderBottom: isActive ? '2px solid var(--gold-primary)' : '2px solid transparent',
+                  borderBottom: isActive ? '2px solid #D97706' : '2px solid transparent',
                   paddingBottom: '4px',
+                  whiteSpace: 'nowrap',
+                  letterSpacing: '0.01em',
                 }}
               >
                 {link.label[lang]}
@@ -94,8 +118,46 @@ export const Navbar: React.FC<NavbarProps> = ({ lang }) => {
           })}
         </nav>
 
-        {/* Actions: Language Switcher & Mobile Menu Toggle */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+        {/* Actions: Evidence Modal, Language Switcher & Mobile Menu Toggle */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
+          <button
+            onClick={() => {
+              if (typeof window !== 'undefined') {
+                window.dispatchEvent(new CustomEvent('open-claim-modal', { detail: {} }));
+              }
+            }}
+            title={lang === 'ta' ? 'சான்று சரிபார்ப்புக் களஞ்சியம் (Ctrl+K)' : 'Evidence & Claims Inspector (Ctrl+K)'}
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.35rem',
+              background: '#FAF8F5',
+              border: '1px solid #E2E8F0',
+              padding: '0.38rem 0.75rem',
+              borderRadius: '8px',
+              fontSize: '0.78rem',
+              fontWeight: 600,
+              color: '#0F172A',
+              cursor: 'pointer',
+              transition: 'all 0.15s ease',
+            }}
+          >
+            <ShieldCheck size={14} color="#D97706" />
+            <span className="evidence-btn-text">{lang === 'ta' ? 'சான்றுகள்' : 'Claims'}</span>
+            <kbd
+              style={{
+                background: '#E2E8F0',
+                fontSize: '0.65rem',
+                padding: '0.1rem 0.3rem',
+                borderRadius: '4px',
+                color: '#64748B',
+                fontFamily: 'monospace',
+                marginLeft: '2px',
+              }}
+            >
+              ⌘K
+            </kbd>
+          </button>
           <LanguageSwitcher currentLang={lang} />
           <button
             onClick={toggleMobile}

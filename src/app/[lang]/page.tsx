@@ -129,28 +129,48 @@ export default async function HomePage({
                   boxShadow: 'var(--shadow-lg)',
                 }}
               >
-                {/* Symbolic Badge Avatar */}
+                {/* Executive Portrait with Luxury Gold/Emerald Border */}
                 <div
                   style={{
-                    width: '180px',
-                    height: '180px',
+                    position: 'relative',
+                    width: '240px',
+                    height: '280px',
                     margin: '0 auto 1.5rem auto',
-                    borderRadius: '50%',
-                    background: 'linear-gradient(135deg, #FEF3C7 0%, #F59E0B 50%, #B45309 100%)',
-                    border: '4px solid #FFFFFF',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    boxShadow: 'var(--shadow-md)',
+                    borderRadius: '20px',
+                    overflow: 'hidden',
+                    border: '3px solid #D97706',
+                    boxShadow: '0 20px 40px -10px rgba(180, 83, 9, 0.25), 0 0 0 6px #FFFBEB',
                   }}
                 >
-                  <span className="font-serif" style={{ fontSize: '3rem', fontWeight: 800, color: '#FFFFFF' }}>
-                    JA
-                  </span>
-                  <span style={{ fontSize: '0.75rem', color: '#FFFBEB', letterSpacing: '0.1em', fontWeight: 800 }}>
-                    ESTD. 2000
-                  </span>
+                  <img
+                    src="/images/portrait.jpg"
+                    alt={biographyData.name[lang]}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      objectPosition: 'top center',
+                      display: 'block',
+                    }}
+                  />
+                  <div
+                    style={{
+                      position: 'absolute',
+                      bottom: 0,
+                      left: 0,
+                      right: 0,
+                      padding: '0.5rem',
+                      background: 'linear-gradient(to top, rgba(15, 23, 42, 0.85), transparent)',
+                      color: '#FFFFFF',
+                      fontSize: '0.72rem',
+                      fontWeight: 700,
+                      letterSpacing: '0.08em',
+                      textTransform: 'uppercase',
+                      textAlign: 'center',
+                    }}
+                  >
+                    ESTD. 2000 • PUDUCHERRY
+                  </div>
                 </div>
 
                 <h3 className="font-serif heading-gold" style={{ fontSize: '1.45rem', marginBottom: '0.35rem', fontWeight: 800 }}>

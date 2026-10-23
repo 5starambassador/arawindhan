@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { StructuredData } from '@/components/StructuredData';
+import { ClaimModal } from '@/components/ClaimModal';
 import { Language } from '@/types';
 
 export async function generateStaticParams() {
@@ -70,6 +71,7 @@ export default async function LangLayout({
         <Navbar lang={lang} />
         <main>{children}</main>
         <Footer lang={lang} />
+        <ClaimModal language={lang} />
       </body>
     </html>
   );
