@@ -21,7 +21,7 @@ export const StructuredData: React.FC<StructuredDataProps> = ({
       '@id': 'https://www.arawindhan.com/#person',
       name: 'Dr. J. Arawindhan',
       alternateName: [
-        'Santoshi Shri. Arawindhan',
+        'Santoshi Shri Arawindhan',
         'Dr. J. Arawindhan',
         'முனைவர் ஜே. அரவிந்தன்',
       ],

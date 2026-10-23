@@ -6,7 +6,7 @@ export const biographyData = {
     ta: 'முனைவர் ஜே. அரவிந்தன்',
   },
   spiritualName: {
-    en: 'Santoshi Shri. Arawindhan',
+    en: 'Santoshi Shri Arawindhan',
     ta: 'சந்தோஷி ஸ்ரீ அரவிந்தன்',
   },
   roles: {

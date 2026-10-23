@@ -330,4 +330,240 @@ export const booksList: BookItem[] = [
       ta: '"சாதாரண ஆசிரியர் சொல்வார்; நல்ல ஆசிரியர் விளக்குவார்; சிறந்த ஆசிரியர் செய்துகாட்டுவார்; ஆனால் மகா ஆசிரியர் விழித்தெழச் செய்வார். ஐராவத் என்பது அந்த விழிப்புணர்வு நோக்கிய பயணம்."',
     },
   },
+  {
+    id: 'BK-008',
+    slug: 'andava-the-victory-mode',
+    coverImage: '/images/books/andava_victory_mode.jpg',
+    title: {
+      en: 'ANDAVA: The Victory Mode',
+      ta: 'ஆண்டவா: தி விக்டரி மோட் (ANDAVA: The Victory Mode)',
+    },
+    tagline: {
+      en: 'Switching from Victim to Creator of Your Life',
+      ta: 'பாதிக்கப்பட்ட மனநிலையில் இருந்து உங்கள் வாழ்வை உருவாக்கும் படைப்பாளியாக மாறுங்கள்',
+    },
+    author: {
+      en: 'Dr. J. Arawindhan',
+      ta: 'முனைவர் ஜே. அரவிந்தன்',
+    },
+    edition: 'Life Mastery Edition',
+    language: 'English & Tamil',
+    status: 'Published',
+    claimId: 'CLM-023',
+    summary: {
+      en: 'In ANDAVA: The Victory Mode, Dr. J. Arawindhan addresses the subtle trap of modern victimhood—the instinct to blame circumstance, upbringing, or systems for personal stagnation. By deconstructing the neurological and psychological shift into "Victory Mode," this book provides an actionable blueprint to activate internal sovereignty, take radical personal ownership, and consciously engineer triumph in every dimension of life.',
+      ta: 'நவீன மனிதனை முடக்கிப் போடும் பலவீனமான மனநிலையை உடைத்தெறியும் வழிகாட்டி நூல். சூழ்நிலைகளையோ அல்லது பிறரையோ குறைசொல்லும் மனநிலையைக் கடந்து, தன் வாழ்வின் முழுப் பொறுப்பையும் தானே ஏற்றுக்கொண்டு, ஒரு படைப்பாளியாக "வெற்றி பயன்முறைக்கு" (Victory Mode) எவ்வாறு மாறுவது என்பதை உளவியல் மற்றும் ஆன்ம பலத்தோடு இந்நூல் விளக்குகிறது.',
+    },
+    keyThemes: {
+      en: [
+        'The binary shift: Victim consciousness vs. Creator consciousness',
+        'Radical self-ownership as the bedrock of enduring personal power',
+        'Neurological triggers of the "Victory Mode" state',
+        'Architecting daily rituals of unshakeable conviction and momentum',
+      ],
+      ta: [
+        'பாதிக்கப்பட்ட மனநிலைக்கும் படைப்பாளி விழிப்புணர்வுக்கும் இடையிலான மாற்றம்',
+        'தன்னிறைவான பொறுப்பேற்பே உண்மையான அதிகாரத்தின் அடித்தளம்',
+        'வெற்றி மனநிலையைத் தூண்டும் நரம்பியல் பழக்கவழக்கங்கள்',
+        'அசைக்க முடியாத தன்னம்பிக்கை மற்றும் தொடர் முன்னேற்றத்திற்கான தினசரி பயிற்சிகள்',
+      ],
+    },
+    targetAudience: {
+      en: 'Youth, emerging entrepreneurs, corporate leaders, and individuals seeking to overcome self-doubt and achieve personal mastery.',
+      ta: 'இளைஞர்கள், இளம் தொழில்முனைவோர் மற்றும் சுய சந்தேகங்களைக் கடந்து வாழ்வில் சாதிக்கத் துடிக்கும் அனைவரும்.',
+    },
+    readMoreSnippet: {
+      en: '“You cannot conquer the world while you are still making excuses for it. The exact second you stop asking ‘Why did this happen to me?’ and begin declaring ‘I am the creator of what happens next,’ Victory Mode is switched on.”',
+      ta: '"சுய சமாதானங்களை அடுக்கிக் கொண்டிருக்கும் வரை உங்களால் இந்த உலகை வெல்ல முடியாது. ‘இது எனக்கு ஏன் நடந்தது?’ என்று புலம்புவதை நிறுத்திவிட்டு, ‘அடுத்து நடப்பதை நானே தீர்மானிக்கிறேன்’ என்று நீங்கள் அறிவிக்கும் நொடியில் வெற்றி முறை உயிர்பெறுகிறது."',
+    },
+  },
+  {
+    id: 'BK-009',
+    slug: 'the-yoga-of-personality',
+    coverImage: '/images/books/yoga_of_personality.jpg',
+    title: {
+      en: 'The Yoga of Personality',
+      ta: 'ஆளுமையின் யோகம் (The Yoga of Personality)',
+    },
+    tagline: {
+      en: 'A Story of Becoming Who You Already Are — Based on the Teachings of the Original Speech',
+      ta: 'நீங்கள் ஏற்கனவே யார் என்பதை உணரும் ஆளுமைப் பயணம்',
+    },
+    author: {
+      en: 'Dr. J. Arawindhan',
+      ta: 'முனைவர் ஜே. அரவிந்தன்',
+    },
+    edition: 'Consciousness & Leadership Edition',
+    language: 'English & Tamil',
+    status: 'Published',
+    claimId: 'CLM-023',
+    summary: {
+      en: 'Based on the profound teachings of Dr. J. Arawindhan’s celebrated keynote address, The Yoga of Personality challenges conventional corporate definitions of charisma. Rather than treating personality as a superficial mask assembled from rehearsed gestures, the book defines it through the classical yogic lens of inner union—the alignment of thought, speech, energy, and action that allows an individual’s innate genius to shine without friction.',
+      ta: 'முனைவர் ஜே. அரவிந்தனின் புகழ்பெற்ற பேருரையின் அடிப்படையில் அமைந்த அரிய நூல். மேலோட்டமான பாவனைகளையோ மற்றவர்களைக் கவர அணியும் முகமூடியையோ ஆளுமை என்று உலகம் நினைக்கிறது. ஆனால் யோக தத்துவத்தின்படி, மனிதனின் எண்ணம், சொல், செயல் மற்றும் உள் ஆற்றல் ஆகியவை ஒன்றுபடும்போது வெளிப்படும் அசல் மாண்பே உண்மையான ஆளுமை என்பதை இந்நூல் நிறுவுகிறது.',
+    },
+    keyThemes: {
+      en: [
+        'Personality as authentic integration rather than external imitation',
+        'The Five Koshas (sheaths of being) and their role in human magnetism',
+        'Dissolving conditioned social anxiety to liberate natural presence',
+        'The synthesis of yogic stillness and decisive executive power',
+      ],
+      ta: [
+        'போலிப் பாவனைகளைத் தவிர்த்து உள்ளார்ந்த ஒருங்கிணைப்பை ஆளுமையாக்குதல்',
+        'பஞ்ச கோசங்கள் மற்றும் மனித ஈர்ப்பு விசையின் ரகசியங்கள்',
+        'சமூகப் பயங்களைக் களைந்து இயற்கையான தன்னம்பிக்கையை வெளிக்கொணர்தல்',
+        'யோக அமைதியையும் நிர்வாக உறுதியையும் ஒன்றிணைக்கும் கலை',
+      ],
+    },
+    targetAudience: {
+      en: 'Public speakers, teachers, educators, executives, and spiritual aspirants seeking authentic presence.',
+      ta: 'மேடைப் பேச்சாளர்கள், ஆசிரியர்கள், நிறுவன நிர்வாகிகள் மற்றும் மெய்யான தலைமைத்துவ ஆளுமையை வளர்க்க விரும்புவோர்.',
+    },
+    readMoreSnippet: {
+      en: '“Personality is not an outfit you put on to impress the world. It is the radiant stillness that emerges when you have the courage to become who you already are.”',
+      ta: '"ஆளுமை என்பது உலகத்தை கவர நீங்கள் அணிந்து கொள்ளும் ஆடம்பர ஆடை அல்ல; அனைத்து போலிகளையும் கழற்றி எறிந்துவிட்டு, நீங்கள் ஏற்கனவே யார் என்பதை உணரும்போது வெளிப்படும் தூய ஒளியே ஆளுமை."',
+    },
+  },
+  {
+    id: 'BK-010',
+    slug: 'from-knowing-to-doing',
+    coverImage: '/images/books/from_knowing_to_doing.jpg',
+    title: {
+      en: 'From Knowing to Doing',
+      ta: 'அறிதலில் இருந்து செயலுக்கு (From Knowing to Doing)',
+    },
+    tagline: {
+      en: 'The Four Pillars of Youth Empowerment in India: A Practical Guide to Building Skill, Talent, and Purpose For the Gen Z Generation',
+      ta: 'இந்திய இளைஞர் அதிகாரமளித்தலின் 4 தூண்கள்: ஜென்-இசட் தலைமுறைக்கான திறன், மேதமை மற்றும் லட்சிய வழிகாட்டி',
+    },
+    author: {
+      en: 'Dr. J. Arawindhan',
+      ta: 'முனைவர் ஜே. அரவிந்தன்',
+    },
+    edition: 'National Youth Empowerment Edition',
+    language: 'English & Tamil',
+    status: 'Published',
+    claimId: 'CLM-023',
+    summary: {
+      en: 'Written directly for India’s burgeoning Gen Z demographic, From Knowing to Doing bridges the catastrophic chasm between academic information and real-world execution. Dr. J. Arawindhan outlines the Four Pillars of Youth Empowerment—Foundation Skill, Honed Talent, Relentless Execution, and Transcendent Purpose—equipping youngsters with the psychological stamina and technical dexterity to transform knowledge into nation-building enterprises.',
+      ta: 'இந்தியாவின் புதிய தலைமுறை இளைஞர்களுக்காக எழுதப்பட்ட நடைமுறை சாசன நூல். தகவல்களை மனப்பாடம் செய்வதற்கும் நிஜ உலகில் அதைச் செயல்படுத்திக் காட்டுவதற்கும் இடையே உள்ள இடைவெளியை இந்நூல் தகர்க்கிறது. அடிப்படைத் திறன், தனித்துவத் திறமை, அயராத செயல்பாடு மற்றும் உன்னத லட்சியம் ஆகிய 4 தூண்களின் வழியே இளைஞர்கள் தங்கள் ஆற்றலை தேச நிர்மாண சக்தியாக மாற்றுவதற்கான வழிகளை வழங்குகிறது.',
+    },
+    keyThemes: {
+      en: [
+        'The Four Pillars: Skill Mastery, Talent Differentiation, Relentless Doing, Purposeful Direction',
+        'Overcoming digital distraction and information paralysis in the Gen Z era',
+        'The 10,000-hour principle transformed into focused sprints and agile execution',
+        'Creating sovereign value for India on the global stage',
+      ],
+      ta: [
+        '4 தூண்கள்: அடிப்படைத் திறன், தனித்துவ மேதமை, உறுதியான செயல், உன்னத நோக்கம்',
+        'டிஜிட்டல் கவனச்சிதறல்களைக் கடந்து செயலில் ஆழமான கவனம் செலுத்துதல்',
+        'வெறும் அறிவுத் திரட்டலைத் தாண்டி நிஜ உலகப் பிரச்சனைகளுக்கு தீர்வு காணுதல்',
+        'உலக அரங்கில் பாரதத்தின் பெருமையை நிலைநிறுத்தும் இளைஞர் சக்தி',
+      ],
+    },
+    targetAudience: {
+      en: 'Gen Z youth, college students, career starters, school leavers, and youth mentors.',
+      ta: 'கல்லூரி மாணவர்கள், தொழில்முனைவோராக விரும்பும் இளைஞர்கள் மற்றும் இளைய தலைமுறை வழிகாட்டிகள்.',
+    },
+    readMoreSnippet: {
+      en: '“Knowing without doing is the tragedy of modern education. India will not be built by what our graduates store in memory; India will be built by what our youth dare to execute with their hands and hearts.”',
+      ta: '"அறிந்தும் செயல்படாமல் இருப்பது நவீன கல்வியின் மிகப்பெரிய சாபக்கேடு. பட்டதாரிகள் நினைவில் வைத்திருப்பதைக் கொண்டு இந்தியா வளரப் போவதில்லை; இளைஞர்கள் தங்கள் கரங்களாலும் இதயத்தாலும் என்ன செய்து காட்டுகிறார்கள் என்பதிலேயே தேசத்தின் எதிர்காலம் உள்ளது."',
+    },
+  },
+  {
+    id: 'BK-011',
+    slug: 'the-lions-bank-account',
+    coverImage: '/images/books/lions_bank_account.jpg',
+    title: {
+      en: "The Lion's Bank Account",
+      ta: 'சிங்கத்தின் வங்கிக் கணக்கு (The Lion’s Bank Account)',
+    },
+    tagline: {
+      en: 'Stop Chasing Rats, Start Hunting Deer',
+      ta: 'எலிகளைத் துரத்துவதை நிறுத்துங்கள்; மான்களை வேட்டையாடத் தொடங்குங்கள்',
+    },
+    author: {
+      en: 'Dr. J. Arawindhan',
+      ta: 'முனைவர் ஜே. அரவிந்தன்',
+    },
+    edition: 'Wealth Architecture & Mindset Edition',
+    language: 'English & Tamil',
+    status: 'Published',
+    claimId: 'CLM-023',
+    summary: {
+      en: 'Bold, provocative, and razor-sharp, The Lion\'s Bank Account opens with the disruptive reality: "Your first salary is not a flex. It’s a trap." Dr. J. Arawindhan challenges the salaried rat-race conditioning that enslaves ambitious minds in loops of consumerism. Distinguishing between the petty busywork of "chasing rats" and the strategic majesty of "hunting deer," this work delivers an unvarnished masterclass on equity, asset architecture, and sovereign financial independence.',
+      ta: '"உங்கள் முதல் சம்பளம் பெருமைக்குரிய விஷயம் அல்ல; அது ஒரு பொறி!" என்ற அதிரடி உண்மையோடு தொடங்குகிறது இந்நூல். நுகர்வுக் கலாச்சாரத்திலும் சம்பளச் சங்கிலியிலும் சிக்கித் தவிக்கும் இளைஞர்களுக்கு நிதி விடுதலையின் கதவுகளைத் திறக்கிறது. அற்ப விஷயங்களுக்காக ஆற்றலை வீணடிக்கும் எலி வேட்டையை நிறுத்திவிட்டு, பெருஞ்செல்வத்தையும் சுயசார்பையும் ஈட்டும் மான் வேட்டைக்குத் தயாராகுமாறு சிங்கத்தின் கம்பீரத்தோடு அறைகூவல் விடுக்கிறது.',
+    },
+    keyThemes: {
+      en: [
+        'The First Salary Paradox: When safety becomes the ultimate risk',
+        'The Predator’s Economy: Chasing rats (petty distractions) vs. hunting deer (transformative value)',
+        'Building asymmetric compounding wealth over linear wage-trading',
+        'From reactive consumer to autonomous institutional capital architect',
+      ],
+      ta: [
+        'முதல் சம்பள முரண்பாடு: பாதுகாப்பே மிக ஆபத்தான பொறியாக மாறும் விதம்',
+        'ஆற்றல் விரயத்தை தவிர்த்தல்: அற்ப கவனச்சிதறல்களை விடுத்து பெருமதிப்பை உருவாக்குதல்',
+        'நேரத்தை விற்று சம்பாதிக்கும் நிலையிலிருந்து கூட்டு வட்டி மற்றும் மூலதன உருவாக்கம் நோக்கி நகர்தல்',
+        'நுகர்வோர் மனநிலையிலிருந்து நிதிச் சுயாட்சி பெற்ற முதலீட்டாளராக மாறுதல்',
+      ],
+    },
+    targetAudience: {
+      en: 'Young professionals, startup founders, commerce students, and wealth seekers seeking radical financial liberation.',
+      ta: 'இளம் பணிபுரியோர், தொழில் நிறுவனர்கள் மற்றும் உண்மையான நிதி சுதந்திரத்தை நாடும் லட்சியவாதிகள்.',
+    },
+    readMoreSnippet: {
+      en: '“Your first salary is not a flex. It’s a trap. A lion never exhausts its majestic energy chasing field mice through the grass; it sleeps, strategizes, and strikes only when the quarry is worthy of its regal power.”',
+      ta: '"உங்கள் முதல் சம்பளம் பெருமை அல்ல; அது ஒரு பொறி. ஒரு சிங்கம் புல்வெளியில் எலிகளைத் துரத்தி தன் ஆற்றலை வீணடிப்பதில்லை; அது காத்திருக்கிறது, வியூகம் அமைக்கிறது, தன் வலிமைக்கு தகுதியான வேட்டையின் போது மட்டுமே பாய்கிறது."',
+    },
+  },
+  {
+    id: 'BK-012',
+    slug: 'science-of-divine-grace-tirukkural',
+    coverImage: '/images/books/science_of_divine_grace.jpg',
+    title: {
+      en: 'The Science of Divine Grace: Achieving Heavenly Glory through the Tirukkuṟaḷ',
+      ta: 'திருவருளின் அறிவியல் : திருக்குறள் வழி வான் புகழ் அடைதல்',
+    },
+    tagline: {
+      en: 'The Sacred Technology of Righteous Action, Divine Grace & Immortality of Contribution',
+      ta: 'திருக்குறள் காட்டும் மெய்ஞ்ஞான நெறி மற்றும் வான் புகழ் பெறுவதற்கான ஆன்ம அறிவியல்',
+    },
+    author: {
+      en: 'Dr. J. Arawindhan (Santoshi Shri Arawindhan)',
+      ta: 'முனைவர் ஜே. அரவிந்தன் (சந்தோஷி ஸ்ரீ அரவிந்தன்)',
+    },
+    edition: 'Sacred Heritage & Philosophy Edition',
+    language: 'Tamil & English',
+    status: 'Published',
+    claimId: 'CLM-023',
+    summary: {
+      en: 'In this monumental spiritual and philosophical work, Dr. J. Arawindhan decodes the ancient verses of the Tirukkuṟaḷ not merely as ethical literature, but as an exact spiritual science. Exploring the profound dynamic between human endeavor and Thiruvarul (Divine Grace), the book illuminates how righteous living (Aram), ethical prosperity (Porul), and transcendent joy (Inbam) converge to grant the human being Vaan Pugazh—the immortal glory of leaving the world distinctly higher than one found it.',
+      ta: 'திருக்குறளை வெறும் நீதி நூலாக மட்டும் பார்க்காமல், இறையருளை ஈர்த்து வாழ்வில் வான் புகழ் பெறுவதற்கான துல்லியமான மெய்ஞ்ஞான அறிவியலாக விளக்கும் மாபெரும் படைப்பு. மனிதனின் அறநெறி சார்ந்த உழைப்பும், திருவருளின் பேரருளும் இணையும் போது ஏற்படும் அரிய ஆன்ம மாற்றங்களை இந்நூல் விளக்குகிறது. "தோன்றின் புகழொடு தோன்றுக" என்ற குறள் வாக்கின் ஆழமான மெய்ப்பொருளை நவீன வாழ்வியலோடு பொருத்தி வழிகாட்டுகிறது.',
+    },
+    keyThemes: {
+      en: [
+        'Thiruvarul as cosmic resonance: The physics of Divine Grace in everyday action',
+        'Decoding the Tirukkuṟaḷ as an operational manual for human peak potential',
+        'The triad harmony: Aram (Righteousness), Porul (Material Creation), Inbam (Bliss)',
+        'Vaan Pugazh: Transcending biological mortality through selfless civilizational legacy',
+      ],
+      ta: [
+        'திருவருள் என்னும் பிரபஞ்ச ஆற்றல்: அன்றாடச் செயல்களில் இறையருளை ஈர்க்கும் முறை',
+        'மனித உச்சநிலைக்கான வழிகாட்டி நூலாக திருக்குறளை உணர்தல்',
+        'அறம், பொருள், இன்பம் ஆகியவற்றின் முக்காலப் பொருத்தம்',
+        'வான் புகழ்: சுயநலமற்ற மக்கள் சேவையின் மூலம் அழியாப் புகழ் எய்துதல்',
+      ],
+    },
+    targetAudience: {
+      en: 'Scholars of Tamil literature, spiritual practitioners, ethical leaders, educators, and global truth-seekers.',
+      ta: 'தமிழ் இலக்கிய ஆர்வலர்கள், ஆன்மீகப் சாதகர்கள், அறவழியில் வாழத் துடிக்கும் தலைவர்கள் மற்றும் உலகளாவிய மெய்த்தேடலாளர்கள்.',
+    },
+    readMoreSnippet: {
+      en: '“Heavenly glory is never the product of arrogance or noise. It is the silent, eternal afterglow of a human life that aligned itself with Divine Grace to lift millions from darkness into light.”',
+      ta: '"வான் புகழ் என்பது தற்பெருமையால் வருவதல்ல; இறையருளோடு தன் வாழ்வை இணைத்துக்கொண்டு, ஆயிரமாயிரம் உயிர்களை இருளிலிருந்து வெளிச்சத்திற்கு உயர்த்திய ஒரு தூய ஆன்மாவின் அழியாத ஒளியாகும்."',
+    },
+  },
 ];
+
