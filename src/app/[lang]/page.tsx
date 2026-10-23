@@ -229,14 +229,17 @@ export default async function HomePage({
           <div className="grid-4">
             {coreMetrics.map((item, idx) => (
               <div key={`${item.claimId}-${item.number}-${idx}`} className="card-premium">
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.75rem' }}>
-                  <span
-                    className="font-serif heading-gold"
-                    style={{ fontSize: '2.5rem', fontWeight: 800, lineHeight: 1 }}
-                  >
-                    {item.number}
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.65rem' }}>
+                  <span style={{ fontSize: '0.68rem', fontWeight: 800, color: 'var(--gold-glow)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                    {lang === 'ta' ? 'நிறுவன சாதனை' : 'RECORD METRIC'}
                   </span>
-                  <ClaimBadge claimId={item.claimId} status="SOURCE_CLAIM" language={lang} />
+                  <ClaimBadge claimId={item.claimId} status="SOURCE_CLAIM" language={lang} compact />
+                </div>
+                <div
+                  className="font-serif heading-gold"
+                  style={{ fontSize: '2.5rem', fontWeight: 800, lineHeight: 1, marginBottom: '0.65rem' }}
+                >
+                  {item.number}
                 </div>
                 <h4 style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--text-main)', marginBottom: '0.5rem' }}>
                   {item.label[lang]}

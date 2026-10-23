@@ -8,12 +8,14 @@ interface ClaimBadgeProps {
   claimId: string;
   status?: 'CONFIRMED' | 'SOURCE_CLAIM' | 'PENDING_VERIFICATION' | 'CONFLICTING';
   language?: 'en' | 'ta';
+  compact?: boolean;
 }
 
 export const ClaimBadge: React.FC<ClaimBadgeProps> = ({
   claimId,
   status,
   language = 'en',
+  compact = false,
 }) => {
   const masterClaim = MASTER_CLAIMS.find((c) => c.id.toUpperCase() === claimId.toUpperCase());
   const effectiveStatus = status || masterClaim?.verificationStatus || 'CONFIRMED';
@@ -49,15 +51,17 @@ export const ClaimBadge: React.FC<ClaimBadgeProps> = ({
       type="button"
       onClick={handleClick}
       className={badgeClass}
-      title={`${language === 'ta' ? 'சான்று எண்' : 'Claim ID'}: ${claimId} (Click to inspect evidence)`}
+      title={`${text} (${claimId}) - Click to inspect evidence dossier`}
       style={{
         display: 'inline-flex',
         alignItems: 'center',
         gap: '4px',
         cursor: 'pointer',
         border: 'none',
-        padding: '0.2rem 0.55rem',
+        padding: compact ? '0.15rem 0.5rem' : '0.2rem 0.55rem',
         borderRadius: '999px',
+        whiteSpace: 'nowrap',
+        flexShrink: 0,
         transition: 'transform 0.15s ease, box-shadow 0.15s ease',
       }}
       onMouseEnter={(e) => {
@@ -68,10 +72,18 @@ export const ClaimBadge: React.FC<ClaimBadgeProps> = ({
       }}
     >
       <Icon size={12} />
-      <span>{text}</span>
-      <span style={{ opacity: 0.8, fontSize: '0.68rem', marginLeft: '2px', fontFamily: 'monospace', fontWeight: 700 }}>
-        ({claimId})
-      </span>
+      {compact ? (
+        <span style={{ fontSize: '0.72rem', fontFamily: 'monospace', fontWeight: 800 }}>
+          {claimId}
+        </span>
+      ) : (
+        <>
+          <span>{text}</span>
+          <span style={{ opacity: 0.8, fontSize: '0.68rem', marginLeft: '2px', fontFamily: 'monospace', fontWeight: 700 }}>
+            ({claimId})
+          </span>
+        </>
+      )}
     </button>
   );
 };
