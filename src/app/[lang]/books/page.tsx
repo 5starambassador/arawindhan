@@ -27,15 +27,29 @@ export default async function BooksPage({
           subtitle={lang === 'ta' ? 'கல்வி, தலைமைத்துவம், மனித ஆற்றல் மற்றும் ஆன்மீக விழிப்புணர்வு குறித்த ஏழு முக்கிய படைப்புகள்.' : 'A structured catalogue of published works and institutional editions shaping educators, parents, and leaders.'}
         />
 
-        <div className="grid-3">
+        <div
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'center',
+            gap: '1.75rem',
+            alignItems: 'stretch',
+          }}
+        >
           {booksList.map((book) => (
             <div
               key={book.id}
               className="card-premium"
               style={{
+                flex: '1 1 320px',
+                maxWidth: '370px',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
+                borderRadius: '16px',
+                padding: '1.75rem',
+                border: '1px solid #E2E8F0',
+                boxShadow: '0 4px 16px rgba(15, 23, 42, 0.04)',
               }}
             >
               <div>
