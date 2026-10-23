@@ -257,25 +257,56 @@ export const enterprisesList: InstitutionEntry[] = [
   { id: 'ENT-29', name: 'Garuda Park', sector: 'Recreation', category: 'Group Enterprise', location: 'Puducherry', description: { en: 'Outdoor nature adventure park providing rope courses and physical grit training.', ta: 'இயற்கை சாகசப் பூங்கா மற்றும் உடல் துணிவு பயிற்சி மையம்.' } },
   { id: 'ENT-30', name: 'Pogo Land', sector: 'Recreation', category: 'Group Enterprise', location: 'Puducherry', description: { en: 'Children’s active play zone designed for sensory motor development.', ta: 'குழந்தைகளின் உடல் வளர்ச்சி மற்றும் விளையாட்டுப் பூங்கா.' } },
   // Supra Sapiens Academies
-  { id: 'ENT-31', name: 'MiWay Private Limited', sector: 'Suprasapien Academies', category: 'Group Enterprise', location: 'Puducherry', description: { en: 'Proprietary curriculum publishing and educational technology development company.', ta: 'மைவே (MiWay) பாடத்திட்டம் மற்றும் கல்வி தொழில்நுட்ப நிறுவனம்.' } },
-  { id: 'ENT-32', name: 'HeGuru India', sector: 'Suprasapien Academies', category: 'Group Enterprise', location: 'Puducherry / Chennai', description: { en: 'Right-brain early childhood education operating across 9 dedicated centres.', ta: 'ஜப்பானிய ஹெகுரு ஆரம்பக்கால மூளை பயிற்சி மையங்களின் இந்திய இயக்கம்.' } },
+  { id: 'ENT-31', name: 'MiWay Teaching Aids Private Limited', sector: 'Suprasapien Academies', category: 'Group Enterprise', location: '88, Candappa Mudaliar St, Puducherry – 605 001', description: { en: 'Proprietary curriculum publishing, TRACK assessment system, and sensory learning aids deployed nationwide.', ta: '88, கந்தப்பா முதலியார் தெரு, புதுச்சேரியில் இயங்கும் மைவே (MiWay) தனியுரிமை பாடத்திட்டம் மற்றும் கல்வி உபகரணங்கள் நிறுவனம்.' } },
+  { id: 'ENT-32', name: 'Heguru India', sector: 'Suprasapien Academies', category: 'Group Enterprise', location: 'Puducherry / Chennai / Bengaluru / Pune / Hyderabad', description: { en: 'National Master Franchise for Heguru Japan (Ruiko & Hirotada Henmi). Right-brain precision neuroplasticity operating across 10+ centres.', ta: 'ஜப்பானிய ஹெகுரு நிறுவனத்தின் இந்திய முதன்மை இயக்கம். 10+ மையங்களில் அதிவேக வலதுமூளை நரம்பியல் பயிற்சி.' } },
   { id: 'ENT-33', name: 'Wow Academy', sector: 'Suprasapien Academies', category: 'Group Enterprise', location: 'Puducherry', description: { en: 'Advanced cognitive and habit mastery institution for school students.', ta: 'மாணவர்களின் உயர் சிந்தனை மற்றும் பழக்க மேலாண்மை அகாடமி.' } },
   { id: 'ENT-34', name: 'Jaiho Academy', sector: 'Suprasapien Academies', category: 'Group Enterprise', location: 'Puducherry', description: { en: 'Patriotic leadership, civic duty, and values-based youth development.', ta: 'தேசப்பற்று மற்றும் குடிமைப் பொறுப்புணர்வு கொண்ட இளைஞர் பயிற்சி கூடம்.' } },
-  { id: 'ENT-35', name: 'Wow Schooling', sector: 'Suprasapien Academies', category: 'Group Enterprise', location: 'Puducherry', description: { en: 'Future-ready homeschooling and flexible schooling learning system.', ta: 'எதிர்கால தேவைகளுக்கான நவீன மாற்றுப் பள்ளி கல்வி முறை.' } },
-  { id: 'ENT-36', name: 'Total Tilt', sector: 'Suprasapien Academies', category: 'Group Enterprise', location: 'Puducherry', description: { en: 'Neuroscience and sensory-motor acceleration studio.', ta: 'நரம்பியல் மற்றும் புலன்கள் செயலாக்க ஆய்வகம்.' } },
-  { id: 'ENT-37', name: 'Skill Actualization Private Limited', sector: 'Suprasapien Academies', category: 'Group Enterprise', location: 'Puducherry', description: { en: 'Corporate and adolescent skill certification and aptitude testing.', ta: 'திறன் சான்றிதழ் மற்றும் திறனாய்வு நிறுவனம்.' } },
+  { id: 'ENT-35', name: 'Q-School', sector: 'Suprasapien Academies', category: 'Group Enterprise', location: 'Puducherry', description: { en: 'Pioneering early-childhood developmental model nurturing 9 cognitive and ethical attributes.', ta: '9 அறிவு மற்றும் ஒழுக்கப் பண்புகளை குழந்தைகளிடம் விதைக்கும் முன்னோடி பள்ளி மாதிரி.' } },
+  { id: 'ENT-36', name: 'Booshidoo Martial Discipline', sector: 'Suprasapien Academies', category: 'Group Enterprise', location: 'Puducherry', description: { en: 'Ancient martial arts, Silambam dexterity, and neuromuscular discipline academy.', ta: 'பாரம்பரிய சிலம்பம் மற்றும் மன உறுதி வளர்க்கும் தற்காப்புக் கலை அகாடமி.' } },
+  { id: 'ENT-37', name: 'Ignite Labs (Startup Launchpad)', sector: 'Suprasapien Academies', category: 'Group Enterprise', location: 'Puducherry', description: { en: 'Incubator empowering students to ideate, prototype, and launch commercial ventures.', ta: 'மாணவர்கள் தங்கள் புத்தாக்க சிந்தனைகளை தொழிலாக மாற்ற உதவும் அடைகாக்கும் மையம் (Incubator).' } },
+  { id: 'ENT-38', name: 'Skill Actualization Private Limited', sector: 'Suprasapien Academies', category: 'Group Enterprise', location: 'Puducherry', description: { en: 'Corporate and adolescent skill certification and aptitude testing.', ta: 'திறன் சான்றிதழ் மற்றும் திறனாய்வு நிறுவனம்.' } },
   // IT & Tech
-  { id: 'ENT-38', name: 'Axen Tech', sector: 'Technology & Media', category: 'Group Enterprise', location: 'Bangalore / Puducherry', description: { en: 'Cloud software engineering, educational ERP platforms, and AI applications.', ta: 'மென்பொருள் பொறியியல் மற்றும் கல்வி மேலாண்மை தொழில்நுட்ப நிறுவனம்.' } },
-  { id: 'ENT-39', name: 'UCMax - Abacus', sector: 'Technology & Media', category: 'Group Enterprise', location: 'Puducherry / Chennai', description: { en: 'Bilateral mental arithmetic training system deployed across school networks.', ta: 'இரு மூளை அரைக்கோளங்களையும் தூண்டும் மனக்கணக்கு அபேகஸ் நிறுவனம்.' } },
-  { id: 'ENT-40', name: 'CAJ-Infosys', sector: 'Technology & Media', category: 'Group Enterprise', location: 'Puducherry', description: { en: 'IT infrastructure management, campus networking, and hardware support.', ta: 'தகவல் தொழில்நுட்ப கட்டமைப்பு மற்றும் கணினி வலையமைப்பு பராமரிப்பு.' } },
-  { id: 'ENT-41', name: 'Honey TV', sector: 'Technology & Media', category: 'Group Enterprise', location: 'Puducherry', description: { en: 'Regional digital television and student broadcast production network.', ta: 'மண்டல டிஜிட்டல் தொலைக்காட்சி மற்றும் மாணவர் செய்தி தயாரிப்பு தளம்.' } },
-  { id: 'ENT-42', name: 'Community Radio Happy FM', sector: 'Technology & Media', category: 'Group Enterprise', location: 'Puducherry', description: { en: 'Community radio station broadcasting educational content, music, and social awareness.', ta: 'கல்வி மற்றும் சமூக விழிப்புணர்வுக்கான சமூக வானொலி நிலையம்.' } },
+  { id: 'ENT-39', name: 'Axen Tech', sector: 'Technology & Media', category: 'Group Enterprise', location: 'Bangalore / Puducherry', description: { en: 'Cloud software engineering, educational ERP platforms, and AI applications.', ta: 'மென்பொருள் பொறியியல் மற்றும் கல்வி மேலாண்மை தொழில்நுட்ப நிறுவனம்.' } },
+  { id: 'ENT-40', name: 'UCMax - Abacus', sector: 'Technology & Media', category: 'Group Enterprise', location: 'Puducherry / Chennai', description: { en: 'Bilateral mental arithmetic training system deployed across school networks.', ta: 'இரு மூளை அரைக்கோளங்களையும் தூண்டும் மனக்கணக்கு அபேகஸ் நிறுவனம்.' } },
+  { id: 'ENT-41', name: 'CAJ-Infosys', sector: 'Technology & Media', category: 'Group Enterprise', location: 'Puducherry', description: { en: 'IT infrastructure management, campus networking, and hardware support.', ta: 'தகவல் தொழில்நுட்ப கட்டமைப்பு மற்றும் கணினி வலையமைப்பு பராமரிப்பு.' } },
+  { id: 'ENT-42', name: 'Honey TV', sector: 'Technology & Media', category: 'Group Enterprise', location: 'Puducherry', description: { en: 'Regional digital television and student broadcast production network.', ta: 'மண்டல டிஜிட்டல் தொலைக்காட்சி மற்றும் மாணவர் செய்தி தயாரிப்பு தளம்.' } },
+  { id: 'ENT-43', name: 'Community Radio Happy FM', sector: 'Technology & Media', category: 'Group Enterprise', location: 'Puducherry', description: { en: 'Community radio station broadcasting educational content, music, and social awareness.', ta: 'கல்வி மற்றும் சமூக விழிப்புணர்வுக்கான சமூக வானொலி நிலையம்.' } },
+  // Recreation
+  { id: 'ENT-44', name: 'Pop Tron Edutainment Park', sector: 'Recreation', category: 'Group Enterprise', location: 'Puducherry', description: { en: 'Interactive digital edutainment, motion games, and physical activity park.', ta: 'ஊடாடும் டிஜிட்டல் விளையாட்டுகள் மற்றும் உடற்பயிற்சி பூங்கா.' } },
+  { id: 'ENT-45', name: 'Samporna Resorts', sector: 'Recreation', category: 'Group Enterprise', location: 'Puducherry Coast', description: { en: 'Eco-friendly coastal resort offering tranquil family retreats and conferences.', ta: 'கடற்கரை சூழல் சுற்றுலா மற்றும் தியான ஓய்வு விடுதி.' } },
   // WOW Wellness & Trusts
-  { id: 'ENT-43', name: 'Wow Health Boutique Private Limited', sector: 'Wellness & Healthcare', category: 'Group Enterprise', location: 'Puducherry', description: { en: 'Natural wellness, herbal supplements, and holistic health products.', ta: 'இயற்கை மூலிகை பொருட்கள் மற்றும் முழுமையான நல்வாழ்வு நிறுவனம்.' } },
-  { id: 'ENT-44', name: 'Divya Dharshan', sector: 'Wellness & Healthcare', category: 'Group Enterprise', location: 'Puducherry', description: { en: 'Spiritual literature, meditation supplies, and energy-enhancement tools.', ta: 'ஆன்மீக இலக்கியங்கள் மற்றும் தியான சாதனங்கள் மையம்.' } },
-  { id: 'ENT-45', name: 'Hope Wellness Center', sector: 'Wellness & Healthcare', category: 'Group Enterprise', location: 'Puducherry', description: { en: 'Naturopathy, yoga therapy, and holistic lifestyle recovery clinics.', ta: 'இயற்கை மருத்துவம், யோகா சிகிச்சை மற்றும் நல்வாழ்வு மையம்.' } },
-  { id: 'ENT-46', name: 'Divine Grace Trust', sector: 'Wellness & Healthcare', category: 'Trust', location: 'Puducherry', description: { en: 'Registered charitable trust organizing spiritual retreats, Divya Yogam, and social service.', ta: 'திவ்ய யோகம் மற்றும் ஆன்மீக சமூக சேவைகளை நடத்தும் அறக்கட்டளை.' } },
-  { id: 'ENT-47', name: 'Swamy Vaidya', sector: 'Wellness & Healthcare', category: 'Group Enterprise', location: 'Puducherry', description: { en: 'Traditional Siddha and Ayurvedic medicine clinic promoting indigenous healing.', ta: 'பாரம்பரிய சித்த மற்றும் ஆயுர்வேத மருத்துவ சிகிச்சை மையம்.' } },
-  { id: 'ENT-48', name: 'Lakshmi Samraj Trust', sector: 'Wellness & Healthcare', category: 'Trust', location: 'Puducherry', description: { en: 'Philanthropic trust supporting educational scholarships for underprivileged youth.', ta: 'பின்தங்கிய மாணவர்களின் கல்விக்கு உதவும் தொண்டு அறக்கட்டளை.' } },
-  { id: 'ENT-49', name: 'Yadava Trust', sector: 'Wellness & Healthcare', category: 'Trust', location: 'Puducherry', description: { en: 'Community development trust promoting cow protection and organic farming.', ta: 'கோசம்ரக்ஷணை மற்றும் இயற்கை விவசாயத்தை ஊக்குவிக்கும் அறக்கட்டளை.' } },
+  { id: 'ENT-46', name: 'Wow Health Boutique Private Limited', sector: 'Wellness & Healthcare', category: 'Group Enterprise', location: 'Puducherry', description: { en: 'Natural wellness, herbal supplements, and holistic health products.', ta: 'இயற்கை மூலிகை பொருட்கள் மற்றும் முழுமையான நல்வாழ்வு நிறுவனம்.' } },
+  { id: 'ENT-47', name: 'Divya Dharshan', sector: 'Wellness & Healthcare', category: 'Group Enterprise', location: 'Puducherry', description: { en: 'Spiritual literature, meditation supplies, and energy-enhancement tools.', ta: 'ஆன்மீக இலக்கியங்கள் மற்றும் தியான சாதனங்கள் மையம்.' } },
+  { id: 'ENT-48', name: 'Hope Wellness Center', sector: 'Wellness & Healthcare', category: 'Group Enterprise', location: 'Puducherry', description: { en: 'Naturopathy, yoga therapy, and holistic lifestyle recovery clinics.', ta: 'இயற்கை மருத்துவம், யோகா சிகிச்சை மற்றும் நல்வாழ்வு மையம்.' } },
+  { id: 'ENT-49', name: 'Divine Grace Trust', sector: 'Wellness & Healthcare', category: 'Trust', location: 'Puducherry', description: { en: 'Registered charitable trust organizing spiritual retreats, Divya Yogam, and social service.', ta: 'திவ்ய யோகம் மற்றும் ஆன்மீக சமூக சேவைகளை நடத்தும் அறக்கட்டளை.' } },
+  { id: 'ENT-50', name: 'Swamy Vaidya', sector: 'Wellness & Healthcare', category: 'Group Enterprise', location: 'Puducherry', description: { en: 'Traditional Siddha and Ayurvedic medicine clinic promoting indigenous healing.', ta: 'பாரம்பரிய சித்த மற்றும் ஆயுர்வேத மருத்துவ சிகிச்சை மையம்.' } },
+  { id: 'ENT-51', name: 'Lakshmi Samraj Trust', sector: 'Wellness & Healthcare', category: 'Trust', location: 'Puducherry', description: { en: 'Philanthropic trust supporting educational scholarships for underprivileged youth.', ta: 'பின்தங்கிய மாணவர்களின் கல்விக்கு உதவும் தொண்டு அறக்கட்டளை.' } },
+  { id: 'ENT-52', name: 'Yadava Trust', sector: 'Wellness & Healthcare', category: 'Trust', location: 'Puducherry', description: { en: 'Community development trust promoting cow protection and organic farming.', ta: 'கோசம்ரக்ஷணை மற்றும் இயற்கை விவசாயத்தை ஊக்குவிக்கும் அறக்கட்டளை.' } },
+];
+
+export const heguruMilestones = [
+  {
+    year: '2023',
+    cities: { en: 'Chennai, Bengaluru, Puducherry', ta: 'சென்னை, பெங்களூரு, புதுச்சேரி' },
+    details: {
+      en: 'Inaugurated Heguru India flagship centres bringing Ruiko & Hirotada Henmi’s right-brain methodology to India under Dr. J. Arawindhan’s leadership.',
+      ta: 'முனைவர் ஜே. அரவிந்தன் தலைமையில் ருயிகோ & ஹிரோதடா ஹென்மியின் ஜப்பானிய வலதுமூளை நுட்பங்களை இந்தியாவில் முறைப்படி அறிமுகப்படுத்துதல்.',
+    },
+  },
+  {
+    year: '2024',
+    cities: { en: 'Adyar (Chennai Expansion), Trichy', ta: 'அடையாறு (சென்னை), திருச்சி' },
+    details: {
+      en: 'Expanded high-frequency cognitive stimulation, speed listening, and photographic memory centres across key Tamil Nadu educational belts.',
+      ta: 'புகைப்பட நினைவாற்றல் மற்றும் அதிவிரைவு மூளை பயிற்சி மையங்களை தமிழகத்தின் முக்கிய நகரங்களில் விரிவுபடுத்துதல்.',
+    },
+  },
+  {
+    year: '2025',
+    cities: { en: 'Pune, Hyderabad (10+ Pan-India Centres)', ta: 'புனே, ஹைதராபாத் (10+ அகில இந்திய மையங்கள்)' },
+    details: {
+      en: 'Crossed 10+ operational centres nationwide, expanding into Maharashtra and Telangana to train infants and young learners in Whole-Brain Synchrony.',
+      ta: 'மகாராஷ்டிரா மற்றும் தெலுங்கானா வரை பரவி 10+ மையங்களுடன் நாடு தழுவிய அளவில் குழந்தைகளுக்கு முழுமூளை ஒருங்கிணைப்புப் பயிற்சி வழங்குதல்.',
+    },
+  },
 ];

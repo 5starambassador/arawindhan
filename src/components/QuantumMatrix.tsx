@@ -175,6 +175,18 @@ export const QuantumMatrix: React.FC<QuantumMatrixProps> = ({ lang }) => {
     return true;
   });
 
+  const handleFilterChange = (mode: 'ALL' | 'CREATIONS' | 'SYNTHESIS') => {
+    setFilterMode(mode);
+    const nextFiltered = INTELLIGENCE_NODES.filter((node) => {
+      if (mode === 'CREATIONS') return node.category === 'Arawindhan Creation';
+      if (mode === 'SYNTHESIS') return node.category === 'Suprasapien Synthesis';
+      return true;
+    });
+    if (nextFiltered.length > 0 && !nextFiltered.some((n) => n.id === activeNode.id)) {
+      setActiveNode(nextFiltered[0]);
+    }
+  };
+
   return (
     <div
       style={{
@@ -245,7 +257,7 @@ export const QuantumMatrix: React.FC<QuantumMatrixProps> = ({ lang }) => {
           ].map((mode) => (
             <button
               key={mode.id}
-              onClick={() => setFilterMode(mode.id as any)}
+              onClick={() => handleFilterChange(mode.id as any)}
               style={{
                 background: filterMode === mode.id ? '#FFFFFF' : 'transparent',
                 color: filterMode === mode.id ? '#0F172A' : '#64748B',
@@ -269,17 +281,19 @@ export const QuantumMatrix: React.FC<QuantumMatrixProps> = ({ lang }) => {
       <div
         style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+          gridTemplateColumns: 'minmax(280px, 1fr) minmax(320px, 1.2fr)',
           gap: '2rem',
-          alignItems: 'stretch',
+          alignItems: 'start',
         }}
       >
         {/* Left: Node Selector Matrix */}
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(130px, 1fr))',
             gap: '0.65rem',
+            alignContent: 'start',
+            alignItems: 'start',
           }}
         >
           {filteredNodes.map((node) => {
@@ -295,24 +309,28 @@ export const QuantumMatrix: React.FC<QuantumMatrixProps> = ({ lang }) => {
                     : '#FFFFFF',
                   border: isSelected ? '2px solid #D97706' : '1px solid #E2E8F0',
                   borderRadius: '12px',
-                  padding: '0.85rem',
+                  padding: '0.75rem 0.85rem',
                   textAlign: 'left',
                   cursor: 'pointer',
                   position: 'relative',
                   boxShadow: isSelected ? '0 4px 15px rgba(217, 119, 6, 0.2)' : '0 1px 3px rgba(0,0,0,0.02)',
                   transition: 'all 0.18s ease',
                   transform: isSelected ? 'translateY(-2px)' : 'none',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'flex-start',
+                  minHeight: '82px',
                 }}
               >
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.25rem' }}>
-                  <span style={{ fontSize: '0.68rem', fontWeight: 800, color: isSelected ? '#B45309' : '#94A3B8', fontFamily: 'monospace' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', marginBottom: '0.35rem' }}>
+                  <span style={{ fontSize: '0.7rem', fontWeight: 800, color: isSelected ? '#B45309' : '#94A3B8', fontFamily: 'monospace' }}>
                     {node.number}
                   </span>
                   {isSpecial && (
-                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#D97706' }} />
+                    <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#D97706', boxShadow: '0 0 6px rgba(217,119,6,0.6)' }} />
                   )}
                 </div>
-                <div style={{ fontSize: '0.82rem', fontWeight: 700, color: '#0F172A', lineHeight: 1.25 }}>
+                <div style={{ fontSize: '0.82rem', fontWeight: 700, color: '#0F172A', lineHeight: 1.3 }}>
                   {node.title[lang]}
                 </div>
               </button>

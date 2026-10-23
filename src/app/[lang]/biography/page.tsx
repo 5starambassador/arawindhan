@@ -1,7 +1,31 @@
 import React from 'react';
 import Link from 'next/link';
-import { ShieldCheck, Compass, CheckCircle2, ArrowRight, GraduationCap, Building2, Sparkles } from 'lucide-react';
-import { biographyData, avatarPhases } from '@/data/biography';
+import {
+  ShieldCheck,
+  Compass,
+  CheckCircle2,
+  ArrowRight,
+  GraduationCap,
+  Building2,
+  Sparkles,
+  Quote,
+  Lightbulb,
+  Award,
+  Layers,
+  HeartHandshake,
+  BookOpen,
+  Calendar,
+  MapPin,
+  TrendingUp,
+} from 'lucide-react';
+import {
+  biographyData,
+  avatarPhases,
+  leadershipLessons,
+  coreValues,
+  directQuotes,
+  transformationRipples,
+} from '@/data/biography';
 import { SectionHeader } from '@/components/SectionHeader';
 import { ClaimBadge } from '@/components/ClaimBadge';
 import { Language } from '@/types';
@@ -38,19 +62,55 @@ export default async function BiographyPage({
           }}
         >
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', flexWrap: 'wrap', gap: '0.75rem' }}>
-            <span style={{ color: 'var(--gold-glow)', fontSize: '0.85rem', fontWeight: 800, textTransform: 'uppercase' }}>
-              {lang === 'ta' ? 'கல்வித் தோற்றம்: 2000 முதல் 2026' : 'GENESIS & 25-YEAR ODYSSEY (2000–2026)'}
+            <span style={{ color: 'var(--gold-glow)', fontSize: '0.85rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+              {lang === 'ta' ? 'கல்வித் தோற்றம்: 1998 முதல் 2026' : 'GENESIS & 28-YEAR ODYSSEY (1998–2026)'}
             </span>
             <ClaimBadge claimId="CLM-001" status="CONFIRMED" language={lang} />
           </div>
 
-          <h3 className="font-serif heading-gold" style={{ fontSize: '1.75rem', marginBottom: '1.25rem', fontWeight: 800 }}>
+          <h3 className="font-serif heading-gold" style={{ fontSize: '1.85rem', marginBottom: '1.25rem', fontWeight: 800 }}>
             {lang === 'ta' ? 'மெக்கானிக்கல் பொறியியலில் இருந்து மனித ஆளுமைப் புரட்சி வரை' : 'From Mechanical Engineering to Awakening Human Potential'}
           </h3>
 
           <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: 1.85, marginBottom: '1.5rem' }}>
             {biographyData.overview[lang]}
           </p>
+
+          {/* 1998 Origin Bedrock Box from MD Magazine */}
+          <div
+            style={{
+              background: 'linear-gradient(135deg, #FAF8F5 0%, #FFFBEB 100%)',
+              border: '1.5px solid #FDE68A',
+              borderRadius: '16px',
+              padding: '1.75rem',
+              marginBottom: '2rem',
+              boxShadow: '0 4px 15px rgba(217, 119, 6, 0.05)',
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#B45309', fontWeight: 800, fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.65rem' }}>
+              <Calendar size={16} color="#D97706" />
+              <span>{lang === 'ta' ? '1998 தொடக்கம்: ஆசிரியர்களை உருவாக்குவதே மூலவேர்' : '1998 Foundation: The Teacher as the Catalyst'}</span>
+            </div>
+            <h4 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#0F172A', marginBottom: '0.65rem' }}>
+              {biographyData.originStory.foundation[lang]}
+            </h4>
+            <p style={{ color: '#475569', fontSize: '0.94rem', lineHeight: 1.75, margin: 0 }}>
+              {biographyData.originStory.narrative[lang]}
+            </p>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '0.75rem', marginTop: '1.25rem', paddingTop: '1.25rem', borderTop: '1px solid #F1E5D5' }}>
+              {biographyData.originStory.milestones.map((m, idx) => (
+                <div key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem' }}>
+                  <span style={{ background: '#D97706', color: '#FFFFFF', padding: '0.1rem 0.45rem', borderRadius: '4px', fontSize: '0.72rem', fontWeight: 800, fontFamily: 'monospace' }}>
+                    {m.year}
+                  </span>
+                  <span style={{ fontSize: '0.82rem', color: '#1E293B', fontWeight: 600, lineHeight: 1.4 }}>
+                    {m.milestone[lang]}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
 
           {/* Core Thesis Box */}
           <div
@@ -207,6 +267,271 @@ export default async function BiographyPage({
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+
+        {/* Editorial Insights: Seven Lessons from the Leader (Page 23 MD Magazine) */}
+        <div style={{ maxWidth: '1000px', margin: '0 auto 4.5rem auto' }}>
+          <SectionHeader
+            badge={lang === 'ta' ? 'பத்திரிகை சிறப்புக் கட்டுரை • MD இதழ்' : 'EDITORIAL INSIGHTS • MD COMMEMORATIVE MAGAZINE'}
+            title={lang === 'ta' ? 'தலைவரிடமிருந்து 7 வாழ்வியல் பாடங்கள்' : 'Seven Lessons from the Leader'}
+            subtitle={lang === 'ta' ? '28 ஆண்டு கால கல்விப் பயணம் மற்றும் நிறுவன உருவாக்கத்தில் செதுக்கப்பட்ட நடைமுறை தலைமைத்துவ ஞானம்.' : 'Practical leadership principles forged over 28 years of building world-class education systems.'}
+          />
+
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+              gap: '1.5rem',
+            }}
+          >
+            {leadershipLessons.map((lesson) => (
+              <div
+                key={lesson.number}
+                className="card-premium"
+                style={{
+                  padding: '1.75rem',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                  border: '1px solid #E2E8F0',
+                  borderRadius: '16px',
+                  background: '#FFFFFF',
+                  position: 'relative',
+                  overflow: 'hidden',
+                }}
+              >
+                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(90deg, #D97706, #F59E0B)' }} />
+                
+                <div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.85rem' }}>
+                    <span style={{ background: '#FFFBEB', border: '1px solid #FDE68A', color: '#B45309', padding: '0.2rem 0.65rem', borderRadius: '999px', fontSize: '0.72rem', fontWeight: 800, fontFamily: 'monospace' }}>
+                      LESSON 0{lesson.number}
+                    </span>
+                    <Sparkles size={15} color="#D97706" />
+                  </div>
+
+                  <h4 style={{ fontSize: '1.15rem', fontWeight: 800, color: '#0F172A', marginBottom: '0.75rem', lineHeight: 1.35 }}>
+                    {lesson.title[lang]}
+                  </h4>
+
+                  <p style={{ color: '#475569', fontSize: '0.9rem', lineHeight: 1.7, marginBottom: '1.25rem' }}>
+                    {lesson.principle[lang]}
+                  </p>
+                </div>
+
+                <div
+                  style={{
+                    background: '#FAF8F5',
+                    borderLeft: '3px solid #D97706',
+                    padding: '0.85rem 1rem',
+                    borderRadius: '0 8px 8px 0',
+                    display: 'flex',
+                    alignItems: 'flex-start',
+                    gap: '0.5rem',
+                  }}
+                >
+                  <Quote size={15} color="#D97706" style={{ minWidth: '15px', marginTop: '2px' }} />
+                  <p style={{ fontSize: '0.84rem', fontStyle: 'italic', color: '#1E293B', margin: 0, lineHeight: 1.55 }}>
+                    "{lesson.quote[lang]}"
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* The 7 Core Values Behind the Vision (Page 30 MD Magazine) */}
+        <div
+          style={{
+            maxWidth: '1000px',
+            margin: '0 auto 4.5rem auto',
+            background: 'linear-gradient(180deg, #FFFFFF 0%, #FAF8F5 100%)',
+            border: '1.5px solid #FDE68A',
+            borderRadius: '24px',
+            padding: '2.5rem',
+            boxShadow: '0 10px 30px -10px rgba(217, 119, 6, 0.08)',
+          }}
+        >
+          <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.45rem', background: '#FFFBEB', border: '1px solid #FDE68A', padding: '0.2rem 0.65rem', borderRadius: '999px', fontSize: '0.72rem', fontWeight: 800, color: '#B45309', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.5rem' }}>
+              <Compass size={13} color="#D97706" />
+              <span>{lang === 'ta' ? 'மூலக் கொள்கைகள்' : 'PHILOSOPHICAL PILLARS'}</span>
+            </div>
+            <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: 800, color: '#0F172A', margin: 0 }}>
+              {lang === 'ta' ? 'தொலைநோக்குப் பார்வையின் 7 மூல விழுமியங்கள்' : 'The Seven Values Behind the Vision'}
+            </h3>
+            <p style={{ margin: '0.4rem auto 0 auto', maxWidth: '650px', color: '#64748B', fontSize: '0.92rem' }}>
+              {lang === 'ta'
+                ? 'ஆச்சாரியாவின் ஒவ்வொரு வகுப்பறை, நிறுவனம் மற்றும் வழிகாட்டல் தருணங்களையும் வழிநடத்தும் அடிப்படைப் பண்புகள்.'
+                : 'The foundational tenets guiding every classroom, enterprise, and mentorship interaction across the ecosystem.'}
+            </p>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem' }}>
+            {coreValues.map((val) => (
+              <div
+                key={val.number}
+                style={{
+                  background: '#FFFFFF',
+                  border: '1px solid #E2E8F0',
+                  borderRadius: '14px',
+                  padding: '1.25rem',
+                  display: 'flex',
+                  gap: '1rem',
+                  alignItems: 'flex-start',
+                  boxShadow: '0 2px 8px rgba(15, 23, 42, 0.03)',
+                }}
+              >
+                <div
+                  style={{
+                    minWidth: '32px',
+                    height: '32px',
+                    borderRadius: '8px',
+                    background: 'linear-gradient(135deg, #FEF3C7 0%, #D97706 100%)',
+                    color: '#FFFFFF',
+                    fontWeight: 800,
+                    fontSize: '0.85rem',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontFamily: 'monospace',
+                  }}
+                >
+                  {val.number}
+                </div>
+                <div>
+                  <h5 style={{ fontSize: '0.98rem', fontWeight: 800, color: '#0F172A', margin: '0 0 0.35rem 0' }}>
+                    {val.title[lang]}
+                  </h5>
+                  <p style={{ fontSize: '0.86rem', color: '#475569', lineHeight: 1.6, margin: 0 }}>
+                    {val.description[lang]}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* The 5 Concentric Ripples of Educational Transformation (Page 32 MD Magazine) */}
+        <div style={{ maxWidth: '1000px', margin: '0 auto 4.5rem auto' }}>
+          <SectionHeader
+            badge={lang === 'ta' ? 'சமூகத் தாக்கம்' : 'SOCIETAL MULTIPLIER'}
+            title={lang === 'ta' ? 'கல்வி மாற்றத்தின் 5 தொடர் அலைகள்' : 'The Five Concentric Ripples of Transformation'}
+            subtitle={lang === 'ta' ? 'ஒரு மனிதரின் தொலைநோக்கு எவ்வாறு ஆசிரியர்கள், குழந்தைகள், குடும்பங்கள் மற்றும் எதிர்காலத் தலைமுறையினரைத் தொட்டு விரிகிறது.' : 'How a single visionary spark expands outward into educators, children, families, communities, and future generations.'}
+          />
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            {transformationRipples.map((ripple) => (
+              <div
+                key={ripple.step}
+                className="card-premium"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '1.5rem',
+                  padding: '1.25rem 1.75rem',
+                  flexWrap: 'wrap',
+                }}
+              >
+                <div
+                  style={{
+                    minWidth: '42px',
+                    height: '42px',
+                    borderRadius: '50%',
+                    background: '#FFFBEB',
+                    border: '2px solid #D97706',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontWeight: 800,
+                    fontSize: '0.95rem',
+                    color: '#B45309',
+                    fontFamily: 'monospace',
+                  }}
+                >
+                  0{ripple.step}
+                </div>
+
+                <div style={{ flex: '1 1 240px' }}>
+                  <div style={{ fontSize: '0.72rem', fontWeight: 800, color: '#D97706', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                    {lang === 'ta' ? `நிலை 0${ripple.step}` : `RIPPLE LEVEL 0${ripple.step}`}
+                  </div>
+                  <h4 style={{ fontSize: '1.15rem', fontWeight: 800, color: '#0F172A', margin: '0.15rem 0' }}>
+                    {ripple.level[lang]}
+                  </h4>
+                  <div style={{ fontSize: '0.85rem', color: '#64748B', fontWeight: 600 }}>
+                    {ripple.focus[lang]}
+                  </div>
+                </div>
+
+                <div style={{ flex: '2 1 320px', borderLeft: '1px solid #E2E8F0', paddingLeft: '1.25rem' }}>
+                  <p style={{ color: '#334155', fontSize: '0.9rem', lineHeight: 1.65, margin: 0 }}>
+                    {ripple.impact[lang]}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Direct Authorized Quotes from Dr. J. Arawindhan (MD Magazine Showcase) */}
+        <div style={{ maxWidth: '1000px', margin: '0 auto 4.5rem auto' }}>
+          <SectionHeader
+            badge={lang === 'ta' ? 'அவரது சொந்த வரிகள்' : 'IN HIS OWN WORDS'}
+            title={lang === 'ta' ? 'முனைவர் ஜே. அரவிந்தன் அவர்களின் பொன்மொழிகள்' : 'Direct Quotations from Dr. J. Arawindhan'}
+            subtitle={lang === 'ta' ? 'ஆச்சாரியா சிறப்பு மலரில் இடம்பெற்ற முக்கிய வாழ்வியல் மற்றும் கல்வி சிந்தனைகள்.' : 'Key pedagogical, entrepreneurial, and philosophical reflections captured in the commemorative edition.'}
+          />
+
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(290px, 1fr))',
+              gap: '1.25rem',
+            }}
+          >
+            {directQuotes.slice(0, 6).map((item, qIdx) => (
+              <div
+                key={qIdx}
+                style={{
+                  background: '#FFFFFF',
+                  border: '1px solid #E2E8F0',
+                  borderRadius: '16px',
+                  padding: '1.5rem',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                  boxShadow: '0 4px 15px rgba(15, 23, 42, 0.03)',
+                  position: 'relative',
+                }}
+              >
+                <div>
+                  <Quote size={20} color="#D97706" style={{ opacity: 0.6, marginBottom: '0.75rem' }} />
+                  <p
+                    style={{
+                      fontFamily: 'var(--font-serif)',
+                      fontSize: '1.05rem',
+                      fontWeight: 600,
+                      color: '#0F172A',
+                      lineHeight: 1.6,
+                      marginBottom: '1rem',
+                      fontStyle: 'italic',
+                    }}
+                  >
+                    "{item.quote[lang]}"
+                  </p>
+                </div>
+
+                <div style={{ borderTop: '1px solid #F1F5F9', paddingTop: '0.85rem' }}>
+                  <div style={{ fontSize: '0.78rem', color: '#64748B', fontWeight: 600, marginBottom: '0.2rem' }}>
+                    {item.context[lang]}
+                  </div>
+                  <div style={{ fontSize: '0.7rem', color: '#D97706', fontWeight: 700, fontFamily: 'monospace' }}>
+                    {item.source}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 

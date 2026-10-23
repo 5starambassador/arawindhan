@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Building2, School, Factory, Utensils, HeartPulse, Laptop, Palmtree, GraduationCap, ShieldCheck, Filter } from 'lucide-react';
-import { collegesList, schoolsSummary, enterprisesList } from '@/data/institutions';
+import { collegesList, schoolsSummary, enterprisesList, heguruMilestones } from '@/data/institutions';
 import { SectionHeader } from '@/components/SectionHeader';
 import { ClaimBadge } from '@/components/ClaimBadge';
 import { Language } from '@/types';
@@ -303,6 +303,64 @@ export default function InstitutionsPage({
             </div>
           </div>
         )}
+
+        {/* Heguru India National Milestones Showcase (From MD Magazine Page 19) */}
+        <div
+          style={{
+            maxWidth: '1000px',
+            margin: '3.5rem auto 0 auto',
+            background: 'linear-gradient(135deg, #FAF8F5 0%, #FFFBEB 100%)',
+            border: '1.5px solid #FDE68A',
+            borderRadius: '20px',
+            padding: '2rem 2.5rem',
+            boxShadow: '0 10px 30px -10px rgba(217, 119, 6, 0.08)',
+          }}
+        >
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.75rem', marginBottom: '1.25rem' }}>
+            <div>
+              <span style={{ fontSize: '0.72rem', fontWeight: 800, color: '#B45309', background: '#FEF3C7', border: '1px solid #FDE68A', padding: '0.2rem 0.65rem', borderRadius: '999px', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+                {lang === 'ta' ? 'சர்வதேச வலதுமூளை கூட்டாண்மை' : 'JAPANESE RIGHT-BRAIN ALLIANCE • HEGURU INDIA'}
+              </span>
+              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.6rem', fontWeight: 800, color: '#0F172A', margin: '0.4rem 0 0 0' }}>
+                {lang === 'ta' ? 'ஹெகுரு இந்தியா தேசிய மைல்கற்கள் (2023–2025)' : 'Heguru India National Milestones (2023–2025)'}
+              </h3>
+            </div>
+            <ClaimBadge claimId="CLM-005" status="CONFIRMED" language={lang} />
+          </div>
+
+          <p style={{ color: '#475569', fontSize: '0.92rem', lineHeight: 1.7, marginBottom: '1.75rem' }}>
+            {lang === 'ta'
+              ? 'ஜப்பானின் டோக்கியோவைச் சேர்ந்த ருயிகோ மற்றும் ஹிரோதடா ஹென்மி அவர்களின் 30 ஆண்டு கால நரம்பியல் ஆய்வுகளை, முனைவர் ஜே. அரவிந்தன் தேசிய முதன்மை உரிமத்தின் (National Master Franchise) கீழ் இந்தியா முழுவதும் 10+ உயர் மையங்களாக விரிவுபடுத்தியுள்ளார்.'
+              : 'Partnering with founders Ruiko & Hirotada Henmi (Heguru Japan), Dr. J. Arawindhan serves as the National Master Franchise Holder & Managing Director, establishing 10+ state-of-the-art right-brain neuroplasticity centres across India.'}
+          </p>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.25rem' }}>
+            {heguruMilestones.map((milestone) => (
+              <div
+                key={milestone.year}
+                style={{
+                  background: '#FFFFFF',
+                  border: '1px solid #E2E8F0',
+                  borderRadius: '14px',
+                  padding: '1.25rem',
+                  boxShadow: '0 2px 8px rgba(15, 23, 42, 0.03)',
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
+                  <span style={{ background: '#D97706', color: '#FFFFFF', fontSize: '0.75rem', fontWeight: 800, padding: '0.15rem 0.5rem', borderRadius: '6px', fontFamily: 'monospace' }}>
+                    {milestone.year}
+                  </span>
+                  <span style={{ fontSize: '0.86rem', fontWeight: 700, color: '#0F172A' }}>
+                    {milestone.cities[lang]}
+                  </span>
+                </div>
+                <p style={{ color: '#64748B', fontSize: '0.84rem', lineHeight: 1.6, margin: 0 }}>
+                  {milestone.details[lang]}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

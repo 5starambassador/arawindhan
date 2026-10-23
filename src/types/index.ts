@@ -72,3 +72,29 @@ export interface AvatarPhase {
   essence: { en: string; ta: string };
   description: { en: string; ta: string };
 }
+
+export interface LeadershipLesson {
+  number: number;
+  title: { en: string; ta: string };
+  principle: { en: string; ta: string };
+  quote: { en: string; ta: string };
+}
+
+export interface CoreValue {
+  number: number;
+  title: { en: string; ta: string };
+  description: { en: string; ta: string };
+}
+
+export interface DirectQuote {
+  quote: { en: string; ta: string };
+  context: { en: string; ta: string };
+  source: string;
+}
+
+export interface TransformationRipple {
+  step: number;
+  level: { en: string; ta: string };
+  focus: { en: string; ta: string };
+  impact: { en: string; ta: string };
+}
