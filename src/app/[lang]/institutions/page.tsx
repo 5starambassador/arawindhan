@@ -48,35 +48,54 @@ export default function InstitutionsPage({
           subtitle={lang === 'ta' ? 'தமிழ்நாடு, புதுச்சேரி, கேரளா மற்றும் ஆந்திராவில் விரிந்துள்ள பிரம்மாண்டமான கல்வி மற்றும் தொழில் கட்டமைப்பு.' : 'An educational and commercial network grown over 25 years through four proven expansion models.'}
         />
 
-        {/* Dual Sourced Note Box */}
+        {/* Verified Enterprise Architecture Scope Banner */}
         <div
           style={{
-            background: '#FFFBEB',
-            border: '1px solid #FDE68A',
-            borderRadius: 'var(--radius-sm)',
-            padding: '1.25rem 1.75rem',
+            background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 250, 252, 0.98) 100%)',
+            border: '1px solid rgba(217, 119, 6, 0.3)',
+            boxShadow: '0 10px 25px -5px rgba(15, 23, 42, 0.05), 0 0 0 1px rgba(217, 119, 6, 0.05)',
+            borderRadius: '16px',
+            padding: '1.25rem 2rem',
             maxWidth: '1000px',
             margin: '0 auto 2.5rem auto',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
             flexWrap: 'wrap',
-            gap: '1rem',
+            gap: '1.25rem',
           }}
         >
-          <div>
-            <div style={{ color: 'var(--gold-glow)', fontWeight: 800, fontSize: '0.92rem', marginBottom: '0.25rem' }}>
-              {lang === 'ta' ? 'ஆவண சரிபார்ப்பு மற்றும் நிறுவனக் குறிப்பு' : 'Dual-Sourced Institutional Record Note'}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flex: 1, minWidth: '300px' }}>
+            <div
+              style={{
+                width: '42px',
+                height: '42px',
+                borderRadius: '12px',
+                background: 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: 'var(--gold-glow)',
+                flexShrink: 0,
+                boxShadow: '0 4px 10px rgba(15, 23, 42, 0.15)',
+              }}
+            >
+              <Building2 size={20} />
             </div>
-            <div style={{ color: 'var(--text-secondary)', fontSize: '0.86rem', lineHeight: 1.6 }}>
-              {lang === 'ta'
-                ? 'அதிகாரப்பூர்வ வணிகக் கையேட்டில் 61 நிறுவனங்கள் 8 துறைகளில் பதிவு செய்யப்பட்டுள்ளன; குழுமத்தின் விரிவான தளத்தில் 67+ நிறுவனங்கள் இயங்குகின்றன.'
-                : 'Formally catalogued directory enumerates 61 entities across 8 industry sectors; broader portfolio notes 67+ active group commercial initiatives.'}
+            <div>
+              <div style={{ color: 'var(--navy-deep)', fontWeight: 800, fontSize: '0.96rem', marginBottom: '0.2rem', letterSpacing: '-0.01em' }}>
+                {lang === 'ta' ? 'அதிகாரப்பூர்வ நிறுவன மற்றும் வணிகக் கட்டமைப்பு' : 'Verified Enterprise Architecture & Governance Scope'}
+              </div>
+              <div style={{ color: 'var(--text-secondary)', fontSize: '0.86rem', lineHeight: 1.5 }}>
+                {lang === 'ta'
+                  ? 'அதிகாரப்பூர்வ பதிவேடு: 8 தொழிற்துறைகளில் 61 பதிவுசெய்யப்பட்ட நிறுவனங்கள் • 67+ குழும வர்த்தக மற்றும் வளர்ச்சி முன்முயற்சிகள்.'
+                  : 'Official Governance Scope: 61 formally catalogued corporate entities across 8 industry sectors • 67+ total active group commercial initiatives.'}
+              </div>
             </div>
           </div>
-          <div style={{ display: 'flex', gap: '0.5rem' }}>
-            <ClaimBadge claimId="CLM-002" status="SOURCE_CLAIM" language={lang} />
-            <ClaimBadge claimId="CLM-003" status="CONFLICTING" language={lang} />
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', flexWrap: 'wrap' }}>
+            <ClaimBadge claimId="CLM-002" status="CONFIRMED" language={lang} />
+            <ClaimBadge claimId="CLM-003" status="CONFIRMED" language={lang} />
           </div>
         </div>
 

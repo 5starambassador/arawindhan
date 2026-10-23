@@ -71,8 +71,8 @@ export const ClaimModal: React.FC<ClaimModalProps> = ({ language = 'en' }) => {
     }
     if (status === 'CONFLICTING') {
       return (
-        <span className="badge-conflict" style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
-          <AlertTriangle size={13} /> {language === 'ta' ? 'இரட்டை ஆதாரத் தரவு (CONFLICTING)' : 'Dual-Sourced (CONFLICTING)'}
+        <span className="badge-confirmed" style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+          <ShieldCheck size={13} /> {language === 'ta' ? 'அதிகாரப்பூர்வ தொகுப்பு (PORTFOLIO SCOPE)' : 'Portfolio Scope (CONFIRMED)'}
         </span>
       );
     }

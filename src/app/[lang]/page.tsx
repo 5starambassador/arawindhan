@@ -25,6 +25,10 @@ import { QuantumMatrix } from '@/components/QuantumMatrix';
 import { NeuralTerminal } from '@/components/NeuralTerminal';
 import { Language } from '@/types';
 
+export async function generateStaticParams() {
+  return [{ lang: 'en' }, { lang: 'ta' }];
+}
+
 export default async function HomePage({
   params,
 }: {
