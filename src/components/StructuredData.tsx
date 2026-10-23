@@ -18,7 +18,7 @@ export const StructuredData: React.FC<StructuredDataProps> = ({
   let schemaGraph: any[] = [
     {
       '@type': 'Person',
-      '@id': 'https://arawindhan.org/#person',
+      '@id': 'https://www.arawindhan.com/#person',
       name: 'Dr. J. Arawindhan Ji',
       alternateName: [
         'Santoshi Shri. Arawindhan Ji',

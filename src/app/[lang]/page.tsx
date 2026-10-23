@@ -21,6 +21,8 @@ import { innerJourneyData } from '@/data/innerJourney';
 import { mediaArticles } from '@/data/media';
 import { ClaimBadge } from '@/components/ClaimBadge';
 import { SectionHeader } from '@/components/SectionHeader';
+import { QuantumMatrix } from '@/components/QuantumMatrix';
+import { NeuralTerminal } from '@/components/NeuralTerminal';
 import { Language } from '@/types';
 
 export default async function HomePage({
@@ -328,6 +330,13 @@ export default async function HomePage({
         </div>
       </section>
 
+      {/* 4.5 FUTURISTIC INTERACTIVE QUANTUM INTELLIGENCE MATRIX */}
+      <section className="section-py" style={{ paddingTop: '1rem', paddingBottom: '3.5rem' }}>
+        <div className="container">
+          <QuantumMatrix lang={lang} />
+        </div>
+      </section>
+
       {/* 5. PUBLISHED BOOKS & INTELLECTUAL OUTPUT */}
       <section className="section-py">
         <div className="container">
@@ -493,37 +502,16 @@ export default async function HomePage({
         </div>
       </section>
 
-      {/* 8. THOUGHT LEADERSHIP & AI PERSPECTIVE */}
+      {/* 8. THOUGHT LEADERSHIP & AI ANSWER ENGINE TERMINAL */}
       <section className="section-py" style={{ background: 'var(--bg-subtle)', borderTop: '1px solid var(--border-light)' }}>
         <div className="container">
           <SectionHeader
-            badge={lang === 'ta' ? 'செயற்கை நுண்ணறிவு & கல்வி' : 'THOUGHT LEADERSHIP'}
+            badge={lang === 'ta' ? 'செயற்கை நுண்ணறிவு & கல்வி' : 'FUTURISTIC AI REASONING & THOUGHT LEADERSHIP'}
             title={lang === 'ta' ? 'மனித நுண்ணறிவு + AI = குவாண்டம் நுண்ணறிவு' : 'Human Intelligence + AI = Quantum Intelligence'}
-            subtitle={lang === 'ta' ? 'மாறிவரும் AI யுகத்தில் கல்வியை அணுகும் புரட்சிகரப் பார்வை.' : 'A foundational thesis delivered at the ACHARIYA Principals’ Conclave (September 2026).'}
+            subtitle={lang === 'ta' ? 'மாறிவரும் AI யுகத்தில் கல்வியை அணுகும் புரட்சிகரப் பார்வை. நிகழ்நேர அறிவுத் தள வினா-விடை கன்சோல்.' : 'Interactive reasoning terminal synthesizing Dr. J. Arawindhan Ji’s codified philosophies, exhibits, and verified claims.'}
           />
 
-          <div
-            className="card-premium"
-            style={{
-              maxWidth: '850px',
-              margin: '0 auto',
-              padding: '2rem 2.5rem',
-            }}
-          >
-            <div style={{ color: 'var(--gold-glow)', fontWeight: 700, fontSize: '0.88rem', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
-              {mediaArticles[0].category[lang]} • {mediaArticles[0].date}
-            </div>
-            <h3 className="font-serif heading-white" style={{ fontSize: '1.45rem', marginBottom: '1rem', fontWeight: 800 }}>
-              {mediaArticles[0].title[lang]}
-            </h3>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', lineHeight: 1.8, marginBottom: '1.5rem' }}>
-              {mediaArticles[0].excerpt[lang]}
-            </p>
-            <Link href={`/${lang}/media`} className="btn-gold">
-              <span>{lang === 'ta' ? 'முழு உரையை வாசிக்க' : 'Read Full Speech & Keynotes'}</span>
-              <ArrowRight size={16} />
-            </Link>
-          </div>
+          <NeuralTerminal lang={lang} />
         </div>
       </section>
     </div>

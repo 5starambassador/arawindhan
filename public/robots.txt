@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /_next/
-Sitemap: https://arawindhan.org/sitemap.xml
+Sitemap: https://www.arawindhan.com/sitemap.xml

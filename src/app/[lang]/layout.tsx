@@ -24,11 +24,11 @@ export async function generateMetadata({
       description:
         'ஆச்சாரியா கல்வி நிறுவனங்களின் நிறுவனர், கல்வியியலாளர், மற்றும் 18 கல்லூரிகள், 101 பள்ளிகள், 61+ நிறுவனங்களின் தலைவர் முனைவர் ஜே. அரவிந்தன் ஜி அவர்களின் அதிகாரப்பூர்வ தளம்.',
       alternates: {
-        canonical: 'https://arawindhan.org/ta',
+        canonical: 'https://www.arawindhan.com/ta',
         languages: {
-          en: 'https://arawindhan.org/en',
-          ta: 'https://arawindhan.org/ta',
-          'x-default': 'https://arawindhan.org/en',
+          en: 'https://www.arawindhan.com/en',
+          ta: 'https://www.arawindhan.com/ta',
+          'x-default': 'https://www.arawindhan.com/en',
         },
       },
     };
@@ -39,11 +39,11 @@ export async function generateMetadata({
     description:
       'Official digital authority platform for Dr. J. Arawindhan Ji: Educationist, entrepreneur, and founder of ACHARIYA World Class Education (18 colleges, 101 schools, 61+ companies, 600+ world records).',
     alternates: {
-      canonical: 'https://arawindhan.org/en',
+      canonical: 'https://www.arawindhan.com/en',
       languages: {
-        en: 'https://arawindhan.org/en',
-        ta: 'https://arawindhan.org/ta',
-        'x-default': 'https://arawindhan.org/en',
+        en: 'https://www.arawindhan.com/en',
+        ta: 'https://www.arawindhan.com/ta',
+        'x-default': 'https://www.arawindhan.com/en',
       },
     },
   };
