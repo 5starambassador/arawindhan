@@ -112,11 +112,23 @@ export default async function GovernancePage({
 
           <div className="grid-3">
             {governanceData.sixEngines.map((engine, idx) => (
-              <div key={idx} className="card-premium">
+              <div
+                key={idx}
+                className="card-premium"
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  height: '100%',
+                  borderRadius: '16px',
+                  padding: '1.75rem',
+                  border: '1px solid #E2E8F0',
+                  boxShadow: '0 4px 16px rgba(15, 23, 42, 0.04)',
+                }}
+              >
                 <h4 className="font-serif heading-gold" style={{ fontSize: '1.25rem', marginBottom: '0.5rem', fontWeight: 800 }}>
                   {engine.title[lang]}
                 </h4>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: 1.65 }}>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: 1.65, margin: 0, marginTop: 'auto' }}>
                   {engine.desc[lang]}
                 </p>
               </div>
@@ -157,11 +169,22 @@ export default async function GovernancePage({
 
           <div className="grid-3">
             {governanceData.concardiosHierarchy.phases.map((ph, i) => (
-              <div key={i} style={{ background: 'var(--bg-subtle)', padding: '1rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-light)' }}>
-                <div style={{ color: 'var(--gold-glow)', fontWeight: 800, fontSize: '0.95rem', marginBottom: '0.25rem' }}>
+              <div
+                key={i}
+                style={{
+                  background: 'var(--bg-subtle)',
+                  padding: '1.25rem',
+                  borderRadius: '14px',
+                  border: '1px solid var(--border-light)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  height: '100%',
+                }}
+              >
+                <div style={{ color: 'var(--gold-glow)', fontWeight: 800, fontSize: '0.95rem', marginBottom: '0.35rem' }}>
                   {i + 1}. {lang === 'ta' ? ph.tamilName : ph.name}
                 </div>
-                <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', lineHeight: 1.6 }}>
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', lineHeight: 1.6, margin: 0, marginTop: 'auto' }}>
                   {ph.desc[lang]}
                 </p>
               </div>
