@@ -226,25 +226,57 @@ export default async function HomePage({
             subtitle={lang === 'ta' ? 'ஒவ்வொரு புள்ளிவிவரமும் நிறுவன ஆவணங்கள் மற்றும் சரிபார்க்கப்பட்ட சான்றுகளோடு இணைக்கப்பட்டுள்ளது.' : 'Every metric is linked to documented institutional records and verification IDs.'}
           />
 
-          <div className="grid-4">
+          <div className="grid-metrics">
             {coreMetrics.map((item, idx) => (
-              <div key={`${item.claimId}-${item.number}-${idx}`} className="card-premium">
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.65rem' }}>
-                  <span style={{ fontSize: '0.68rem', fontWeight: 800, color: 'var(--gold-glow)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
-                    {lang === 'ta' ? 'நிறுவன சாதனை' : 'RECORD METRIC'}
-                  </span>
-                  <ClaimBadge claimId={item.claimId} status="SOURCE_CLAIM" language={lang} compact />
+              <div
+                key={`${item.claimId}-${item.number}-${idx}`}
+                className="card-premium"
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                  height: '100%',
+                  padding: '1.45rem',
+                }}
+              >
+                <div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.65rem' }}>
+                    <span style={{ fontSize: '0.65rem', fontWeight: 800, color: 'var(--gold-glow)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                      {lang === 'ta' ? 'நிறுவன சாதனை' : 'RECORD METRIC'}
+                    </span>
+                    <ClaimBadge claimId={item.claimId} status="SOURCE_CLAIM" language={lang} compact />
+                  </div>
+                  <div
+                    className="font-serif heading-gold"
+                    style={{ fontSize: '2.4rem', fontWeight: 800, lineHeight: 1, marginBottom: '0.65rem' }}
+                  >
+                    {item.number}
+                  </div>
+                  <h4
+                    style={{
+                      fontSize: '1rem',
+                      fontWeight: 700,
+                      color: 'var(--text-main)',
+                      margin: 0,
+                      minHeight: '2.8rem',
+                      display: 'flex',
+                      alignItems: 'flex-start',
+                      lineHeight: 1.4,
+                    }}
+                  >
+                    {item.label[lang]}
+                  </h4>
                 </div>
-                <div
-                  className="font-serif heading-gold"
-                  style={{ fontSize: '2.5rem', fontWeight: 800, lineHeight: 1, marginBottom: '0.65rem' }}
+                <p
+                  style={{
+                    fontSize: '0.84rem',
+                    color: 'var(--text-muted)',
+                    lineHeight: 1.55,
+                    margin: '0.85rem 0 0 0',
+                    borderTop: '1px solid #F1F5F9',
+                    paddingTop: '0.75rem',
+                  }}
                 >
-                  {item.number}
-                </div>
-                <h4 style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--text-main)', marginBottom: '0.5rem' }}>
-                  {item.label[lang]}
-                </h4>
-                <p style={{ fontSize: '0.86rem', color: 'var(--text-muted)', lineHeight: 1.6 }}>
                   {item.detail[lang]}
                 </p>
               </div>
