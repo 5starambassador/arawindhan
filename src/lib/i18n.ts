@@ -1,17 +1,23 @@
 import { Language } from '@/types';
 
-export const navigationLinks = [
-  { href: '', label: { en: 'Home', ta: 'முகப்பு' } },
-  { href: 'biography', label: { en: 'Biography', ta: 'வாழ்க்கை வரலாறு' } },
-  { href: 'education', label: { en: 'Educational Innovations', ta: 'கல்விப் புத்தாக்கங்கள்' } },
-  { href: 'books', label: { en: 'Books & Publications', ta: 'நூல்கள் & வெளியீடுகள்' } },
-  { href: 'institutions', label: { en: 'Institutions & Directory', ta: 'கல்வி & நிறுவனங்கள்' } },
-  { href: 'recognition', label: { en: 'Recognition & Records', ta: 'விருதுகள் & சாதனைகள்' } },
-  { href: 'inner-journey', label: { en: 'Inner Journey', ta: 'திவ்ய யோகம்' } },
-  { href: 'governance', label: { en: 'Governance & Systems', ta: 'நிர்வாகக் கட்டமைப்பு' } },
-  { href: 'media', label: { en: 'Media & Speeches', ta: 'உரைகள் & ஊடகம்' } },
-  { href: 'faq', label: { en: 'Answer Engine & FAQs', ta: 'கேள்வி & பதில்கள்' } },
-  { href: 'contact', label: { en: 'Contact & Verification', ta: 'தொடர்பு & சரிபார்ப்பு' } },
+export interface NavLink {
+  href: string;
+  label: { en: string; ta: string };
+  shortLabel: { en: string; ta: string };
+}
+
+export const navigationLinks: NavLink[] = [
+  { href: '', label: { en: 'Home', ta: 'முகப்பு' }, shortLabel: { en: 'Home', ta: 'முகப்பு' } },
+  { href: 'biography', label: { en: 'Biography', ta: 'வாழ்க்கை வரலாறு' }, shortLabel: { en: 'Biography', ta: 'வரலாறு' } },
+  { href: 'education', label: { en: 'Educational Innovations', ta: 'கல்விப் புத்தாக்கங்கள்' }, shortLabel: { en: 'Education', ta: 'கல்வி' } },
+  { href: 'books', label: { en: 'Books & Publications', ta: 'நூல்கள் & வெளியீடுகள்' }, shortLabel: { en: 'Books', ta: 'நூல்கள்' } },
+  { href: 'institutions', label: { en: 'Institutions & Directory', ta: 'கல்வி & நிறுவனங்கள்' }, shortLabel: { en: 'Institutions', ta: 'நிறுவனங்கள்' } },
+  { href: 'recognition', label: { en: 'Recognition & Records', ta: 'விருதுகள் & சாதனைகள்' }, shortLabel: { en: 'Honours', ta: 'சாதனைகள்' } },
+  { href: 'inner-journey', label: { en: 'Inner Journey', ta: 'திவ்ய யோகம்' }, shortLabel: { en: 'Inner Journey', ta: 'திவ்ய யோகம்' } },
+  { href: 'governance', label: { en: 'Governance & Systems', ta: 'நிர்வாகக் கட்டமைப்பு' }, shortLabel: { en: 'Governance', ta: 'நிர்வாகம்' } },
+  { href: 'media', label: { en: 'Media & Speeches', ta: 'உரைகள் & ஊடகம்' }, shortLabel: { en: 'Media', ta: 'ஊடகம்' } },
+  { href: 'faq', label: { en: 'Answer Engine & FAQs', ta: 'கேள்வி & பதில்கள்' }, shortLabel: { en: 'FAQs', ta: 'FAQs' } },
+  { href: 'contact', label: { en: 'Contact & Verification', ta: 'தொடர்பு & சரிபார்ப்பு' }, shortLabel: { en: 'Contact', ta: 'தொடர்பு' } },
 ];
 
 export const uiLabels = {
@@ -59,28 +65,28 @@ export const uiLabels = {
     en: 'Read Full Text',
     ta: 'முழுமையாக வாசிக்க',
   },
-  allSectors: {
-    en: 'All Sectors',
-    ta: 'அனைத்து துறைகளும்',
+  sourceDocument: {
+    en: 'Source Document',
+    ta: 'மூல ஆவணம்',
   },
-  searchPlaceholder: {
-    en: 'Search methodologies, books, institutions...',
-    ta: 'பாடத்திட்டங்கள், நூல்கள், நிறுவனங்களை தேடுக...',
-  },
-  footerDisclaimer: {
-    en: 'This official digital knowledge platform documents the educational systems, enterprises, publications, and philosophies founded and led by Dr. J. Arawindhan Ji. Every factual statement is cross-referenced with institutional primary documents.',
-    ta: 'முனைவர் ஜே. அரவிந்தன் ஜி அவர்களின் கல்வி அமைப்புகள், தொழில் நிறுவனங்கள், நூல்கள் மற்றும் தத்துவங்களை ஆவணப்படுத்தும் அதிகாரப்பூர்வ அறிவுத் தளம். அனைத்து தகவல்களும் ஆவணச் சான்றுகளோடு இணைக்கப்பட்டுள்ளன.',
+  supportingEvidence: {
+    en: 'Supporting Evidence',
+    ta: 'சான்று ஆவணம்',
   },
   quickLinks: {
     en: 'Quick Links',
-    ta: 'முக்கிய இணைப்புகள்',
+    ta: 'விரைவு இணைப்புகள்',
   },
   institutionsHeading: {
     en: 'Institutions & Movements',
-    ta: 'நிறுவனங்கள் & அமைப்புகள்',
+    ta: 'நிறுவனங்கள் & இயக்கங்கள்',
   },
   contactHeading: {
     en: 'Official Verification Desk',
     ta: 'அதிகாரப்பூர்வ சரிபார்ப்பு மையம்',
+  },
+  footerDisclaimer: {
+    en: 'This official digital knowledge platform documents the educational systems, enterprises, publications, and philosophies founded and led by Dr. J. Arawindhan Ji. Every factual statement is cross-referenced with institutional primary documents.',
+    ta: 'முனைவர் ஜே. அரவிந்தன் ஜி அவர்களின் கல்விப் புத்தாக்கங்கள், நிறுவனங்கள், வெளியீடுகள் மற்றும் தத்துவங்களை ஆவணப்படுத்தும் அதிகாரப்பூர்வ தளம். அனைத்து தகவல்களும் மூல ஆவணங்களுடன் சரிபார்க்கப்பட்டவை.',
   },
 };

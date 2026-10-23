@@ -20,16 +20,32 @@ export const Navbar: React.FC<NavbarProps> = ({ lang }) => {
 
   return (
     <header className="header-glass">
-      <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.85rem 1.5rem' }}>
+      <div
+        className="container"
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          padding: '0.75rem 1.5rem',
+          maxWidth: '1360px',
+          gap: '1rem',
+        }}
+      >
         {/* Brand identity */}
         <Link
           href={`/${lang}`}
-          style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.75rem' }}
+          style={{
+            textDecoration: 'none',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '0.75rem',
+            flexShrink: 0,
+          }}
         >
           <div
             style={{
-              width: '42px',
-              height: '42px',
+              width: '40px',
+              height: '40px',
               borderRadius: '50%',
               background: 'linear-gradient(135deg, #D97706 0%, #B45309 100%)',
               border: '2px solid #FDE68A',
@@ -38,9 +54,10 @@ export const Navbar: React.FC<NavbarProps> = ({ lang }) => {
               justifyContent: 'center',
               boxShadow: '0 2px 10px rgba(217, 119, 6, 0.2)',
               fontWeight: 800,
-              fontSize: '1.1rem',
+              fontSize: '1.05rem',
               color: '#FFFFFF',
               fontFamily: 'var(--font-serif)',
+              flexShrink: 0,
             }}
           >
             JA
@@ -55,6 +72,7 @@ export const Navbar: React.FC<NavbarProps> = ({ lang }) => {
                   color: '#0F172A',
                   letterSpacing: '0.01em',
                   lineHeight: 1.2,
+                  whiteSpace: 'nowrap',
                 }}
               >
                 {uiLabels.platformTitle[lang]}
@@ -82,9 +100,9 @@ export const Navbar: React.FC<NavbarProps> = ({ lang }) => {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav style={{ display: 'none', alignItems: 'center', gap: '1.05rem' }} className="desktop-nav">
+        <nav style={{ display: 'none', alignItems: 'center', gap: '0.9rem' }} className="desktop-nav">
           <style jsx>{`
-            @media (min-width: 1024px) {
+            @media (min-width: 1080px) {
               .desktop-nav {
                 display: flex !important;
               }
@@ -100,27 +118,35 @@ export const Navbar: React.FC<NavbarProps> = ({ lang }) => {
               <Link
                 key={link.href}
                 href={fullHref}
+                title={link.label[lang]}
                 style={{
                   textDecoration: 'none',
-                  fontSize: '0.82rem',
+                  fontSize: '0.84rem',
                   fontWeight: isActive ? 700 : 500,
                   color: isActive ? '#B45309' : '#1E293B',
-                  transition: 'var(--transition)',
+                  transition: 'all 0.15s ease',
                   borderBottom: isActive ? '2px solid #D97706' : '2px solid transparent',
-                  paddingBottom: '4px',
+                  paddingBottom: '3px',
                   whiteSpace: 'nowrap',
                   letterSpacing: '0.01em',
                 }}
+                onMouseEnter={(e) => {
+                  if (!isActive) e.currentTarget.style.color = '#B45309';
+                }}
+                onMouseLeave={(e) => {
+                  if (!isActive) e.currentTarget.style.color = '#1E293B';
+                }}
               >
-                {link.label[lang]}
+                {link.shortLabel[lang]}
               </Link>
             );
           })}
         </nav>
 
         {/* Actions: Evidence Modal, Language Switcher & Mobile Menu Toggle */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', flexShrink: 0 }}>
           <button
+            type="button"
             onClick={() => {
               if (typeof window !== 'undefined') {
                 window.dispatchEvent(new CustomEvent('open-claim-modal', { detail: {} }));
@@ -140,10 +166,11 @@ export const Navbar: React.FC<NavbarProps> = ({ lang }) => {
               color: '#0F172A',
               cursor: 'pointer',
               transition: 'all 0.15s ease',
+              whiteSpace: 'nowrap',
             }}
           >
             <ShieldCheck size={14} color="#D97706" />
-            <span className="evidence-btn-text">{lang === 'ta' ? 'சான்றுகள்' : 'Claims'}</span>
+            <span>{lang === 'ta' ? 'சான்றுகள்' : 'Claims'}</span>
             <kbd
               style={{
                 background: '#E2E8F0',
@@ -158,7 +185,9 @@ export const Navbar: React.FC<NavbarProps> = ({ lang }) => {
               ⌘K
             </kbd>
           </button>
+
           <LanguageSwitcher currentLang={lang} />
+
           <button
             onClick={toggleMobile}
             className="mobile-toggle"
@@ -206,7 +235,7 @@ export const Navbar: React.FC<NavbarProps> = ({ lang }) => {
                   textDecoration: 'none',
                   fontSize: '1rem',
                   fontWeight: isActive ? 700 : 500,
-                  color: isActive ? 'var(--gold-glow)' : 'var(--text-main)',
+                  color: isActive ? '#B45309' : '#0F172A',
                   padding: '0.5rem 0',
                   borderBottom: '1px solid var(--border-light)',
                 }}
