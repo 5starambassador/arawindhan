@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ShieldCheck, Compass, CheckCircle2, ArrowRight } from 'lucide-react';
+import { ShieldCheck, Compass, CheckCircle2, ArrowRight, GraduationCap, Building2, Sparkles } from 'lucide-react';
 import { biographyData, avatarPhases } from '@/data/biography';
 import { SectionHeader } from '@/components/SectionHeader';
 import { ClaimBadge } from '@/components/ClaimBadge';
@@ -72,36 +72,141 @@ export default async function BiographyPage({
           </div>
 
           {/* Three Verticals Breakdown */}
-          <h4 className="font-serif heading-white" style={{ fontSize: '1.35rem', marginBottom: '1.25rem', fontWeight: 800 }}>
-            {lang === 'ta' ? 'ஒருங்கிணைந்த மூன்று தலைமைத்துவத் தளங்கள்' : 'Three Reinforcing Verticals of Leadership'}
-          </h4>
+          <div style={{ marginBottom: '1.25rem', display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+            <div style={{ width: '4px', height: '22px', background: 'var(--gold-primary)', borderRadius: '2px' }} />
+            <h4 className="font-heading" style={{ fontSize: '1.35rem', fontWeight: 800, color: 'var(--text-main)', margin: 0 }}>
+              {lang === 'ta' ? 'ஒருங்கிணைந்த மூன்று தலைமைத்துவத் தளங்கள்' : 'Three Reinforcing Verticals of Leadership'}
+            </h4>
+          </div>
 
-          <div className="grid-3" style={{ marginBottom: '2rem' }}>
-            {biographyData.threeVerticals.map((vert, idx) => (
-              <div key={idx} style={{ background: 'var(--bg-subtle)', padding: '1.25rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-light)' }}>
-                <div style={{ color: 'var(--gold-glow)', fontWeight: 700, fontSize: '1.05rem', marginBottom: '0.35rem' }}>
-                  {vert.title[lang]}
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+              gap: '1.25rem',
+              marginBottom: '2rem',
+            }}
+          >
+            {biographyData.threeVerticals.map((vert, idx) => {
+              const icons = [GraduationCap, Building2, ShieldCheck];
+              const IconComp = icons[idx] || Sparkles;
+              return (
+                <div
+                  key={idx}
+                  style={{
+                    background: '#FFFFFF',
+                    padding: '1.5rem',
+                    borderRadius: '16px',
+                    border: '1px solid #E2E8F0',
+                    boxShadow: '0 8px 24px -6px rgba(15, 23, 42, 0.05)',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between',
+                    position: 'relative',
+                    overflow: 'hidden',
+                  }}
+                >
+                  <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(90deg, #D97706, #B45309)' }} />
+                  <div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.75rem' }}>
+                      <div
+                        style={{
+                          width: '36px',
+                          height: '36px',
+                          borderRadius: '10px',
+                          background: 'linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%)',
+                          border: '1px solid #FDE68A',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          color: '#B45309',
+                          flexShrink: 0,
+                        }}
+                      >
+                        <IconComp size={18} />
+                      </div>
+                      <div style={{ color: 'var(--text-main)', fontWeight: 800, fontSize: '1.08rem', letterSpacing: '-0.01em' }}>
+                        {vert.title[lang]}
+                      </div>
+                    </div>
+                    <div
+                      style={{
+                        background: '#F8FAFC',
+                        border: '1px solid #E2E8F0',
+                        borderRadius: '8px',
+                        padding: '0.4rem 0.75rem',
+                        color: 'var(--gold-glow)',
+                        fontSize: '0.82rem',
+                        fontWeight: 700,
+                        marginBottom: '0.85rem',
+                        fontStyle: 'italic',
+                      }}
+                    >
+                      {vert.question[lang]}
+                    </div>
+                    <p style={{ color: 'var(--text-secondary)', fontSize: '0.88rem', lineHeight: 1.65, margin: 0 }}>
+                      {vert.description[lang]}
+                    </p>
+                  </div>
                 </div>
-                <div style={{ color: 'var(--text-muted)', fontSize: '0.82rem', fontWeight: 600, marginBottom: '0.75rem' }}>
-                  {vert.question[lang]}
-                </div>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.88rem', lineHeight: 1.65 }}>
-                  {vert.description[lang]}
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* Signature Effect (Seyalthiram) Staged Progression */}
-          <div style={{ background: 'var(--bg-subtle)', border: '1px solid var(--border-light)', borderRadius: 'var(--radius-sm)', padding: '1.5rem' }}>
-            <h5 style={{ color: 'var(--gold-glow)', fontSize: '1rem', fontWeight: 800, marginBottom: '0.5rem' }}>
-              {lang === 'ta' ? 'செயல்திறன் (Seyalthiram) ஐந்து படிநிலைகள்' : 'The Signature Effect (Seyalthiram) Progression'}
-            </h5>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: 1.7 }}>
-              {lang === 'ta'
-                ? 'அறிவு (Arivu / தயார்நிலை) → ஆற்றல் (Attral / வெளிப்பாடு) → ஆளுமை (Aazhumai / சுயநம்பிக்கை) → அசராத துணிவு (Asaradhana Thunivu / உறுதி) → அதிவிசேஷ திறன் (Adhivisheha Thiran / தனித்துவமான வாழ்வியல் ஆளுமை).'
-                : 'A staged cognitive progression: Arivu (readiness) → Attral (expression) → Aazhumai (self-confidence) → Asaradhana Thunivu (unshakeable grit) → Adhivisheha Thiran (a distinctive personal way of engaging with the world).'}
-            </p>
+          <div
+            style={{
+              background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 250, 252, 0.98) 100%)',
+              border: '1px solid rgba(217, 119, 6, 0.25)',
+              borderRadius: '16px',
+              padding: '1.75rem',
+              boxShadow: '0 8px 24px -4px rgba(15, 23, 42, 0.04)',
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '1rem' }}>
+              <Sparkles size={18} style={{ color: 'var(--gold-primary)' }} />
+              <h5 style={{ color: 'var(--text-main)', fontSize: '1.05rem', fontWeight: 800, margin: 0, letterSpacing: '-0.01em' }}>
+                {lang === 'ta' ? 'செயல்திறன் (Seyalthiram) ஐந்து படிநிலைகள்' : 'The Signature Effect (Seyalthiram) 5-Stage Cognitive Progression'}
+              </h5>
+            </div>
+
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(170px, 1fr))',
+                gap: '0.75rem',
+              }}
+            >
+              {[
+                { stage: '01', enName: 'Arivu', enSub: 'Cognitive Readiness', taName: 'அறிவு', taSub: 'தயார்நிலை' },
+                { stage: '02', enName: 'Attral', enSub: 'Active Expression', taName: 'ஆற்றல்', taSub: 'வெளிப்பாடு' },
+                { stage: '03', enName: 'Aazhumai', enSub: 'Inner Self-Confidence', taName: 'ஆளுமை', taSub: 'சுயநம்பிக்கை' },
+                { stage: '04', enName: 'Asaradhana Thunivu', enSub: 'Unshakeable Grit', taName: 'அசராத துணிவு', taSub: 'உறுதி' },
+                { stage: '05', enName: 'Adhivisheha Thiran', enSub: 'Distinctive Mastery', taName: 'அதிவிசேஷ திறன்', taSub: 'வாழ்வியல் ஆளுமை' },
+              ].map((step, sIdx) => (
+                <div
+                  key={sIdx}
+                  style={{
+                    background: '#FFFFFF',
+                    border: '1px solid #E2E8F0',
+                    borderRadius: '12px',
+                    padding: '0.9rem',
+                    boxShadow: '0 2px 6px rgba(15, 23, 42, 0.03)',
+                    position: 'relative',
+                  }}
+                >
+                  <div style={{ fontSize: '0.7rem', fontWeight: 800, color: 'var(--gold-primary)', fontFamily: 'monospace', marginBottom: '0.2rem' }}>
+                    STAGE {step.stage}
+                  </div>
+                  <div style={{ fontWeight: 800, fontSize: '0.9rem', color: 'var(--text-main)', marginBottom: '0.15rem' }}>
+                    {lang === 'ta' ? step.taName : step.enName}
+                  </div>
+                  <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
+                    {lang === 'ta' ? step.taSub : step.enSub}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 

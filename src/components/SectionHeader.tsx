@@ -45,13 +45,14 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
       )}
       <h2
         style={{
-          fontFamily: 'var(--font-serif)',
+          fontFamily: 'var(--font-heading)',
           color: '#0F172A',
-          fontSize: 'clamp(2rem, 3.8vw, 2.75rem)',
-          fontWeight: 700,
-          lineHeight: 1.22,
-          letterSpacing: '-0.015em',
+          fontSize: 'clamp(1.85rem, 3.2vw, 2.55rem)',
+          fontWeight: 800,
+          lineHeight: 1.2,
+          letterSpacing: '-0.025em',
           marginBottom: '0.85rem',
+          fontVariantNumeric: 'lining-nums proportional-nums',
         }}
       >
         {title}
