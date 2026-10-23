@@ -221,8 +221,8 @@ export default async function HomePage({
           />
 
           <div className="grid-4">
-            {coreMetrics.map((item) => (
-              <div key={item.claimId} className="card-premium">
+            {coreMetrics.map((item, idx) => (
+              <div key={`${item.claimId}-${item.number}-${idx}`} className="card-premium">
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.75rem' }}>
                   <span
                     className="font-serif heading-gold"
