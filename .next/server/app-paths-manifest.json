@@ -1,0 +1,17 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/page": "app/page.js",
+  "/[lang]/institutions/page": "app/[lang]/institutions/page.js",
+  "/[lang]/page": "app/[lang]/page.js",
+  "/[lang]/contact/page": "app/[lang]/contact/page.js",
+  "/[lang]/biography/page": "app/[lang]/biography/page.js",
+  "/[lang]/books/page": "app/[lang]/books/page.js",
+  "/[lang]/education/page": "app/[lang]/education/page.js",
+  "/[lang]/faq/page": "app/[lang]/faq/page.js",
+  "/[lang]/inner-journey/page": "app/[lang]/inner-journey/page.js",
+  "/[lang]/books/[slug]/page": "app/[lang]/books/[slug]/page.js",
+  "/[lang]/education/[slug]/page": "app/[lang]/education/[slug]/page.js",
+  "/[lang]/governance/page": "app/[lang]/governance/page.js",
+  "/[lang]/media/page": "app/[lang]/media/page.js",
+  "/[lang]/recognition/page": "app/[lang]/recognition/page.js"
+}

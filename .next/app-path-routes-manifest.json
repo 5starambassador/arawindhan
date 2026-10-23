@@ -1,0 +1,17 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/page": "/",
+  "/[lang]/institutions/page": "/[lang]/institutions",
+  "/[lang]/page": "/[lang]",
+  "/[lang]/contact/page": "/[lang]/contact",
+  "/[lang]/biography/page": "/[lang]/biography",
+  "/[lang]/books/page": "/[lang]/books",
+  "/[lang]/education/page": "/[lang]/education",
+  "/[lang]/faq/page": "/[lang]/faq",
+  "/[lang]/inner-journey/page": "/[lang]/inner-journey",
+  "/[lang]/books/[slug]/page": "/[lang]/books/[slug]",
+  "/[lang]/education/[slug]/page": "/[lang]/education/[slug]",
+  "/[lang]/governance/page": "/[lang]/governance",
+  "/[lang]/media/page": "/[lang]/media",
+  "/[lang]/recognition/page": "/[lang]/recognition"
+}

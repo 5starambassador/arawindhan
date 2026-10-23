@@ -1,0 +1,130 @@
+import React from 'react';
+import Link from 'next/link';
+import { Mail, MapPin, Building, ShieldCheck, FileSpreadsheet, ExternalLink, Globe } from 'lucide-react';
+import { SectionHeader } from '@/components/SectionHeader';
+import { Language } from '@/types';
+
+export async function generateStaticParams() {
+  return [{ lang: 'en' }, { lang: 'ta' }];
+}
+
+export default async function ContactPage({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
+  const resolved = await params;
+  const lang: Language = resolved.lang === 'ta' ? 'ta' : 'en';
+
+  return (
+    <div className="section-py">
+      <div className="container" style={{ maxWidth: '1000px' }}>
+        <SectionHeader
+          badge={lang === 'ta' ? 'அதிகாரப்பூர்வ தொடர்பு & சான்றுகள்' : 'OFFICIAL CONTACT & VERIFICATION DESK'}
+          title={lang === 'ta' ? 'தொடர்பு & தகவல் சரிபார்ப்பு மையம்' : 'Official Communications & Verification Desk'}
+          subtitle={lang === 'ta' ? 'ஆய்வாளர்கள், கல்வியியலாளர்கள் மற்றும் கல்வி நிறுவனங்களுக்கான அதிகாரப்பூர்வ தொடர்பு வழிகள்.' : 'Official institutional desk for academic inquiries, biographical verification, and institutional collaborations.'}
+        />
+
+        <div className="grid-2" style={{ marginBottom: '3.5rem' }}>
+          {/* Institutional HQ */}
+          <div className="card-premium">
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem', color: 'var(--gold-glow)' }}>
+              <Building size={22} />
+              <h3 className="font-serif heading-gold" style={{ fontSize: '1.35rem', fontWeight: 800 }}>
+                {lang === 'ta' ? 'முதன்மை வளாகம் (HQ)' : 'Central Campus & Headquarters'}
+              </h3>
+            </div>
+
+            <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.75, marginBottom: '1.25rem' }}>
+              <strong>ACHARIYA World Class Education</strong><br />
+              Central Administrative Office<br />
+              ACHARIYA Central Campus, Villianur<br />
+              Puducherry – 605 110, India.
+            </p>
+
+            <div style={{ color: 'var(--text-muted)', fontSize: '0.88rem', borderTop: '1px solid var(--border-light)', paddingTop: '1rem' }}>
+              <div><strong>{lang === 'ta' ? 'திட்ட ஒருங்கிணைப்பாளர்:' : 'Project Coordinator:'}</strong> Director – Learning Academy (MIWAY)</div>
+              <div><strong>{lang === 'ta' ? 'நிறுவன ஆதரவாளர்:' : 'Project Sponsor:'}</strong> Achariya World Class Education</div>
+            </div>
+          </div>
+
+          {/* Factual Integrity & Archival Access */}
+          <div className="card-premium">
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem', color: '#059669' }}>
+              <ShieldCheck size={22} />
+              <h3 className="font-serif heading-white" style={{ fontSize: '1.35rem', fontWeight: 800 }}>
+                {lang === 'ta' ? 'உண்மைச் சரிபார்ப்புக் கொள்கை' : 'Factual Verification & Claims Archive'}
+              </h3>
+            </div>
+
+            <p style={{ color: 'var(--text-secondary)', fontSize: '0.92rem', lineHeight: 1.7, marginBottom: '1.5rem' }}>
+              {lang === 'ta'
+                ? 'இத்தளத்தில் வெளியிடப்பட்டுள்ள 30-க்கும் மேற்பட்ட முக்கிய புள்ளிவிவரங்கள் மற்றும் சாதனைகள், முதன்மை ஆவணங்களுடன் ஒப்பீடு செய்யப்பட்டு "மாஸ்டர் க்ளைம்ஸ் ரெஜிஸ்டரில்" பதிவு செய்யப்பட்டுள்ளன.'
+                : 'Every quantitative statement and historical milestone is maintained in the Master Claims Register with discrete verification states (CONFIRMED, SOURCE_CLAIM, PENDING_VERIFICATION).'}
+            </p>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+              <div style={{ background: 'var(--bg-subtle)', padding: '0.75rem 1rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-light)', fontSize: '0.85rem', color: 'var(--text-secondary)', fontWeight: 600 }}>
+                📊 <strong>MASTER_CLAIMS_REGISTER.csv</strong> — Complete 30-Point Audit
+              </div>
+              <div style={{ background: 'var(--bg-subtle)', padding: '0.75rem 1rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-light)', fontSize: '0.85rem', color: 'var(--text-secondary)', fontWeight: 600 }}>
+                📋 <strong>CONTENT_VERIFICATION_POLICY.md</strong> — Verification Standards
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Official Web & Media Links */}
+        <div
+          className="card-premium"
+          style={{
+            padding: '2.5rem',
+            border: '1px solid var(--border-gold)',
+          }}
+        >
+          <h3 className="font-serif heading-gold" style={{ fontSize: '1.5rem', marginBottom: '1rem', fontWeight: 800 }}>
+            {lang === 'ta' ? 'அதிகாரப்பூர்வ நிறுவன இணைப்புகள்' : 'Verified Official Ecosystem Portals'}
+          </h3>
+
+          <p style={{ color: 'var(--text-muted)', fontSize: '0.92rem', lineHeight: 1.7, marginBottom: '1.75rem' }}>
+            {lang === 'ta'
+              ? 'முனைவர் அரவிந்தன் அவர்களின் அங்கீகரிக்கப்பட்ட அதிகாரப்பூர்வ வலைத்தளங்கள் மற்றும் கல்வி நிறுவன இணையதளங்கள்:'
+              : 'Authorized digital entities directly affiliated with Dr. J. Arawindhan Ji:'}
+          </p>
+
+          <div className="grid-3">
+            <div style={{ background: 'var(--bg-subtle)', padding: '1.25rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-light)' }}>
+              <div style={{ color: 'var(--gold-glow)', fontWeight: 800, fontSize: '1rem', marginBottom: '0.35rem' }}>
+                ACHARIYA Education
+              </div>
+              <p style={{ fontSize: '0.82rem', color: 'var(--text-muted)', marginBottom: '0.75rem' }}>
+                Official portal for 18 colleges and 101 schools.
+              </p>
+              <span style={{ fontSize: '0.82rem', color: '#059669', fontWeight: 700 }}>achariya.in</span>
+            </div>
+
+            <div style={{ background: 'var(--bg-subtle)', padding: '1.25rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-light)' }}>
+              <div style={{ color: 'var(--gold-glow)', fontWeight: 800, fontSize: '1rem', marginBottom: '0.35rem' }}>
+                MIWAY Academic System
+              </div>
+              <p style={{ fontSize: '0.82rem', color: 'var(--text-muted)', marginBottom: '0.75rem' }}>
+                Multiple Intelligence K-12 curriculum portal.
+              </p>
+              <span style={{ fontSize: '0.82rem', color: '#059669', fontWeight: 700 }}>miway.in</span>
+            </div>
+
+            <div style={{ background: 'var(--bg-subtle)', padding: '1.25rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-light)' }}>
+              <div style={{ color: 'var(--gold-glow)', fontWeight: 800, fontSize: '1rem', marginBottom: '0.35rem' }}>
+                Divine Grace Foundation
+              </div>
+              <p style={{ fontSize: '0.82rem', color: 'var(--text-muted)', marginBottom: '0.75rem' }}>
+                Divya Yogam & annual Maha Shambala Puducherry.
+              </p>
+              <span style={{ fontSize: '0.82rem', color: '#059669', fontWeight: 700 }}>divinegracefoundation.org</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

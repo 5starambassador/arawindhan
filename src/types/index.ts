@@ -1,0 +1,74 @@
+export type Language = 'en' | 'ta';
+
+export interface ClaimVerification {
+  id: string;
+  status: 'CONFIRMED' | 'SOURCE_CLAIM' | 'PENDING_VERIFICATION' | 'CONFLICTING' | 'APPROVAL_REQUIRED';
+  source: string;
+  notes?: string;
+}
+
+export interface MetricItem {
+  number: string;
+  label: { en: string; ta: string };
+  detail: { en: string; ta: string };
+  claimId: string;
+}
+
+export interface EducationalExhibit {
+  id: string;
+  slug: string;
+  title: { en: string; ta: string };
+  subtitle: { en: string; ta: string };
+  tagline: { en: string; ta: string };
+  whatItIs: { en: string; ta: string };
+  howItWorks: { en: string[]; ta: string[] };
+  evidenceAndReach: { en: string[]; ta: string[] };
+  iconName: string;
+  claimId: string;
+  relatedBooks?: string[];
+}
+
+export interface BookItem {
+  id: string;
+  slug: string;
+  title: { en: string; ta: string };
+  tagline: { en: string; ta: string };
+  author: { en: string; ta: string };
+  edition: string;
+  language: string;
+  status: 'Published' | 'Ecosystem Edition' | 'Forthcoming';
+  claimId: string;
+  summary: { en: string; ta: string };
+  keyThemes: { en: string[]; ta: string[] };
+  targetAudience: { en: string; ta: string };
+  readMoreSnippet?: { en: string; ta: string };
+}
+
+export interface InstitutionEntry {
+  id: string;
+  name: string;
+  tamilName?: string;
+  sector: 'Higher Education' | 'K12 Schools' | 'Enterprises & Food' | 'Wellness & Healthcare' | 'Recreation' | 'Industry' | 'Technology & Media' | 'Suprasapien Academies';
+  category: 'Owned' | 'Powered' | 'Partnered' | 'Parented' | 'Group Enterprise' | 'Trust';
+  location: string;
+  description: { en: string; ta: string };
+  scaleNote?: string;
+}
+
+export interface HonourItem {
+  id: string;
+  title: { en: string; ta: string };
+  conferredBy: { en: string; ta: string };
+  category: 'Personal Honour' | 'Institutional Accolade' | 'World Record';
+  year?: string;
+  claimId: string;
+  verificationStatus: 'CONFIRMED' | 'SOURCE_CLAIM' | 'PENDING_VERIFICATION';
+  details: { en: string; ta: string };
+}
+
+export interface AvatarPhase {
+  phase: number;
+  avatar: { en: string; ta: string };
+  essence: { en: string; ta: string };
+  description: { en: string; ta: string };
+}

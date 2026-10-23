@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/[lang]/layout,_N_T_/[lang]/biography/layout,_N_T_/[lang]/biography/page,_N_T_/en/biography"
+  },
+  "routeCache": {
+    "key": "/route-cache/APP_PAGE/5a7c004c22401fb55b200ca9bcd945ab9e09b8ac7c2bf51d25a2b53096561ca5/$/en/biography",
+    "owner": {
+      "kind": "APP_PAGE",
+      "sourceRoute": "/[lang]/biography/page"
+    },
+    "isFallback": false
+  }
+}

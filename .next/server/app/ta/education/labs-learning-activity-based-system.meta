@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/[lang]/layout,_N_T_/[lang]/education/layout,_N_T_/[lang]/education/[slug]/layout,_N_T_/[lang]/education/[slug]/page,_N_T_/ta/education/labs-learning-activity-based-system"
+  },
+  "routeCache": {
+    "key": "/route-cache/APP_PAGE/e298399dd4e1f7d44c3f8858e722ad2ab533904e1b0c2a81fce88da874a4bc77/$/ta/education/labs-learning-activity-based-system",
+    "owner": {
+      "kind": "APP_PAGE",
+      "sourceRoute": "/[lang]/education/[slug]/page"
+    },
+    "isFallback": false
+  }
+}

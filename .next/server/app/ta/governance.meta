@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/[lang]/layout,_N_T_/[lang]/governance/layout,_N_T_/[lang]/governance/page,_N_T_/ta/governance"
+  },
+  "routeCache": {
+    "key": "/route-cache/APP_PAGE/1c8b3705aea59d5b51e258a1681341f20d57624d246f3efb625dc4d07db9d966/$/ta/governance",
+    "owner": {
+      "kind": "APP_PAGE",
+      "sourceRoute": "/[lang]/governance/page"
+    },
+    "isFallback": false
+  }
+}

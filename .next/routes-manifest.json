@@ -1,0 +1,160 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/[lang]",
+      "regex": "^/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/[lang]/biography",
+      "regex": "^/([^/]+?)/biography(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/biography(?:/)?$"
+    },
+    {
+      "page": "/[lang]/books",
+      "regex": "^/([^/]+?)/books(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/books(?:/)?$"
+    },
+    {
+      "page": "/[lang]/books/[slug]",
+      "regex": "^/([^/]+?)/books/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang",
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/books/(?<nxtPslug>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/[lang]/contact",
+      "regex": "^/([^/]+?)/contact(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/contact(?:/)?$"
+    },
+    {
+      "page": "/[lang]/education",
+      "regex": "^/([^/]+?)/education(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/education(?:/)?$"
+    },
+    {
+      "page": "/[lang]/education/[slug]",
+      "regex": "^/([^/]+?)/education/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang",
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/education/(?<nxtPslug>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/[lang]/faq",
+      "regex": "^/([^/]+?)/faq(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/faq(?:/)?$"
+    },
+    {
+      "page": "/[lang]/governance",
+      "regex": "^/([^/]+?)/governance(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/governance(?:/)?$"
+    },
+    {
+      "page": "/[lang]/inner-journey",
+      "regex": "^/([^/]+?)/inner\\-journey(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/inner\\-journey(?:/)?$"
+    },
+    {
+      "page": "/[lang]/institutions",
+      "regex": "^/([^/]+?)/institutions(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/institutions(?:/)?$"
+    },
+    {
+      "page": "/[lang]/media",
+      "regex": "^/([^/]+?)/media(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/media(?:/)?$"
+    },
+    {
+      "page": "/[lang]/recognition",
+      "regex": "^/([^/]+?)/recognition(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/recognition(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments"
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}
