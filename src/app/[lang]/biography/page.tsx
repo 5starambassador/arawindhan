@@ -280,9 +280,11 @@ export default async function BiographyPage({
 
           <div
             style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+              display: 'flex',
+              flexWrap: 'wrap',
+              justifyContent: 'center',
               gap: '1.5rem',
+              alignItems: 'stretch',
             }}
           >
             {leadershipLessons.map((lesson) => (
@@ -290,6 +292,8 @@ export default async function BiographyPage({
                 key={lesson.number}
                 className="card-premium"
                 style={{
+                  flex: '1 1 290px',
+                  maxWidth: '315px',
                   padding: '1.75rem',
                   display: 'flex',
                   flexDirection: 'column',
@@ -368,11 +372,21 @@ export default async function BiographyPage({
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem' }}>
+          <div
+            style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              justifyContent: 'center',
+              gap: '1rem',
+              alignItems: 'stretch',
+            }}
+          >
             {coreValues.map((val) => (
               <div
                 key={val.number}
                 style={{
+                  flex: '1 1 270px',
+                  maxWidth: '300px',
                   background: '#FFFFFF',
                   border: '1px solid #E2E8F0',
                   borderRadius: '14px',
