@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Mail, MapPin, Building, ShieldCheck, FileSpreadsheet, ExternalLink, Globe } from 'lucide-react';
 import { SectionHeader } from '@/components/SectionHeader';
+import { ContactForm } from '@/components/ContactForm';
 import { Language } from '@/types';
 
 export async function generateStaticParams() {
@@ -72,6 +73,11 @@ export default async function ContactPage({
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Live Interactive Verification & Inquiry Backend Form */}
+        <div style={{ marginBottom: '3.5rem' }}>
+          <ContactForm language={lang} />
         </div>
 
         {/* Official Web & Media Links */}

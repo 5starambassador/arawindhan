@@ -1,9 +1,9 @@
 import type { NextConfig } from "next";
 
-const isProd = process.env.NODE_ENV === 'production';
+const isStaticExport = process.env.STATIC_EXPORT === 'true';
 
 const nextConfig: NextConfig = {
-  ...(isProd ? { output: 'export' } : {}),
+  ...(isStaticExport ? { output: 'export' } : {}),
   reactStrictMode: true,
   images: {
     unoptimized: true,
