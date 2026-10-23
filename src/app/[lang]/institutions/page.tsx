@@ -80,6 +80,63 @@ export default function InstitutionsPage({
           </div>
         </div>
 
+        {/* Architectural Campus Showcase Card */}
+        <div
+          style={{
+            position: 'relative',
+            borderRadius: '20px',
+            overflow: 'hidden',
+            marginBottom: '3rem',
+            border: '2px solid #E2E8F0',
+            boxShadow: '0 15px 35px -10px rgba(15, 23, 42, 0.12)',
+            height: '360px',
+          }}
+        >
+          <img
+            src="/images/institutions/achariya_campus.jpg"
+            alt="Achariya World Class Education Puducherry Central Campus"
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              objectPosition: 'center',
+              display: 'block',
+            }}
+          />
+          <div
+            style={{
+              position: 'absolute',
+              inset: 0,
+              background: 'linear-gradient(to top, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.2) 60%, transparent 100%)',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'flex-end',
+              padding: '2rem 2.5rem',
+              color: '#FFFFFF',
+            }}
+          >
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(217, 119, 6, 0.9)', padding: '0.25rem 0.75rem', borderRadius: '999px', fontSize: '0.75rem', fontWeight: 700, width: 'fit-content', marginBottom: '0.5rem' }}>
+              <span>PUDUCHERRY CENTRAL HEADQUARTERS</span>
+            </div>
+            <h3
+              style={{
+                fontFamily: 'var(--font-serif)',
+                fontSize: 'clamp(1.5rem, 3vw, 2.2rem)',
+                fontWeight: 800,
+                color: '#FFFFFF',
+                marginBottom: '0.35rem',
+              }}
+            >
+              Achariya World Class Education
+            </h3>
+            <p style={{ color: '#E2E8F0', fontSize: '0.92rem', maxWidth: '750px', lineHeight: 1.5, margin: 0 }}>
+              {lang === 'ta'
+                ? 'நவீன சர்வதேச உள்கட்டமைப்புடன் கூடிய ஆச்சாரியா முதன்மை வளாகம். 18 கல்லூரிகள், 101 பள்ளிகள் மற்றும் 14,000-க்கும் மேற்பட்ட மாணவர்களுக்கான வழிகாட்டுதல் மையம்.'
+                : 'Central flagship campus in Puducherry — the nerve center uniting 18 higher education colleges, 101 schools, and 61+ enterprises across southern India.'}
+            </p>
+          </div>
+        </div>
+
         {/* Tab Controls */}
         <div style={{ display: 'flex', justifyContent: 'center', gap: '0.75rem', marginBottom: '3rem', flexWrap: 'wrap' }}>
           <button
