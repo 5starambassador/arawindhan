@@ -90,7 +90,7 @@ export interface CoreValue {
 export interface DirectQuote {
   quote: { en: string; ta: string };
   context: { en: string; ta: string };
-  source: string;
+  source?: string;
 }
 
 export interface TransformationRipple {

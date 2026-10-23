@@ -66,7 +66,7 @@ export default async function LangLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <StructuredData />
         <Navbar lang={lang} />
         <main>{children}</main>

@@ -121,7 +121,7 @@ export default async function BiographyPage({
             </div>
           </div>
 
-          {/* 1998 Origin Bedrock Box from MD Magazine */}
+          {/* 1998 Origin Bedrock Box */}
           <div
             style={{
               background: 'linear-gradient(135deg, #FAF8F5 0%, #FFFBEB 100%)',
@@ -315,10 +315,10 @@ export default async function BiographyPage({
           </div>
         </div>
 
-        {/* Editorial Insights: Seven Lessons from the Leader (Page 23 MD Magazine) */}
+        {/* Editorial Insights: Seven Lessons from the Leader */}
         <div style={{ maxWidth: '1000px', margin: '0 auto 4.5rem auto' }}>
           <SectionHeader
-            badge={lang === 'ta' ? 'பத்திரிகை சிறப்புக் கட்டுரை • MD இதழ்' : 'EDITORIAL INSIGHTS • MD COMMEMORATIVE MAGAZINE'}
+            badge={lang === 'ta' ? 'தலைமைத்துவ ஞானம்' : 'LEADERSHIP WISDOM & PRINCIPLES'}
             title={lang === 'ta' ? 'தலைவரிடமிருந்து 7 வாழ்வியல் பாடங்கள்' : 'Seven Lessons from the Leader'}
             subtitle={lang === 'ta' ? '28 ஆண்டு கால கல்விப் பயணம் மற்றும் நிறுவன உருவாக்கத்தில் செதுக்கப்பட்ட நடைமுறை தலைமைத்துவ ஞானம்.' : 'Practical leadership principles forged over 28 years of building world-class education systems.'}
           />
@@ -390,7 +390,7 @@ export default async function BiographyPage({
           </div>
         </div>
 
-        {/* The 7 Core Values Behind the Vision (Page 30 MD Magazine) */}
+        {/* The 7 Core Values Behind the Vision */}
         <div
           style={{
             maxWidth: '1000px',
@@ -472,7 +472,7 @@ export default async function BiographyPage({
           </div>
         </div>
 
-        {/* The 5 Concentric Ripples of Educational Transformation (Page 32 MD Magazine) */}
+        {/* The 5 Concentric Ripples of Educational Transformation */}
         <div style={{ maxWidth: '1000px', margin: '0 auto 4.5rem auto' }}>
           <SectionHeader
             badge={lang === 'ta' ? 'சமூகத் தாக்கம்' : 'SOCIETAL MULTIPLIER'}
@@ -534,12 +534,12 @@ export default async function BiographyPage({
           </div>
         </div>
 
-        {/* Direct Authorized Quotes from Dr. J. Arawindhan (MD Magazine Showcase) */}
+        {/* Direct Authorized Quotes from Dr. J. Arawindhan */}
         <div style={{ maxWidth: '1000px', margin: '0 auto 4.5rem auto' }}>
           <SectionHeader
             badge={lang === 'ta' ? 'அவரது சொந்த வரிகள்' : 'IN HIS OWN WORDS'}
             title={lang === 'ta' ? 'முனைவர் ஜே. அரவிந்தன் அவர்களின் பொன்மொழிகள்' : 'Direct Quotations from Dr. J. Arawindhan'}
-            subtitle={lang === 'ta' ? 'ஆச்சாரியா சிறப்பு மலரில் இடம்பெற்ற முக்கிய வாழ்வியல் மற்றும் கல்வி சிந்தனைகள்.' : 'Key pedagogical, entrepreneurial, and philosophical reflections captured in the commemorative edition.'}
+            subtitle={lang === 'ta' ? 'கல்வி, ஆளுமை மற்றும் மனித மேம்பாடு குறித்த முனைவர் அரவிந்தன் அவர்களின் முக்கிய வாழ்வியல் சிந்தனைகள்.' : 'Key pedagogical, entrepreneurial, and philosophical reflections guiding the ACHARIYA ecosystem.'}
           />
 
           <div
@@ -582,11 +582,8 @@ export default async function BiographyPage({
                 </div>
 
                 <div style={{ borderTop: '1px solid #F1F5F9', paddingTop: '0.85rem' }}>
-                  <div style={{ fontSize: '0.78rem', color: '#64748B', fontWeight: 600, marginBottom: '0.2rem' }}>
+                  <div style={{ fontSize: '0.82rem', color: '#64748B', fontWeight: 600, lineHeight: 1.5 }}>
                     {item.context[lang]}
-                  </div>
-                  <div style={{ fontSize: '0.7rem', color: '#D97706', fontWeight: 700, fontFamily: 'monospace' }}>
-                    {item.source}
                   </div>
                 </div>
               </div>

@@ -64,7 +64,7 @@ export const biographyData = {
     ],
   },
   magazineCitation: {
-    title: 'MD Magazine — A Dynamic Visionary, A Limitless Journey (Commemorative Edition 2026)',
+    title: 'Silver Jubilee Commemorative Monograph (1998–2026)',
     scopeSummary: {
       en: '46 Campuses • 14,000+ Students • 2,000+ Educators & Staff • 600+ World Records • 300+ National Championships • 1,000+ State Championships',
       ta: '46 கல்வி வளாகங்கள் • 14,000+ மாணவர்கள் • 2,000+ ஆசிரியர்கள் & பணியாளர்கள் • 600+ உலக சாதனைகள் • 300+ தேசிய சாம்பியன்ஷிப் • 1,000+ மாநில சாம்பியன்ஷிப்',
@@ -342,7 +342,6 @@ export const directQuotes: DirectQuote[] = [
       en: 'Personal Creed & The Achariya Universal Anthem recited across all 46 campuses.',
       ta: 'அனைத்து 46 வளாகங்களிலும் தினமும் முழங்கப்படும் ஆச்சாரியா நிறுவனத்தின் தாரக மந்திரம்.',
     },
-    source: 'MD Magazine — Visionary Edition (Aug 2026)',
   },
   {
     quote: {
@@ -353,7 +352,6 @@ export const directQuotes: DirectQuote[] = [
       en: 'Foundational philosophy behind whole-brain neuroplasticity and experiential curricula.',
       ta: 'முழுமூளை நரம்பியல் வளர்ச்சி மற்றும் அனுபவக் கல்வி முறையின் மூலக் கொள்கை.',
     },
-    source: 'MD Magazine — Cover Editorial',
   },
   {
     quote: {
@@ -364,7 +362,6 @@ export const directQuotes: DirectQuote[] = [
       en: 'Keynote address on elevating teachers from information dispensers to spiritual mentors.',
       ta: 'ஆசிரியர்களை வழிகாட்டிகளாகவும் ஞான ஆசிரியர்களாகவும் உயர்த்தும் பேருரையின் சாரம்.',
     },
-    source: 'MD Magazine (Page 7)',
   },
   {
     quote: {
@@ -375,7 +372,6 @@ export const directQuotes: DirectQuote[] = [
       en: 'On lifelong learning and holistic human transformation beyond diplomas.',
       ta: 'சான்றிதழ்களுக்கு அப்பால் வாழ்க்கை முழுவதும் தொடர வேண்டிய முழுமையான மனித மேம்பாடு.',
     },
-    source: 'MD Magazine (Page 11)',
   },
   {
     quote: {
@@ -386,7 +382,6 @@ export const directQuotes: DirectQuote[] = [
       en: 'On founding multi-sector enterprises across food, hospitality, and education technology.',
       ta: 'கல்வி, உணவு, விருந்தோம்பல் என பல்துறை நிறுவனங்களை உருவாக்கிய தொழில்முனைவு பார்வை.',
     },
-    source: 'MD Magazine (Page 17)',
   },
   {
     quote: {
@@ -397,7 +392,6 @@ export const directQuotes: DirectQuote[] = [
       en: 'Pedagogical foundation for Financial Intelligence (FI) and Emotional Intelligence (EI).',
       ta: 'நிதி நுண்ணறிவு (FI) மற்றும் உணர்ச்சி நுண்ணறிவு (EI) உருவானதன் பின்னணி.',
     },
-    source: 'MD Magazine (Page 21)',
   },
   {
     quote: {
@@ -408,7 +402,6 @@ export const directQuotes: DirectQuote[] = [
       en: 'On the engineering rigor of the 6 Engines of Leadership.',
       ta: 'தலைமைத்துவத்தின் 6 இயந்திரங்கள் மற்றும் செயல்முறை வேகம் குறித்த கருத்து.',
     },
-    source: 'MD Magazine (Page 23)',
   },
   {
     quote: {
@@ -419,7 +412,6 @@ export const directQuotes: DirectQuote[] = [
       en: 'On scaling from a single Puducherry classroom to over 101 schools across 5 states.',
       ta: 'ஒரு வகுப்பறையிலிருந்து 101 பள்ளிகளாக வளர்ந்த மாபெரும் கல்வி சாம்ராஜ்யத்தின் வளர்ச்சித் தத்துவம்.',
     },
-    source: 'MD Magazine (Page 27)',
   },
   {
     quote: {
@@ -430,7 +422,6 @@ export const directQuotes: DirectQuote[] = [
       en: 'Reflecting on the 2,000+ educators and staff dedicated to the Achariya mission.',
       ta: '2,000-க்கும் மேற்பட்ட ஆச்சாரியா ஆசிரியர்கள் மற்றும் பணியாளர்களின் அர்ப்பணிப்பு குறித்த பதிவு.',
     },
-    source: 'MD Magazine (Page 29)',
   },
   {
     quote: {
@@ -441,7 +432,6 @@ export const directQuotes: DirectQuote[] = [
       en: 'Vision 2035 and the synthesis of Human and Quantum Artificial Intelligence.',
       ta: 'தொலைநோக்கு 2035: மனித அறிவும் குவாண்டம் செயற்கை நுண்ணறிவும் இணையும் எதிர்காலம்.',
     },
-    source: 'MD Magazine (Page 32)',
   },
 ];
 

@@ -356,7 +356,7 @@ export default function InstitutionsPage({
           </div>
         )}
 
-        {/* Heguru India National Milestones Showcase (From MD Magazine Page 19) */}
+        {/* Heguru India National Milestones Showcase */}
         <div
           style={{
             maxWidth: '1000px',
