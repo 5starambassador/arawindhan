@@ -184,32 +184,84 @@ export default function InstitutionsPage({
           </button>
         </div>
 
-        {/* TAB 1: 101 SCHOOLS (4 MODELS) */}
+        {/* TAB 1: 101 SCHOOLS (4 MODELS - ONE PARENT WITH FOUR CHILDREN) */}
         {activeTab === 'schools' && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-            <div className="grid-2">
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 450px), 1fr))',
+                gap: '1.75rem',
+                alignItems: 'stretch',
+              }}
+            >
               {schoolsSummary.map((summary, idx) => (
-                <div key={idx} className="card-premium">
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem' }}>
-                    <h3 className="font-serif heading-gold" style={{ fontSize: '1.4rem', fontWeight: 800 }}>
-                      {lang === 'ta' ? summary.tamilModel : summary.model}
-                    </h3>
-                    <span style={{ color: '#059669', fontWeight: 800, fontSize: '0.85rem' }}>
-                      {summary.count}
-                    </span>
+                <div
+                  key={idx}
+                  className="card-premium"
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between',
+                    padding: '2rem',
+                    borderRadius: '18px',
+                    border: '1px solid #E2E8F0',
+                    boxShadow: '0 4px 20px rgba(15, 23, 42, 0.04)',
+                    height: '100%',
+                  }}
+                >
+                  <div>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '1rem', marginBottom: '1rem' }}>
+                      <h3
+                        className="font-serif heading-gold"
+                        style={{
+                          fontSize: '1.45rem',
+                          fontWeight: 800,
+                          lineHeight: 1.25,
+                          margin: 0,
+                          color: '#0F172A',
+                        }}
+                      >
+                        {lang === 'ta' ? summary.tamilModel : summary.model}
+                      </h3>
+                      <span
+                        style={{
+                          background: '#ECFDF5',
+                          border: '1px solid #A7F3D0',
+                          color: '#065F46',
+                          fontWeight: 800,
+                          fontSize: '0.82rem',
+                          padding: '0.3rem 0.75rem',
+                          borderRadius: '999px',
+                          whiteSpace: 'nowrap',
+                          flexShrink: 0,
+                        }}
+                      >
+                        {summary.count}
+                      </span>
+                    </div>
+
+                    <p style={{ color: 'var(--text-secondary)', fontSize: '0.94rem', lineHeight: 1.7, marginBottom: '1.5rem' }}>
+                      {summary.description[lang]}
+                    </p>
                   </div>
 
-                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.92rem', lineHeight: 1.7, marginBottom: '1.25rem' }}>
-                    {summary.description[lang]}
-                  </p>
-
-                  <div style={{ background: 'var(--bg-subtle)', padding: '1rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-light)' }}>
-                    <div style={{ color: 'var(--gold-glow)', fontSize: '0.8rem', fontWeight: 800, textTransform: 'uppercase', marginBottom: '0.5rem' }}>
-                      {lang === 'ta' ? 'வளாகங்கள் & கூட்டாண்மைகள்:' : 'Campuses & Regional Footprint:'}
+                  {/* Regional Footprint Box - Pinned to bottom */}
+                  <div
+                    style={{
+                      background: 'linear-gradient(180deg, #FAF8F5 0%, #FFFBEB 100%)',
+                      padding: '1.25rem',
+                      borderRadius: '12px',
+                      border: '1px solid #F1E5D5',
+                      marginTop: 'auto',
+                    }}
+                  >
+                    <div style={{ color: '#B45309', fontSize: '0.78rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '0.65rem' }}>
+                      {lang === 'ta' ? 'வளாகங்கள் & மண்டலச் சுவடு:' : 'CAMPUSES & REGIONAL FOOTPRINT:'}
                     </div>
-                    <ul style={{ paddingLeft: '1.2rem', color: 'var(--text-secondary)', fontSize: '0.86rem', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                    <ul style={{ paddingLeft: '1.2rem', color: '#334155', fontSize: '0.88rem', display: 'flex', flexDirection: 'column', gap: '0.45rem', margin: 0 }}>
                       {summary.networks.map((net, i) => (
-                        <li key={i}>{net}</li>
+                        <li key={i} style={{ lineHeight: 1.5 }}>{net}</li>
                       ))}
                     </ul>
                   </div>
@@ -221,10 +273,10 @@ export default function InstitutionsPage({
 
         {/* TAB 2: 18 COLLEGES */}
         {activeTab === 'colleges' && (
-          <div className="grid-3">
+          <div className="grid-3" style={{ alignItems: 'stretch' }}>
             {collegesList.map((col) => (
-              <div key={col.id} className="card-premium">
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem' }}>
+              <div key={col.id} className="card-premium" style={{ display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'flex-start' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem', gap: '0.5rem' }}>
                   <span style={{ fontSize: '0.75rem', color: 'var(--gold-glow)', fontWeight: 800, textTransform: 'uppercase' }}>
                     {col.scaleNote}
                   </span>
@@ -239,7 +291,7 @@ export default function InstitutionsPage({
                   📍 {col.location} • {col.category}
                 </div>
 
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.88rem', lineHeight: 1.65 }}>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.88rem', lineHeight: 1.65, margin: 0, marginTop: 'auto' }}>
                   {col.description[lang]}
                 </p>
               </div>
@@ -275,10 +327,10 @@ export default function InstitutionsPage({
               ))}
             </div>
 
-            <div className="grid-3">
+            <div className="grid-3" style={{ alignItems: 'stretch' }}>
               {filteredEnterprises.map((ent) => (
-                <div key={ent.id} className="card-premium">
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
+                <div key={ent.id} className="card-premium" style={{ display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'flex-start' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem', gap: '0.5rem' }}>
                     <span style={{ fontSize: '0.75rem', color: 'var(--gold-glow)', fontWeight: 800 }}>
                       {ent.sector}
                     </span>
@@ -295,7 +347,7 @@ export default function InstitutionsPage({
                     📍 {ent.location}
                   </div>
 
-                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.86rem', lineHeight: 1.6 }}>
+                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.86rem', lineHeight: 1.6, margin: 0, marginTop: 'auto' }}>
                     {ent.description[lang]}
                   </p>
                 </div>
