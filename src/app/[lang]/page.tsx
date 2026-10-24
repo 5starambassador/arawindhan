@@ -22,7 +22,6 @@ import { mediaArticles } from '@/data/media';
 import { ClaimBadge } from '@/components/ClaimBadge';
 import { SectionHeader } from '@/components/SectionHeader';
 import { QuantumMatrix } from '@/components/QuantumMatrix';
-import { NeuralTerminal } from '@/components/NeuralTerminal';
 import { Language } from '@/types';
 
 export async function generateStaticParams() {
@@ -130,7 +129,7 @@ export default async function HomePage({
                 className="card-premium"
                 style={{
                   textAlign: 'center',
-                  padding: '2.5rem 2rem',
+                  padding: '2rem 1.75rem',
                   border: '1px solid var(--border-gold)',
                   boxShadow: 'var(--shadow-lg)',
                 }}
@@ -139,18 +138,19 @@ export default async function HomePage({
                 <div
                   style={{
                     position: 'relative',
-                    width: '240px',
-                    height: '280px',
+                    width: '100%',
+                    maxWidth: '380px',
+                    height: '420px',
                     margin: '0 auto 1.5rem auto',
-                    borderRadius: '20px',
+                    borderRadius: '24px',
                     overflow: 'hidden',
                     border: '3px solid #D97706',
-                    boxShadow: '0 20px 40px -10px rgba(180, 83, 9, 0.25), 0 0 0 6px #FFFBEB',
+                    boxShadow: '0 25px 50px -12px rgba(180, 83, 9, 0.35), 0 0 0 6px #FFFBEB',
                   }}
                 >
                   <img
-                    src="/images/portrait.jpg"
-                    alt={biographyData.name[lang]}
+                    src="/images/portrait_hero.jpg"
+                    alt={`${biographyData.name[lang]} - ${biographyData.spiritualName[lang]}`}
                     style={{
                       width: '100%',
                       height: '100%',
@@ -165,12 +165,12 @@ export default async function HomePage({
                       bottom: 0,
                       left: 0,
                       right: 0,
-                      padding: '0.5rem',
-                      background: 'linear-gradient(to top, rgba(15, 23, 42, 0.85), transparent)',
+                      padding: '0.6rem',
+                      background: 'linear-gradient(to top, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.3) 70%, transparent)',
                       color: '#FFFFFF',
-                      fontSize: '0.72rem',
+                      fontSize: '0.78rem',
                       fontWeight: 700,
-                      letterSpacing: '0.08em',
+                      letterSpacing: '0.1em',
                       textTransform: 'uppercase',
                       textAlign: 'center',
                     }}
@@ -179,10 +179,10 @@ export default async function HomePage({
                   </div>
                 </div>
 
-                <h3 className="font-serif heading-gold" style={{ fontSize: '1.45rem', marginBottom: '0.35rem', fontWeight: 800 }}>
+                <h3 className="font-serif heading-gold" style={{ fontSize: '1.65rem', marginBottom: '0.3rem', fontWeight: 800 }}>
                   {biographyData.name[lang]}
                 </h3>
-                <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '1.25rem', fontWeight: 500 }}>
+                <p style={{ color: 'var(--gold-glow, #D97706)', fontSize: '1.05rem', marginBottom: '1.25rem', fontWeight: 600, letterSpacing: '0.02em' }}>
                   {biographyData.spiritualName[lang]}
                 </p>
 
@@ -617,19 +617,6 @@ export default async function HomePage({
               <ArrowRight size={16} />
             </Link>
           </div>
-        </div>
-      </section>
-
-      {/* 8. THOUGHT LEADERSHIP & AI ANSWER ENGINE TERMINAL */}
-      <section className="section-py" style={{ background: 'var(--bg-subtle)', borderTop: '1px solid var(--border-light)' }}>
-        <div className="container">
-          <SectionHeader
-            badge={lang === 'ta' ? 'செயற்கை நுண்ணறிவு & கல்வி' : 'FUTURISTIC AI REASONING & THOUGHT LEADERSHIP'}
-            title={lang === 'ta' ? 'மனித நுண்ணறிவு + AI = குவாண்டம் நுண்ணறிவு' : 'Human Intelligence + AI = Quantum Intelligence'}
-            subtitle={lang === 'ta' ? 'மாறிவரும் AI யுகத்தில் கல்வியை அணுகும் புரட்சிகரப் பார்வை. நிகழ்நேர அறிவுத் தள வினா-விடை கன்சோல்.' : 'Interactive reasoning terminal synthesizing Dr. J. Arawindhan’s codified philosophies, exhibits, and verified claims.'}
-          />
-
-          <NeuralTerminal lang={lang} />
         </div>
       </section>
     </div>

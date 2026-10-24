@@ -220,6 +220,53 @@ export default async function BookDetailPage({
               ))}
             </ul>
           </div>
+
+          {/* Sample Chapters Excerpts */}
+          {book.sampleChapters && book.sampleChapters.length > 0 && (
+            <div style={{ marginTop: '2.5rem', paddingTop: '2rem', borderTop: '1px solid var(--border-light)' }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.25rem', flexWrap: 'wrap', gap: '0.75rem' }}>
+                <h4 style={{ color: 'var(--gold-glow)', fontSize: '1.15rem', fontWeight: 800, textTransform: 'uppercase', margin: 0 }}>
+                  {lang === 'ta' ? '📖 மாதிரி வாசிப்பு (Sample Reading):' : '📖 Sample Reading Excerpts:'}
+                </h4>
+                <OpenReaderButton
+                  slug={book.slug}
+                  mode="text"
+                  label={lang === 'ta' ? 'முழு திரையில் வாசிக்க' : 'Open in Fullscreen Reader'}
+                  style={{ padding: '0.45rem 1rem', fontSize: '0.82rem' }}
+                />
+              </div>
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                {book.sampleChapters.map((ch, idx) => (
+                  <div
+                    key={idx}
+                    style={{
+                      background: '#FAFAF9',
+                      border: '1px solid #E7E5E4',
+                      borderRadius: '12px',
+                      padding: '1.5rem 1.75rem',
+                    }}
+                  >
+                    <div style={{ fontWeight: 800, color: 'var(--text-primary)', fontSize: '1.05rem', marginBottom: '0.35rem' }}>
+                      {ch.title[lang]}
+                    </div>
+                    {ch.subtitle && (
+                      <div style={{ fontStyle: 'italic', color: 'var(--gold-glow)', fontSize: '0.9rem', marginBottom: '1rem', fontWeight: 600 }}>
+                        {ch.subtitle[lang]}
+                      </div>
+                    )}
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
+                      {ch.paragraphs[lang].map((p, pIdx) => (
+                        <p key={pIdx} style={{ color: 'var(--text-secondary)', lineHeight: 1.8, fontSize: '0.94rem', margin: 0 }}>
+                          {p}
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Factual Integrity & Acquisition Notice */}

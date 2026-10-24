@@ -54,22 +54,29 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '0.85rem' }}>
               <div
                 style={{
-                  width: '38px',
-                  height: '38px',
+                  width: '40px',
+                  height: '40px',
                   borderRadius: '50%',
-                  background: 'linear-gradient(135deg, #D97706 0%, #B45309 100%)',
-                  border: '2px solid #FDE68A',
+                  overflow: 'hidden',
+                  border: '2px solid #F59E0B',
+                  boxShadow: '0 2px 8px rgba(217, 119, 6, 0.25), 0 0 0 2px #FEF3C7',
+                  flexShrink: 0,
+                  background: '#FEF3C7',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  fontWeight: 800,
-                  fontSize: '0.95rem',
-                  color: '#FFFFFF',
-                  fontFamily: 'var(--font-serif)',
-                  boxShadow: '0 2px 8px rgba(217, 119, 6, 0.25)',
                 }}
               >
-                JA
+                <img
+                  src="/images/avatar.jpg"
+                  alt="Dr. J. Arawindhan"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    display: 'block',
+                  }}
+                />
               </div>
               <div>
                 <div

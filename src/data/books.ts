@@ -775,7 +775,9 @@ export const booksList: BookItem[] = [
   {
     id: 'BK-009',
     slug: 'the-yoga-of-personality',
-    coverImage: '/images/books/yoga_of_personality_v2.jpg',
+    coverImage: '/images/books/yoga-of-personality.jpg',
+    pdfUrl: '/books/yoga-of-personality.pdf',
+    flipbookPages: Array.from({ length: 33 }, (_, i) => `/books/yoga-of-personality/pages/page_${i + 1}.webp`),
     title: {
       en: 'The Yoga of Personality',
       ta: 'ஆளுமையின் யோகம் (The Yoga of Personality)',
@@ -1426,6 +1428,8 @@ export const booksList: BookItem[] = [
         },
       },
     ],
+    pdfUrl: '/books/iqqi.pdf',
+    flipbookPages: Array.from({ length: 213 }, (_, i) => `/books/iqqi/pages/page_${i + 1}.webp`),
   },
   {
     id: 'BK-016',

@@ -6,8 +6,8 @@ export const biographyData = {
     ta: 'முனைவர் ஜே. அரவிந்தன்',
   },
   spiritualName: {
-    en: 'Santoshi Shri Arawindhan',
-    ta: 'சந்தோஷி ஸ்ரீ அரவிந்தன்',
+    en: 'Santoshi Shri Arawindhan ji',
+    ta: 'சந்தோஷி ஸ்ரீ அரவிந்தன் ஜி',
   },
   roles: {
     en: 'Founder, Chief Mentor & Managing Director, ACHARIYA World Class Education | Educationist | Entrepreneur | Spiritual Master',
