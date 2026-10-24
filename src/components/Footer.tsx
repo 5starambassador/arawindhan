@@ -145,6 +145,102 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
                 </div>
               </div>
             </div>
+
+            {/* Official Social Links */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginTop: '1rem', flexWrap: 'wrap' }}>
+              <a
+                href="https://www.linkedin.com/in/dr-j-arawindhan-jayakumar-b1a056124/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.4rem',
+                  background: '#EFF6FF',
+                  border: '1px solid #BFDBFE',
+                  color: '#1D4ED8',
+                  padding: '0.35rem 0.75rem',
+                  borderRadius: '8px',
+                  fontSize: '0.78rem',
+                  fontWeight: 700,
+                  textDecoration: 'none',
+                  transition: 'all 0.15s ease',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = '#DBEAFE';
+                  e.currentTarget.style.transform = 'translateY(-1px)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = '#EFF6FF';
+                  e.currentTarget.style.transform = 'none';
+                }}
+              >
+                <span>in LinkedIn</span>
+                <span style={{ fontSize: '0.7rem', opacity: 0.85 }}>Dr. J. Arawindhan</span>
+              </a>
+
+              <a
+                href="https://www.youtube.com/@ArawindhanOfficial"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.4rem',
+                  background: '#FEF2F2',
+                  border: '1px solid #FECACA',
+                  color: '#DC2626',
+                  padding: '0.35rem 0.75rem',
+                  borderRadius: '8px',
+                  fontSize: '0.78rem',
+                  fontWeight: 700,
+                  textDecoration: 'none',
+                  transition: 'all 0.15s ease',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = '#FEE2E2';
+                  e.currentTarget.style.transform = 'translateY(-1px)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = '#FEF2F2';
+                  e.currentTarget.style.transform = 'none';
+                }}
+              >
+                <span>▶ YouTube</span>
+                <span style={{ fontSize: '0.7rem', opacity: 0.85 }}>@ArawindhanOfficial</span>
+              </a>
+
+              <a
+                href="https://www.instagram.com/arawindan_official/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.4rem',
+                  background: '#FDF2F8',
+                  border: '1px solid #FBCFE8',
+                  color: '#DB2777',
+                  padding: '0.35rem 0.75rem',
+                  borderRadius: '8px',
+                  fontSize: '0.78rem',
+                  fontWeight: 700,
+                  textDecoration: 'none',
+                  transition: 'all 0.15s ease',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = '#FCE7F3';
+                  e.currentTarget.style.transform = 'translateY(-1px)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = '#FDF2F8';
+                  e.currentTarget.style.transform = 'none';
+                }}
+              >
+                <span>📷 Instagram</span>
+                <span style={{ fontSize: '0.7rem', opacity: 0.85 }}>@arawindan_official</span>
+              </a>
+            </div>
           </div>
 
           {/* Col 2: Core Knowledge Sections */}

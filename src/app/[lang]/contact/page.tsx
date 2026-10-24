@@ -119,6 +119,15 @@ export default async function ContactPage({
               <div style={{ background: 'var(--bg-subtle)', padding: '0.75rem 1rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-light)', fontSize: '0.88rem', color: 'var(--text-secondary)' }}>
                 🌐 <strong>{lang === 'ta' ? 'அதிகாரப்பூர்வ தளம்:' : 'Official Portal:'}</strong> <a href="https://www.arawindhan.com" target="_blank" rel="noopener noreferrer" style={{ color: '#059669', fontWeight: 700, textDecoration: 'none' }}>www.arawindhan.com</a>
               </div>
+              <div style={{ background: 'var(--bg-subtle)', padding: '0.75rem 1rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-light)', fontSize: '0.88rem', color: 'var(--text-secondary)' }}>
+                💼 <strong>{lang === 'ta' ? 'லிங்க்ட்இன் சுயவிவரம்:' : 'Official LinkedIn:'}</strong> <a href="https://www.linkedin.com/in/dr-j-arawindhan-jayakumar-b1a056124/" target="_blank" rel="noopener noreferrer" style={{ color: '#1D4ED8', fontWeight: 700, textDecoration: 'none' }}>Dr. J. Arawindhan</a>
+              </div>
+              <div style={{ background: 'var(--bg-subtle)', padding: '0.75rem 1rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-light)', fontSize: '0.88rem', color: 'var(--text-secondary)' }}>
+                ▶️ <strong>{lang === 'ta' ? 'யூடியூப் சேனல்:' : 'Official YouTube:'}</strong> <a href="https://www.youtube.com/@ArawindhanOfficial" target="_blank" rel="noopener noreferrer" style={{ color: '#DC2626', fontWeight: 700, textDecoration: 'none' }}>@ArawindhanOfficial</a>
+              </div>
+              <div style={{ background: 'var(--bg-subtle)', padding: '0.75rem 1rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-light)', fontSize: '0.88rem', color: 'var(--text-secondary)' }}>
+                📷 <strong>{lang === 'ta' ? 'இன்ஸ்டாகிராம் பக்கம்:' : 'Official Instagram:'}</strong> <a href="https://www.instagram.com/arawindan_official/" target="_blank" rel="noopener noreferrer" style={{ color: '#DB2777', fontWeight: 700, textDecoration: 'none' }}>@arawindan_official</a>
+              </div>
             </div>
           </div>
         </div>

@@ -82,6 +82,9 @@ export const StructuredData: React.FC<StructuredDataProps> = ({
       ],
       sameAs: [
         'https://achariya.in',
+        'https://www.linkedin.com/in/dr-j-arawindhan-jayakumar-b1a056124/',
+        'https://www.youtube.com/@ArawindhanOfficial',
+        'https://www.instagram.com/arawindan_official/',
         'https://www.facebook.com/achariyaworldclasseducation',
         'https://www.youtube.com/@AchariyaEducationalInstitutions',
       ],
