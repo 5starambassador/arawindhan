@@ -177,8 +177,51 @@ export default async function BiographyPage({
                 <span>{lang === 'ta' ? 'அதிகாரப்பூர்வ சுயவிவரம் & கல்வி அடித்தளம்' : 'AUTHORITATIVE PROFILE & FOUNDATIONAL ROOTS'}</span>
               </div>
               <span style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', color: '#065F46', padding: '0.2rem 0.65rem', borderRadius: '999px', fontSize: '0.75rem', fontWeight: 800 }}>
-                {lang === 'ta' ? '1,100+ பணியாளர்கள் • 25+ நிறுவனங்கள்' : '1,100+ Workforce • 25+ Institutions'}
+                {lang === 'ta' ? '12,000+ மாணவர்கள் • 1,200 பணியாளர்கள் • 42+ நிறுவனங்கள்' : '12,000+ Students • 1,200 Workforce • 42+ Institutions'}
               </span>
+            </div>
+
+            {/* Honorific & Core Creed Callout */}
+            <div
+              style={{
+                background: 'linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%)',
+                border: '1px solid #FDE68A',
+                borderRadius: '14px',
+                padding: '1rem 1.25rem',
+                marginBottom: '1.25rem',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                flexWrap: 'wrap',
+                gap: '1rem',
+              }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                <img
+                  src="/images/arawindhan_blue_shirt.jpg"
+                  alt="Tr J Arawindhan - Teacher / Trainer / Transformer"
+                  style={{
+                    width: '64px',
+                    height: '64px',
+                    borderRadius: '50%',
+                    objectFit: 'cover',
+                    border: '2px solid #D97706',
+                    boxShadow: '0 2px 8px rgba(217, 119, 6, 0.25)',
+                    flexShrink: 0,
+                  }}
+                />
+                <div>
+                  <div style={{ fontSize: '0.75rem', fontWeight: 800, color: '#B45309', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                    {biographyData.personalProfile.teacherTransformerTitle[lang]}
+                  </div>
+                  <div style={{ fontSize: '0.96rem', fontWeight: 800, color: '#0F172A', marginTop: '0.15rem' }}>
+                    {biographyData.personalProfile.popularName[lang]}
+                  </div>
+                </div>
+              </div>
+              <div style={{ background: '#FFFFFF', border: '1px solid #FDE68A', padding: '0.4rem 0.85rem', borderRadius: '8px', fontSize: '0.82rem', fontWeight: 700, color: '#B45309', fontStyle: 'italic' }}>
+                {biographyData.personalProfile.spiritualMotto[lang]}
+              </div>
             </div>
 
             <div
@@ -250,13 +293,13 @@ export default async function BiographyPage({
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
                 <Globe size={18} color="#D97706" />
                 <h5 style={{ margin: 0, fontSize: '0.96rem', fontWeight: 800, color: '#0F172A' }}>
-                  {lang === 'ta' ? 'உலகளாவிய கல்விக் கள ஆய்வுகள் & கலாச்சாரப் பயணங்கள் (11 நாடுகள்)' : 'Global Education Systems & Cultural Research Odyssey (11 Nations Visited)'}
+                  {lang === 'ta' ? 'உலகளாவிய கல்விக் கள ஆய்வுகள் & கலாச்சாரப் பயணங்கள் (12 நாடுகள்)' : 'Global Education Systems & Cultural Research Odyssey (12 Nations Visited)'}
                 </h5>
               </div>
               <p style={{ color: '#475569', fontSize: '0.88rem', lineHeight: 1.6, marginBottom: '0.85rem' }}>
                 {lang === 'ta'
-                  ? 'உலகெங்கிலும் உள்ள சிறந்த கல்வி முறைகள் மற்றும் சமூக கலாச்சாரங்களை நேரில் ஆய்வு செய்து, ஆச்சாரியாவின் தனித்துவமான "தசாவதானி" மற்றும் "மைவே" (MiWay) பாடத்திட்டங்களை வடிவமைக்க முனைவர் ஜே. அரவிந்தன் விரிவான கல்விப் பயணங்களை மேற்கொண்டுள்ளார்.'
-                  : 'In his quest to learn about the education systems and social cultures across the world, Dr. Arawindhan has travelled extensively to research and synthesize the world’s most progressive pedagogical models into ACHARIYA’s Dasavadani and MiWay frameworks.'}
+                  ? 'பின்லாந்து, சிங்கப்பூர், ஜப்பான், இங்கிலாந்து, கனடா, அமெரிக்கா என உலகின் மிகச்சிறந்த கல்வி முறைகளையும் சமூக கலாச்சாரங்களையும் நேரில் ஆய்வு செய்து, ஆச்சாரியாவின் தனித்துவமான "தசாவதானி" மற்றும் "மைவே" (MiWay) பாடத்திட்டங்களை வடிவமைக்க முனைவர் ஜே. அரவிந்தன் விரிவான உலகப் பயணங்களை மேற்கொண்டுள்ளார்.'
+                  : 'In his quest to learn about the education systems and social cultures across the world, Dr. Arawindhan has travelled the length and breadth of the planet — including Finland, Singapore, Japan, Canada, China, Italy, USA, and beyond — to synthesize the world’s most progressive pedagogical models into ACHARIYA’s Dasavadani and MiWay frameworks.'}
               </p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
                 {biographyData.globalStudyTravel.map((country, cIdx) => (

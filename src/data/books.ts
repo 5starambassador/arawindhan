@@ -92,7 +92,7 @@ export const booksList: BookItem[] = [
       en: 'Parents of preschool, primary, and adolescent students.',
       ta: 'மழலையர், தொடக்க மற்றும் வளரிளம் பருவக் குழந்தைகளின் பெற்றோர்கள்.',
     },
-    pdfUrl: '/books/wow_parenting_book_final.pdf',
+    pdfUrl: '/books/wow-parenting-book.pdf',
     epubUrl: '/books/wow_parenting.epub',
     flipbookPages: Array.from({ length: 38 }, (_, i) => `/books/wow_parenting/pages/page_${i + 1}.webp`),
     sampleChapters: [

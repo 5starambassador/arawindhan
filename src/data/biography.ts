@@ -77,12 +77,31 @@ export const biographyData = {
       ta: 'கல்வித்துறைக்கு ஆற்றிய மகத்தான பங்களிப்பைப் பாராட்டி இத்தாலியின் யார்க்கர் சர்வதேச பல்கலைக்கழகம் 2010-ல் மதிப்புறு முனைவர் பட்டம் வழங்கியது.',
     },
     managingTrustee: {
-      en: 'Managing Trustee & Founder of Achariya Educational Public Trust (Est. 2002), promoting Achariya World Class Institutions.',
-      ta: 'ஆச்சாரியா உலகத்தரம் வாய்ந்த கல்வி நிறுவனங்களை வழிநடத்தும் ஆச்சாரியா கல்வி பொது அறக்கட்டளையின் (2002) நிறுவன நிர்வாக அறங்காவலர்.',
+      en: 'Managing Trustee & Founder of Achariya Educational Public Trust (Est. 2002), promoting Achariya World Class Institutions (42+ institutions, 12,000+ students, 1,200 employees).',
+      ta: 'ஆச்சாரியா உலகத்தரம் வாய்ந்த கல்வி நிறுவனங்களை (42+ நிறுவனங்கள், 12,000+ மாணவர்கள், 1,200 ஊழியர்கள்) வழிநடத்தும் ஆச்சாரியா கல்வி பொது அறக்கட்டளையின் (2002) நிறுவன நிர்வாக அறங்காவலர்.',
     },
-    totalEmployees: '1,100+ Dedicated Educators & Staff',
+    teacherTransformerTitle: {
+      en: 'Tr J Arawindhan (Teacher / Trainer / Transformer)',
+      ta: 'ஆசிரியர் ஜே. அரவிந்தன் (கற்பிப்பாளர் / பயிற்றுவிப்பாளர் / உருமாற்றுபவர்)',
+    },
+    popularName: {
+      en: 'Affectionately called “Brother Arawindhan” — with Achariya evolving as a family.',
+      ta: 'ஆச்சாரியா ஒரு பெரும் குடும்பமாக மலர்ந்த நிலையில், அனைவராலும் “சகோதரர் அரவிந்தன்” என அழைக்கப்படுபவர்.',
+    },
+    spiritualMotto: {
+      en: '“Inner Silence, Outer Vibrance” — cultivating spiritual alignment through meditation & yoga.',
+      ta: '“அக அமைதி, புற ஆற்றல்” — யோகா மற்றும் தியானத்தின் வழியே மாணவர்களிடம் ஆன்ம ஒழுங்கமைப்பை உருவாக்குதல்.',
+    },
+    kalamVision: {
+      en: 'Creating the new India based on Intelligence, as dreamt by Dr. A.P.J. Abdul Kalam.',
+      ta: 'பாரத ரத்னா டாக்டர் ஏ.பி.ஜே. அப்துல் கலாம் அவர்களின் கனவான நுண்ணறிவுமிக்க புதிய பாரதத்தை உருவாக்குதல்.',
+    },
+    totalInstitutions: 'Over 42 Institutions in its Fold',
+    totalStudents: '12,000+ Active Students',
+    totalEmployees: 'Around 1,200 Dedicated Employees & Faculty Members',
   },
   globalStudyTravel: [
+    'Finland',
     'Singapore',
     'Malaysia',
     'Japan',

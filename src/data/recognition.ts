@@ -312,6 +312,42 @@ export const institutionalAccolades: HonourItem[] = [
       ta: 'மாணவர்களின் அபாரமான சிந்திக்கும் திறன் மற்றும் தேசிய அளவிலான முதன்மை கல்விச் சாதனைகளுக்காக நேஷனல் ஜீனியஸ் சர்ச் பவுண்டேஷன் வழங்கிய கௌரவம்.',
     },
   },
+  {
+    id: 'INS-08',
+    title: {
+      en: '182 Guinness & World Records Milestone',
+      ta: '182 கின்னஸ் மற்றும் உலக சாதனைகள் மைல்கல்',
+    },
+    conferredBy: {
+      en: 'Guinness World Records & International Record Authorities',
+      ta: 'கின்னஸ் உலக சாதனைகள் & சர்வதேச சாதனை ஆணையங்கள்',
+    },
+    category: 'World Record',
+    claimId: 'CLM-007',
+    verificationStatus: 'CONFIRMED',
+    details: {
+      en: 'Achieved by Achariya students and faculty across academics, sports, yoga, arts, and cognitive memory since 2009.',
+      ta: '2009 முதல் ஆச்சாரியா மாணவர்கள் மற்றும் ஆசிரியர்களால் கல்வி, யோகா, நினைவாற்றல், கலைகளில் நிகழ்த்தப்பட்ட 182 உலக சாதனைகள்.',
+    },
+  },
+  {
+    id: 'INS-09',
+    title: {
+      en: 'International Robotics Award',
+      ta: 'சர்வதேச ரோபோடிக்ஸ் விருது',
+    },
+    conferredBy: {
+      en: 'World Robo Masters Cup, Singapore (2013)',
+      ta: 'வேர்ல்ட் ரோபோ மாஸ்டர்ஸ் கப், சிங்கப்பூர் (2013)',
+    },
+    category: 'Institutional Accolade',
+    claimId: 'CLM-007',
+    verificationStatus: 'CONFIRMED',
+    details: {
+      en: 'Awarded to Achariya innovators for pioneering advanced student robotics design and artificial intelligence automation in Singapore.',
+      ta: 'சிங்கப்பூரில் நடைபெற்ற உலக ரோபோ மாஸ்டர்ஸ் கோப்பையில் மாணவர்களின் நவீன ரோபோடிக்ஸ் வடிவமைப்பு மற்றும் ஆட்டோமேஷனுக்காக வென்ற சர்வதேச விருது.',
+    },
+  },
 ];
 
 export const worldRecordsData = {

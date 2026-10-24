@@ -322,8 +322,25 @@ export const trustOverview = {
     en: 'Dr. J. Arawindhan (Managing Trustee & Founder)',
     ta: 'முனைவர் ஜே. அரவிந்தன் (நிறுவன நிர்வாக அறங்காவலர்)',
   },
-  totalInstitutions: 'Over 25 Premier Institutions',
-  totalEmployees: '1,100+ Employees & Faculty Members',
+  titleHonorific: {
+    en: 'Tr J Arawindhan (Teacher / Trainer / Transformer) • Affectionately Known as “Brother Arawindhan”',
+    ta: 'ஆசிரியர் ஜே. அரவிந்தன் (கற்பிப்பாளர் / பயிற்றுவிப்பாளர் / உருமாற்றுபவர்) • அன்போடு “சகோதரர் அரவிந்தன்”',
+  },
+  mission: {
+    en: 'Empower Minds & Enrich Lives, by providing the best of World Class infrastructure with opportunities for Educational, Vocational, Social, Cultural & Leadership development that promote learning skills for life-long personal & collaborative achievements & accomplishments, through manifesting human potential, to meet the diverse & changing needs of humanity.',
+    ta: 'மனங்களை மேம்படுத்தி, வாழ்க்கையை வளப்படுத்துதல் — உலகத்தரம் வாய்ந்த உள்கட்டமைப்பு மற்றும் கல்வி, தொழிற்கல்வி, சமூக, கலாச்சார, தலைமைத்துவ வாய்ப்புகளை வழங்கி, மனித ஆற்றலை வெளிக்கொணர்ந்து, வாழ்நாள் சாதனையாளர்களாக மாற்றுதல்.',
+  },
+  spiritualPhilosophy: {
+    en: '“Inner Silence, Outer Vibrance” — spiritual alignment through meditation and yoga.',
+    ta: '“அக அமைதி, புற ஆற்றல்” — யோகா மற்றும் தியானத்தின் வழியே ஆன்ம ஒருமைப்பாடு.',
+  },
+  kalamDream: {
+    en: 'Empowering young Indians across the Nation to attain educational excellence and create the new India based on Intelligence, as dreamt by Dr. A.P.J. Abdul Kalam.',
+    ta: 'டாக்டர் ஏ.பி.ஜே. அப்துல் கலாம் அவர்களின் கனவுப்படி, இளம் இந்தியர்களை நுண்ணறிவுமிக்க ஆற்றலாளர்களாக மாற்றி புதிய இந்தியாவை உருவாக்குதல்.',
+  },
+  totalInstitutions: 'Over 42 Institutions in its Fold',
+  totalEmployees: 'Around 1,200 Dedicated Employees',
+  totalStudents: '12,000+ Active Students',
   curriculaAffiliations: 'CBSE, ICSE, IGCSE & State Boards of Education',
 };
 
@@ -334,11 +351,101 @@ export const officialFoundingChronology = [
   { institution: 'Achariya Siksha Mandir', established: 'June 2002', category: 'K12 Schooling' },
   { institution: 'Achariya Vidya Bhavan', established: 'August 2002', category: 'K12 Schooling' },
   { institution: 'Achariya Arts and Science College', established: 'August 2004', category: 'Collegiate Education' },
-  { institution: 'Aklavya ICSE School', established: 'June 2005', category: 'ICSE Schooling' },
+  { institution: 'Aklavya International School (ICSE)', established: 'June 2005', category: 'ICSE Schooling' },
   { institution: 'Sri Sampourna Vidyalayam', established: 'June 2005', category: 'K12 Schooling' },
   { institution: 'Achariya School of Business & Technology', established: 'June 2008', category: 'Management Education' },
   { institution: 'Achariya School of Tourism & Hotel Management', established: 'June 2009', category: 'Hospitality Education' },
   { institution: 'Achariya College of Engineering Technology', established: 'August 2010', category: 'Engineering Education' },
   { institution: 'Achariya Bala Siksha Mandir - Chennai Centres', established: 'June 2010', category: 'Metropolitan Campus' },
-  { institution: 'Achariya Bala Siksha Mandir - Coimbatore Centres', established: 'June 2011', category: 'Metropolitan Campus' },
+  { institution: 'Achariya Bala Siksha / Siksha Mandir – Coimbatore, Tindivanam, Villupuram', established: 'Since 2011', category: 'Regional Hubs' },
 ];
+
+export const internationalPartnerSchools = [
+  {
+    name: 'The BRIT School',
+    country: 'United Kingdom',
+    flag: '🇬🇧',
+    type: { en: 'Performing Arts & Technology Partner', ta: 'நிகழ்த்து கலை மற்றும் தொழில்நுட்ப கூட்டாண்மை' },
+  },
+  {
+    name: 'CIV International School',
+    country: 'France',
+    flag: '🇫🇷',
+    type: { en: 'Bilingual & European Cultural Exchange', ta: 'இருமொழி மற்றும் பிரெஞ்சு கலாச்சார பரிமாற்றம்' },
+  },
+  {
+    name: 'Santa Rosa City Schools',
+    country: 'Argentina',
+    flag: '🇦🇷',
+    type: { en: 'Global Citizenship & Latin American Collaboration', ta: 'சர்வதேச குடியுரிமை & லத்தீன் அமெரிக்க கூட்டாண்மை' },
+  },
+  {
+    name: 'Sun Rise School',
+    country: 'Nepal',
+    flag: '🇳🇵',
+    type: { en: 'Himalayan Regional Pedagogy Alliance', ta: 'இமயமலை பிராந்திய கல்வி கூட்டமைப்பு' },
+  },
+  {
+    name: 'Marshgate Primary School',
+    country: 'United Kingdom',
+    flag: '🇬🇧',
+    type: { en: 'Primary Years British Curriculum Benchmark', ta: 'பிரிட்டிஷ் தொடக்கக் கல்வி தரநிலை கூட்டாண்மை' },
+  },
+];
+
+export const wowAcademyPrograms = [
+  {
+    id: 'WA-01',
+    name: { en: 'Divyadharshan', ta: 'திவ்யதர்ஷன் (Divyadharshan)' },
+    focus: { en: 'Perfect Eyesight & Ocular Health', ta: 'கண்பார்வை கூர்மை மற்றும் இயற்கை பார்வை மேம்பாடு' },
+    description: {
+      en: 'Specialized eye exercises and yogic focus techniques to enhance eyesight and maintain pristine ocular wellness without strain.',
+      ta: 'கண்களுக்கான பிரத்யேக பயிற்சிகள் மற்றும் யோகாசனங்கள் மூலம் பார்வைத்திறனை இயற்கையாக மேம்படுத்தும் பயிற்சி.',
+    },
+  },
+  {
+    id: 'WA-02',
+    name: { en: 'Divyadhristi', ta: 'திவ்யதிருஷ்டி (Divyadhristi)' },
+    focus: { en: 'Blindfold / Third Eye Opening Cognition', ta: 'கண்மூடி அறியும் உள்ளுணர்வு & புலன் விரிவாக்கம்' },
+    description: {
+      en: 'Neuroplastic sensory awakening enabling children to read, identify colors, calculate, and navigate with high precision while blindfolded.',
+      ta: 'கண்களை மூடிக்கொண்டு வண்ணங்களை உணர்தல், புத்தகங்களை வாசித்தல் மற்றும் வழியறிதல் போன்ற வியத்தகு உள்ளுணர்வுப் பயிற்சி.',
+    },
+  },
+  {
+    id: 'WA-03',
+    name: { en: 'LIFT Classes', ta: 'லிப்ட் வகுப்புகள் (LIFT Classes)' },
+    focus: { en: 'Fast Track Learning Programmes', ta: 'விரைவு கற்றல் மற்றும் தனிநபர் வேக மேம்பாடு' },
+    description: {
+      en: 'Accelerated pedagogical modules helping students assimilate complex curricula concepts at 2x–3x velocity.',
+      ta: 'மாணவர்கள் பாடக் கருத்துக்களை வழக்கத்தை விட பல மடங்கு வேகத்தில் கிரகித்துக்கொள்ள உதவும் முடுக்குவிக்கப்பட்ட கற்றல் திட்டம்.',
+    },
+  },
+  {
+    id: 'WA-04',
+    name: { en: 'Enrichment Skills', ta: 'சுய ஆளுமை மேம்பாடு (Enrichment Skills)' },
+    focus: { en: 'Self-Positioning & Dynamic Oratory', ta: 'தனிமனித மேடைப் பேச்சு, தலைமைத்துவம் மற்றும் ஆளுமை' },
+    description: {
+      en: 'Empowering children with self-confidence, dynamic stage presence, debate eloquence, and fearless leadership.',
+      ta: 'குழந்தைகளிடம் அச்சமின்மை, துணிச்சலான மேடைப்பேச்சு, உரையாடல் திறன் மற்றும் தலைமைப் பண்புகளை வளர்த்தல்.',
+    },
+  },
+  {
+    id: 'WA-05',
+    name: { en: '100% Learning Curve', ta: '100% கற்றல் வளைவு (100% Learning Curve)' },
+    focus: { en: 'Balancing Academic Ladder for Slow Performers', ta: 'அனைத்து குழந்தைகளையும் சமநிலைக்குக் கொண்டுவரும் கற்றல் ஏணி' },
+    description: {
+      en: 'Diagnostic remedial acceleration ensuring no student is left behind, balancing the academic ladder so every child reaches distinction.',
+      ta: 'எந்தவொரு குழந்தையும் பின்தங்கிவிடாமல், தனிப்பயன் கற்றல் ஆதரவு மூலம் அனைவரையும் தேர்ச்சி நிலைக்கு உயர்த்தும் திட்டம்.',
+    },
+  },
+];
+
+export const competitiveCoachingData = {
+  title: { en: 'Competitive Examination Command Center', ta: 'போட்டித் தேர்வு பயிற்சி மையம்' },
+  exams: ['IIT-JEE', 'BITSAT', 'JIPMER', 'NEET / AIEEE'],
+  description: {
+    en: 'Specialized coaching for premier engineering, medical, and national technical institutions conducted in full swing each academic year, empowering students to think beyond the classroom, textbooks, and exams.',
+    ta: 'ஐஐடி, பிட்சாட், ஜிப்மர் போன்ற தேசிய அளவிலான முதன்மை நுழைவுத் தேர்வுகளுக்கான தீவிர சிறப்புப் பயிற்சி ஆண்டுதோறும் நடத்தப்படுகிறது.',
+  },
+};

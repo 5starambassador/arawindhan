@@ -183,16 +183,23 @@ export default function InstitutionsPage({
             <h4 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.25rem', fontWeight: 800, color: '#0F172A', margin: '0 0 0.35rem 0' }}>
               {trustOverview.trustName[lang]} (Est. {trustOverview.established})
             </h4>
-            <p style={{ color: '#475569', fontSize: '0.9rem', lineHeight: 1.6, margin: 0 }}>
+            <p style={{ color: '#475569', fontSize: '0.9rem', lineHeight: 1.6, margin: '0 0 0.85rem 0' }}>
               {lang === 'ta'
-                ? `ஆச்சாரியா கல்வி பொது அறக்கட்டளையின் நிறுவன நிர்வாக அறங்காவலராக முனைவர் ஜே. அரவிந்தன் செயல்பட்டு வருகிறார். அறக்கட்டளையின் கீழ் ${trustOverview.totalInstitutions}, 35 கே12 பள்ளிகள் மற்றும் 1,100-க்கும் மேற்பட்ட கல்வியாளர்கள் மற்றும் பணியாளர்கள் இயங்கி வருகின்றனர்.`
-                : `Achariya World Class Institutions are promoted by ${trustOverview.trustName.en} with ${trustOverview.managingTrustee.en}. The trust oversees ${trustOverview.totalInstitutions}, 35 K12 schools, and ${trustOverview.totalEmployees} across CBSE, ICSE, IGCSE & State Boards.`}
+                ? `ஆச்சாரியா கல்வி பொது அறக்கட்டளையின் நிறுவன நிர்வாக அறங்காவலராக முனைவர் ஜே. அரவிந்தன் செயல்பட்டு வருகிறார். அறக்கட்டளையின் கீழ் ${trustOverview.totalInstitutions}, ${trustOverview.totalStudents} மற்றும் ${trustOverview.totalEmployees} இயங்கி வருகின்றனர்.`
+                : `Achariya World Class Institutions are promoted by ${trustOverview.trustName.en} with ${trustOverview.managingTrustee.en}. The trust oversees ${trustOverview.totalInstitutions}, ${trustOverview.totalStudents}, and ${trustOverview.totalEmployees} across CBSE, ICSE, IGCSE & State Boards.`}
             </p>
+            <div style={{ fontSize: '0.84rem', color: '#1E293B', fontStyle: 'italic', background: '#FFFFFF', padding: '0.65rem 1rem', borderRadius: '8px', borderLeft: '3px solid #D97706' }}>
+              "{trustOverview.mission[lang]}"
+            </div>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem', flexShrink: 0 }}>
             <div style={{ background: '#FFFFFF', border: '1px solid #E2E8F0', borderRadius: '8px', padding: '0.4rem 0.85rem', fontSize: '0.82rem', fontWeight: 700, color: '#0F172A', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
               <Users size={14} color="#D97706" />
               <span>{trustOverview.totalEmployees}</span>
+            </div>
+            <div style={{ background: '#FFFFFF', border: '1px solid #E2E8F0', borderRadius: '8px', padding: '0.4rem 0.85rem', fontSize: '0.82rem', fontWeight: 700, color: '#0F172A', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+              <GraduationCap size={14} color="#D97706" />
+              <span>{trustOverview.totalStudents}</span>
             </div>
             <div style={{ background: '#FFFFFF', border: '1px solid #E2E8F0', borderRadius: '8px', padding: '0.4rem 0.85rem', fontSize: '0.82rem', fontWeight: 700, color: '#0F172A', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
               <School size={14} color="#D97706" />
@@ -500,7 +507,7 @@ export default function InstitutionsPage({
               <strong>{lang === 'ta' ? 'நிறுவனர் & முதன்மை வழிகாட்டி:' : 'Founder & Chief Mentor:'}</strong> Dr. J. Arawindhan | <strong>{lang === 'ta' ? 'அறக்கட்டளை:' : 'Promoted by:'}</strong> Achariya Educational Public Trust
             </div>
             <div style={{ fontWeight: 800, color: '#D97706' }}>
-              {lang === 'ta' ? 'மொத்த ஊழியர்கள்: 1100' : 'Total Number of Employees: 1100'}
+              {lang === 'ta' ? 'மொத்த பணியாளர்கள்: ~1200 | மாணவர்கள்: 12000+' : 'Total Workforce: ~1,200 Employees | Students: 12,000+'}
             </div>
           </div>
         </div>
