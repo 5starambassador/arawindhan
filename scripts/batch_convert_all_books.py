@@ -29,6 +29,15 @@ PUBLIC_IMAGES_DIR = BASE_DIR / "public" / "images" / "books"
 DATA_BOOKS_TS = BASE_DIR / "src" / "data" / "books.ts"
 
 KNOWN_MAPPINGS = {
+    "divine": "science-of-divine-grace-tirukkural",
+    "grace": "science-of-divine-grace-tirukkural",
+    "tirukkural": "science-of-divine-grace-tirukkural",
+    "lion": "the-lions-bank-account",
+    "bank": "the-lions-bank-account",
+    "knowing": "from-knowing-to-doing",
+    "doing": "from-knowing-to-doing",
+    "iravadh": "iravadh-book",
+    "airavatha": "iravadh-book",
     "andava": "andava-the-victory-mode",
     "victory": "andava-the-victory-mode",
     "dictionary": "wow-dictionary",
@@ -55,6 +64,14 @@ KNOWN_MAPPINGS = {
 def slugify(text):
     text = re.sub(r'[^\w\s-]', '', text.lower())
     clean = re.sub(r'[-\s]+', '-', text).strip('-')
+    if "divine" in clean or "grace" in clean or "tirukkural" in clean:
+        return "science-of-divine-grace-tirukkural"
+    if "lion" in clean:
+        return "the-lions-bank-account"
+    if "knowing" in clean or "doing" in clean:
+        return "from-knowing-to-doing"
+    if "iravadh" in clean or "airavatha" in clean:
+        return "iravadh-book"
     if "dictionary" in clean:
         return "wow-dictionary"
     if "parenting" in clean:

@@ -1149,6 +1149,8 @@ export const booksList: BookItem[] = [
         },
       },
     ],
+    pdfUrl: '/books/the-science-of-divine-grace.pdf',
+    flipbookPages: Array.from({ length: 43 }, (_, i) => `/books/the-science-of-divine-grace/pages/page_${i + 1}.webp`),
   },
   {
     id: 'BK-013',
