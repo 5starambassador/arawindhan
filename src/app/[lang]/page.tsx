@@ -22,6 +22,7 @@ import { mediaArticles } from '@/data/media';
 import { ClaimBadge } from '@/components/ClaimBadge';
 import { SectionHeader } from '@/components/SectionHeader';
 import { QuantumMatrix } from '@/components/QuantumMatrix';
+import { BookCoverCardImage } from '@/components/BookCoverCardImage';
 import { Language } from '@/types';
 import type { Metadata } from 'next';
 
@@ -478,32 +479,15 @@ export default async function HomePage({
             {autoArrangedBooks.slice(0, 3).map((book) => (
               <div key={book.id} className="card-premium" style={{ display: 'flex', flexDirection: 'column' }}>
                 {book.coverImage && (
-                  <div
-                    style={{
-                      height: '210px',
-                      borderRadius: '12px',
-                      overflow: 'hidden',
-                      marginBottom: '1.25rem',
-                      background: 'linear-gradient(145deg, #FFFBEB 0%, #FEF3C7 100%)',
-                      border: '1px solid #FDE68A',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      padding: '0.75rem',
-                    }}
-                  >
-                    <img
-                      src={book.coverImage}
-                      alt={book.title[lang]}
-                      style={{
-                        maxHeight: '100%',
-                        maxWidth: '100%',
-                        objectFit: 'contain',
-                        borderRadius: '6px',
-                        boxShadow: '0 8px 20px rgba(0,0,0,0.15)',
-                      }}
-                    />
-                  </div>
+                  <BookCoverCardImage
+                    coverImage={book.coverImage}
+                    title={book.title[lang]}
+                    slug={book.slug}
+                    lang={lang}
+                    epubUrl={book.epubUrl}
+                    pdfUrl={book.pdfUrl}
+                    tagline={book.tagline[lang]}
+                  />
                 )}
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.75rem' }}>
                   <span style={{ fontSize: '0.78rem', color: 'var(--gold-glow)', fontWeight: 700, textTransform: 'uppercase' }}>

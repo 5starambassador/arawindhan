@@ -5,6 +5,7 @@ import { booksList } from '@/data/books';
 import { SectionHeader } from '@/components/SectionHeader';
 import { ClaimBadge } from '@/components/ClaimBadge';
 import { OpenReaderButton } from '@/components/OpenReaderButton';
+import { BookCoverCardImage } from '@/components/BookCoverCardImage';
 import { Language } from '@/types';
 import type { Metadata } from 'next';
 
@@ -161,67 +162,16 @@ export default async function BooksPage({
                   <ClaimBadge claimId={book.claimId} status="SOURCE_CLAIM" language={lang} compact />
                 </div>
 
-                {/* Book Cover Image */}
-                <div
-                  style={{
-                    height: 'clamp(160px, 40vw, 240px)',
-                    borderRadius: '12px',
-                    overflow: 'hidden',
-                    marginBottom: '1.25rem',
-                    position: 'relative',
-                    boxShadow: '0 8px 24px -4px rgba(15, 23, 42, 0.12)',
-                    border: '1px solid #E2E8F0',
-                    background: '#FAF8F5',
-                  }}
-                >
-                  <img
-                    src={book.coverImage || '/images/books/shambala_book.jpg'}
-                    alt={book.title[lang]}
-                    loading="lazy"
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      objectFit: 'cover',
-                      objectPosition: 'top center',
-                      display: 'block',
-                    }}
-                  />
-                  {/* Format Pills Overlay */}
-                  <div style={{ position: 'absolute', bottom: '8px', left: '8px', display: 'flex', gap: '4px' }}>
-                    {book.epubUrl && (
-                      <span
-                        style={{
-                          background: 'rgba(16, 185, 129, 0.92)',
-                          color: '#FFFFFF',
-                          fontSize: '0.68rem',
-                          fontWeight: 800,
-                          padding: '2px 7px',
-                          borderRadius: '4px',
-                          letterSpacing: '0.04em',
-                          boxShadow: '0 2px 4px rgba(0,0,0,0.2)',
-                        }}
-                      >
-                        EPUB
-                      </span>
-                    )}
-                    {book.pdfUrl && (
-                      <span
-                        style={{
-                          background: 'rgba(220, 38, 38, 0.92)',
-                          color: '#FFFFFF',
-                          fontSize: '0.68rem',
-                          fontWeight: 800,
-                          padding: '2px 7px',
-                          borderRadius: '4px',
-                          letterSpacing: '0.04em',
-                          boxShadow: '0 2px 4px rgba(0,0,0,0.2)',
-                        }}
-                      >
-                        PDF
-                      </span>
-                    )}
-                  </div>
-                </div>
+                {/* Book Cover Image - Full View & Expandable */}
+                <BookCoverCardImage
+                  coverImage={book.coverImage || '/images/books/shambala_book.jpg'}
+                  title={book.title[lang]}
+                  slug={book.slug}
+                  lang={lang}
+                  epubUrl={book.epubUrl}
+                  pdfUrl={book.pdfUrl}
+                  tagline={book.tagline[lang]}
+                />
 
                 {/* Book Title - Fixed Baseline */}
                 <h3
