@@ -155,7 +155,7 @@ export default async function HomePage({
                       width: '100%',
                       height: '100%',
                       objectFit: 'cover',
-                      objectPosition: 'top center',
+                      objectPosition: 'center 15%',
                       display: 'block',
                     }}
                   />
