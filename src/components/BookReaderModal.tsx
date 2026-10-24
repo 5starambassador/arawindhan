@@ -37,7 +37,9 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
   const [theme, setTheme] = useState<'paper' | 'dark' | 'light'>('paper');
   const [showRequestForm, setShowRequestForm] = useState(false);
   const [requested, setRequested] = useState(false);
+  const [hasUnlocked, setHasUnlocked] = useState(false);
   const [reqName, setReqName] = useState('');
+  const [reqPhone, setReqPhone] = useState('');
   const [reqEmail, setReqEmail] = useState('');
   const [reqOrg, setReqOrg] = useState('');
 
@@ -247,6 +249,25 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
   const handleRequestSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setRequested(true);
+    setHasUnlocked(true);
+    try {
+      const existingLeads = JSON.parse(localStorage.getItem('arawindhan_book_leads') || '[]');
+      existingLeads.push({
+        bookSlug: activeBookSlug,
+        bookTitle: book?.title[language] || activeBookSlug,
+        name: reqName,
+        phone: reqPhone,
+        email: reqEmail,
+        institution: reqOrg,
+        date: new Date().toISOString(),
+      });
+      localStorage.setItem('arawindhan_book_leads', JSON.stringify(existingLeads));
+      if (activeBookSlug) {
+        localStorage.setItem(`book_unlocked_${activeBookSlug}`, 'true');
+      }
+    } catch {
+      // storage unavailable
+    }
   };
 
   // Flipbook Spread Calculations
@@ -553,11 +574,20 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
               </>
             )}
 
-            {/* Direct Downloads */}
+            {/* Gated EPUB Download Button */}
             {book.epubUrl && (
-              <a
-                href={book.epubUrl}
-                download
+              <button
+                type="button"
+                onClick={() => {
+                  if (hasUnlocked) {
+                    const link = document.createElement('a');
+                    link.href = book.epubUrl!;
+                    link.download = '';
+                    link.click();
+                  } else {
+                    setShowRequestForm(true);
+                  }
+                }}
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
@@ -566,24 +596,30 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
                   color: '#FFFFFF',
                   padding: '5px 10px',
                   borderRadius: '6px',
-                  textDecoration: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
                   fontSize: '0.72rem',
                   fontWeight: 800,
                   boxShadow: '0 2px 4px rgba(16, 185, 129, 0.25)',
                 }}
-                title={language === 'ta' ? 'ஈபப் (EPUB) பதிவிறக்கம்' : 'Download EPUB eBook'}
+                title={hasUnlocked ? (language === 'ta' ? 'ஈபப் (EPUB) பதிவிறக்கம்' : 'Download EPUB eBook') : (language === 'ta' ? 'பதிவிறக்க அனுமதி பெற' : 'Request Permission to Download EPUB')}
               >
                 <Download size={12} />
                 <span>EPUB</span>
-              </a>
+              </button>
             )}
 
+            {/* Gated PDF Download Button */}
             {book.pdfUrl && (
-              <a
-                href={book.pdfUrl}
-                download
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                type="button"
+                onClick={() => {
+                  if (hasUnlocked) {
+                    window.open(book.pdfUrl, '_blank');
+                  } else {
+                    setShowRequestForm(true);
+                  }
+                }}
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
@@ -592,16 +628,17 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
                   color: '#FFFFFF',
                   padding: '5px 10px',
                   borderRadius: '6px',
-                  textDecoration: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
                   fontSize: '0.72rem',
                   fontWeight: 800,
                   boxShadow: '0 2px 4px rgba(220, 38, 38, 0.25)',
                 }}
-                title={language === 'ta' ? 'அதிகாரப்பூர்வ PDF பதிவிறக்கம்' : 'Download Official PDF'}
+                title={hasUnlocked ? (language === 'ta' ? 'அதிகாரப்பூர்வ PDF பதிவிறக்கம்' : 'Download Official PDF') : (language === 'ta' ? 'பதிவிறக்க அனுமதி பெற' : 'Request Permission to Download PDF')}
               >
                 <Download size={12} />
                 <span>PDF</span>
-              </a>
+              </button>
             )}
 
             {/* Audio Flip Sound Toggle */}
@@ -1440,6 +1477,28 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
 
                       <div style={{ marginBottom: '1rem' }}>
                         <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 700, textTransform: 'uppercase', marginBottom: '0.35rem', opacity: 0.8 }}>
+                          {language === 'ta' ? 'தொலைபேசி / வாட்ஸ்அப் எண்' : 'Contact / WhatsApp Number'}
+                        </label>
+                        <input
+                          type="tel"
+                          required
+                          value={reqPhone}
+                          onChange={(e) => setReqPhone(e.target.value)}
+                          placeholder="+91 98765 43210"
+                          style={{
+                            width: '100%',
+                            padding: '0.75rem 1rem',
+                            borderRadius: '8px',
+                            border: '1px solid ' + themeStyles.border,
+                            background: themeStyles.bg,
+                            color: themeStyles.text,
+                            fontSize: '0.92rem',
+                          }}
+                        />
+                      </div>
+
+                      <div style={{ marginBottom: '1rem' }}>
+                        <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 700, textTransform: 'uppercase', marginBottom: '0.35rem', opacity: 0.8 }}>
                           {language === 'ta' ? 'மின்னஞ்சல் முகவரி' : 'Work / Personal Email'}
                         </label>
                         <input
@@ -1610,78 +1669,79 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
                         : 'Download the complete reflowable EPUB eBook for Apple Books, Kindle & e-readers, download the official print PDF, or request institutional classroom sets.'}
                     </p>
 
-                    <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
-                      {book.epubUrl && (
-                        <a
-                          href={book.epubUrl}
-                          download
-                          style={{
-                            background: '#10B981',
-                            color: '#FFFFFF',
-                            border: 'none',
-                            padding: '0.75rem 1.5rem',
-                            borderRadius: '999px',
-                            fontWeight: 700,
-                            fontSize: '0.9rem',
-                            textDecoration: 'none',
-                            display: 'inline-flex',
-                            alignItems: 'center',
-                            gap: '0.5rem',
-                            boxShadow: '0 4px 12px rgba(16, 185, 129, 0.25)',
-                          }}
-                        >
-                          <Download size={16} />
-                          <span>{language === 'ta' ? 'ஈபப் (EPUB) பதிவிறக்கம்' : 'Download EPUB eBook'}</span>
-                        </a>
-                      )}
-
-                      {book.pdfUrl && (
-                        <a
-                          href={book.pdfUrl}
-                          download
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          style={{
-                            background: '#DC2626',
-                            color: '#FFFFFF',
-                            border: 'none',
-                            padding: '0.75rem 1.5rem',
-                            borderRadius: '999px',
-                            fontWeight: 700,
-                            fontSize: '0.9rem',
-                            textDecoration: 'none',
-                            display: 'inline-flex',
-                            alignItems: 'center',
-                            gap: '0.5rem',
-                            boxShadow: '0 4px 12px rgba(220, 38, 38, 0.25)',
-                          }}
-                        >
-                          <Download size={16} />
-                          <span>{language === 'ta' ? 'அதிகாரப்பூர்வ PDF (38 பக்கங்கள்)' : 'Download Official PDF (38 Pages)'}</span>
-                        </a>
-                      )}
-
+                    {hasUnlocked ? (
+                      <div style={{ display: 'flex', gap: '0.85rem', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
+                        {book.pdfUrl && (
+                          <a
+                            href={book.pdfUrl}
+                            download
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{
+                              background: '#DC2626',
+                              color: '#FFFFFF',
+                              padding: '0.75rem 1.6rem',
+                              borderRadius: '999px',
+                              fontWeight: 800,
+                              fontSize: '0.92rem',
+                              textDecoration: 'none',
+                              display: 'inline-flex',
+                              alignItems: 'center',
+                              gap: '0.5rem',
+                              boxShadow: '0 4px 14px rgba(220, 38, 38, 0.35)',
+                            }}
+                          >
+                            <Download size={16} />
+                            <span>{language === 'ta' ? 'அதிகாரப்பூர்வ PDF பதிவிறக்கம்' : 'Download Official PDF (38 Pages)'}</span>
+                          </a>
+                        )}
+                        {book.epubUrl && (
+                          <a
+                            href={book.epubUrl}
+                            download
+                            style={{
+                              background: '#10B981',
+                              color: '#FFFFFF',
+                              padding: '0.75rem 1.6rem',
+                              borderRadius: '999px',
+                              fontWeight: 800,
+                              fontSize: '0.92rem',
+                              textDecoration: 'none',
+                              display: 'inline-flex',
+                              alignItems: 'center',
+                              gap: '0.5rem',
+                              boxShadow: '0 4px 14px rgba(16, 185, 129, 0.35)',
+                            }}
+                          >
+                            <Download size={16} />
+                            <span>{language === 'ta' ? 'EPUB மின்னூல் பதிவிறக்கம்' : 'Download EPUB eBook'}</span>
+                          </a>
+                        )}
+                      </div>
+                    ) : (
                       <button
                         type="button"
                         onClick={() => setShowRequestForm(true)}
                         style={{
-                          background: themeStyles.cardBg,
-                          color: themeStyles.text,
-                          border: '1.5px solid ' + themeStyles.border,
-                          padding: '0.75rem 1.5rem',
+                          background: 'linear-gradient(135deg, #F59E0B, #D97706)',
+                          color: '#FFFFFF',
+                          border: 'none',
+                          padding: '0.85rem 2rem',
                           borderRadius: '999px',
-                          fontWeight: 700,
-                          fontSize: '0.9rem',
+                          fontWeight: 800,
+                          fontSize: '0.96rem',
                           cursor: 'pointer',
                           display: 'inline-flex',
                           alignItems: 'center',
-                          gap: '0.5rem',
+                          gap: '0.65rem',
+                          boxShadow: '0 6px 20px rgba(217, 119, 6, 0.35)',
+                          transition: 'transform 0.15s ease',
                         }}
                       >
-                        <BookMarked size={16} color={themeStyles.accent} />
-                        <span>{language === 'ta' ? 'கல்வி நிறுவன அணுகல்' : 'Institutional Access Gate'}</span>
+                        <BookMarked size={18} />
+                        <span>{language === 'ta' ? 'விவரங்களைப் பதிவு செய்து முழு பதிவிறக்க அனுமதி பெற' : 'Request Permission to Download Full Edition'}</span>
                       </button>
-                    </div>
+                    )}
                   </div>
                 </div>
               )}

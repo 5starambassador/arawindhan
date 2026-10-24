@@ -47,6 +47,8 @@ export const booksList: BookItem[] = [
       en: '“Do not do with your mind; do with your Meditative Mind. Outer change is temporary, shaped by circumstance. Change that begins within becomes part of who we are, and endures.”',
       ta: '"உங்கள் சாதாரண மனதைக் கொண்டு எதையும் செய்யாதீர்கள்; உங்கள் தியான மனதைக் கொண்டு செய்யுங்கள். வெளிப்புற மாற்றம் தற்காலிகமானது; உள்ளிருந்து தொடங்கும் மாற்றமே நிலையானது."',
     },
+    pdfUrl: '/books/shambala-book.pdf',
+    flipbookPages: Array.from({ length: 26 }, (_, i) => `/books/shambala-book/pages/page_${i + 1}.webp`),
   },
   {
     id: 'BK-002',
