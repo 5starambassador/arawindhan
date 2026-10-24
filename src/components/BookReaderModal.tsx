@@ -42,6 +42,8 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
   const [reqPhone, setReqPhone] = useState('');
   const [reqEmail, setReqEmail] = useState('');
   const [reqOrg, setReqOrg] = useState('');
+  const [formError, setFormError] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   // FlipHTML5 3D Reader States
   const [readerMode, setReaderMode] = useState<'flipbook' | 'text'>('flipbook');
@@ -264,14 +266,61 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
 
   const handleRequestSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setRequested(true);
-    setHasUnlocked(true);
+    setFormError(null);
+
+    const trimmedName = reqName.trim();
+    if (!trimmedName || trimmedName.length < 2) {
+      setFormError(
+        language === 'ta'
+          ? 'தயவுசெய்து உங்கள் முழுப் பெயரை சரியாக உள்ளிடவும்.'
+          : 'Please enter your full name (at least 2 characters).'
+      );
+      return;
+    }
+
+    // Phone validation: extract digits
+    const cleanedPhone = reqPhone.replace(/\D/g, '');
+    const phoneDigits = cleanedPhone.length > 10 && cleanedPhone.startsWith('91')
+      ? cleanedPhone.slice(-10)
+      : cleanedPhone;
+
+    if (phoneDigits.length !== 10) {
+      setFormError(
+        language === 'ta'
+          ? 'தயவுசெய்து சரியான 10 இலக்க மொபைல் / வாட்ஸ்அப் எண்ணை உள்ளிடவும்.'
+          : 'Please enter a valid 10-digit mobile or WhatsApp number.'
+      );
+      return;
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(reqEmail.trim())) {
+      setFormError(
+        language === 'ta'
+          ? 'தயவுசெய்து சரியான மின்னஞ்சல் முகவரியை உள்ளிடவும்.'
+          : 'Please enter a valid email address.'
+      );
+      return;
+    }
+
+    const trimmedOrg = reqOrg.trim();
+    if (!trimmedOrg) {
+      setFormError(
+        language === 'ta'
+          ? 'தயவுசெய்து உங்கள் கல்வி நிறுவனம் அல்லது பெற்றோர் நிலையை உள்ளிடவும்.'
+          : 'Please specify your institution, school, or role.'
+      );
+      return;
+    }
+
+    setIsSubmitting(true);
 
     const leadPayload = {
-      name: reqName,
-      phone: reqPhone,
-      email: reqEmail,
-      institution: reqOrg,
+      name: trimmedName,
+      phone: phoneDigits,
+      email: reqEmail.trim().toLowerCase(),
+      institution: trimmedOrg,
       bookSlug: activeBookSlug || 'general',
       bookTitle: book?.title[language] || activeBookSlug || 'General Request',
       date: new Date().toISOString(),
@@ -291,14 +340,27 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
 
     // Automatically dispatch lead to backend for Google Sheets sync
     try {
-      await fetch('/api/book-lead', {
+      const res = await fetch('/api/book-lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(leadPayload),
       });
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        if (data?.error) {
+          setFormError(data.error);
+          setIsSubmitting(false);
+          return;
+        }
+      }
     } catch (err) {
       console.warn('Could not sync lead to API route', err);
     }
+
+    setIsSubmitting(false);
+    setRequested(true);
+    setHasUnlocked(true);
   };
 
   // Flipbook Spread Calculations
@@ -1582,26 +1644,53 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
                         />
                       </div>
 
+                      {formError && (
+                        <div
+                          style={{
+                            background: '#FEF2F2',
+                            border: '1px solid #FCA5A5',
+                            color: '#991B1B',
+                            borderRadius: '8px',
+                            padding: '0.75rem 1rem',
+                            fontSize: '0.86rem',
+                            fontWeight: 600,
+                            marginBottom: '1.25rem',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '0.5rem',
+                          }}
+                        >
+                          <span>⚠️</span>
+                          <span>{formError}</span>
+                        </div>
+                      )}
+
                       <button
                         type="submit"
+                        disabled={isSubmitting}
                         style={{
                           width: '100%',
-                          background: themeStyles.accent,
+                          background: isSubmitting ? '#9CA3AF' : themeStyles.accent,
                           color: '#FFFFFF',
                           padding: '0.9rem',
                           borderRadius: '8px',
                           border: 'none',
                           fontWeight: 800,
                           fontSize: '0.96rem',
-                          cursor: 'pointer',
+                          cursor: isSubmitting ? 'not-allowed' : 'pointer',
                           display: 'flex',
                           alignItems: 'center',
                           justifyContent: 'center',
                           gap: '0.5rem',
                           boxShadow: '0 4px 12px rgba(217, 119, 6, 0.25)',
+                          transition: 'background 0.2s ease',
                         }}
                       >
-                        <span>{language === 'ta' ? 'விவரங்களை சமர்ப்பித்து பதிவிறக்குக' : 'Submit & Unlock Instant Download'}</span>
+                        <span>
+                          {isSubmitting
+                            ? (language === 'ta' ? 'சரிபார்க்கிறது...' : 'Validating & Saving...')
+                            : (language === 'ta' ? 'விவரங்களை சமர்ப்பித்து பதிவிறக்குக' : 'Submit & Unlock Instant Download')}
+                        </span>
                         <Download size={16} />
                       </button>
                     </form>

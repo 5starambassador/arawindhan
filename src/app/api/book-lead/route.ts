@@ -15,6 +15,28 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Clean and validate phone number (extract digits)
+    const cleanedPhone = String(phone).replace(/\D/g, '');
+    const phoneDigits = cleanedPhone.length > 10 && cleanedPhone.startsWith('91')
+      ? cleanedPhone.slice(-10)
+      : cleanedPhone;
+
+    if (phoneDigits.length !== 10) {
+      return NextResponse.json(
+        { error: 'Please enter a valid 10-digit mobile or WhatsApp number.' },
+        { status: 400 }
+      );
+    }
+
+    // Email format validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(String(email).trim())) {
+      return NextResponse.json(
+        { error: 'Please enter a valid email address.' },
+        { status: 400 }
+      );
+    }
+
     const now = new Date();
     const formattedDate = now.toLocaleString('en-IN', {
       timeZone: 'Asia/Kolkata',
@@ -23,9 +45,9 @@ export async function POST(request: NextRequest) {
     });
 
     const payload = {
-      name,
-      phone,
-      email,
+      name: String(name).trim(),
+      phone: phoneDigits,
+      email: String(email).trim().toLowerCase(),
       institution: institution || 'N/A',
       bookTitle: bookTitle || 'General Book Request',
       bookSlug: bookSlug || 'general',
