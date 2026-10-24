@@ -57,6 +57,10 @@ def slugify(text):
     clean = re.sub(r'[-\s]+', '-', text).strip('-')
     if "dictionary" in clean:
         return "wow-dictionary"
+    if "parenting" in clean:
+        return "wow-parenting-book"
+    if "andava" in clean or "victory" in clean:
+        return "andava-the-victory-mode"
     return clean
 
 def determine_slug(pdf_filename):

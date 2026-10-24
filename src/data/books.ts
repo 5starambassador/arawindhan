@@ -99,7 +99,7 @@ export const booksList: BookItem[] = [
   {
     id: 'BK-002',
     slug: 'wow-parenting-book',
-    coverImage: '/images/books/wow_parenting.jpg',
+    coverImage: '/images/books/wow-parenting.jpg',
     title: {
       en: 'WOW Parenting',
       ta: 'வாவ் (WOW) பேரண்டிங்',
@@ -138,9 +138,9 @@ export const booksList: BookItem[] = [
       en: 'Parents of preschool, primary, and adolescent students.',
       ta: 'மழலையர், தொடக்க மற்றும் வளரிளம் பருவக் குழந்தைகளின் பெற்றோர்கள்.',
     },
-    pdfUrl: '/books/wow-parenting-book.pdf',
+    pdfUrl: '/books/wow-parenting.pdf',
     epubUrl: '/books/wow_parenting.epub',
-    flipbookPages: Array.from({ length: 38 }, (_, i) => `/books/wow_parenting/pages/page_${i + 1}.webp`),
+    flipbookPages: Array.from({ length: 39 }, (_, i) => `/books/wow-parenting/pages/page_${i + 1}.webp`),
     sampleChapters: [
       {
         title: {
