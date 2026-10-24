@@ -17,9 +17,9 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
     <div
       style={{
         textAlign: centered ? 'center' : 'left',
-        marginBottom: '2.75rem',
+        marginBottom: '2rem',
         maxWidth: centered ? '820px' : '100%',
-        margin: centered ? '0 auto 2.75rem auto' : '0 0 2.75rem 0',
+        margin: centered ? '0 auto 2rem auto' : '0 0 2rem 0',
       }}
     >
       {badge && (
