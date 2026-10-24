@@ -54,11 +54,18 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
   const [isMuted, setIsMuted] = useState<boolean>(false);
 
   const containerRef = useRef<HTMLDivElement>(null);
+  const textScrollRef = useRef<HTMLDivElement>(null);
 
   const playFlipSound = () => {
     if (isMuted) return;
     playPageFlipAudio();
   };
+
+  useEffect(() => {
+    if (textScrollRef.current) {
+      textScrollRef.current.scrollTo({ top: 0, behavior: 'instant' });
+    }
+  }, [activeBookSlug, activeChapterIndex, showRequestForm, readerMode]);
 
   useEffect(() => {
     const handleOpen = (e: CustomEvent<{ slug: string; mode?: 'flipbook' | 'text'; showRequestForm?: boolean }>) => {
@@ -717,8 +724,8 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
             overflow: 'hidden',
             display: 'flex',
             flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
+            justifyContent: readerMode === 'flipbook' ? 'center' : 'flex-start',
+            alignItems: readerMode === 'flipbook' ? 'center' : 'stretch',
             background: readerMode === 'flipbook' ? '#14171F' : themeStyles.bg,
           }}
         >
@@ -1307,13 +1314,15 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
           ) : (
             /* ==================== REFLOWABLE EREADER MODE ==================== */
             <div
+              ref={textScrollRef}
               style={{
                 width: '100%',
-                height: '100%',
+                flex: 1,
                 overflowY: 'auto',
-                padding: '2.5rem 2rem',
-                maxWidth: '780px',
+                padding: '2.5rem 1.5rem 4rem 1.5rem',
+                maxWidth: '820px',
                 margin: '0 auto',
+                boxSizing: 'border-box',
               }}
             >
               {showRequestForm ? (
@@ -1323,9 +1332,11 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
                     background: themeStyles.cardBg,
                     border: '1px solid ' + themeStyles.border,
                     borderRadius: '16px',
-                    padding: '2.5rem',
+                    padding: '2.75rem 2rem',
                     boxShadow: '0 10px 30px rgba(0,0,0,0.06)',
                     textAlign: 'center',
+                    marginTop: '1rem',
+                    marginBottom: '2.5rem',
                   }}
                 >
                   <div
