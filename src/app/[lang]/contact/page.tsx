@@ -173,12 +173,12 @@ export default async function ContactPage({
 
             <div style={{ background: 'var(--bg-subtle)', padding: '1.25rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-light)' }}>
               <div style={{ color: 'var(--gold-glow)', fontWeight: 800, fontSize: '1rem', marginBottom: '0.35rem' }}>
-                Divine Grace Foundation
+                Divya Yogam
               </div>
               <p style={{ fontSize: '0.82rem', color: 'var(--text-muted)', marginBottom: '0.75rem' }}>
-                {lang === 'ta' ? 'திவ்ய யோகம் மற்றும் மகா ஷாம்பாலா புதுச்சேரி.' : 'Divya Yogam & annual Maha Shambala Puducherry.'}
+                {lang === 'ta' ? 'திவ்ய யோகம் மற்றும் ஆன்மீக வழிகாட்டல் தளம்.' : 'Divya Yogam & annual Maha Shambala Puducherry.'}
               </p>
-              <a href="https://divinegracefoundation.org" target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.82rem', color: '#059669', fontWeight: 700, textDecoration: 'none' }}>divinegracefoundation.org</a>
+              <a href="https://www.divyayogam.org/" target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.82rem', color: '#059669', fontWeight: 700, textDecoration: 'none' }}>divyayogam.org</a>
             </div>
 
             <div style={{ background: 'var(--bg-subtle)', padding: '1.25rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-light)' }}>
