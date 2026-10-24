@@ -114,10 +114,10 @@ export default async function ContactPage({
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
               <div style={{ background: 'var(--bg-subtle)', padding: '0.75rem 1rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-light)', fontSize: '0.88rem', color: 'var(--text-secondary)' }}>
-                ✉️ <strong>{lang === 'ta' ? 'முதன்மை மின்னஞ்சல்:' : 'Official Email:'}</strong> <a href="mailto:info@achariya.in" style={{ color: '#B45309', fontWeight: 700, textDecoration: 'none' }}>info@achariya.in</a>
+                ✉️ <strong>{lang === 'ta' ? 'முதன்மை மின்னஞ்சல்:' : 'Official Email:'}</strong> <a href="mailto:mdoffice@achariya.org" style={{ color: '#B45309', fontWeight: 700, textDecoration: 'none' }}>mdoffice@achariya.org</a>
               </div>
               <div style={{ background: 'var(--bg-subtle)', padding: '0.75rem 1rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-light)', fontSize: '0.88rem', color: 'var(--text-secondary)' }}>
-                🌐 <strong>{lang === 'ta' ? 'அதிகாரப்பூர்வ தளம்:' : 'Official Portal:'}</strong> <a href="https://arawindhan.org" target="_blank" rel="noopener noreferrer" style={{ color: '#059669', fontWeight: 700, textDecoration: 'none' }}>arawindhan.org</a>
+                🌐 <strong>{lang === 'ta' ? 'அதிகாரப்பூர்வ தளம்:' : 'Official Portal:'}</strong> <a href="https://www.arawindhan.com" target="_blank" rel="noopener noreferrer" style={{ color: '#059669', fontWeight: 700, textDecoration: 'none' }}>www.arawindhan.com</a>
               </div>
             </div>
           </div>
@@ -141,13 +141,13 @@ export default async function ContactPage({
               : 'Authorized digital entities directly affiliated with Dr. J. Arawindhan:'}
           </p>
 
-          <div className="grid-3">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
             <div style={{ background: 'var(--bg-subtle)', padding: '1.25rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-light)' }}>
               <div style={{ color: 'var(--gold-glow)', fontWeight: 800, fontSize: '1rem', marginBottom: '0.35rem' }}>
                 ACHARIYA Education
               </div>
               <p style={{ fontSize: '0.82rem', color: 'var(--text-muted)', marginBottom: '0.75rem' }}>
-                Official portal for 18 colleges and 35 schools.
+                {lang === 'ta' ? '18 கல்லூரிகள் மற்றும் 35 பள்ளிகளுக்கான அதிகாரப்பூர்வ தளம்.' : 'Official portal for 18 colleges and 35 schools.'}
               </p>
               <a href="https://achariya.in" target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.82rem', color: '#059669', fontWeight: 700, textDecoration: 'none' }}>achariya.in</a>
             </div>
@@ -157,7 +157,7 @@ export default async function ContactPage({
                 MIWAY Academic System
               </div>
               <p style={{ fontSize: '0.82rem', color: 'var(--text-muted)', marginBottom: '0.75rem' }}>
-                Multiple Intelligence K-12 curriculum portal.
+                {lang === 'ta' ? 'பல்வகை நுண்ணறிவு K-12 பாடத்திட்ட தளம்.' : 'Multiple Intelligence K-12 curriculum portal.'}
               </p>
               <a href="https://miway.in" target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.82rem', color: '#059669', fontWeight: 700, textDecoration: 'none' }}>miway.in</a>
             </div>
@@ -167,9 +167,19 @@ export default async function ContactPage({
                 Divine Grace Foundation
               </div>
               <p style={{ fontSize: '0.82rem', color: 'var(--text-muted)', marginBottom: '0.75rem' }}>
-                Divya Yogam & annual Maha Shambala Puducherry.
+                {lang === 'ta' ? 'திவ்ய யோகம் மற்றும் மகா ஷாம்பாலா புதுச்சேரி.' : 'Divya Yogam & annual Maha Shambala Puducherry.'}
               </p>
               <a href="https://divinegracefoundation.org" target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.82rem', color: '#059669', fontWeight: 700, textDecoration: 'none' }}>divinegracefoundation.org</a>
+            </div>
+
+            <div style={{ background: 'var(--bg-subtle)', padding: '1.25rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-light)' }}>
+              <div style={{ color: 'var(--gold-glow)', fontWeight: 800, fontSize: '1rem', marginBottom: '0.35rem' }}>
+                Heguru India
+              </div>
+              <p style={{ fontSize: '0.82rem', color: 'var(--text-muted)', marginBottom: '0.75rem' }}>
+                {lang === 'ta' ? 'ஜப்பானிய வலதுமூளை ஆரம்பக்கால குழந்தை வளர்ச்சி தளம்.' : 'Right-brain early childhood neuro-development portal.'}
+              </p>
+              <a href="https://heguruindia.com/" target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.82rem', color: '#059669', fontWeight: 700, textDecoration: 'none' }}>heguruindia.com</a>
             </div>
           </div>
         </div>
