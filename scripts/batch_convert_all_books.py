@@ -29,8 +29,8 @@ PUBLIC_IMAGES_DIR = BASE_DIR / "public" / "images" / "books"
 DATA_BOOKS_TS = BASE_DIR / "src" / "data" / "books.ts"
 
 KNOWN_MAPPINGS = {
+    "dictionary": "wow-dictionary",
     "shambala": "shambala-book",
-    "wow": "wow-parenting-book",
     "parenting": "wow-parenting-book",
     "financial": "financial-intelligence",
     "master": "master-stroke",
@@ -47,7 +47,10 @@ KNOWN_MAPPINGS = {
 
 def slugify(text):
     text = re.sub(r'[^\w\s-]', '', text.lower())
-    return re.sub(r'[-\s]+', '-', text).strip('-')
+    clean = re.sub(r'[-\s]+', '-', text).strip('-')
+    if "dictionary" in clean:
+        return "wow-dictionary"
+    return clean
 
 def determine_slug(pdf_filename):
     lower = pdf_filename.lower()
@@ -59,7 +62,7 @@ def determine_slug(pdf_filename):
 
 def process_pdf(pdf_path, explicit_slug=None):
     pdf_filename = os.path.basename(pdf_path)
-    slug = explicit_slug or determine_slug(pdf_filename)
+    slug = slugify(explicit_slug) if explicit_slug else determine_slug(pdf_filename)
     print(f"\n==========================================")
     print(f"📖 Processing Book: {pdf_filename}")
     print(f"🎯 Target Slug: {slug}")

@@ -638,5 +638,54 @@ export const booksList: BookItem[] = [
       ta: '"வான் புகழ் என்பது தற்பெருமையால் வருவதல்ல; இறையருளோடு தன் வாழ்வை இணைத்துக்கொண்டு, ஆயிரமாயிரம் உயிர்களை இருளிலிருந்து வெளிச்சத்திற்கு உயர்த்திய ஒரு தூய ஆன்மாவின் அழியாத ஒளியாகும்."',
     },
   },
+  {
+    id: 'BK-013',
+    slug: 'wow-dictionary',
+    coverImage: '/images/books/wow-dictionary.jpg',
+    title: {
+      en: 'A WOW Dictionary – Concepts & Strategy',
+      ta: 'வாவ் (WOW) அகராதி – கோட்பாடுகள் & யுக்திகள்',
+    },
+    tagline: {
+      en: 'Resonance & Coherence: World of Wonders · Working Out Wonders · Wonder of the World',
+      ta: 'ஒத்திசைவு & ஒருமைப்பாடு: வியப்புறும் உலகம் · அதிசயங்களை நிகழ்த்தும் உழைப்பு · உலகின் அற்புதம்',
+    },
+    author: {
+      en: 'Tr. J. Arawindhan Ji (Teacher · Trainer · Transformer · Trendsetter · Total Reformer)',
+      ta: 'ஆசிரியர் ஜே. அரவிந்தன் ஜி (கற்பிப்பாளர் · பயிற்றுவிப்பாளர் · உருமாற்றுபவர் · முன்னோடி)',
+    },
+    edition: 'Official Philosophical & Operational Monograph',
+    language: 'English',
+    status: 'Published',
+    claimId: 'CLM-023',
+    summary: {
+      en: 'A masterwork gathering the core concepts, strategic lexicon, and operational philosophies conceived by Tr. J. Arawindhan Ji. Rather than standard dictionary definitions, every entry encapsulates living principles—from The Origin and Identity & Way of Being to The Three Pillars of Poise, The Five R\'s of Inner Strength, and Self-Mastery Habits—designed to spark resonance, coherence, and transformative action in leaders, educators, and seekers.',
+      ta: 'ஆசிரியர் ஜே. அரவிந்தன் ஜி அவர்களால் உருவாக்கப்பட்ட மூலக் கோட்பாடுகள், வியூகச் சொற்கள் மற்றும் செயல்முறைத் தத்துவங்களின் தொகுப்பு நூல். வழக்கமான அகராதிப் பொருள் கடந்து, ஒவ்வொன்றும் உயிர்ப்புள்ள வாழ்வியல் யுக்தியாக விளங்குகிறது. தோற்றம், சுய அடையாளம், அமைதியின் மூன்று தூண்கள், ஐந்து ஆர் (5 R’s) உள் உறுதி மற்றும் சுய ஆளுமைப் பழக்கவழக்கங்கள் என தலைவர்களுக்கும் கல்வியாளர்களுக்கும் வழிகாட்டும் மாபெரும் படைப்பு.',
+    },
+    keyThemes: {
+      en: [
+        'The Three WOW Readings: World of Wonders, Working Out Wonders, Wonder of the World',
+        'Identity & Way of Being: The Three Pillars of Poise and Five R\'s of Inner Strength',
+        'Rallying cries, self-mastery habits, and the Tamil Triad of Doing',
+        'Resonance & Coherence: Moving from knowledge to experiential awakening',
+      ],
+      ta: [
+        'வாவ் (WOW) மூன்று நிலைகள்: உலக அதிசயம், அதிசயங்களை நிகழ்த்தும் உழைப்பு, உலகின் அற்புதம்',
+        'சுய அடையாளம்: அமைதியின் மூன்று தூண்கள் மற்றும் உள் ஆற்றலின் 5 ஆர் (5 R\'s) கொள்கைகள்',
+        'உற்சாக முழக்கங்கள், சுய ஆளுமைப் பழக்கங்கள் மற்றும் தமிழ் முத்தமிழ்ச் செயல் நெறி',
+        'ஒத்திசைவு & ஒருமைப்பாடு: சாதாரண முயற்சியை அசாதாரண சாதனையாக மாற்றும் வித்தை',
+      ],
+    },
+    targetAudience: {
+      en: 'Educators, administrators, thinkers, entrepreneurs, and seekers of systemic self-mastery.',
+      ta: 'கல்வியாளர்கள், நிர்வாகிகள், சிந்தனையாளர்கள், தொழில்முனைவோர் மற்றும் ஆளுமைத் திறன் தேடுவோர்.',
+    },
+    readMoreSnippet: {
+      en: '“Every word gathered here carries a concept or a strategy conceived by Tr. J. Arawindhan Ji — read not for its dictionary meaning, but for the standard of thinking and way of being it unlocks.”',
+      ta: '"இங்கே தொகுக்கப்பட்டுள்ள ஒவ்வொரு சொல்லும் ஆசிரியர் ஜே. அரவிந்தன் ஜி அவர்களின் ஆழமான சிந்தனையையும் யுக்தியையும் சுமந்து நிற்கிறது — இதை வெறும் அகராதிப் பொருளுக்காக அல்லாமல், அது திறக்கும் புதிய சிந்தனை தளத்திற்காகப் படியுங்கள்."',
+    },
+    pdfUrl: '/books/wow-dictionary.pdf',
+    flipbookPages: Array.from({ length: 72 }, (_, i) => `/books/wow-dictionary/pages/page_${i + 1}.webp`),
+  },
 ];
 
