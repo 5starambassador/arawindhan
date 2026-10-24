@@ -101,7 +101,7 @@ export const educationalExhibits: EducationalExhibit[] = [
     },
     iconName: 'Compass',
     claimId: 'CLM-015',
-    relatedBooks: ['master-stroke'],
+    relatedBooks: ['my-green-book'],
   },
   {
     id: 'A3',
@@ -299,7 +299,7 @@ export const educationalExhibits: EducationalExhibit[] = [
     },
     iconName: 'BookOpen',
     claimId: 'CLM-019',
-    relatedBooks: ['young-scientist'],
+    relatedBooks: ['my-white-book'],
   },
   {
     id: 'A7',

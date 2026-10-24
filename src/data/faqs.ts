@@ -80,8 +80,8 @@ export const faqsList: FAQItem[] = [
       ta: 'முனைவர் ஜே. அரவிந்தன் எழுதிய நூல்கள் யாவை?',
     },
     answer: {
-      en: 'Dr. J. Arawindhan has authored seven major books in institutional and public circulation: 1. The Shambala Book (Inner consciousness & meditation), 2. WOW Parenting (Family and school co-learning), 3. Financial Intelligence (Wealth literacy for youth), 4. Emotional Intelligence (Self-regulation and empathy), 5. Master Stroke (Strategic leadership & systems), 6. Young Scientist (Experiential STEM discovery), and 7. Iravadh (The 21 levels of teacher evolution).',
-      ta: 'முனைவர் அரவிந்தன் ஏழு முக்கிய நூல்களை எழுதியுள்ளார்: 1. தி ஷாம்பாலா (ஆன்மீக விழிப்புணர்வு & தியானம்), 2. வாவ் பேரண்டிங் (பெற்றோர் வழிகாட்டல்), 3. நிதி நுண்ணறிவு (பொருளாதார மேலாண்மை), 4. உணர்ச்சி நுண்ணறிவு (உளவியல் சமநிலை), 5. மாஸ்டர் ஸ்ட்ரோக் (தலைமைத்துவ நெறிமுறைகள்), 6. இளம் விஞ்ஞானி (செய்முறை அறிவியல்), மற்றும் 7. ஐராவத் (ஆசிரியரின் 21 பரிணாம நிலைகள்).',
+      en: 'Dr. J. Arawindhan has authored 16+ published titles and institutional books, including The Shambala Book (Inner consciousness & meditation), WOW Parenting (Family and school co-learning), Financial Intelligence, Emotional Intelligence, The Lion\'s Bank Account, My Yellow Book (My Guru = My Value), My White Book (Individual Intelligence based schooling), and My Green Book (Dream to Destiny).',
+      ta: 'முனைவர் அரவிந்தன் 16-க்கும் மேற்பட்ட நூல்களை எழுதியுள்ளார்; அவற்றுள் தி ஷாம்பாலா (ஆன்மீக விழிப்புணர்வு & தியானம்), வாவ் பேரண்டிங் (பெற்றோர் வழிகாட்டல்), நிதி நுண்ணறிவு, உணர்ச்சி நுண்ணறிவு, சிங்கத்தின் வங்கிக் கணக்கு, என் மஞ்சள் புத்தகம் (என் குரு = என் மதிப்பு), என் வெள்ளை புத்தகம் (தனிநபர் நுண்ணறிவுக் கல்வி), மற்றும் என் பசுமைப் புத்தகம் (கனவிலிருந்து இலட்சிய வெற்றி வரை) ஆகியவை முக்கிய நூல்களாகும்.',
     },
     relatedLink: '/books',
   },
