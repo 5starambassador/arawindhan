@@ -288,8 +288,8 @@ export default async function RecognitionPage({
             </div>
             <div style={{ fontSize: '0.88rem', color: '#64748B' }}>
               {lang === 'ta'
-                ? 'இந்த விருதுகள் 28 ஆண்டுப் பயணத்தின் மைல்கற்கள். ஒரு மெக்கானிக்கல் பொறியாளரிலிருந்து கல்வி சாம்ராஜ்யம் வரையிலான முழு வரலாற்றை வாசியுங்கள்.'
-                : 'These honours mark milestones in a 28-year journey. Read the full story — from a mechanical engineer\'s workshop to a world-class education ecosystem.'}
+                ? 'இந்த விருதுகள் 25 ஆண்டுப் பயணத்தின் மைல்கற்கள். ஒரு மெக்கானிக்கல் பொறியாளரிலிருந்து கல்வி சாம்ராஜ்யம் வரையிலான முழு வரலாற்றை வாசியுங்கள்.'
+                : 'These honours mark milestones in a 25-year journey. Read the full story — from a mechanical engineer\'s workshop to a world-class education ecosystem.'}
             </div>
           </div>
           <Link href={`/${lang}/biography`} className="btn-gold" style={{ flexShrink: 0 }}>

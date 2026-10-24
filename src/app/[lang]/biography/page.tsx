@@ -159,7 +159,7 @@ export default async function BiographyPage({
             {biographyData.overview[lang]}
           </p>
 
-          {/* Bespoke 28-Year Odyssey & Campus Vision Visual Showcase */}
+          {/* Bespoke 25-Year Odyssey & Campus Vision Visual Showcase */}
           <div
             style={{
               position: 'relative',
@@ -172,8 +172,8 @@ export default async function BiographyPage({
             }}
           >
             <img
-              src="/images/institutions/achariya_campus.jpg"
-              alt="28 Years of Vision: From Engineering Blueprints to 53 Campuses — Dr. J. Arawindhan & ACHARIYA Campus"
+              src="/images/institutions/golden_sunrise_campus_panorama.webp"
+              alt="28 Years of Vision: From Engineering Blueprints to 53 Campuses — ACHARIYA Campus Panorama at Golden Sunrise"
               style={{
                 width: '100%',
                 height: '380px',
@@ -194,7 +194,7 @@ export default async function BiographyPage({
               }}
             >
               <div style={{ fontSize: '0.8rem', fontWeight: 800, color: '#FEF3C7', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                {lang === 'ta' ? '28 ஆண்டு தொலைநோக்கு • பொறியியல் முதல் பல்கலைக்கழகங்கள் வரை' : 'The 28-Year Odyssey: From Engineering Blueprints to 53 Campuses'}
+                {lang === 'ta' ? '25 ஆண்டு தொலைநோக்கு • பொறியியல் முதல் பல்கலைக்கழகங்கள் வரை' : 'The 25-Year Odyssey: From Engineering Blueprints to 53 Campuses'}
               </div>
               <div style={{ fontSize: '0.88rem', color: '#E2E8F0', marginTop: '0.2rem' }}>
                 {lang === 'ta'
@@ -581,7 +581,7 @@ export default async function BiographyPage({
           <SectionHeader
             badge={lang === 'ta' ? 'தலைமைத்துவ ஞானம்' : 'LEADERSHIP WISDOM & PRINCIPLES'}
             title={lang === 'ta' ? 'தலைவரிடமிருந்து 7 வாழ்வியல் பாடங்கள்' : 'Seven Lessons from the Leader'}
-            subtitle={lang === 'ta' ? '28 ஆண்டு கால கல்விப் பயணம் மற்றும் நிறுவன உருவாக்கத்தில் செதுக்கப்பட்ட நடைமுறை தலைமைத்துவ ஞானம்.' : 'Practical leadership principles forged over 28 years of building world-class education systems.'}
+            subtitle={lang === 'ta' ? '25 ஆண்டு கால கல்விப் பயணம் மற்றும் நிறுவன உருவாக்கத்தில் செதுக்கப்பட்ட நடைமுறை தலைமைத்துவ ஞானம்.' : 'Practical leadership principles forged over 25 years of building world-class education systems.'}
           />
 
           <div
