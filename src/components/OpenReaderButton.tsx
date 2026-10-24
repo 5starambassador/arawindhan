@@ -9,6 +9,8 @@ interface OpenReaderButtonProps {
   className?: string;
   style?: React.CSSProperties;
   variant?: 'primary' | 'outline' | 'pill';
+  mode?: 'flipbook' | 'text';
+  showRequestForm?: boolean;
 }
 
 export const OpenReaderButton: React.FC<OpenReaderButtonProps> = ({
@@ -17,6 +19,8 @@ export const OpenReaderButton: React.FC<OpenReaderButtonProps> = ({
   className = '',
   style = {},
   variant = 'primary',
+  mode,
+  showRequestForm = false,
 }) => {
   const handleClick = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -24,7 +28,7 @@ export const OpenReaderButton: React.FC<OpenReaderButtonProps> = ({
     if (typeof window !== 'undefined') {
       window.dispatchEvent(
         new CustomEvent('open-book-reader', {
-          detail: { slug },
+          detail: { slug, mode, showRequestForm },
         })
       );
     }

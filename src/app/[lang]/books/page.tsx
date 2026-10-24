@@ -195,8 +195,8 @@ export default async function BooksPage({
                   {book.summary[lang]}
                 </p>
 
-                {/* Key Themes Chips - Fixed Height */}
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.35rem', marginBottom: '1.25rem', minHeight: '1.8rem', alignItems: 'center' }}>
+                {/* Key Themes Chips - Responsive with no overflow */}
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem', marginBottom: '1.25rem', minHeight: '3.6rem', alignItems: 'flex-start' }}>
                   {book.keyThemes[lang].slice(0, 2).map((theme, idx) => (
                     <span
                       key={idx}
@@ -206,9 +206,12 @@ export default async function BooksPage({
                         color: 'var(--text-secondary)',
                         fontSize: '0.74rem',
                         fontWeight: 500,
-                        padding: '0.15rem 0.5rem',
-                        borderRadius: 'var(--radius-full)',
-                        whiteSpace: 'nowrap',
+                        padding: '0.25rem 0.65rem',
+                        borderRadius: '6px',
+                        lineHeight: 1.35,
+                        maxWidth: '100%',
+                        whiteSpace: 'normal',
+                        wordBreak: 'break-word',
                       }}
                     >
                       {theme}
@@ -220,6 +223,7 @@ export default async function BooksPage({
               <div style={{ borderTop: '1px solid var(--border-light)', paddingTop: '1rem', display: 'flex', gap: '0.65rem', alignItems: 'center' }}>
                 <OpenReaderButton
                   slug={book.slug}
+                  mode="text"
                   label={lang === 'ta' ? 'வாசிக்க' : 'Read Sample'}
                   style={{ flex: 1, padding: '0.6rem 0.85rem', fontSize: '0.86rem', borderRadius: 'var(--radius-full)' }}
                 />

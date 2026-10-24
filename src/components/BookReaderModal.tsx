@@ -37,6 +37,7 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
   const [theme, setTheme] = useState<'paper' | 'dark' | 'light'>('paper');
   const [showRequestForm, setShowRequestForm] = useState(false);
   const [requested, setRequested] = useState(false);
+  const [reqName, setReqName] = useState('');
   const [reqEmail, setReqEmail] = useState('');
   const [reqOrg, setReqOrg] = useState('');
 
@@ -58,22 +59,28 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
   };
 
   useEffect(() => {
-    const handleOpen = (e: CustomEvent<{ slug: string }>) => {
+    const handleOpen = (e: CustomEvent<{ slug: string; mode?: 'flipbook' | 'text'; showRequestForm?: boolean }>) => {
       if (e.detail?.slug) {
         setActiveBookSlug(e.detail.slug);
         setActiveChapterIndex(0);
         setCurrentPage(1);
-        setShowRequestForm(false);
         setRequested(false);
         setZoomLevel(1.0);
         setShowThumbnails(false);
 
-        // If the book has flipbook pages, default to flipbook mode
         const targetBook = booksList.find((b) => b.slug === e.detail.slug);
-        if (targetBook?.flipbookPages && targetBook.flipbookPages.length > 0) {
-          setReaderMode('flipbook');
-        } else {
+
+        if (e.detail.showRequestForm) {
+          setShowRequestForm(true);
           setReaderMode('text');
+        } else {
+          setShowRequestForm(false);
+          if (e.detail.mode) {
+            setReaderMode(e.detail.mode);
+          } else {
+            // Default: if it has flipbookPages and not explicitly asking for text sample, use flipbook; otherwise text
+            setReaderMode(targetBook?.flipbookPages && targetBook.flipbookPages.length > 0 ? 'flipbook' : 'text');
+          }
         }
       }
     };
@@ -1315,18 +1322,122 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
                         background: '#ECFDF5',
                         border: '1.5px solid #A7F3D0',
                         color: '#065F46',
-                        padding: '1.25rem',
-                        borderRadius: '12px',
-                        fontWeight: 700,
-                        fontSize: '0.95rem',
+                        padding: '1.75rem 1.5rem',
+                        borderRadius: '16px',
+                        textAlign: 'center',
+                        maxWidth: '560px',
+                        margin: '0 auto',
+                        boxShadow: '0 10px 25px -5px rgba(16, 185, 129, 0.15)',
                       }}
                     >
-                      {language === 'ta'
-                        ? 'நன்றி! உங்கள் கோரிக்கை பதிவு செய்யப்பட்டது. ஆச்சாரியா பதிப்பக அலுவலகம் உங்களைத் தொடர்பு கொள்ளும்.'
-                        : 'Thank you! Your institutional request has been recorded. Our editorial office will dispatch access details to your email.'}
+                      <div style={{ fontSize: '2.2rem', marginBottom: '0.4rem' }}>🎉</div>
+                      <h4 style={{ fontSize: '1.25rem', fontWeight: 800, margin: '0 0 0.5rem 0', color: '#047857' }}>
+                        {language === 'ta' ? 'அணுகல் அனுமதிக்கப்பட்டது!' : 'Access Granted! Download Your Unabridged Copy'}
+                      </h4>
+                      <p style={{ fontSize: '0.92rem', margin: '0 0 1.5rem 0', opacity: 0.9, lineHeight: 1.6 }}>
+                        {language === 'ta'
+                          ? `நன்றி ${reqName || ''}! உங்கள் விவரங்கள் பதிவு செய்யப்பட்டன. கீழே உள்ள பொத்தான்கள் மூலம் நூலை உடனடியாக பதிவிறக்கம் செய்து கொள்ளலாம்.`
+                          : `Thank you${reqName ? `, ${reqName}` : ''}! Your details have been registered. You can now download the complete edition directly below:`}
+                      </p>
+
+                      <div style={{ display: 'flex', gap: '0.85rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '1.25rem' }}>
+                        {book.pdfUrl && (
+                          <a
+                            href={book.pdfUrl}
+                            download
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{
+                              display: 'inline-flex',
+                              alignItems: 'center',
+                              gap: '6px',
+                              background: '#DC2626',
+                              color: '#FFFFFF',
+                              padding: '0.85rem 1.5rem',
+                              borderRadius: '8px',
+                              textDecoration: 'none',
+                              fontWeight: 800,
+                              fontSize: '0.92rem',
+                              boxShadow: '0 4px 14px rgba(220, 38, 38, 0.35)',
+                              transition: 'transform 0.15s ease',
+                            }}
+                          >
+                            <Download size={16} />
+                            <span>{language === 'ta' ? 'அதிகாரப்பூர்வ PDF பதிவிறக்கம்' : 'Download Full PDF (38 Pages)'}</span>
+                          </a>
+                        )}
+                        {book.epubUrl && (
+                          <a
+                            href={book.epubUrl}
+                            download
+                            style={{
+                              display: 'inline-flex',
+                              alignItems: 'center',
+                              gap: '6px',
+                              background: '#10B981',
+                              color: '#FFFFFF',
+                              padding: '0.85rem 1.5rem',
+                              borderRadius: '8px',
+                              textDecoration: 'none',
+                              fontWeight: 800,
+                              fontSize: '0.92rem',
+                              boxShadow: '0 4px 14px rgba(16, 185, 129, 0.35)',
+                              transition: 'transform 0.15s ease',
+                            }}
+                          >
+                            <Download size={16} />
+                            <span>{language === 'ta' ? 'EPUB மின்னூல் பதிவிறக்கம்' : 'Download EPUB eBook'}</span>
+                          </a>
+                        )}
+                      </div>
+
+                      {totalFlipPages > 0 && (
+                        <div style={{ borderTop: '1px solid #A7F3D0', paddingTop: '1rem', marginTop: '0.5rem' }}>
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setShowRequestForm(false);
+                              setReaderMode('flipbook');
+                            }}
+                            style={{
+                              background: 'transparent',
+                              border: 'none',
+                              color: '#047857',
+                              fontWeight: 700,
+                              fontSize: '0.88rem',
+                              cursor: 'pointer',
+                              textDecoration: 'underline',
+                            }}
+                          >
+                            {language === 'ta' ? 'அல்லது 3D திருப்புப் புத்தகமாக வாசிக்க 📖' : 'Or Read in Interactive 3D Flipbook 📖'}
+                          </button>
+                        </div>
+                      )}
                     </div>
                   ) : (
-                    <form onSubmit={handleRequestSubmit} style={{ maxWidth: '420px', margin: '0 auto', textAlign: 'left' }}>
+                    <form onSubmit={handleRequestSubmit} style={{ maxWidth: '440px', margin: '0 auto', textAlign: 'left' }}>
+                      <div style={{ marginBottom: '1rem' }}>
+                        <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 700, textTransform: 'uppercase', marginBottom: '0.35rem', opacity: 0.8 }}>
+                          {language === 'ta' ? 'முழுப் பெயர்' : 'Full Name'}
+                        </label>
+                        <input
+                          type="text"
+                          required
+                          value={reqName}
+                          onChange={(e) => setReqName(e.target.value)}
+                          placeholder="Dr. / Prof. / Parent Name"
+                          style={{
+                            width: '100%',
+                            padding: '0.75rem 1rem',
+                            borderRadius: '8px',
+                            border: '1px solid ' + themeStyles.border,
+                            background: themeStyles.bg,
+                            color: themeStyles.text,
+                            fontSize: '0.92rem',
+                          }}
+                        />
+                      </div>
+
                       <div style={{ marginBottom: '1rem' }}>
                         <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 700, textTransform: 'uppercase', marginBottom: '0.35rem', opacity: 0.8 }}>
                           {language === 'ta' ? 'மின்னஞ்சல் முகவரி' : 'Work / Personal Email'}
@@ -1351,14 +1462,14 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
 
                       <div style={{ marginBottom: '1.5rem' }}>
                         <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 700, textTransform: 'uppercase', marginBottom: '0.35rem', opacity: 0.8 }}>
-                          {language === 'ta' ? 'நிறுவனம் / பள்ளி / கல்லூரி பெயர்' : 'Institution / University / Organization'}
+                          {language === 'ta' ? 'நிறுவனம் / பள்ளி / பெற்றோர் நிலை' : 'Institution / University / Parent Role'}
                         </label>
                         <input
                           type="text"
                           required
                           value={reqOrg}
                           onChange={(e) => setReqOrg(e.target.value)}
-                          placeholder="School or Campus Name"
+                          placeholder="e.g. Achariya Parent / School Principal"
                           style={{
                             width: '100%',
                             padding: '0.75rem 1rem',
@@ -1377,20 +1488,21 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
                           width: '100%',
                           background: themeStyles.accent,
                           color: '#FFFFFF',
-                          padding: '0.85rem',
+                          padding: '0.9rem',
                           borderRadius: '8px',
                           border: 'none',
-                          fontWeight: 700,
-                          fontSize: '0.95rem',
+                          fontWeight: 800,
+                          fontSize: '0.96rem',
                           cursor: 'pointer',
                           display: 'flex',
                           alignItems: 'center',
                           justifyContent: 'center',
                           gap: '0.5rem',
+                          boxShadow: '0 4px 12px rgba(217, 119, 6, 0.25)',
                         }}
                       >
-                        <span>{language === 'ta' ? 'கோரிக்கையை அனுப்புக' : 'Submit Access Request'}</span>
-                        <Send size={16} />
+                        <span>{language === 'ta' ? 'விவரங்களை சமர்ப்பித்து பதிவிறக்குக' : 'Submit & Unlock Instant Download'}</span>
+                        <Download size={16} />
                       </button>
                     </form>
                   )}
