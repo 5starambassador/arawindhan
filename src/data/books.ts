@@ -2,101 +2,6 @@ import { BookItem } from '@/types';
 
 export const booksList: BookItem[] = [
   {
-    id: 'BK-001',
-    slug: 'shambala-book',
-    coverImage: '/images/books/shambala_book.jpg',
-    title: {
-      en: 'The Shambala Book',
-      ta: 'தி ஷாம்பாலா நூல் (The Shambala Book)',
-    },
-    tagline: {
-      en: 'Principles of Higher Consciousness, Meditative Mind, and Inner Awakening',
-      ta: 'உயர்ந்த விழிப்புணர்வு, தியான மனம் மற்றும் உள்முக விழிப்புக்கான தத்துவ வழிகாட்டி',
-    },
-    author: {
-      en: 'Dr. J. Arawindhan (Santoshi Shri Arawindhan)',
-      ta: 'முனைவர் ஜே. அரவிந்தன் (சந்தோஷி ஸ்ரீ அரவிந்தன்)',
-    },
-    edition: 'Ecosystem & Special Retreat Edition',
-    language: 'English & Tamil',
-    status: 'Ecosystem Edition',
-    claimId: 'CLM-023',
-    summary: {
-      en: 'The Shambala Book encapsulates over a decade of inner exploration and annual spiritual retreats held in Puducherry since 2012. It articulates the mechanics of turning from external striving toward inner stillness, outlining the Seven Chakra pyramid energy practices, Oneness Meditation, and the realization of Divine Grace in daily life.',
-      ta: '2012 முதல் புதுச்சேரியில் நடைபெற்று வரும் மகா ஷாம்பாலா ஆன்மீக சங்கமங்களின் சாரமாக விளங்கும் நூல். புற உலக வெற்றிகளைத் தாண்டி, உள்முக அமைதியை நோக்கி நகர்வதற்கான வழிகளை விளக்குகிறது. ஏழு சக்கர பிரமிடு ஆற்றல் பயிற்சிகள், ஒருமை தியானம் மற்றும் அன்றாட வாழ்வில் ஆன்மீக விழிப்புணர்வை உணர்தல் குறித்து விரிவாகப் பேசுகிறது.',
-    },
-    keyThemes: {
-      en: [
-        'The Meditative Mind over mental noise',
-        'Seven Chakra energy alignment and pyramid practice',
-        'Moving from knowing to experiencing and awakening',
-        'Inner Engineering for enduring peace and conscious living',
-      ],
-      ta: [
-        'மன இரைச்சலைத் தாண்டிய தியான மனம்',
-        'ஏழு சக்கர ஆற்றல் ஒருமுகப்படுத்தல் மற்றும் பிரமிடு பயிற்சி',
-        'அறிதலில் இருந்து அனுபவத்திற்கும் விழிப்புக்கும் நகர்தல்',
-        'நிலையான அமைதிக்கான உள்முகப் பொறியியல் (Inner Engineering)',
-      ],
-    },
-    targetAudience: {
-      en: 'Spiritual seekers, educators, parents, and leaders seeking holistic inner transformation.',
-      ta: 'ஆன்மீகத் தேடலுடையோர், கல்வியாளர்கள், பெற்றோர்கள் மற்றும் முழுமையான உள் அமைதியை விரும்புவோர்.',
-    },
-    readMoreSnippet: {
-      en: '“Do not do with your mind; do with your Meditative Mind. Outer change is temporary, shaped by circumstance. Change that begins within becomes part of who we are, and endures.”',
-      ta: '"உங்கள் சாதாரண மனதைக் கொண்டு எதையும் செய்யாதீர்கள்; உங்கள் தியான மனதைக் கொண்டு செய்யுங்கள். வெளிப்புற மாற்றம் தற்காலிகமானது; உள்ளிருந்து தொடங்கும் மாற்றமே நிலையானது."',
-    },
-    pdfUrl: '/books/shambala-book.pdf',
-    flipbookPages: Array.from({ length: 26 }, (_, i) => `/books/shambala-book/pages/page_${i + 1}.webp`),
-    sampleChapters: [
-      {
-        title: {
-          en: 'Chapter 1: Awakening the Meditative Mind',
-          ta: 'அத்தியாயம் 1: தியான மனதின் விழிப்புணர்வு',
-        },
-        subtitle: {
-          en: 'Silencing Mental Noise to Discover Inner Shambala',
-          ta: 'மன இரைச்சலைக் கடந்து உள்முக ஷாம்பாலா அமைதியை அடைதல்',
-        },
-        paragraphs: {
-          en: [
-            'Do not act with your reactive mind; act with your Meditative Mind. In modern existence, the intellect is endlessly stimulated by superficial notifications, deadlines, and anxiety. We mistake agitation for productivity and speed for progress.',
-            'Shambala is not an inaccessible geographic valley hidden in snowy mountain passes; it is the sacred stillness resting at the exact center of human consciousness. When you learn to withdraw energy from external drama, you discover an unshakeable reservoir of peace that circumstances cannot alter.',
-            'Through disciplined breath awareness and inner stillness, the mind shifts from chaotic survival instincts into clear spiritual perception. Here, intuition awakens and every worldly action becomes an expression of grace.',
-          ],
-          ta: [
-            'உங்கள் சாதாரண மனதைக் கொண்டு எதையும் செய்யாதீர்கள்; உங்கள் தியான மனதைக் கொண்டு செய்யுங்கள். நவீன மனிதனின் அறிவு முடிவில்லாத அவசரங்களாலும், பதற்றங்களாலும் அலைக்கழிக்கப்படுகிறது. பரபரப்பை உற்பத்தித்திறன் என்றும், வேகத்தை முன்னேற்றம் என்றும் நாம் தவறாகக் கருதுகிறோம்.',
-            'ஷாம்பாலா என்பது பனிமலை இடுக்குகளில் மறைந்திருக்கும் எட்டாத பூமி அல்ல; அது மனித விழிப்புணர்வின் மையத்தில் இயல்பாக வீற்றிருக்கும் அமைதியின் திருவிடம். புற உலக கூச்சல்களிலிருந்து உங்கள் கவனத்தை உள்ளே திருப்பும்போது, எத்தகைய சூழ்நிலைகளாலும் அசைக்க முடியாத பேரின்ப அமைதியை நீங்கள் உணர்கிறீர்கள்.',
-            'மூச்சுக் கவனிப்பும், அமைதிப் பயிற்சியும் உங்கள் மனதை கீழ்நிலை பயங்களிலிருந்து விடுவித்து, ஆழ்ந்த உள்ளுணர்வை விழித்தெழச் செய்கின்றன. அப்போது நாம் செய்யும் ஒவ்வொரு செயலும் அருளின் வெளிப்பாடாக மலர்கிறது.',
-          ],
-        },
-      },
-      {
-        title: {
-          en: 'Chapter 2: The Seven Chakra Pyramid Energy',
-          ta: 'அத்தியாயம் 2: ஏழு சக்கர பிரமிடு ஆற்றல் நெறி',
-        },
-        subtitle: {
-          en: 'Cosmic Resonance, Subtle Vitality, and Daily Alignment',
-          ta: 'பிரபஞ்ச ஒத்திசைவு மற்றும் அன்றாட ஆற்றல் சமநிலை',
-        },
-        paragraphs: {
-          en: [
-            'The human spine is a celestial antenna connecting terrestrial grounding to cosmic consciousness. From the root (Muladhara) to the crown (Sahasrara), the seven energy centers regulate not merely bodily organs, but the very frequency of thoughts and creative manifestations.',
-            'Pyramid meditation concentrates pranic energy into a laser-sharp vortex. When meditating beneath a sacred geometric form, chaotic brainwaves decelerate into theta and delta states, accelerating biological cellular repair and dissolving subconscious blockages.',
-            'When all seven chakras vibrate in harmonic resonance, the human being ceases to be a victim of circumstance and becomes a channel for divine order, profound vitality, and universal love.',
-          ],
-          ta: [
-            'மனித முதுகெலும்பு என்பது பூமிக்கும் பிரபஞ்ச விழிப்புணர்வுக்குமான ஒரு தெய்வீக ஆண்டெனா போன்றது. மூலாதாரம் முதல் துரியம் வரை இயங்கும் ஏழு ஆற்றல் மையங்கள் வெறும் உடலியல் இயக்கங்களை மட்டுமல்லாது, நமது எண்ண அலைகளையும் வாழ்வியல் உருவாக்கங்களையும் தீர்மானிக்கின்றன.',
-            'பிரமிடு தியானம் என்பது பிராண ஆற்றலை ஒருமுகப்படுத்தும் அரிய கலையாகும். புனித வடிவியல் அமைப்பின் கீழ் அமர்ந்து தியானிக்கும்போது, மன அலைகள் அமைதியடைந்து, உடலின் செல்கள் புத்துயிர் பெறுகின்றன; ஆழ்மனத் தடைகள் அனைத்தும் விலகுகின்றன.',
-            'ஏழு சக்கரங்களும் ஒருமுகப்பட்டு இயங்கும்போது, மனிதன் சூழ்நிலைகளுக்குப் பலியாகாமல், பிரபஞ்ச அருளையும், அளப்பரிய ஆற்றலையும் தன் வழியாக வெளிப்படுத்தும் ஞானக் கருவியாக மாறுகிறான்.',
-          ],
-        },
-      },
-    ],
-  },
-  {
     id: 'BK-002',
     slug: 'wow-parenting-book',
     coverImage: '/images/books/wow-parenting.jpg',
@@ -1531,6 +1436,101 @@ export const booksList: BookItem[] = [
             'முழுமையான நல்வாழ்வு என்பது வெறும் நோய் இல்லாத நிலை மட்டுமல்ல; அது உடல், மனம், சொல், ஆன்மா ஆகிய அனைத்தின் ஒருமைப்பாடாகும்: உடல் நலம், மன உறுதி, உணர்வுச் சமநிலை, அறிவுத் தெளிவு மற்றும் ஆன்ம இணைப்பு ஆகிய ஐந்து தூண்களே இதன் அடிப்படை.',
             'தேக சுத்தி, சப்தமகா கிரியை மற்றும் பொன்சிரிப்பு தியானம் ஆகியவற்றின் மூலம் உடலில் பிராண சக்தி புத்துயிர் பெறுகிறது. மேலும் இந்நூல் ‘வாக்கின் அறிவியலை’ விளக்குகிறது: வாக்கு சுத்தி (புறம்பேசுதல் மற்றும் பொய்மையைத் தவிர்த்தல்), வாக்கு சித்தி (சொல்லும் சொல் பலிதமாகும் தவநிலை), மற்றும் வாக்கு சக்தி (பிரபஞ்ச படைப்பாற்றல்).',
             'ஒழுங்கே சொர்க்கத்தின் முதல் விதி. நான்கு புனித விதிகளின்படி வாழுங்கள்: எல்லாவற்றிற்கும் ஓர் இடம், எல்லாவற்றிற்கும் உரிய காலம், எல்லாவற்றிற்கும் ஓர் உன்னத நோக்கம், எல்லாவற்றிலும் ஓர் அழகியல்.',
+          ],
+        },
+      },
+    ],
+  },
+  {
+    id: 'BK-001',
+    slug: 'shambala-book',
+    coverImage: '/images/books/shambala_book.jpg',
+    title: {
+      en: 'The Shambala Book',
+      ta: 'தி ஷாம்பாலா நூல் (The Shambala Book)',
+    },
+    tagline: {
+      en: 'Principles of Higher Consciousness, Meditative Mind, and Inner Awakening',
+      ta: 'உயர்ந்த விழிப்புணர்வு, தியான மனம் மற்றும் உள்முக விழிப்புக்கான தத்துவ வழிகாட்டி',
+    },
+    author: {
+      en: 'Dr. J. Arawindhan (Santoshi Shri Arawindhan)',
+      ta: 'முனைவர் ஜே. அரவிந்தன் (சந்தோஷி ஸ்ரீ அரவிந்தன்)',
+    },
+    edition: 'Ecosystem & Special Retreat Edition',
+    language: 'English & Tamil',
+    status: 'Ecosystem Edition',
+    claimId: 'CLM-023',
+    summary: {
+      en: 'The Shambala Book encapsulates over a decade of inner exploration and annual spiritual retreats held in Puducherry since 2012. It articulates the mechanics of turning from external striving toward inner stillness, outlining the Seven Chakra pyramid energy practices, Oneness Meditation, and the realization of Divine Grace in daily life.',
+      ta: '2012 முதல் புதுச்சேரியில் நடைபெற்று வரும் மகா ஷாம்பாலா ஆன்மீக சங்கமங்களின் சாரமாக விளங்கும் நூல். புற உலக வெற்றிகளைத் தாண்டி, உள்முக அமைதியை நோக்கி நகர்வதற்கான வழிகளை விளக்குகிறது. ஏழு சக்கர பிரமிடு ஆற்றல் பயிற்சிகள், ஒருமை தியானம் மற்றும் அன்றாட வாழ்வில் ஆன்மீக விழிப்புணர்வை உணர்தல் குறித்து விரிவாகப் பேசுகிறது.',
+    },
+    keyThemes: {
+      en: [
+        'The Meditative Mind over mental noise',
+        'Seven Chakra energy alignment and pyramid practice',
+        'Moving from knowing to experiencing and awakening',
+        'Inner Engineering for enduring peace and conscious living',
+      ],
+      ta: [
+        'மன இரைச்சலைத் தாண்டிய தியான மனம்',
+        'ஏழு சக்கர ஆற்றல் ஒருமுகப்படுத்தல் மற்றும் பிரமிடு பயிற்சி',
+        'அறிதலில் இருந்து அனுபவத்திற்கும் விழிப்புக்கும் நகர்தல்',
+        'நிலையான அமைதிக்கான உள்முகப் பொறியியல் (Inner Engineering)',
+      ],
+    },
+    targetAudience: {
+      en: 'Spiritual seekers, educators, parents, and leaders seeking holistic inner transformation.',
+      ta: 'ஆன்மீகத் தேடலுடையோர், கல்வியாளர்கள், பெற்றோர்கள் மற்றும் முழுமையான உள் அமைதியை விரும்புவோர்.',
+    },
+    readMoreSnippet: {
+      en: '“Do not do with your mind; do with your Meditative Mind. Outer change is temporary, shaped by circumstance. Change that begins within becomes part of who we are, and endures.”',
+      ta: '"உங்கள் சாதாரண மனதைக் கொண்டு எதையும் செய்யாதீர்கள்; உங்கள் தியான மனதைக் கொண்டு செய்யுங்கள். வெளிப்புற மாற்றம் தற்காலிகமானது; உள்ளிருந்து தொடங்கும் மாற்றமே நிலையானது."',
+    },
+    pdfUrl: '/books/shambala-book.pdf',
+    flipbookPages: Array.from({ length: 26 }, (_, i) => `/books/shambala-book/pages/page_${i + 1}.webp`),
+    sampleChapters: [
+      {
+        title: {
+          en: 'Chapter 1: Awakening the Meditative Mind',
+          ta: 'அத்தியாயம் 1: தியான மனதின் விழிப்புணர்வு',
+        },
+        subtitle: {
+          en: 'Silencing Mental Noise to Discover Inner Shambala',
+          ta: 'மன இரைச்சலைக் கடந்து உள்முக ஷாம்பாலா அமைதியை அடைதல்',
+        },
+        paragraphs: {
+          en: [
+            'Do not act with your reactive mind; act with your Meditative Mind. In modern existence, the intellect is endlessly stimulated by superficial notifications, deadlines, and anxiety. We mistake agitation for productivity and speed for progress.',
+            'Shambala is not an inaccessible geographic valley hidden in snowy mountain passes; it is the sacred stillness resting at the exact center of human consciousness. When you learn to withdraw energy from external drama, you discover an unshakeable reservoir of peace that circumstances cannot alter.',
+            'Through disciplined breath awareness and inner stillness, the mind shifts from chaotic survival instincts into clear spiritual perception. Here, intuition awakens and every worldly action becomes an expression of grace.',
+          ],
+          ta: [
+            'உங்கள் சாதாரண மனதைக் கொண்டு எதையும் செய்யாதீர்கள்; உங்கள் தியான மனதைக் கொண்டு செய்யுங்கள். நவீன மனிதனின் அறிவு முடிவில்லாத அவசரங்களாலும், பதற்றங்களாலும் அலைக்கழிக்கப்படுகிறது. பரபரப்பை உற்பத்தித்திறன் என்றும், வேகத்தை முன்னேற்றம் என்றும் நாம் தவறாகக் கருதுகிறோம்.',
+            'ஷாம்பாலா என்பது பனிமலை இடுக்குகளில் மறைந்திருக்கும் எட்டாத பூமி அல்ல; அது மனித விழிப்புணர்வின் மையத்தில் இயல்பாக வீற்றிருக்கும் அமைதியின் திருவிடம். புற உலக கூச்சல்களிலிருந்து உங்கள் கவனத்தை உள்ளே திருப்பும்போது, எத்தகைய சூழ்நிலைகளாலும் அசைக்க முடியாத பேரின்ப அமைதியை நீங்கள் உணர்கிறீர்கள்.',
+            'மூச்சுக் கவனிப்பும், அமைதிப் பயிற்சியும் உங்கள் மனதை கீழ்நிலை பயங்களிலிருந்து விடுவித்து, ஆழ்ந்த உள்ளுணர்வை விழித்தெழச் செய்கின்றன. அப்போது நாம் செய்யும் ஒவ்வொரு செயலும் அருளின் வெளிப்பாடாக மலர்கிறது.',
+          ],
+        },
+      },
+      {
+        title: {
+          en: 'Chapter 2: The Seven Chakra Pyramid Energy',
+          ta: 'அத்தியாயம் 2: ஏழு சக்கர பிரமிடு ஆற்றல் நெறி',
+        },
+        subtitle: {
+          en: 'Cosmic Resonance, Subtle Vitality, and Daily Alignment',
+          ta: 'பிரபஞ்ச ஒத்திசைவு மற்றும் அன்றாட ஆற்றல் சமநிலை',
+        },
+        paragraphs: {
+          en: [
+            'The human spine is a celestial antenna connecting terrestrial grounding to cosmic consciousness. From the root (Muladhara) to the crown (Sahasrara), the seven energy centers regulate not merely bodily organs, but the very frequency of thoughts and creative manifestations.',
+            'Pyramid meditation concentrates pranic energy into a laser-sharp vortex. When meditating beneath a sacred geometric form, chaotic brainwaves decelerate into theta and delta states, accelerating biological cellular repair and dissolving subconscious blockages.',
+            'When all seven chakras vibrate in harmonic resonance, the human being ceases to be a victim of circumstance and becomes a channel for divine order, profound vitality, and universal love.',
+          ],
+          ta: [
+            'மனித முதுகெலும்பு என்பது பூமிக்கும் பிரபஞ்ச விழிப்புணர்வுக்குமான ஒரு தெய்வீக ஆண்டெனா போன்றது. மூலாதாரம் முதல் துரியம் வரை இயங்கும் ஏழு ஆற்றல் மையங்கள் வெறும் உடலியல் இயக்கங்களை மட்டுமல்லாது, நமது எண்ண அலைகளையும் வாழ்வியல் உருவாக்கங்களையும் தீர்மானிக்கின்றன.',
+            'பிரமிடு தியானம் என்பது பிராண ஆற்றலை ஒருமுகப்படுத்தும் அரிய கலையாகும். புனித வடிவியல் அமைப்பின் கீழ் அமர்ந்து தியானிக்கும்போது, மன அலைகள் அமைதியடைந்து, உடலின் செல்கள் புத்துயிர் பெறுகின்றன; ஆழ்மனத் தடைகள் அனைத்தும் விலகுகின்றன.',
+            'ஏழு சக்கரங்களும் ஒருமுகப்பட்டு இயங்கும்போது, மனிதன் சூழ்நிலைகளுக்குப் பலியாகாமல், பிரபஞ்ச அருளையும், அளப்பரிய ஆற்றலையும் தன் வழியாக வெளிப்படுத்தும் ஞானக் கருவியாக மாறுகிறான்.',
           ],
         },
       },
