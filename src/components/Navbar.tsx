@@ -149,49 +149,8 @@ export const Navbar: React.FC<NavbarProps> = ({ lang }) => {
           })}
         </nav>
 
-        {/* Actions: Evidence Modal, Language Switcher & Mobile Menu Toggle */}
+        {/* Actions: Language Switcher & Mobile Menu Toggle */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', flexShrink: 0 }}>
-          <button
-            type="button"
-            onClick={() => {
-              if (typeof window !== 'undefined') {
-                window.dispatchEvent(new CustomEvent('open-claim-modal', { detail: {} }));
-              }
-            }}
-            title={lang === 'ta' ? 'சான்று சரிபார்ப்புக் களஞ்சியம் (Ctrl+K)' : 'Evidence & Claims Inspector (Ctrl+K)'}
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '0.35rem',
-              background: '#FAF8F5',
-              border: '1px solid #E2E8F0',
-              padding: '0.38rem 0.75rem',
-              borderRadius: '8px',
-              fontSize: '0.78rem',
-              fontWeight: 600,
-              color: '#0F172A',
-              cursor: 'pointer',
-              transition: 'all 0.15s ease',
-              whiteSpace: 'nowrap',
-            }}
-          >
-            <ShieldCheck size={14} color="#D97706" />
-            <span>{lang === 'ta' ? 'சான்றுகள்' : 'Claims'}</span>
-            <kbd
-              style={{
-                background: '#E2E8F0',
-                fontSize: '0.65rem',
-                padding: '0.1rem 0.3rem',
-                borderRadius: '4px',
-                color: '#64748B',
-                fontFamily: 'monospace',
-                marginLeft: '2px',
-              }}
-            >
-              ⌘K
-            </kbd>
-          </button>
-
           <LanguageSwitcher currentLang={lang} />
 
           <button

@@ -109,31 +109,17 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
                 : 'Official digital knowledge platform documenting the educational systems, enterprises, publications, and philosophies founded and led by Dr. J. Arawindhan. Every statement is cross-referenced with institutional primary documents.'}
             </p>
 
-            {/* Interactive Verification Vault Button */}
-            <button
-              type="button"
-              onClick={openClaimsModal}
-              title="Click to open the Master Claims & Evidentiary Inspector"
+            {/* Institutional Seal */}
+            <div
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '0.65rem',
                 background: '#FFFFFF',
-                border: '1.5px solid #10B981',
+                border: '1.5px solid #FCD34D',
                 padding: '0.55rem 0.95rem',
                 borderRadius: '10px',
-                cursor: 'pointer',
-                boxShadow: '0 2px 8px rgba(16, 185, 129, 0.12)',
-                transition: 'all 0.2s ease',
-                textAlign: 'left',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-2px)';
-                e.currentTarget.style.boxShadow = '0 6px 16px rgba(16, 185, 129, 0.2)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'none';
-                e.currentTarget.style.boxShadow = '0 2px 8px rgba(16, 185, 129, 0.12)';
+                boxShadow: '0 2px 8px rgba(217, 119, 6, 0.08)',
               }}
             >
               <div
@@ -141,23 +127,23 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
                   width: '24px',
                   height: '24px',
                   borderRadius: '50%',
-                  background: '#ECFDF5',
+                  background: '#FEF3C7',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                 }}
               >
-                <ShieldCheck size={15} color="#059669" />
+                <ShieldCheck size={15} color="#D97706" />
               </div>
               <div>
-                <div style={{ fontSize: '0.78rem', color: '#065F46', fontWeight: 800, lineHeight: 1.2 }}>
-                  {lang === 'ta' ? '30 சான்றுகள் சரிபார்க்கப்பட்டன' : '30 Primary Claims Audited'}
+                <div style={{ fontSize: '0.78rem', color: '#92400E', fontWeight: 800, lineHeight: 1.2 }}>
+                  {lang === 'ta' ? 'அதிகாரப்பூர்வ நிறுவன ஆவணம்' : 'Official Institutional Archive'}
                 </div>
-                <div style={{ fontSize: '0.68rem', color: '#047857', fontWeight: 500 }}>
-                  {lang === 'ta' ? 'ஆதாரங்களை ஆய்வு செய்ய சொடுக்கவும் (⌘K)' : 'Inspect Evidence Vault (⌘K)'}
+                <div style={{ fontSize: '0.68rem', color: '#B45309', fontWeight: 500 }}>
+                  {lang === 'ta' ? 'ஆச்சாரியா குழுமம் • நிறுவப்பட்டது 2000' : 'ACHARIYA World Class Education • Estd. 2000'}
                 </div>
               </div>
-            </button>
+            </div>
           </div>
 
           {/* Col 2: Core Knowledge Sections */}

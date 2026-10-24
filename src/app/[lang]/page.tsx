@@ -223,7 +223,7 @@ export default async function HomePage({
           <SectionHeader
             badge={lang === 'ta' ? 'புள்ளிவிவரச் சுருக்கம்' : 'THE WORK AT A GLANCE'}
             title={lang === 'ta' ? '25 ஆண்டு சாதனைகள் ஒரு பார்வையில்' : 'Twenty-Five Years in Measurable Reach'}
-            subtitle={lang === 'ta' ? 'ஒவ்வொரு புள்ளிவிவரமும் நிறுவன ஆவணங்கள் மற்றும் சரிபார்க்கப்பட்ட சான்றுகளோடு இணைக்கப்பட்டுள்ளது.' : 'Every metric is linked to documented institutional records and verification IDs.'}
+            subtitle={lang === 'ta' ? '25 ஆண்டுகளில் கல்வி, தலைமைத்துவம் மற்றும் உலக சாதனைகளில் எட்டப்பட்ட வரலாற்று மைல்கற்கள்.' : 'Documented institutional reach, academic excellence, and student world records across 25 years.'}
           />
 
           <div className="grid-metrics">
@@ -236,15 +236,14 @@ export default async function HomePage({
                   flexDirection: 'column',
                   justifyContent: 'space-between',
                   height: '100%',
-                  padding: '1.45rem',
+                  padding: '1.5rem',
                 }}
               >
                 <div>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.65rem' }}>
-                    <span style={{ fontSize: '0.65rem', fontWeight: 800, color: 'var(--gold-glow)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem' }}>
+                    <span style={{ fontSize: '0.72rem', fontWeight: 800, color: 'var(--gold-glow)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
                       {lang === 'ta' ? 'நிறுவன சாதனை' : 'RECORD METRIC'}
                     </span>
-                    <ClaimBadge claimId={item.claimId} status="SOURCE_CLAIM" language={lang} compact />
                   </div>
                   <div
                     className="font-serif heading-gold"
