@@ -223,8 +223,7 @@ export default async function BooksPage({
               <div style={{ borderTop: '1px solid var(--border-light)', paddingTop: '1rem', display: 'flex', gap: '0.65rem', alignItems: 'center' }}>
                 <OpenReaderButton
                   slug={book.slug}
-                  mode="text"
-                  label={lang === 'ta' ? 'வாசிக்க' : 'Read Sample'}
+                  label={book.flipbookPages && book.flipbookPages.length > 0 ? (lang === 'ta' ? '📖 புரட்டுக' : '📖 Read Flipbook') : (lang === 'ta' ? 'வாசிக்க' : 'Read Sample')}
                   style={{ flex: 1, padding: '0.6rem 0.85rem', fontSize: '0.86rem', borderRadius: 'var(--radius-full)' }}
                 />
                 <Link
