@@ -144,58 +144,9 @@ export default async function BookDetailPage({
               <div style={{ display: 'flex', gap: '0.85rem', flexWrap: 'wrap', alignItems: 'center', marginBottom: '1.5rem' }}>
                 <OpenReaderButton
                   slug={book.slug}
-                  label={lang === 'ta' ? '📖 மாதிரி அத்தியாயத்தை வாசிக்க' : '📖 Read Online (eReader)'}
+                  label={lang === 'ta' ? '📖 மாதிரி அத்தியாயத்தை வாசிக்க' : '📖 Read Online (Flipbook)'}
                   style={{ padding: '0.75rem 1.75rem', fontSize: '0.96rem', fontWeight: 800 }}
                 />
-
-                {book.epubUrl && (
-                  <a
-                    href={book.epubUrl}
-                    download
-                    style={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: '0.5rem',
-                      background: '#10B981',
-                      color: '#FFFFFF',
-                      padding: '0.75rem 1.5rem',
-                      borderRadius: 'var(--radius-full)',
-                      fontWeight: 700,
-                      fontSize: '0.92rem',
-                      textDecoration: 'none',
-                      boxShadow: '0 4px 12px rgba(16, 185, 129, 0.25)',
-                    }}
-                  >
-                    <Download size={16} />
-                    <span>{lang === 'ta' ? 'ஈபப் (EPUB) பதிவிறக்கம்' : 'Download EPUB (.epub)'}</span>
-                  </a>
-                )}
-
-                {book.pdfUrl && (
-                  <a
-                    href={book.pdfUrl}
-                    download
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: '0.5rem',
-                      background: '#DC2626',
-                      color: '#FFFFFF',
-                      padding: '0.75rem 1.5rem',
-                      borderRadius: 'var(--radius-full)',
-                      fontWeight: 700,
-                      fontSize: '0.92rem',
-                      textDecoration: 'none',
-                      boxShadow: '0 4px 12px rgba(220, 38, 38, 0.25)',
-                    }}
-                  >
-                    <Download size={16} />
-                    <span>{lang === 'ta' ? 'அசல் PDF (38 பக்கங்கள்)' : 'Download PDF (38 Pages)'}</span>
-                  </a>
-                )}
-
                 <OpenReaderButton
                   slug={book.slug}
                   variant="outline"

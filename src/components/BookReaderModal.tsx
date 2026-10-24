@@ -19,6 +19,8 @@ import {
   Layers,
   FileText,
   RotateCcw,
+  Volume2,
+  VolumeX,
 } from 'lucide-react';
 import { booksList } from '@/data/books';
 import { Language } from '@/types';
@@ -45,8 +47,77 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
   const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
   const [isFlipping, setIsFlipping] = useState<boolean>(false);
   const [flipDirection, setFlipDirection] = useState<'next' | 'prev' | null>(null);
+  const [isMuted, setIsMuted] = useState<boolean>(false);
 
   const containerRef = useRef<HTMLDivElement>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const audio = new Audio('/sounds/page-flip.mp3');
+      audio.preload = 'auto';
+      audio.volume = 0.75;
+      audioRef.current = audio;
+    }
+  }, []);
+
+  const playFlipSound = () => {
+    if (isMuted) return;
+    try {
+      if (audioRef.current) {
+        audioRef.current.currentTime = 0;
+        const playPromise = audioRef.current.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(() => {
+            synthesizeFlipSound();
+          });
+        }
+      } else {
+        const audio = new Audio('/sounds/page-flip.mp3');
+        audio.volume = 0.75;
+        audio.play().catch(() => synthesizeFlipSound());
+      }
+    } catch {
+      synthesizeFlipSound();
+    }
+  };
+
+  const synthesizeFlipSound = () => {
+    if (isMuted) return;
+    try {
+      const AudioCtx = window.AudioContext || (window as any).webkitAudioContext;
+      if (!AudioCtx) return;
+      const ctx = new AudioCtx();
+      const bufferSize = Math.floor(ctx.sampleRate * 0.2);
+      const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+      const data = buffer.getChannelData(0);
+      let last = 0;
+      for (let i = 0; i < bufferSize; i++) {
+        const white = Math.random() * 2 - 1;
+        last = last * 0.88 + white * 0.12;
+        const prog = i / bufferSize;
+        const env = prog < 0.12 ? prog / 0.12 : Math.pow(1 - prog, 2.2);
+        data[i] = (last * 0.75 + white * 0.25) * env * 0.5;
+      }
+      const src = ctx.createBufferSource();
+      src.buffer = buffer;
+      const filter = ctx.createBiquadFilter();
+      filter.type = 'bandpass';
+      filter.frequency.setValueAtTime(750, ctx.currentTime);
+      filter.frequency.exponentialRampToValueAtTime(320, ctx.currentTime + 0.2);
+      filter.Q.value = 1.0;
+      const gain = ctx.createGain();
+      gain.gain.setValueAtTime(0.55, ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.2);
+      src.connect(filter);
+      filter.connect(gain);
+      gain.connect(ctx.destination);
+      src.start();
+      src.onended = () => ctx.close().catch(() => {});
+    } catch {
+      // AudioContext unavailable
+    }
+  };
 
   useEffect(() => {
     const handleOpen = (e: CustomEvent<{ slug: string }>) => {
@@ -122,6 +193,7 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
   const handleFlipNext = () => {
     if (readerMode === 'flipbook' && totalFlipPages > 0) {
       if (currentPage < totalFlipPages) {
+        playFlipSound();
         setIsFlipping(true);
         setFlipDirection('next');
         setTimeout(() => {
@@ -136,6 +208,7 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
         }, 220);
       }
     } else {
+      playFlipSound();
       setActiveChapterIndex((prev) => Math.min(chapters.length - 1, prev + 1));
     }
   };
@@ -143,6 +216,7 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
   const handleFlipPrev = () => {
     if (readerMode === 'flipbook' && totalFlipPages > 0) {
       if (currentPage > 1) {
+        playFlipSound();
         setIsFlipping(true);
         setFlipDirection('prev');
         setTimeout(() => {
@@ -156,6 +230,7 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
         }, 220);
       }
     } else {
+      playFlipSound();
       setActiveChapterIndex((prev) => Math.max(0, prev - 1));
     }
   };
@@ -582,6 +657,28 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
               </a>
             )}
 
+            {/* Audio Flip Sound Toggle */}
+            <button
+              type="button"
+              onClick={() => setIsMuted((m) => !m)}
+              style={{
+                border: 'none',
+                background: readerMode === 'flipbook' ? '#1E2430' : themeStyles.cardBg,
+                color: isMuted ? '#94A3B8' : '#F59E0B',
+                padding: '6px 8px',
+                borderRadius: '8px',
+                cursor: 'pointer',
+                display: 'inline-flex',
+                alignItems: 'center',
+                borderWidth: '1px',
+                borderStyle: 'solid',
+                borderColor: readerMode === 'flipbook' ? 'rgba(255,255,255,0.12)' : themeStyles.border,
+              }}
+              title={isMuted ? 'Turn on Page-Turn Sound' : 'Mute Page-Turn Sound'}
+            >
+              {isMuted ? <VolumeX size={14} /> : <Volume2 size={14} />}
+            </button>
+
             {/* Fullscreen Toggle */}
             <button
               type="button"
@@ -714,6 +811,62 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
                 <ChevronRight size={24} />
               </button>
 
+              {/* Embedded 3D Flip Styles */}
+              <style>{`
+                @keyframes flipNext3D {
+                  0% {
+                    transform: rotateY(0deg);
+                    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                  }
+                  30% {
+                    transform: rotateY(-50deg) skewY(-1.5deg);
+                    box-shadow: -15px 5px 30px rgba(0,0,0,0.5);
+                  }
+                  60% {
+                    transform: rotateY(-110deg) skewY(1.5deg);
+                    box-shadow: 15px 5px 30px rgba(0,0,0,0.5);
+                  }
+                  100% {
+                    transform: rotateY(-180deg);
+                    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                  }
+                }
+
+                @keyframes flipPrev3D {
+                  0% {
+                    transform: rotateY(0deg);
+                    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                  }
+                  30% {
+                    transform: rotateY(50deg) skewY(1.5deg);
+                    box-shadow: 15px 5px 30px rgba(0,0,0,0.5);
+                  }
+                  60% {
+                    transform: rotateY(110deg) skewY(-1.5deg);
+                    box-shadow: -15px 5px 30px rgba(0,0,0,0.5);
+                  }
+                  100% {
+                    transform: rotateY(180deg);
+                    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                  }
+                }
+
+                @keyframes sweepShadow {
+                  0% { opacity: 0; }
+                  45% { opacity: 0.6; }
+                  100% { opacity: 0; }
+                }
+
+                @keyframes cornerGlow {
+                  0%, 100% { transform: scale(1); filter: brightness(1); }
+                  50% { transform: scale(1.15) translateY(-2px); filter: brightness(1.3); }
+                }
+
+                .corner-curl-btn:hover .corner-icon {
+                  transform: scale(1.2) translateY(-2px) !important;
+                }
+              `}</style>
+
               {/* The 3D Book Container */}
               <div
                 style={{
@@ -722,11 +875,13 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
                   justifyContent: 'center',
                   transform: `scale(${zoomLevel})`,
                   transition: 'transform 0.2s ease',
-                  boxShadow: '0 25px 65px -10px rgba(0, 0, 0, 0.8)',
-                  borderRadius: '8px',
+                  boxShadow: '0 25px 65px -10px rgba(0, 0, 0, 0.85)',
+                  borderRadius: '10px',
                   background: '#0B0D13',
                   position: 'relative',
                   maxHeight: '80vh',
+                  perspective: '2500px',
+                  transformStyle: 'preserve-3d',
                 }}
               >
                 {/* When on Cover Page (Page 1) */}
@@ -738,10 +893,13 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
                       position: 'relative',
                       display: 'flex',
                       flexDirection: 'column',
-                      borderRadius: '6px',
+                      borderRadius: '8px',
                       overflow: 'hidden',
-                      boxShadow: '8px 10px 30px rgba(0,0,0,0.6)',
-                      borderRight: '2px solid rgba(0,0,0,0.3)',
+                      boxShadow: '12px 14px 40px rgba(0,0,0,0.7)',
+                      borderRight: '3px solid rgba(0,0,0,0.4)',
+                      transformOrigin: 'left center',
+                      transform: isFlipping ? 'rotateY(-60deg)' : 'rotateY(0deg)',
+                      transition: isFlipping ? 'transform 0.48s cubic-bezier(0.25, 1, 0.5, 1)' : 'none',
                     }}
                     title="Click cover to open book"
                   >
@@ -762,55 +920,79 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
                         top: 0,
                         left: 0,
                         bottom: 0,
-                        width: '30px',
-                        background: 'linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.1) 60%, transparent)',
+                        width: '35px',
+                        background: 'linear-gradient(to right, rgba(0,0,0,0.45), rgba(0,0,0,0.12) 60%, transparent)',
                         pointerEvents: 'none',
                       }}
                     />
-                    {/* Click To Open Indicator */}
+                    {/* Corner Curl Effect on Cover */}
                     <div
                       style={{
                         position: 'absolute',
-                        bottom: '16px',
-                        right: '16px',
-                        background: 'rgba(0, 0, 0, 0.75)',
+                        bottom: 0,
+                        right: 0,
+                        width: '60px',
+                        height: '60px',
+                        background: 'linear-gradient(135deg, transparent 50%, rgba(245, 158, 11, 0.6) 50%)',
+                        display: 'flex',
+                        alignItems: 'flex-end',
+                        justifyContent: 'flex-end',
+                        padding: '6px',
+                        pointerEvents: 'none',
+                        animation: 'cornerGlow 2.5s infinite ease-in-out',
+                      }}
+                    >
+                      <ChevronRight size={18} color="#FFFFFF" />
+                    </div>
+                    {/* Click To Open Indicator Badge */}
+                    <div
+                      style={{
+                        position: 'absolute',
+                        bottom: '20px',
+                        right: '20px',
+                        background: 'rgba(15, 23, 42, 0.88)',
                         color: '#F59E0B',
-                        padding: '6px 12px',
-                        borderRadius: '20px',
-                        fontSize: '0.78rem',
+                        padding: '8px 16px',
+                        borderRadius: '24px',
+                        fontSize: '0.84rem',
                         fontWeight: 800,
                         display: 'flex',
                         alignItems: 'center',
                         gap: '6px',
-                        border: '1px solid rgba(245, 158, 11, 0.4)',
-                        backdropFilter: 'blur(4px)',
+                        border: '1.5px solid rgba(245, 158, 11, 0.5)',
+                        boxShadow: '0 8px 20px rgba(0,0,0,0.4)',
+                        backdropFilter: 'blur(8px)',
                       }}
                     >
-                      <span>Click to Open Book</span>
-                      <ChevronRight size={14} />
+                      <span>Click Cover to Open 📖</span>
+                      <ChevronRight size={16} />
                     </div>
                   </div>
                 ) : (
-                  /* Double Page Realistic Spread (Left & Right Pages) */
+                  /* Double Page Realistic Spread (Left & Right Pages with 3D Leaf) */
                   <div
                     style={{
                       display: 'flex',
                       position: 'relative',
                       borderRadius: '8px',
-                      overflow: 'hidden',
-                      boxShadow: '0 20px 50px rgba(0,0,0,0.7)',
+                      boxShadow: '0 25px 60px rgba(0,0,0,0.8)',
+                      transformStyle: 'preserve-3d',
+                      perspective: '2500px',
                     }}
                   >
                     {/* Left Page (Even Page) */}
                     <div
                       onClick={handleFlipPrev}
+                      className="corner-curl-btn"
                       style={{
                         position: 'relative',
                         cursor: 'pointer',
                         background: '#FFFFFF',
-                        borderRight: '1px solid rgba(0,0,0,0.15)',
+                        borderRight: '1px solid rgba(0,0,0,0.18)',
+                        borderRadius: '6px 0 0 6px',
+                        overflow: 'hidden',
                       }}
-                      title={`Page ${leftPageNum} (Click left to go back)`}
+                      title={`Page ${leftPageNum} (Click to flip left)`}
                     >
                       {leftPageImg ? (
                         <img
@@ -833,48 +1015,72 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
                           top: 0,
                           right: 0,
                           bottom: 0,
-                          width: '40px',
-                          background: 'linear-gradient(to left, rgba(0,0,0,0.22), rgba(0,0,0,0.06) 60%, transparent)',
+                          width: '45px',
+                          background: 'linear-gradient(to left, rgba(0,0,0,0.28), rgba(0,0,0,0.06) 65%, transparent)',
                           pointerEvents: 'none',
                         }}
                       />
+                      {/* Bottom-left interactive corner curl hint */}
+                      <div
+                        className="corner-icon"
+                        style={{
+                          position: 'absolute',
+                          bottom: 0,
+                          left: 0,
+                          width: '45px',
+                          height: '45px',
+                          background: 'linear-gradient(225deg, transparent 55%, rgba(245, 158, 11, 0.45) 55%)',
+                          display: 'flex',
+                          alignItems: 'flex-end',
+                          justifyContent: 'flex-start',
+                          padding: '4px',
+                          pointerEvents: 'none',
+                          transition: 'transform 0.2s ease',
+                        }}
+                      >
+                        <ChevronLeft size={16} color="#B45309" />
+                      </div>
                       {/* Left Page Number Badge */}
                       <div
                         style={{
                           position: 'absolute',
-                          bottom: '10px',
+                          bottom: '12px',
                           left: '16px',
-                          background: 'rgba(0,0,0,0.6)',
+                          background: 'rgba(15,23,42,0.75)',
                           color: '#FFFFFF',
                           padding: '2px 8px',
                           borderRadius: '4px',
-                          fontSize: '0.68rem',
+                          fontSize: '0.72rem',
                           fontWeight: 700,
+                          backdropFilter: 'blur(4px)',
                         }}
                       >
                         {leftPageNum}
                       </div>
                     </div>
 
-                    {/* Book Spine Center Divider */}
+                    {/* Book Spine Center Divider with 3D Shadow Ridge */}
                     <div
                       style={{
-                        width: '4px',
-                        background: 'linear-gradient(to right, rgba(0,0,0,0.4), rgba(255,255,255,0.1), rgba(0,0,0,0.4))',
-                        boxShadow: '0 0 10px rgba(0,0,0,0.5)',
-                        zIndex: 5,
+                        width: '6px',
+                        background: 'linear-gradient(to right, rgba(0,0,0,0.5), rgba(255,255,255,0.15) 45%, rgba(0,0,0,0.5))',
+                        boxShadow: '0 0 12px rgba(0,0,0,0.6)',
+                        zIndex: 10,
                       }}
                     />
 
                     {/* Right Page (Odd Page) */}
                     <div
                       onClick={handleFlipNext}
+                      className="corner-curl-btn"
                       style={{
                         position: 'relative',
                         cursor: 'pointer',
                         background: '#FFFFFF',
+                        borderRadius: '0 6px 6px 0',
+                        overflow: 'hidden',
                       }}
-                      title={`Page ${rightPageNum} (Click right to flip forward)`}
+                      title={`Page ${rightPageNum} (Click to flip right)`}
                     >
                       {rightPageImg ? (
                         <img
@@ -897,40 +1103,209 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
                           top: 0,
                           left: 0,
                           bottom: 0,
-                          width: '40px',
-                          background: 'linear-gradient(to right, rgba(0,0,0,0.22), rgba(0,0,0,0.06) 60%, transparent)',
+                          width: '45px',
+                          background: 'linear-gradient(to right, rgba(0,0,0,0.28), rgba(0,0,0,0.06) 65%, transparent)',
                           pointerEvents: 'none',
                         }}
                       />
-                      {/* Right Page Turn Curl Hint on Hover */}
+                      {/* Bottom-right interactive corner curl hint */}
                       <div
+                        className="corner-icon"
                         style={{
                           position: 'absolute',
                           bottom: 0,
                           right: 0,
-                          width: '32px',
-                          height: '32px',
-                          background: 'linear-gradient(135deg, transparent 50%, rgba(245, 158, 11, 0.4) 50%)',
+                          width: '45px',
+                          height: '45px',
+                          background: 'linear-gradient(135deg, transparent 55%, rgba(245, 158, 11, 0.45) 55%)',
+                          display: 'flex',
+                          alignItems: 'flex-end',
+                          justifyContent: 'flex-end',
+                          padding: '4px',
                           pointerEvents: 'none',
+                          transition: 'transform 0.2s ease',
                         }}
-                      />
+                      >
+                        <ChevronRight size={16} color="#B45309" />
+                      </div>
                       {/* Right Page Number Badge */}
                       <div
                         style={{
                           position: 'absolute',
-                          bottom: '10px',
+                          bottom: '12px',
                           right: '16px',
-                          background: 'rgba(0,0,0,0.6)',
+                          background: 'rgba(15,23,42,0.75)',
                           color: '#FFFFFF',
                           padding: '2px 8px',
                           borderRadius: '4px',
-                          fontSize: '0.68rem',
+                          fontSize: '0.72rem',
                           fontWeight: 700,
+                          backdropFilter: 'blur(4px)',
                         }}
                       >
                         {rightPageNum}
                       </div>
                     </div>
+
+                    {/* ========================================================= */}
+                    {/* ACTIVE 3D FLIPPING LEAF (Forward Page Flip Animation)      */}
+                    {/* ========================================================= */}
+                    {isFlipping && flipDirection === 'next' && (
+                      <div
+                        style={{
+                          position: 'absolute',
+                          top: 0,
+                          right: 0,
+                          width: '50%',
+                          height: '100%',
+                          transformOrigin: 'left center',
+                          transformStyle: 'preserve-3d',
+                          animation: 'flipNext3D 0.48s cubic-bezier(0.25, 1, 0.5, 1) forwards',
+                          zIndex: 25,
+                          pointerEvents: 'none',
+                        }}
+                      >
+                        {/* Front of Turning Leaf (Current Right Page) */}
+                        <div
+                          style={{
+                            position: 'absolute',
+                            width: '100%',
+                            height: '100%',
+                            backfaceVisibility: 'hidden',
+                            overflow: 'hidden',
+                            background: '#FFFFFF',
+                            borderRadius: '0 6px 6px 0',
+                          }}
+                        >
+                          {rightPageImg && (
+                            <img
+                              src={rightPageImg}
+                              alt="Turning Front"
+                              style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block' }}
+                            />
+                          )}
+                          {/* Dynamic Sweeping Shadow during rotation */}
+                          <div
+                            style={{
+                              position: 'absolute',
+                              inset: 0,
+                              background: 'linear-gradient(to left, rgba(0,0,0,0.45), rgba(0,0,0,0.08) 50%, transparent)',
+                              animation: 'sweepShadow 0.48s ease-in-out',
+                            }}
+                          />
+                        </div>
+
+                        {/* Back of Turning Leaf (Upcoming Left Page) */}
+                        <div
+                          style={{
+                            position: 'absolute',
+                            width: '100%',
+                            height: '100%',
+                            backfaceVisibility: 'hidden',
+                            transform: 'rotateY(180deg)',
+                            overflow: 'hidden',
+                            background: '#FFFFFF',
+                            borderRadius: '6px 0 0 6px',
+                          }}
+                        >
+                          {rightPageNum && rightPageNum < totalFlipPages && book.flipbookPages?.[rightPageNum] && (
+                            <img
+                              src={book.flipbookPages[rightPageNum]}
+                              alt="Turning Back"
+                              style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block' }}
+                            />
+                          )}
+                          {/* Dynamic Sweeping Highlight on landing */}
+                          <div
+                            style={{
+                              position: 'absolute',
+                              inset: 0,
+                              background: 'linear-gradient(to right, rgba(0,0,0,0.35), transparent 70%)',
+                              animation: 'sweepShadow 0.48s ease-in-out',
+                            }}
+                          />
+                        </div>
+                      </div>
+                    )}
+
+                    {/* ========================================================= */}
+                    {/* ACTIVE 3D FLIPPING LEAF (Backward Page Flip Animation)     */}
+                    {/* ========================================================= */}
+                    {isFlipping && flipDirection === 'prev' && (
+                      <div
+                        style={{
+                          position: 'absolute',
+                          top: 0,
+                          left: 0,
+                          width: '50%',
+                          height: '100%',
+                          transformOrigin: 'right center',
+                          transformStyle: 'preserve-3d',
+                          animation: 'flipPrev3D 0.48s cubic-bezier(0.25, 1, 0.5, 1) forwards',
+                          zIndex: 25,
+                          pointerEvents: 'none',
+                        }}
+                      >
+                        {/* Front of Turning Leaf (Current Left Page) */}
+                        <div
+                          style={{
+                            position: 'absolute',
+                            width: '100%',
+                            height: '100%',
+                            backfaceVisibility: 'hidden',
+                            overflow: 'hidden',
+                            background: '#FFFFFF',
+                            borderRadius: '6px 0 0 6px',
+                          }}
+                        >
+                          {leftPageImg && (
+                            <img
+                              src={leftPageImg}
+                              alt="Turning Front Prev"
+                              style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block' }}
+                            />
+                          )}
+                          <div
+                            style={{
+                              position: 'absolute',
+                              inset: 0,
+                              background: 'linear-gradient(to right, rgba(0,0,0,0.45), rgba(0,0,0,0.08) 50%, transparent)',
+                              animation: 'sweepShadow 0.48s ease-in-out',
+                            }}
+                          />
+                        </div>
+
+                        {/* Back of Turning Leaf (Previous Right Page) */}
+                        <div
+                          style={{
+                            position: 'absolute',
+                            width: '100%',
+                            height: '100%',
+                            backfaceVisibility: 'hidden',
+                            transform: 'rotateY(180deg)',
+                            overflow: 'hidden',
+                            background: '#FFFFFF',
+                            borderRadius: '0 6px 6px 0',
+                          }}
+                        >
+                          {leftPageNum && leftPageNum > 2 && book.flipbookPages?.[leftPageNum - 2] && (
+                            <img
+                              src={book.flipbookPages[leftPageNum - 2]}
+                              alt="Turning Back Prev"
+                              style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block' }}
+                            />
+                          )}
+                          <div
+                            style={{
+                              position: 'absolute',
+                              inset: 0,
+                              background: 'linear-gradient(to left, rgba(0,0,0,0.35), transparent 70%)',
+                              animation: 'sweepShadow 0.48s ease-in-out',
+                            }}
+                          />
+                        </div>
+                      </div>
+                    )}
                   </div>
                 )}
               </div>
@@ -1277,6 +1652,7 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
                   <div
                     key={idx}
                     onClick={() => {
+                      playFlipSound();
                       setCurrentPage(pageNum);
                       setShowThumbnails(false);
                     }}
@@ -1361,7 +1737,10 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
               <button
                 type="button"
                 disabled={currentPage <= 1}
-                onClick={() => setCurrentPage(1)}
+                onClick={() => {
+                  playFlipSound();
+                  setCurrentPage(1);
+                }}
                 style={{
                   border: 'none',
                   background: 'transparent',
@@ -1431,7 +1810,10 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
               <button
                 type="button"
                 disabled={currentPage >= totalFlipPages}
-                onClick={() => setCurrentPage(totalFlipPages)}
+                onClick={() => {
+                  playFlipSound();
+                  setCurrentPage(totalFlipPages);
+                }}
                 style={{
                   border: 'none',
                   background: 'transparent',
