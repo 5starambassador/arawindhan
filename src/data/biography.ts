@@ -77,8 +77,8 @@ export const biographyData = {
       ta: 'கல்வித்துறைக்கு ஆற்றிய மகத்தான பங்களிப்பைப் பாராட்டி இத்தாலியின் யார்க்கர் சர்வதேச பல்கலைக்கழகம் 2010-ல் மதிப்புறு முனைவர் பட்டம் வழங்கியது.',
     },
     managingTrustee: {
-      en: 'Managing Trustee & Founder of Achariya Educational Public Trust (Est. 2002), promoting Achariya World Class Institutions (18 Colleges, 101 Schools, 14,000+ students, 2,000+ educators & staff).',
-      ta: 'ஆச்சாரியா உலகத்தரம் வாய்ந்த கல்வி நிறுவனங்களை (18 கல்லூரிகள், 101 பள்ளிகள், 14,000+ மாணவர்கள், 2,000+ ஆசிரியர்கள் & பணியாளர்கள்) வழிநடத்தும் ஆச்சாரியா கல்வி பொது அறக்கட்டளையின் (2002) நிறுவன நிர்வாக அறங்காவலர்.',
+      en: 'Managing Trustee & Founder of Achariya Educational Public Trust (Est. 2002), promoting Achariya World Class Institutions (18 Colleges, 35 Schools, 14,000+ students, 2,000+ educators & staff).',
+      ta: 'ஆச்சாரியா உலகத்தரம் வாய்ந்த கல்வி நிறுவனங்களை (18 கல்லூரிகள், 35 பள்ளிகள், 14,000+ மாணவர்கள், 2,000+ ஆசிரியர்கள் & பணியாளர்கள்) வழிநடத்தும் ஆச்சாரியா கல்வி பொது அறக்கட்டளையின் (2002) நிறுவன நிர்வாக அறங்காவலர்.',
     },
     teacherTransformerTitle: {
       en: 'Tr J Arawindhan (Teacher / Trainer / Transformer)',
@@ -96,7 +96,7 @@ export const biographyData = {
       en: 'Creating the new India based on Intelligence, as dreamt by Dr. A.P.J. Abdul Kalam.',
       ta: 'பாரத ரத்னா டாக்டர் ஏ.பி.ஜே. அப்துல் கலாம் அவர்களின் கனவான நுண்ணறிவுமிக்க புதிய பாரதத்தை உருவாக்குதல்.',
     },
-    totalInstitutions: '18 Colleges & 101 Schools in Network',
+    totalInstitutions: '18 Colleges & 35 Schools in Network',
     totalStudents: '14,000+ Active Students',
     totalEmployees: '2,000+ Dedicated Educators & Staff Members',
   },
@@ -460,8 +460,8 @@ export const directQuotes: DirectQuote[] = [
       ta: 'ஒரு உண்மையான தொலைநோக்கு, அது தொடும் ஒவ்வொரு மனித உயிரோடும் இன்னும் விரிவடைந்து வளர்கிறது.',
     },
     context: {
-      en: 'On scaling from a single Puducherry classroom to over 101 schools across 5 states.',
-      ta: 'ஒரு வகுப்பறையிலிருந்து 101 பள்ளிகளாக வளர்ந்த மாபெரும் கல்வி சாம்ராஜ்யத்தின் வளர்ச்சித் தத்துவம்.',
+      en: 'On scaling from a single Puducherry classroom to 35 schools across 5 states.',
+      ta: 'ஒரு வகுப்பறையிலிருந்து 35 பள்ளிகளாக வளர்ந்த மாபெரும் கல்வி சாம்ராஜ்யத்தின் வளர்ச்சித் தத்துவம்.',
     },
   },
   {
@@ -502,7 +502,7 @@ export const transformationRipples: TransformationRipple[] = [
   {
     step: 3,
     level: { en: 'Inspired Children', ta: 'எழுச்சிபெறும் குழந்தைகள்' },
-    focus: { en: '14,000+ Active Students Across 101 Schools', ta: '101 பள்ளிகளில் 14,000+ மாணவச் செல்வங்கள்' },
+    focus: { en: '14,000+ Active Students Across 35 Schools', ta: '35 பள்ளிகளில் 14,000+ மாணவச் செல்வங்கள்' },
     impact: { en: 'Mastering academics alongside blindfold cognition, martial arts, Vedic math, and ethics.', ta: 'கல்வியோடு கண்மூடி அறியும் ஆற்றல், சிலம்பம், வேத கணிதம் மற்றும் அறநெறித் தலைவர்களாக வளர்தல்.' },
   },
   {

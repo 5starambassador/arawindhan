@@ -41,8 +41,8 @@ While traditional schooling treats Listening, Speaking, Reading, and Writing (LS
     category: { en: 'Keynote Address', ta: 'மாநாட்டு உரை' },
     date: 'September 15–16, 2026',
     excerpt: {
-      en: 'A two-day masterclass on the classroom systems, neuro-agility routines, and governance frameworks that scaled ACHARIYA to 101 schools across South India.',
-      ta: 'தென்னிந்தியா முழுவதும் 101 பள்ளிகளாக ஆச்சாரியாவை வளர்த்தெடுத்த வகுப்பறை உத்திகள் மற்றும் நிர்வாக நெறிமுறைகள் குறித்த இருநாள் உரை.',
+      en: 'A two-day masterclass on the classroom systems, neuro-agility routines, and governance frameworks that scaled ACHARIYA to 35 schools across South India.',
+      ta: 'தென்னிந்தியா முழுவதும் 35 பள்ளிகளாக ஆச்சாரியாவை வளர்த்தெடுத்த வகுப்பறை உத்திகள் மற்றும் நிர்வாக நெறிமுறைகள் குறித்த இருநாள் உரை.',
     },
     fullContent: {
       en: `Hosting over 80 visiting school principals and academic directors at the ACHARIYA Central Campus in Puducherry, Dr. J. Arawindhan unpacked the operational machinery of ACHARIYA's 25-year journey.

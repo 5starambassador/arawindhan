@@ -1,5 +1,10 @@
-import { redirect } from 'next/navigation';
+import HomePage from './[lang]/page';
+import LangLayout from './[lang]/layout';
 
-export default function RootPage() {
-  redirect('/en');
+export default async function RootPage() {
+  return (
+    <LangLayout params={Promise.resolve({ lang: 'en' })}>
+      <HomePage params={Promise.resolve({ lang: 'en' })} />
+    </LangLayout>
+  );
 }

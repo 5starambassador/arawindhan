@@ -35,7 +35,7 @@ export function InstitutionsClient({ lang }: InstitutionsClientProps) {
       <div className="container">
         <SectionHeader
           badge={lang === 'ta' ? 'தொழில்முனைவோரின் சாதனைகள்' : 'COLLECTION B: ENTERPRISES & INSTITUTIONS'}
-          title={lang === 'ta' ? 'ஒரு தாய், நான்கு குழந்தைகள்: 18 கல்லூரிகள், 101 பள்ளிகள், 61+ நிறுவனங்கள்' : 'One Parent, Four Children: 18 Colleges, 101 Schools, 61+ Companies'}
+          title={lang === 'ta' ? 'ஒரு தாய், நான்கு குழந்தைகள்: 18 கல்லூரிகள், 35 பள்ளிகள், 61+ நிறுவனங்கள்' : 'One Parent, Four Children: 18 Colleges, 35 Schools, 61+ Companies'}
           subtitle={lang === 'ta' ? 'தமிழ்நாடு, புதுச்சேரி, கேரளா மற்றும் ஆந்திராவில் விரிந்துள்ள பிரம்மாண்டமான கல்வி மற்றும் தொழில் கட்டமைப்பு.' : 'An educational and commercial network grown over 25 years through four proven expansion models.'}
         />
 
@@ -141,8 +141,8 @@ export function InstitutionsClient({ lang }: InstitutionsClientProps) {
             </h3>
             <p style={{ color: '#E2E8F0', fontSize: '0.92rem', maxWidth: '750px', lineHeight: 1.5, margin: 0 }}>
               {lang === 'ta'
-                ? 'நவீன சர்வதேச உள்கட்டமைப்புடன் கூடிய ஆச்சாரியா முதன்மை வளாகம். 18 கல்லூரிகள், 101 பள்ளிகள் மற்றும் 14,000-க்கும் மேற்பட்ட மாணவர்களுக்கான வழிகாட்டுதல் மையம்.'
-                : 'Central flagship campus in Puducherry — the nerve center uniting 18 higher education colleges, 101 schools, and 61+ enterprises across southern India.'}
+                ? 'நவீன சர்வதேச உள்கட்டமைப்புடன் கூடிய ஆச்சாரியா முதன்மை வளாகம். 18 கல்லூரிகள், 35 பள்ளிகள் மற்றும் 14,000-க்கும் மேற்பட்ட மாணவர்களுக்கான வழிகாட்டுதல் மையம்.'
+                : 'Central flagship campus in Puducherry — the nerve center uniting 18 higher education colleges, 35 schools, and 61+ enterprises across southern India.'}
             </p>
           </div>
         </div>
@@ -207,7 +207,7 @@ export function InstitutionsClient({ lang }: InstitutionsClientProps) {
             style={{ fontSize: '0.92rem', padding: '0.65rem 1.5rem' }}
           >
             <School size={16} />
-            <span>{lang === 'ta' ? '101 பள்ளிகள் (4 மாதிரிகள்)' : '101 Schools (4 Models)'}</span>
+            <span>{lang === 'ta' ? '35 பள்ளிகள் (4 மாதிரிகள்)' : '35 Schools (4 Models)'}</span>
           </button>
           <button
             onClick={() => setActiveTab('colleges')}

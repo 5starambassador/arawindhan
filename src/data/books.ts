@@ -120,471 +120,6 @@ export const booksList: BookItem[] = [
     },
   },
   {
-    id: 'BK-003',
-    slug: 'financial-intelligence',
-    coverImage: '/images/books/financial_intelligence.jpg',
-    title: {
-      en: 'Financial Intelligence (FI)',
-      ta: 'நிதி நுண்ணறிவு (Financial Intelligence)',
-    },
-    tagline: {
-      en: 'Resource Stewardship, Value Creation, and Practical Wealth Literacy for the Young Mind',
-      ta: 'இளம் தலைமுறைக்கான நிதி மேலாண்மை, மதிப்பு உருவாக்கம் மற்றும் நடைமுறை பொருளாதார அறிவு',
-    },
-    author: {
-      en: 'Dr. J. Arawindhan',
-      ta: 'முனைவர் ஜே. அரவிந்தன்',
-    },
-    edition: 'Student & Educator Edition',
-    language: 'English & Tamil',
-    status: 'Published',
-    claimId: 'CLM-023',
-    summary: {
-      en: 'Bridging a glaring gap in traditional school curricula, this book introduces financial wisdom as an essential ninth intelligence in the Dasavadani model. From understanding the difference between earning, investing, and serving, to the psychology of money and enterprise creation, this work grounds students in ethical financial self-reliance.',
-      ta: 'பாரம்பரிய கல்வி முறைகளில் புறக்கணிக்கப்பட்ட நிதி அறிவை தசாவதானி பாடத்திட்டத்தின் ஒன்பதாவது நுண்ணறிவாக இந்நூல் அறிமுகப்படுத்துகிறது. உழைப்பு, முதலீடு, சேமிப்பு ஆகியவற்றின் வேறுபாடுகள் முதல் நேர்மையான தொழில்முனைவோர் மனநிலை வரை மாணவர்களுக்கு நடைமுறை வழிகாட்டுகிறது.',
-    },
-    keyThemes: {
-      en: [
-        'The 5 Ms: Mind, Material, Method, Manpower, Money',
-        'The psychology of wealth: From earning to multiplying and sharing',
-        'Student Profit Lab and micro-entrepreneurship simulations',
-        'Budgeting, capital stewardship, and ethical business creation',
-      ],
-      ta: [
-        '5 M தத்துவம்: மனம், மூலப்பொருள், முறை, மனிதவளம், பணம்',
-        'பணத்தின் உளவியல்: ஈட்டுதல், பெருக்குதல் மற்றும் பகிர்தல்',
-        'மாணவர் லாப ஆய்வகம் (Student Profit Lab) மற்றும் குறுந்தொழில் மாதிரிகள்',
-        'வரவு-செலவு மேலாண்மை மற்றும் அறநெறி சார்ந்த தொழில் உருவாக்கம்',
-      ],
-    },
-    targetAudience: {
-      en: 'Middle school to college students, emerging entrepreneurs, and commerce educators.',
-      ta: 'நடுநிலைப் பள்ளி முதல் கல்லூரி மாணவர்கள், இளம் தொழில்முனைவோர் மற்றும் ஆசிரியர்கள்.',
-    },
-    readMoreSnippet: {
-      en: '“Money is an energy that follows clarity and discipline. When children learn to respect resources early, they grow into builders rather than mere consumers.”',
-      ta: '"பணம் என்பது தெளிவையும் ஒழுக்கத்தையும் பின்பற்றும் ஓர் ஆற்றல். வளங்களை மதிக்க குழந்தைகள் ஆரம்பத்திலேயே கற்கும்போது, அவர்கள் நுகர்வோராக மட்டுமல்லாமல் உருவாக்குநர்களாக மாறுகிறார்கள்."',
-    },
-    sampleChapters: [
-      {
-        title: {
-          en: 'Chapter 1: The Foundations of Financial Consciousness',
-          ta: 'அத்தியாயம் 1: நிதி விழிப்புணர்வின் அடித்தளங்கள்',
-        },
-        subtitle: {
-          en: 'Escaping the Linear Wage Trap to Build Sovereign Wealth',
-          ta: 'நேரியல் சம்பளச் சுழற்சியிலிருந்து விடுபட்டு நிதிச் சுயாட்சி அடைதல்',
-        },
-        paragraphs: {
-          en: [
-            'Financial intelligence is not measured by the salary you negotiate, but by the assets you construct and the sovereignty you retain. Society trains graduates to trade time for wages, trapping sharp intellects in an exhausting loop of inflation, taxation, and consumption.',
-            'True financial freedom begins with a mental decoupling: recognizing that money is crystallized human energy. When money works for you while you sleep, learn, or meditate, you transition from economic subservience to strategic autonomy.',
-            'Mastering the basics of cash flow, asset allocation, and risk management is the first civilizational duty of an educated individual who desires to serve their family and society without compromise.',
-          ],
-          ta: [
-            'நிதி நுண்ணறிவு என்பது நீங்கள் வாங்கும் சம்பளத்தைக் கொண்டு அளவிடப்படுவதல்ல; நீங்கள் உருவாக்கும் சொத்துக்களையும், நீங்கள் தக்கவைத்துக் கொள்ளும் சுயாட்சியையும் கொண்டே அளவிடப்படுகிறது. நேரத்தை விற்றுப் பணம் ஈட்டுவதையே சமூகம் வழக்கமாகக் கற்பிக்கிறது; ஆனால் இது கூர்மையான அறிவாளிகளை நுகர்வுச் சுழற்சியில் சிக்க வைக்கிறது.',
-            'உண்மையான நிதி சுதந்திரம் என்பது ஒரு மனநிலை மாற்றத்தில் தொடங்குகிறது. பணம் என்பது உறைந்த மனித ஆற்றல் என்பதை உணர வேண்டும். நீங்கள் உறங்கும் போதும், தியானிக்கும் போதும் உங்களுக்காக செல்வம் பெருகுமாறு கட்டமைக்கும்போதே நீங்கள் பொருளாதார அடிமைத்தனத்திலிருந்து விடுபடுகிறீர்கள்.',
-            'வருவாய் வரவு-செலவு ஒழுங்கு, சொத்து ஒதுக்கீடு மற்றும் நிதி இடர் மேலாண்மையைக் கற்பது, தன் குடும்பத்திற்கும் சமுதாயத்திற்கும் சமரசமின்றி சேவை செய்ய விரும்பும் ஒவ்வொரு மனிதனின் கடமையாகும்.',
-          ],
-        },
-      },
-      {
-        title: {
-          en: 'Chapter 2: The Art of Asymmetric Compounding',
-          ta: 'அத்தியாயம் 2: கூட்டு வட்டியின் ஆக்கபூர்வ ஆற்றல்',
-        },
-        subtitle: {
-          en: 'Building Generational Capital with Ethical Responsibility',
-          ta: 'அறநெறி வழுவாமல் தலைமுறை தழைக்கும் மூலதனத்தை உருவாக்குதல்',
-        },
-        paragraphs: {
-          en: [
-            'Albert Einstein described compounding as the eighth wonder of the world, yet few educational systems teach its strategic application. Compounding is not merely mathematical interest; it is the exponential accumulation of wisdom, trust, and productive capital over decades.',
-            'When wealth is built upon ethical enterprise—solving real human problems, creating sustainable employment, and fostering educational opportunities—it carries the blessings of the cosmos and stands resilient across market cycles.',
-            'Do not pursue quick riches through speculation. Build enduring institutional foundations that generate enduring value for generations to come.',
-          ],
-          ta: [
-            'ஆல்பர்ட் ஐன்ஸ்டீன் கூட்டு வட்டியை உலகின் எட்டாவது அதிசயம் என்றார். ஆனால் அதன் வியூகப் பயன்பாட்டை கல்வி நிறுவனங்கள் கற்றுக்கொடுப்பதில்லை. கூட்டு வட்டி என்பது வெறும் கணித கணக்கீடு மட்டுமல்ல; அது பல தசாப்தங்களாக சேர்க்கப்படும் அனுபவம், நற்பெயர் மற்றும் பயனுள்ள முதலீடுகளின் அபரிமிதமான வளர்ச்சியாகும்.',
-            'மனித பிரச்சனைகளுக்குத் தீர்வு காணுதல், வேலைவாய்ப்புகளை உருவாக்குதல், கல்வி வாய்ப்புகளைப் பெருக்குதல் போன்ற அறநெறி சார்ந்த தொழில்களின் வழியே ஈட்டப்படும் செல்வம் பிரபஞ்ச அருளைப் பெற்று பல தலைமுறைகளுக்கு நிலைத்து நிற்கும்.',
-            'ஊக வணிகத்தால் வரும் குறுகிய கால மாயச் செல்வத்தை நாடாதீர்கள். எதிர்காலத் தலைமுறைகளுக்குப் பயனளிக்கும் நிலையான நிறுவன அமைப்புகளையும், உற்பத்தி மூலதனத்தையும் உருவாக்குங்கள்.',
-          ],
-        },
-      },
-    ],
-  },
-  {
-    id: 'BK-004',
-    slug: 'emotional-intelligence',
-    coverImage: '/images/books/emotional_intelligence.jpg',
-    title: {
-      en: 'Emotional Intelligence (EI)',
-      ta: 'உணர்ச்சி நுண்ணறிவு (Emotional Intelligence)',
-    },
-    tagline: {
-      en: 'Mastering the Inner Weather: Self-Regulation, Empathy & Conscious Choice',
-      ta: 'மன உணர்வுகளை ஆளுமை செய்தல்: சுய கட்டுப்பாடு, பச்சாதாபம் மற்றும் விழிப்புணர்வுத் தேர்வுகள்',
-    },
-    author: {
-      en: 'Dr. J. Arawindhan',
-      ta: 'முனைவர் ஜே. அரவிந்தன்',
-    },
-    edition: 'Curriculum & Life Skills Edition',
-    language: 'English & Tamil',
-    status: 'Published',
-    claimId: 'CLM-023',
-    summary: {
-      en: 'A core pillar of the Dasavadani curriculum, this book offers a systematic roadmap for mastering interpersonal and intrapersonal awareness. It teaches children and young adults how to convert reactivity into responsiveness, manage exam and social anxieties, and practice empathetic communication in collaborative environments.',
-      ta: 'தசாவதானி பாடத்திட்டத்தின் பத்தாவது நுண்ணறிவான உணர்ச்சி நுண்ணறிவை விளக்கும் நூல். கோபம், பயம், கவலை போன்ற உணர்வுகளை எவ்வாறு ஆக்கப்பூர்வமான ஆற்றலாக மாற்றுவது என்றும், மற்றவர்களின் உணர்வுகளை மதித்து நல்லுறவை பேணுவது எப்படி என்றும் மாணவர்களுக்கு கற்பிக்கிறது.',
-    },
-    keyThemes: {
-      en: [
-        'The 3C framework: Change-maker, Choice-maker, Chance-maker',
-        'The 4H integration: Heart, Hand, Head, Health',
-        'Empathy building and conflict resolution in peer groups',
-        'Mindfulness protocols for emotional balance under pressure',
-      ],
-      ta: [
-        '3C கட்டமைப்பு: மாற்றம் உருவாக்குபவர், தேர்வு செய்பவர், வாய்ப்பு உருவாக்குபவர்',
-        '4H ஒருங்கிணைப்பு: இதயம் (Heart), கரம் (Hand), தலை (Head), உடல் நலம் (Health)',
-        'பச்சாதாபம் வளர்த்தல் மற்றும் சவால்களை சுமுகமாக தீர்த்தல்',
-        'அழுத்தமான சூழலிலும் மன அமைதி காக்கும் விழிப்புணர்வு பயிற்சிகள்',
-      ],
-    },
-    targetAudience: {
-      en: 'Adolescent learners, teachers, counselors, and organizational leaders.',
-      ta: 'பள்ளி-கல்லூரி மாணவர்கள், ஆசிரியர்கள், ஆலோசகர்கள் மற்றும் தலைமைப் பொறுப்பாளர்கள்.',
-    },
-    readMoreSnippet: {
-      en: '“IQ gets you in the door; EQ determines how far you travel. The strongest leader is not the one with the loudest voice, but the one who can master their own inner weather.”',
-      ta: '"ஐ.கியூ (IQ) உங்களுக்கு ஒரு வாசலைத் திறக்கலாம்; ஆனால் ஈ.கியூ (EQ) மட்டுமே நீங்கள் எவ்வளவு தூரம் பயணிப்பீர்கள் என்பதை தீர்மானிக்கிறது. உண்மையான தலைவர் தன் மன உணர்வுகளை ஆளத் தெரிந்தவரே."',
-    },
-    sampleChapters: [
-      {
-        title: {
-          en: 'Chapter 1: The Anatomy of Emotional Equilibrium',
-          ta: 'அத்தியாயம் 1: உணர்ச்சிச் சமநிலையின் கட்டமைப்பு',
-        },
-        subtitle: {
-          en: 'Responding with Wisdom Instead of Reacting in Impulse',
-          ta: 'உணர்ச்சித் தூண்டுதலில் சிதறாமல் ஞானத்தோடு எதிர்வினையாற்றுதல்',
-        },
-        paragraphs: {
-          en: [
-            'Between every external stimulus and our behavioral response, there is a sacred pause. In that pause lies our freedom and our growth. The untrained mind reacts instinctively with anger, fear, or insecurity, instantly surrendering its power to external provocations.',
-            'Emotional intelligence is the cultivated ability to witness feelings without becoming enslaved by them. Anger, jealousy, and anxiety are biological signals, not permanent identities. When you observe them with stillness, their destructive heat dissipates, revealing clarity and purpose.',
-            'The highest emotional mastery is not emotional suppression; it is emotional alchemy—transmuting turbulent feelings into creative vitality, unyielding courage, and deep empathy.',
-          ],
-          ta: [
-            'வெளிப்புறத்தில் நடக்கும் நிகழ்வுக்கும், அதற்கு நாம் காட்டும் எதிர்வினைக்கும் நடுவே ஒரு புனிதமான இடைவெளி உள்ளது. அந்த இடைவெளியில்தான் நமது விடுதலையும் ஆன்ம வளர்ச்சியும் அடங்கியுள்ளது. பயிற்சியற்ற மனம் கோபம், பயம் அல்லது தாழ்வுணர்ச்சியோடு உடனடி எதிர்வினை புரிந்து தன் ஆற்றலை இழந்துவிடுகிறது.',
-            'உணர்ச்சி நுண்ணறிவு என்பது நமது உணர்வுகளுக்கு அடிமையாகாமல் அவற்றை சாட்சியாக நின்று உற்றுநோக்கும் கலை. கோபமும், பதற்றமும் உடலியல் சமிக்ஞைகளே அன்றி நமது நிரந்தர அடையாளம் அல்ல. அவற்றை அமைதியோடு கவனிக்கும்போது, அவற்றின் தீவிரம் தணிந்து தெளிவு பிறக்கிறது.',
-            'உணர்ச்சிகளை அடக்கி வைப்பது ஆளுமை அல்ல; எதிர்மறை உணர்ச்சிகளை ஆக்கபூர்வமான உத்வேகமாகவும், துணிவாகவும், எல்லையற்ற கருணையாகவும் உருமாற்றுவதே உண்மையான உணர்ச்சி ஞானமாகும்.',
-          ],
-        },
-      },
-      {
-        title: {
-          en: 'Chapter 2: The Heart as an Organ of Perception',
-          ta: 'அத்தியாயம் 2: பேரன்பின் விழிப்புணர்வும் தலைமைத்துவமும்',
-        },
-        subtitle: {
-          en: 'Leading with Empathy, Compassion, and Coherence',
-          ta: 'கருணையோடு வழிநடத்துதல் மற்றும் உறவுகளின் இணக்கம்',
-        },
-        paragraphs: {
-          en: [
-            'Modern neurocardiology confirms that the human heart possesses its own complex neural network, generating an electromagnetic field thousands of times stronger than the brain. When heart rhythms enter coherence, cognitive capacity sharpens, stress hormone levels drop, and relational intuition awakens.',
-            'Great leadership does not stem from intimidation or detached intellect; it arises from the magnetic resonance of a heart that genuinely cares. When colleagues, students, and family members feel understood and validated, extraordinary collaboration unfolds naturally.',
-            'Practice heart-centered presence every morning: send silent goodwill to those who challenge you, forgive past slights, and enter every room with the commitment to elevate the spirits of everyone present.',
-          ],
-          ta: [
-            'நவீன நரம்பியல் ஆய்வுகள் மனித இதயத்திற்கு என்று தனித்துவமான நரம்பு மண்டலம் இருப்பதையும், அது மூளையை விடப் பல மடங்கு வலிமையான மின்காந்த ஆற்றலை வெளிப்படுத்துவதையும் உறுதி செய்கின்றன. இதயம் அமைதியான ஒத்திசைவை எட்டும்போது, மூளையின் சிந்திக்கும் திறன் கூர்மையடைந்து மனஅழுத்தம் குறைகிறது.',
-            'அதிகாரத்தாலோ அல்லது உணர்ச்சியற்ற புத்திசாலித்தனத்தாலோ சிறந்த தலைவர்கள் உருவாவதில்லை; பிறரை உளமார நேசிக்கும் அன்பின் காந்த ஈர்ப்பிலிருந்தே சிறந்த தலைமை பிறக்கிறது. மாணவர்கள் மற்றும் சக மனிதர்கள் மதிக்கப்படுவதாக உணரும்போது வியத்தகு சாதனைகள் இயல்பாக நிகழ்கின்றன.',
-            'ஒவ்வொரு நாளும் இதயப்பூர்வமான விழிப்புணர்வைப் பழகுங்கள்: உங்களுக்கு சவாலாக இருப்பவர்களுக்கும் நல்வாழ்த்துக்களை அனுப்புங்கள்; கடந்த கால கசப்புகளை மன்னியுங்கள்; நீங்கள் நுழையும் எந்த இடத்தையும் அன்பினால் உயர்த்தும் உறுதியோடு வாழுங்கள்.',
-          ],
-        },
-      },
-    ],
-  },
-  {
-    id: 'BK-005',
-    slug: 'master-stroke',
-    coverImage: '/images/books/master_stroke.jpg',
-    title: {
-      en: 'Master Stroke',
-      ta: 'மாஸ்டர் ஸ்ட்ரோக் (Master Stroke)',
-    },
-    tagline: {
-      en: 'Strategic Leadership, Institutional Architecture & The Art of Execution',
-      ta: 'வியூக தலைமைத்துவம், நிறுவன கட்டமைப்பு மற்றும் திட்டங்களை வெற்றிகரமாக நிறைவேற்றும் கலை',
-    },
-    author: {
-      en: 'Dr. J. Arawindhan',
-      ta: 'முனைவர் ஜே. அரவிந்தன்',
-    },
-    edition: 'Executive Leadership Edition',
-    language: 'English & Tamil',
-    status: 'Published',
-    claimId: 'CLM-023',
-    summary: {
-      en: 'Drawing on 25 years of building 18 colleges, 101 schools, and 61+ companies, Master Stroke deconstructs the science of scaling vision into reality. It details the Centre of Excellence governance model, the five-step chain of accountability, and how leaders maintain cultural coherence while expanding across states and sectors.',
-      ta: '25 ஆண்டுகளில் 18 கல்லூரிகள், 101 பள்ளிகள் மற்றும் 61+ நிறுவனங்களை உருவாக்கிய நிஜ அனுபவங்களின் தொகுப்பு. நிறுவன மேலாண்மை, பொறுப்புணர்வு சங்கிலி, சிறப்பு மேன்மை மைய (CoE) கட்டமைப்பு மற்றும் கொள்கைகளை சமரசமின்றி பல துறைகளில் வெற்றிகரமாக விரிவுபடுத்துவது எப்படி என்பதை விளக்குகிறது.',
-    },
-    keyThemes: {
-      en: [
-        'Good intentions do not scale; good systems do',
-        'The Five-Step Execution Chain: Approved → Enriched → Enabled → Executed → Ensured',
-        'The Six Engines of Institutional Excellence',
-        'From Solo Founder to Self-Sustaining Ecosystem',
-      ],
-      ta: [
-        'நல்ல எண்ணங்கள் மட்டும் விரிவடையாது; சிறந்த கட்டமைப்புகளே விரிவடையும்',
-        'ஐந்து படிநிலை செயல்பாட்டுச் சங்கிலி: ஒப்புதல் → செறிவூட்டல் → தயார்படுத்துதல் → செயல்படுத்துதல் → உறுதிசெய்தல்',
-        'நிறுவன மேன்மையின் ஆறு இயந்திரங்கள் (Six Engines)',
-        'தனிநபர் வழிகாட்டலில் இருந்து தற்சார்பு நிறுவன சூழலியலாக உருமாறுதல்',
-      ],
-    },
-    targetAudience: {
-      en: 'School principals, institutional founders, corporate managers, and system architects.',
-      ta: 'பள்ளி முதல்வர்கள், கல்வி நிறுவன நிறுவனர்கள், கார்ப்பரேட் மேலாளர்கள் மற்றும் நிர்வாகிகள்.',
-    },
-    readMoreSnippet: {
-      en: '“For doing repair work, we need to do prepare work. A master stroke in leadership is never accidental; it is the quiet result of an unbreakable daily process.”',
-      ta: '"பழுதுபார்க்கும் வேலையைத் தவிர்க்க, நாம் முன்கூட்டியே தயாரிப்பு வேலையைச் செய்ய வேண்டும். தலைமைத்துவத்தின் மாஸ்டர் ஸ்ட்ரோக் என்பது தற்செயலானது அல்ல; அது உறுதியான தினசரி வழிமுறையின் வெளிப்பாடு."',
-    },
-    sampleChapters: [
-      {
-        title: {
-          en: 'Chapter 1: The Geometry of Decisive Intervention',
-          ta: 'அத்தியாயம் 1: தீர்க்கமான முன்னெடுப்பின் வடிவியல்',
-        },
-        subtitle: {
-          en: 'How One Singular Strategic Action Transforms Entire Systems',
-          ta: 'ஒரே ஒரு வியூக நடவடிக்கை ஒட்டுமொத்த அமைப்பையும் மாற்றி அமைக்கும் விதம்',
-        },
-        paragraphs: {
-          en: [
-            'A master stroke is not frantic exertion; it is the precise, sovereign intervention that shifts an entire competitive landscape. In organizational leadership, amateurs attempt to fix a hundred symptoms simultaneously, exhausting resources while the core bottleneck remains untouched.',
-            'The visionary leader diagnoses the single fulcrum point where minimal leverage produces exponential movement. Like a master martial artist who strikes with effortless grace, strategic mastery lies in absolute timing, moral authority, and uncompromising execution.',
-            'When the right decision is made with moral conviction and unhesitating speed, resistance evaporates and institutional momentum surges forward.',
-          ],
-          ta: [
-            'மாஸ்டர் ஸ்ட்ரோக் என்பது பதற்றமான கடின உழைப்பு அல்ல; அது ஒட்டுமொத்த சூழலையும் மாற்றியமைக்கும் துல்லியமான, தீர்க்கமான முடிவாகும். சாதாரண நிர்வாகிகள் நூறு சிறு பிரச்சனைகளை ஒரே நேரத்தில் தீர்க்க முயன்று ஆற்றலை வீணடிக்கிறார்கள்; ஆனால் மூலக் காரணம் அப்படியே இருக்கும்.',
-            'தீர்க்கதரிசியான தலைவர் குறைந்தபட்ச முயற்சியில் மிகப்பெரிய மாற்றத்தை ஏற்படுத்தும் மையப்புள்ளியைக் கண்டறிகிறார். ஒரு தற்காப்புக் கலை நிபுணர் குறைந்த உழைப்பில் வெற்றியை நிலைநாட்டுவது போல, சரியான நேரம், அறநெறி அதிகாரம் மற்றும் சமரசமற்ற செயல்பாட்டிலேயே மாபெரும் வெற்றி அடங்கியுள்ளது.',
-            'உண்மையான அறவழியிலும், தயக்கமில்லாத வேகத்திலும் ஒரு முடிவு எடுக்கப்படும் போது, எதிர்ப்புகள் கரைந்து நிறுவனத்தின் முன்னேற்றம் தடையின்றிப் பாய்கிறது.',
-          ],
-        },
-      },
-      {
-        title: {
-          en: 'Chapter 2: Speed, Precision & Moral Authority',
-          ta: 'அத்தியாயம் 2: வேகம், துல்லியம் மற்றும் அறநெறி அதிகாரம்',
-        },
-        subtitle: {
-          en: 'Transcending Bureaucratic Paralysis to Create Quantum Leaps',
-          ta: 'செயலற்ற தயக்கங்களைத் தகர்த்து வியத்தகு சாதனைகளை உருவாக்குதல்',
-        },
-        paragraphs: {
-          en: [
-            'In a world overwhelmed by analysis paralysis, speed combined with precision is an insurmountable competitive advantage. Delay is the subtle grave where visionary projects rot into mediocrity.',
-            'Moral authority is the bedrock of rapid execution. When people know that a leader seeks no personal vanity but acts entirely for institutional excellence and societal welfare, they rally behind decisions with unreserved loyalty.',
-            'Dare to execute boldly. One well-timed, courageously executed master stroke achieves in a single day what decades of cautious deliberation could never produce.',
-          ],
-          ta: [
-            'அளவுக்கு அதிகமான ஆலோசனைகளால் உலகம் முடங்கிக் கிடக்கும் சூழலில், துல்லியத்தோடு கூடிய வேகமே மிகப்பெரிய பலமாகும். தாமதம் என்பது தொலைநோக்குத் திட்டங்களை பாழாக்கும் அமைதியான கல்லறையாகும்.',
-            'வேகமான செயல்பாட்டிற்கு அறநெறி அதிகாரமே அடித்தளம். ஒரு தலைவர் தன் சுயலாபத்திற்காக அன்றி, நிறுவனத்தின் மேன்மைக்காகவும் மக்கள் நலனுக்காகவும் மட்டுமே முடிவெடுக்கிறார் என்பதை மக்கள் உணரும்போது, முழு மனதோடு துணை நிற்பார்கள்.',
-            'துணிவோடு செயல்படுங்கள். தைரியமாக எடுக்கப்படும் ஒரு மாபெரும் நடவடிக்கை, பல ஆண்டுகள் யோசித்து செய்ய முடியாத சாதனையை ஒரே நாளில் நிகழ்த்திக் காட்டும்.',
-          ],
-        },
-      },
-    ],
-  },
-  {
-    id: 'BK-006',
-    slug: 'young-scientist',
-    coverImage: '/images/books/young_scientist.jpg',
-    title: {
-      en: 'Young Scientist',
-      ta: 'இளம் விஞ்ஞானி (Young Scientist)',
-    },
-    tagline: {
-      en: 'Igniting Curiosity, Hands-On Experimentation & Scientific Discovery in the Classroom',
-      ta: 'வகுப்பறையில் அறிவியல் ஆர்வம், செய்முறை சோதனைகள் மற்றும் புதிய கண்டுபிடிப்புகளின் எழுச்சி',
-    },
-    author: {
-      en: 'Dr. J. Arawindhan',
-      ta: 'முனைவர் ஜே. அரவிந்தன்',
-    },
-    edition: 'Lab & Innovation Edition',
-    language: 'English & Tamil',
-    status: 'Published',
-    claimId: 'CLM-023',
-    summary: {
-      en: 'Written to complement ACHARIYA’s network of 73+ LABS and Atal Tinkering Labs, Young Scientist guides educators and students through direct sensory exploration of physical laws. It advocates for inquiry-based learning where hypotheses are tested, failures are celebrated as data points, and innovation becomes a habit.',
-      ta: 'ஆச்சாரியாவின் 73+ செய்முறை ஆய்வகங்கள் மற்றும் அடல் டிங்கரிங் லேப்களின் பின்னணியில் உருவான நூல். ஏட்டுச் சுரைக்காயாக அறிவியலை படிக்காமல், குழந்தைகள் கைகளால் செய்து பார்த்து, சோதனைகள் மூலம் உண்மைகளைக் கண்டறியும் வழிமுறையை விளக்குகிறது.',
-    },
-    keyThemes: {
-      en: [
-        'Turning passive textbook science into living experiments',
-        'The Atal Tinkering mindset: Ideate, Prototype, Test, Iterate',
-        'Integration of robotics, green technology, and daily life science',
-        'Building observational rigor and the scientific temper',
-      ],
-      ta: [
-        'ஏட்டுப் படிப்பை நேரடி அறிவியல் பரிசோதனைகளாக மாற்றுதல்',
-        'அடல் டிங்கரிங் மனநிலை: யோசி, மாதிரி செய், சோதித்து மேம்படுத்து',
-        'ரோபாட்டிக்ஸ், பசுமை தொழில்நுட்பம் மற்றும் அன்றாட அறிவியல்',
-        'துல்லியமான உற்றுநோக்கல் மற்றும் அறிவியல் மனப்பான்மையை வளர்த்தல்',
-      ],
-    },
-    targetAudience: {
-      en: 'STEM educators, young innovators, school lab coordinators, and curious students.',
-      ta: 'அறிவியல் ஆசிரியர்கள், இளம் கண்டுபிடிப்பாளர்கள் மற்றும் மாணவர் சமூகம்.',
-    },
-    readMoreSnippet: {
-      en: '“A child is born a natural scientist. School must never replace that wide-eyed wonder with dull formulas; it must give them the tools to test the universe.”',
-      ta: '"ஒவ்வொரு குழந்தையும் பிறவியிலேயே ஒரு விஞ்ஞானி. பள்ளிக்கூடம் அவர்களின் வியப்பை மழுங்கடிக்காமல், இந்த பிரபஞ்சத்தை சோதித்து அறியும் கருவிகளை அவர்களின் கைகளில் கொடுக்க வேண்டும்."',
-    },
-    sampleChapters: [
-      {
-        title: {
-          en: 'Chapter 1: Rekindling the Fire of Scientific Wonder',
-          ta: 'அத்தியாயம் 1: அறிவியல் வியப்பின் சுடரை ஏற்றுதல்',
-        },
-        subtitle: {
-          en: 'Moving Children from Passive Memorization to Active Discovery',
-          ta: 'மனப்பாடக் கல்வியிலிருந்து சுயமாகக் கண்டறியும் ஆய்வுக் கல்விக்கு நகர்தல்',
-        },
-        paragraphs: {
-          en: [
-            'Every child is born a natural scientist, burning with an unquenchable curiosity to understand the mechanics of the universe. Yet traditional educational paradigms systematically extinguish this wonder, replacing exploratory questions with rigid syllabi and rote memorization.',
-            'Young Scientist provides a transformative manifesto for modern learning: the classroom must become an empirical laboratory where theories are tested, failures are celebrated as data points, and hypotheses are verified through creative hands-on experimentation.',
-            'When a young mind learns to observe without prejudice, formulate clear questions, and deduce fundamental laws from evidence, they acquire an intellectual sovereignty that endures for a lifetime.',
-          ],
-          ta: [
-            'ஒவ்வொரு குழந்தையும் பிறவியிலேயே ஒரு விஞ்ஞானி; இந்த பிரபஞ்சத்தின் ரகசியங்களை அறியும் தீராத ஆர்வம் அவர்களிடம் கொழுந்துவிட்டு எரிகிறது. ஆனால் பாரம்பரிய கல்வி முறைகள் குழந்தைகளை மனப்பாடம் செய்ய வைப்பதன் மூலம் அவர்களின் இயல்பான அறிவியல் வியப்பை அணைத்துவிடுகின்றன.',
-            'இளம் விஞ்ஞானி (Young Scientist) நூல் கற்றலுக்கான புரட்சிகரப் பாதையை வகுக்கிறது: வகுப்பறைகள் வெறும் பாடங்களை ஒப்பிக்கும் இடங்களாக இல்லாமல், புதிய சோதனைகள் நிகழும் அறிவியல் கூடங்களாக மாற வேண்டும். தோல்விகளை புதிய தரவுகளாகக் கொண்டாடி, சுயமாக ஆராய்ந்து கற்க வேண்டும்.',
-            'ஒரு குழந்தை எதையும் கண்மூடித்தனமாக ஏற்காமல், கூர்ந்து கவனித்து, துல்லியமான கேள்விகளை எழுப்பி, ஆதாரங்களின் அடிப்படையில் உண்மைகளைக் கண்டறியும்போது, வாழ்நாள் முழுமைக்குமான அறிவுச் சுயாட்சியைப் பெறுகிறது.',
-          ],
-        },
-      },
-      {
-        title: {
-          en: 'Chapter 2: The Laboratory of Life & Global Problem-Solving',
-          ta: 'அத்தியாயம் 2: வாழ்வியல் ஆய்வுக்கூடமும் உலகளாவிய தீர்வுகளும்',
-        },
-        subtitle: {
-          en: 'Transforming Textbook Formulas into Real-World Breakthroughs',
-          ta: 'புத்தகச் சூத்திரங்களை நிஜ உலகப் பிரச்சனைகளுக்கான தீர்வுகளாக மாற்றுதல்',
-        },
-        paragraphs: {
-          en: [
-            'Science detached from human welfare is an empty exercise. True scientific brilliance shines when young innovators direct their curiosity toward solving tangible societal challenges—purifying drinking water, harnessing renewable solar power, or engineering sustainable agricultural technologies.',
-            'Through experiential project-based challenges, students realize that principles of physics, biology, and chemistry are living instruments for community transformation. They cease to view science as an academic chore and embrace it as a sacred tool for civilizational progress.',
-            'India’s youth hold the intellectual potential to lead the global scientific renaissance. It begins by daring them to think critically, experiment fearlessly, and invent with purpose.',
-          ],
-          ta: [
-            'மனித நலனைத் தொடாத அறிவியல் பயனற்றது. இளைஞர்கள் தங்கள் அறிவியல் அறிவை நிஜ உலகப் பிரச்சனைகளுக்கான தீர்வுகளாக மாற்றும்போதுதான் உண்மையான மேதமை வெளிப்படுகிறது—தூய குடிநீர், சூரிய மின்சக்தி, மற்றும் நீடித்த விவசாயக் கருவிகள் போன்றவை இதற்கு உதாரணம்.',
-            'செயல்முறைத் திட்டங்களின் மூலம், இயற்பியல், வேதியியல், உயிரியல் பாடங்கள் சமுதாயத்தை மாற்றும் உயிருள்ள கருவிகள் என்பதை மாணவர்கள் உணர்கிறார்கள். அறிவியலை வெறும் தேர்வுக்கான பாடமாகப் பார்க்காமல், தேச நிர்மாணத்திற்கான புனிதக் கருவியாகப் போற்றுகிறார்கள்.',
-            'உலகளாவிய அறிவியல் மறுமலர்ச்சிக்குத் தலைமை தாங்கும் பேராற்றல் இந்திய இளைஞர்களிடம் உள்ளது. பயமன்றி சிந்திக்கவும், துணிவோடு பரிசோதிக்கவும், சமுதாய நோக்கோடு புதுமைகளைப் படைக்கவும் அவர்களை ஊக்குவிப்போம்.',
-          ],
-        },
-      },
-    ],
-  },
-  {
-    id: 'BK-007',
-    slug: 'iravadh-book',
-    coverImage: '/images/books/airavatha.jpg',
-    title: {
-      en: 'Iravadh',
-      ta: 'ஐராவத் (Iravadh)',
-    },
-    tagline: {
-      en: 'The 21 Levels of Teacher Evolution & The Sacred Dignity of Mentorship',
-      ta: 'ஆசிரியர் பரிணாமத்தின் 21 நிலைகள் மற்றும் குருத்துவத்தின் புனித மாண்பு',
-    },
-    author: {
-      en: 'Dr. J. Arawindhan',
-      ta: 'முனைவர் ஜே. அரவிந்தன்',
-    },
-    edition: 'ConCardios Teacher Training Edition',
-    language: 'English & Tamil',
-    status: 'Ecosystem Edition',
-    claimId: 'CLM-023',
-    summary: {
-      en: 'Named after the celestial elephant symbolizing steadfast strength and wisdom, Iravadh serves as the definitive manual for teacher transformation in ACHARIYA’s ConCardios training hierarchy. It maps out 21 progressive stages of teacher evolution, from a novice instructor struggling with classroom discipline to an enlightened mentor who awakens the latent genius in every student.',
-      ta: 'நிலைத்த வலிமை மற்றும் ஞானத்தின் அடையாளமான ஐராவதத்தின் பெயரால் அமைந்த இந்நூல், ஆச்சாரியாவின் கான்கார்டியோஸ் ஆசிரியர் பயிற்சிக்கான வழிகாட்டி நூலாகும். சாதாரண பயிற்றுவிப்பாளராக தொடங்கும் ஓர் ஆசிரியர், எவ்வாறு 21 நிலைகளைக் கடந்து, மாணவர்களின் உள்ளார்ந்த மேதமையை விழித்தெழச் செய்யும் ஞான குருவாக மாறுகிறார் என்பதை இந்நூல் விளக்குகிறது.',
-    },
-    keyThemes: {
-      en: [
-        'The 21 stages of teacher consciousness and craft mastery',
-        'Moving from instructing to inspiring and transforming',
-        'The Rope-In induction: Change, Evolve, Transcend',
-        'Creating an anxiety-free, participation-rich classroom culture',
-      ],
-      ta: [
-        'ஆசிரியர் விழிப்புணர்வு மற்றும் கற்பித்தல் ஆளுமையின் 21 படிநிலைகள்',
-        'பாடம் நடத்துவதில் இருந்து குழந்தைகளை ஊக்கப்படுத்தி மாற்றியமைக்கும் நிலைக்கு நகர்தல்',
-        'ரோப்-இன் தத்துவம்: மாறு, பரிணமி, உன்னத நிலையை அடை',
-        'பயமற்ற, மாணவர் ஈடுபாடு நிறைந்த வகுப்பறை கலாச்சாரம் உருவாக்குதல்',
-      ],
-    },
-    targetAudience: {
-      en: 'School educators, teacher educators, B.Ed/D.T.Ed scholars, and academic coordinators.',
-      ta: 'பள்ளி ஆசிரியர்கள், கல்வியியல் பேராசிரியர்கள் மற்றும் ஆசிரியர் பயிற்சி மாணவர்கள்.',
-    },
-    readMoreSnippet: {
-      en: '“The mediocre teacher tells. The good teacher explains. The superior teacher demonstrates. The great teacher awakens. Airavatha is the journey toward awakening.”',
-      ta: '"சாதாரண ஆசிரியர் சொல்வார்; நல்ல ஆசிரியர் விளக்குவார்; சிறந்த ஆசிரியர் செய்துகாட்டுவார்; ஆனால் மகா ஆசிரியர் விழித்தெழச் செய்வார். ஐராவத் என்பது அந்த விழிப்புணர்வு நோக்கிய பயணம்."',
-    },
-    sampleChapters: [
-      {
-        title: {
-          en: 'Chapter 1: The 21 Levels of Teacher Evolution',
-          ta: 'அத்தியாயம் 1: ஆசிரியர் பரிணாமத்தின் 21 படிநிலைகள்',
-        },
-        subtitle: {
-          en: 'From Classroom Manager to Enlightened Mentor and Catalyst',
-          ta: 'வகுப்பறைப் பயிற்றுவிப்பாளரிலிருந்து மாணவர்களை விழித்தெழச் செய்யும் ஞான குரு வரை',
-        },
-        paragraphs: {
-          en: [
-            'Named after the celestial white elephant representing steadfast fortitude and spiritual wisdom, Iravadh serves as the definitive master manual for educator transformation across the ACHARIYA ecosystem. It maps out the 21 progressive stages of teacher evolution.',
-            'The journey begins at Level 1 with an instructor struggling with classroom discipline and mechanical syllabus coverage. Through systematic conscious development, the educator evolves through stages of technical mastery, empathetic connection, inspirational storytelling, and spiritual presence, culminating at Level 21: the Enlightened Achariya who awakens the latent genius within every child without friction.',
-            'A mediocre teacher tells; a good teacher explains; a superior teacher demonstrates; but a great teacher awakens. Airavatha is the map of that sacred awakening.',
-          ],
-          ta: [
-            'நிலைத்த வலிமை, கம்பீரம் மற்றும் ஆன்ம ஞானத்தின் அடையாளமான ஐராவதத்தின் பெயரால் அமைந்த இந்நூல், ஆச்சாரியாவின் கான்கார்டியோஸ் ஆசிரியர் பயிற்சிக்கான வழிகாட்டி நூலாகும். சாதாரண ஆசிரியரிலிருந்து ஞான ஆசிரியராக உயரும் 21 பரிணாம நிலைகளை இந்நூல் துல்லியமாக வரைபடம் செய்கிறது.',
-            'வகுப்பறை ஒழுங்கு மற்றும் பாடங்களை முடிக்கும் கவலையில் தொடங்கும் ஆசிரியர், தொடர் பயிற்சியின் மூலம் தொழில் நுணுக்கத் தேர்ச்சி, அன்பான வழிகாட்டல், ஊக்கமளிக்கும் கற்பித்தல் என உயர்ந்து, 21-வது உச்சநிலையை அடைகிறார்: அதுவே மாணவர்களின் உள்ளார்ந்த மேதமையை எவ்வித வற்புறுத்தலுமின்றி விழித்தெழச் செய்யும் "ஆச்சாரியா" நிலை.',
-            'சாதாரண ஆசிரியர் சொல்வார்; நல்ல ஆசிரியர் விளக்குவார்; சிறந்த ஆசிரியர் செய்துகாட்டுவார்; ஆனால் மகா ஆசிரியர் விழித்தெழச் செய்வார். ஐராவத் என்பது அந்த ஆன்ம விழிப்புணர்வின் புனிதப் பயணமாகும்.',
-          ],
-        },
-      },
-      {
-        title: {
-          en: 'Chapter 2: The Rope-In Induction: Change, Evolve, Transcend',
-          ta: 'அத்தியாயம் 2: ரோப்-இன் தத்துவம்: மாறு, பரிணமி, உன்னத நிலையை அடை',
-        },
-        subtitle: {
-          en: 'Creating an Anxiety-Free, Participation-Rich Culture of Excellence',
-          ta: 'பயமற்ற, மாணவர் ஈடுபாடு நிறைந்த வகுப்பறை கலாச்சாரம் உருவாக்குதல்',
-        },
-        paragraphs: {
-          en: [
-            'Education cannot flourish where fear resides. Traditional classroom hierarchies often instill anxiety, driving creative children into defensive silence. The Rope-In philosophy dismantles this toxic barrier through unconditional acceptance, radical engagement, and mutual respect.',
-            'When an educator masters the Rope-In framework, classroom boundaries transform into collaborative sanctuaries. Every mistake is treated as a stepping stone of learning, every question is welcomed as a spark of curiosity, and learning becomes an exhilarating adventure.',
-            'To teach is not merely to transmit data; it is to touch an eternal soul and leave an indelible imprint of dignity, love, and courage upon the future of humanity.',
-          ],
-          ta: [
-            'பயம் இருக்கும் இடத்தில் உண்மையான கல்வி மலர முடியாது. பாரம்பரிய வகுப்பறை கட்டுப்பாடுகள் மாணவர்களிடையே பதற்றத்தை உண்டாக்கி அவர்களின் படைப்பாற்றலை முடக்குகின்றன. "ரோப்-இன்" தத்துவம் நிபந்தனையற்ற அன்பு, முழுமையான மாணவர் ஈடுபாடு ஆகியவற்றின் மூலம் இந்தத் தடைகளை உடைத்தெறிகிறது.',
-            'ஓர் ஆசிரியர் ரோப்-இன் தத்துவத்தை உணரும்போது, வகுப்பறைகள் அஞ்சாத ஆய்வுக்கூடங்களாக மாறுகின்றன. தவறுகள் கற்றலின் படிகளாக ஏற்கப்படுகின்றன; ஒவ்வொரு கேள்வியும் ஆர்வத்தின் சுடராக வரவேற்கப்படுகிறது; கற்றல் ஒரு மகிழ்ச்சியான அனுபவமாகிறது.',
-            'கற்பித்தல் என்பது வெறும் தகவல்களை வழங்குவது அல்ல; அது ஒரு குழந்தையின் ஆன்மாவைத் தொட்டு, அதன் எதிர்காலத்தில் சுயமரியாதை, அன்பு மற்றும் துணிவின் அழியாத முத்திரையைப் பதிக்கும் தவமாகும்.',
-          ],
-        },
-      },
-    ],
-  },
-  {
     id: 'BK-008',
     slug: 'andava-the-victory-mode',
     coverImage: '/images/books/andava_victory_mode_v2.jpg',
@@ -868,99 +403,6 @@ export const booksList: BookItem[] = [
     ],
     pdfUrl: '/books/from-knowing-to-doing.pdf',
     flipbookPages: Array.from({ length: 36 }, (_, i) => `/books/from-knowing-to-doing/pages/page_${i + 1}.webp`),
-  },
-  {
-    id: 'BK-011',
-    slug: 'the-lions-bank-account',
-    coverImage: '/images/books/lions_bank_account_v2.jpg',
-    title: {
-      en: "The Lion's Bank Account",
-      ta: 'சிங்கத்தின் வங்கிக் கணக்கு (The Lion’s Bank Account)',
-    },
-    tagline: {
-      en: 'Stop Chasing Rats, Start Hunting Deer · "Your first salary is not a flex. It’s a trap."',
-      ta: 'எலிகளைத் துரத்துவதை நிறுத்துங்கள், மான்களை வேட்டையாடத் தொடங்குங்கள் · உங்கள் முதல் சம்பளம் பெருமை அல்ல; அது ஒரு பொறி',
-    },
-    author: {
-      en: 'Dr. J. Aravindan',
-      ta: 'முனைவர் ஜே. அரவிந்தன்',
-    },
-    edition: 'Wealth Architecture & Mindset Edition',
-    language: 'English & Tamil',
-    status: 'Published',
-    claimId: 'CLM-023',
-    summary: {
-      en: 'Bold, provocative, and razor-sharp, The Lion\'s Bank Account opens with the disruptive reality: "Your first salary is not a flex. It’s a trap." Dr. J. Arawindhan challenges the salaried rat-race conditioning that enslaves ambitious minds in loops of consumerism. Distinguishing between the petty busywork of "chasing rats" and the strategic majesty of "hunting deer," this work delivers an unvarnished masterclass on equity, asset architecture, and sovereign financial independence.',
-      ta: '"உங்கள் முதல் சம்பளம் பெருமைக்குரிய விஷயம் அல்ல; அது ஒரு பொறி!" என்ற அதிரடி உண்மையோடு தொடங்குகிறது இந்நூல். நுகர்வுக் கலாச்சாரத்திலும் சம்பளச் சங்கிலியிலும் சிக்கித் தவிக்கும் இளைஞர்களுக்கு நிதி விடுதலையின் கதவுகளைத் திறக்கிறது. அற்ப விஷயங்களுக்காக ஆற்றலை வீணடிக்கும் எலி வேட்டையை நிறுத்திவிட்டு, பெருஞ்செல்வத்தையும் சுயசார்பையும் ஈட்டும் மான் வேட்டைக்குத் தயாராகுமாறு சிங்கத்தின் கம்பீரத்தோடு அறைகூவல் விடுக்கிறது.',
-    },
-    keyThemes: {
-      en: [
-        'The First Salary Paradox: When safety becomes the ultimate risk',
-        'The Predator’s Economy: Chasing rats (petty distractions) vs. hunting deer (transformative value)',
-        'Building asymmetric compounding wealth over linear wage-trading',
-        'From reactive consumer to autonomous institutional capital architect',
-      ],
-      ta: [
-        'முதல் சம்பள முரண்பாடு: பாதுகாப்பே மிக ஆபத்தான பொறியாக மாறும் விதம்',
-        'ஆற்றல் விரயத்தை தவிர்த்தல்: அற்ப கவனச்சிதறல்களை விடுத்து பெருமதிப்பை உருவாக்குதல்',
-        'நேரத்தை விற்று சம்பாதிக்கும் நிலையிலிருந்து கூட்டு வட்டி மற்றும் மூலதன உருவாக்கம் நோக்கி நகர்தல்',
-        'நுகர்வோர் மனநிலையிலிருந்து நிதிச் சுயாட்சி பெற்ற முதலீட்டாளராக மாறுதல்',
-      ],
-    },
-    targetAudience: {
-      en: 'Young professionals, startup founders, commerce students, and wealth seekers seeking radical financial liberation.',
-      ta: 'இளம் பணிபுரியோர், தொழில் நிறுவனர்கள் மற்றும் உண்மையான நிதி சுதந்திரத்தை நாடும் லட்சியவாதிகள்.',
-    },
-    readMoreSnippet: {
-      en: '“Your first salary is not a flex. It’s a trap. A lion never exhausts its majestic energy chasing field mice through the grass; it sleeps, strategizes, and strikes only when the quarry is worthy of its regal power.”',
-      ta: '"உங்கள் முதல் சம்பளம் பெருமை அல்ல; அது ஒரு பொறி. ஒரு சிங்கம் புல்வெளியில் எலிகளைத் துரத்தி தன் ஆற்றலை வீணடிப்பதில்லை; அது காத்திருக்கிறது, வியூகம் அமைக்கிறது, தன் வலிமைக்கு தகுதியான வேட்டையின் போது மட்டுமே பாய்கிறது."',
-    },
-    sampleChapters: [
-      {
-        title: {
-          en: 'Chapter 1: The First Salary Paradox: When Safety Becomes a Trap',
-          ta: 'அத்தியாயம் 1: முதல் சம்பளப் பொறி: போலிப் பாதுகாப்பின் ஆபத்து',
-        },
-        subtitle: {
-          en: '“Your first salary is not a flex. It’s a trap.”',
-          ta: '“உங்கள் முதல் சம்பளம் பெருமைக்குரிய விஷயம் அல்ல; அது ஒரு பொறி!”',
-        },
-        paragraphs: {
-          en: [
-            '“Your first salary is not a flex. It’s a trap.” With this provocative declaration, Dr. J. Arawindhan shatters the illusion of corporate security. The monthly paycheck is an addictive sedative designed to keep ambitious minds docile, spending their most creative youth servicing EMIs and consumer credit.',
-            'When a young professional receives their first compensation, they immediately celebrate with consumption—purchasing liabilities that force them to return to the desk next Monday. What felt like freedom was merely the click of a golden handcuff.',
-            'Wake up from the consumerist trance. Measure your wealth not by the luxury goods you display, but by the number of months you can survive in sovereign dignity without bowing to a wage master.',
-          ],
-          ta: [
-            '“உங்கள் முதல் சம்பளம் பெருமைக்குரிய விஷயம் அல்ல; அது ஒரு பொறி!” என்ற அதிரடி உண்மையோடு தொடங்குகிறது இந்நூல். மாதாந்திர ஊதியம் என்பது லட்சியவாதிகளை அமைதிப்படுத்தும் ஒரு போதை போன்றது; அது இளைஞர்களின் படைப்புத்திறன் மிக்க காலத்தை கடன்களையும் நுகர்வுப் பொருட்களையும் அடைப்பதிலேயே செலவழிக்க வைக்கிறது.',
-            'முதல் சம்பளம் கிடைத்ததும் இளைஞர்கள் ஆடம்பர நுகர்வுகளில் மூழ்கி, அடுத்த திங்கட்கிழமையும் மீண்டும் அதே மேசைக்குச் செல்ல வேண்டிய கட்டாயத்தை உருவாக்கிக் கொள்கிறார்கள். சுதந்திரம் என்று அவர்கள் நினைத்தது உண்மையில் ஒரு தங்க விலங்கின் பூட்டாகும்.',
-            'நுகர்வுக் கலாச்சாரத்தின் மயக்கத்திலிருந்து விழித்தெழுங்கள். நீங்கள் பகட்டாகக் காட்டும் பொருட்களால் உங்கள் செல்வத்தை மதிப்பிடாதீர்கள்; யாரிடமும் கையேந்தாமல் உங்கள் கொள்கைகளோடு எத்தனை காலம் வாழ முடியும் என்பதைக் கொண்டே செல்வத்தை அளவிடுங்கள்.',
-          ],
-        },
-      },
-      {
-        title: {
-          en: 'Chapter 2: Stop Chasing Rats, Start Hunting Deer',
-          ta: 'அத்தியாயம் 2: எலிகளைத் துரத்தாதே, மான்களை வேட்டையாடு',
-        },
-        subtitle: {
-          en: 'The Predator’s Economy: Conserving Regal Energy for Transformative Value',
-          ta: 'அற்ப கவனச்சிதறல்களை விடுத்து பெருமதிப்பை உருவாக்கும் சிங்கத்தின் வியூகம்',
-        },
-        paragraphs: {
-          en: [
-            'A lion never exhausts its majestic energy chasing field mice through the tall grass. A hundred mice will not sustain a lion’s strength, but chasing them exhausts its royal power. The lion sleeps, watches, strategizes, and strikes only when the quarry is worthy of its sovereign nature.',
-            'Most ambitious individuals fail in wealth architecture because they spend 80% of their day hunting rats: petty side-hustles, trivial gossip, reactive emails, and small incremental gains. They are constantly busy, utterly exhausted, and perpetually broke.',
-            'Conserve your regal energy. Stop hunting mice. Target high-leverage assets, scalable enterprises, and generational investments worthy of a lion’s power.',
-          ],
-          ta: [
-            'ஒரு சிங்கம் புல்வெளியில் எலிகளைத் துரத்தி தன் கம்பீரமான ஆற்றலை வீணடிப்பதில்லை. நூறு எலிகளைப் பிடித்தாலும் சிங்கத்தின் பசி தீராது; ஆனால் அதைத் துரத்துவதிலேயே அதன் முழு பலமும் தீர்ந்துவிடும். சிங்கம் படுத்திருக்கிறது, உற்றுநோக்குகிறது, வியூகம் அமைக்கிறது; தன் வலிமைக்குத் தகுதியான மான் வேட்டையின் போது மட்டுமே பாய்கிறது.',
-            'பல லட்சியவாதிகள் செல்வந்தர்களாக மாற முடியாமல் போவதற்குக் காரணம், அவர்கள் தங்கள் நாளின் பெரும்பகுதியை எலிகளைத் துரத்துவதிலேயே வீணடிக்கிறார்கள்: அற்ப வேலைகள், வதந்திகள், சிறு வருமானங்கள். அவர்கள் எப்போதும் பிஸியாக இருக்கிறார்கள், சோர்வடைகிறார்கள், ஆனால் ஏழ்மையிலேயே வாழ்கிறார்கள்.',
-            'உங்கள் ஆற்றலை வீணடிக்காதீர்கள். சிறு எலி வேட்டைகளை நிறுத்துங்கள். தலைமுறை தலைமுறையாக வளரும் மாபெரும் நிறுவனங்களையும், சொத்துக்களையும் உருவாக்கும் சிங்கத்தின் பாய்ச்சலுக்குத் தயாராகுங்கள்.',
-          ],
-        },
-      },
-    ],
   },
   {
     id: 'BK-012',
@@ -1531,6 +973,564 @@ export const booksList: BookItem[] = [
             'மனித முதுகெலும்பு என்பது பூமிக்கும் பிரபஞ்ச விழிப்புணர்வுக்குமான ஒரு தெய்வீக ஆண்டெனா போன்றது. மூலாதாரம் முதல் துரியம் வரை இயங்கும் ஏழு ஆற்றல் மையங்கள் வெறும் உடலியல் இயக்கங்களை மட்டுமல்லாது, நமது எண்ண அலைகளையும் வாழ்வியல் உருவாக்கங்களையும் தீர்மானிக்கின்றன.',
             'பிரமிடு தியானம் என்பது பிராண ஆற்றலை ஒருமுகப்படுத்தும் அரிய கலையாகும். புனித வடிவியல் அமைப்பின் கீழ் அமர்ந்து தியானிக்கும்போது, மன அலைகள் அமைதியடைந்து, உடலின் செல்கள் புத்துயிர் பெறுகின்றன; ஆழ்மனத் தடைகள் அனைத்தும் விலகுகின்றன.',
             'ஏழு சக்கரங்களும் ஒருமுகப்பட்டு இயங்கும்போது, மனிதன் சூழ்நிலைகளுக்குப் பலியாகாமல், பிரபஞ்ச அருளையும், அளப்பரிய ஆற்றலையும் தன் வழியாக வெளிப்படுத்தும் ஞானக் கருவியாக மாறுகிறான்.',
+          ],
+        },
+      },
+    ],
+  },
+  {
+    id: 'BK-003',
+    slug: 'financial-intelligence',
+    coverImage: '/images/books/financial_intelligence.jpg',
+    title: {
+      en: 'Financial Intelligence (FI)',
+      ta: 'நிதி நுண்ணறிவு (Financial Intelligence)',
+    },
+    tagline: {
+      en: 'Resource Stewardship, Value Creation, and Practical Wealth Literacy for the Young Mind',
+      ta: 'இளம் தலைமுறைக்கான நிதி மேலாண்மை, மதிப்பு உருவாக்கம் மற்றும் நடைமுறை பொருளாதார அறிவு',
+    },
+    author: {
+      en: 'Dr. J. Arawindhan',
+      ta: 'முனைவர் ஜே. அரவிந்தன்',
+    },
+    edition: 'Student & Educator Edition',
+    language: 'English & Tamil',
+    status: 'Published',
+    claimId: 'CLM-023',
+    summary: {
+      en: 'Bridging a glaring gap in traditional school curricula, this book introduces financial wisdom as an essential ninth intelligence in the Dasavadani model. From understanding the difference between earning, investing, and serving, to the psychology of money and enterprise creation, this work grounds students in ethical financial self-reliance.',
+      ta: 'பாரம்பரிய கல்வி முறைகளில் புறக்கணிக்கப்பட்ட நிதி அறிவை தசாவதானி பாடத்திட்டத்தின் ஒன்பதாவது நுண்ணறிவாக இந்நூல் அறிமுகப்படுத்துகிறது. உழைப்பு, முதலீடு, சேமிப்பு ஆகியவற்றின் வேறுபாடுகள் முதல் நேர்மையான தொழில்முனைவோர் மனநிலை வரை மாணவர்களுக்கு நடைமுறை வழிகாட்டுகிறது.',
+    },
+    keyThemes: {
+      en: [
+        'The 5 Ms: Mind, Material, Method, Manpower, Money',
+        'The psychology of wealth: From earning to multiplying and sharing',
+        'Student Profit Lab and micro-entrepreneurship simulations',
+        'Budgeting, capital stewardship, and ethical business creation',
+      ],
+      ta: [
+        '5 M தத்துவம்: மனம், மூலப்பொருள், முறை, மனிதவளம், பணம்',
+        'பணத்தின் உளவியல்: ஈட்டுதல், பெருக்குதல் மற்றும் பகிர்தல்',
+        'மாணவர் லாப ஆய்வகம் (Student Profit Lab) மற்றும் குறுந்தொழில் மாதிரிகள்',
+        'வரவு-செலவு மேலாண்மை மற்றும் அறநெறி சார்ந்த தொழில் உருவாக்கம்',
+      ],
+    },
+    targetAudience: {
+      en: 'Middle school to college students, emerging entrepreneurs, and commerce educators.',
+      ta: 'நடுநிலைப் பள்ளி முதல் கல்லூரி மாணவர்கள், இளம் தொழில்முனைவோர் மற்றும் ஆசிரியர்கள்.',
+    },
+    readMoreSnippet: {
+      en: '“Money is an energy that follows clarity and discipline. When children learn to respect resources early, they grow into builders rather than mere consumers.”',
+      ta: '"பணம் என்பது தெளிவையும் ஒழுக்கத்தையும் பின்பற்றும் ஓர் ஆற்றல். வளங்களை மதிக்க குழந்தைகள் ஆரம்பத்திலேயே கற்கும்போது, அவர்கள் நுகர்வோராக மட்டுமல்லாமல் உருவாக்குநர்களாக மாறுகிறார்கள்."',
+    },
+    sampleChapters: [
+      {
+        title: {
+          en: 'Chapter 1: The Foundations of Financial Consciousness',
+          ta: 'அத்தியாயம் 1: நிதி விழிப்புணர்வின் அடித்தளங்கள்',
+        },
+        subtitle: {
+          en: 'Escaping the Linear Wage Trap to Build Sovereign Wealth',
+          ta: 'நேரியல் சம்பளச் சுழற்சியிலிருந்து விடுபட்டு நிதிச் சுயாட்சி அடைதல்',
+        },
+        paragraphs: {
+          en: [
+            'Financial intelligence is not measured by the salary you negotiate, but by the assets you construct and the sovereignty you retain. Society trains graduates to trade time for wages, trapping sharp intellects in an exhausting loop of inflation, taxation, and consumption.',
+            'True financial freedom begins with a mental decoupling: recognizing that money is crystallized human energy. When money works for you while you sleep, learn, or meditate, you transition from economic subservience to strategic autonomy.',
+            'Mastering the basics of cash flow, asset allocation, and risk management is the first civilizational duty of an educated individual who desires to serve their family and society without compromise.',
+          ],
+          ta: [
+            'நிதி நுண்ணறிவு என்பது நீங்கள் வாங்கும் சம்பளத்தைக் கொண்டு அளவிடப்படுவதல்ல; நீங்கள் உருவாக்கும் சொத்துக்களையும், நீங்கள் தக்கவைத்துக் கொள்ளும் சுயாட்சியையும் கொண்டே அளவிடப்படுகிறது. நேரத்தை விற்றுப் பணம் ஈட்டுவதையே சமூகம் வழக்கமாகக் கற்பிக்கிறது; ஆனால் இது கூர்மையான அறிவாளிகளை நுகர்வுச் சுழற்சியில் சிக்க வைக்கிறது.',
+            'உண்மையான நிதி சுதந்திரம் என்பது ஒரு மனநிலை மாற்றத்தில் தொடங்குகிறது. பணம் என்பது உறைந்த மனித ஆற்றல் என்பதை உணர வேண்டும். நீங்கள் உறங்கும் போதும், தியானிக்கும் போதும் உங்களுக்காக செல்வம் பெருகுமாறு கட்டமைக்கும்போதே நீங்கள் பொருளாதார அடிமைத்தனத்திலிருந்து விடுபடுகிறீர்கள்.',
+            'வருவாய் வரவு-செலவு ஒழுங்கு, சொத்து ஒதுக்கீடு மற்றும் நிதி இடர் மேலாண்மையைக் கற்பது, தன் குடும்பத்திற்கும் சமுதாயத்திற்கும் சமரசமின்றி சேவை செய்ய விரும்பும் ஒவ்வொரு மனிதனின் கடமையாகும்.',
+          ],
+        },
+      },
+      {
+        title: {
+          en: 'Chapter 2: The Art of Asymmetric Compounding',
+          ta: 'அத்தியாயம் 2: கூட்டு வட்டியின் ஆக்கபூர்வ ஆற்றல்',
+        },
+        subtitle: {
+          en: 'Building Generational Capital with Ethical Responsibility',
+          ta: 'அறநெறி வழுவாமல் தலைமுறை தழைக்கும் மூலதனத்தை உருவாக்குதல்',
+        },
+        paragraphs: {
+          en: [
+            'Albert Einstein described compounding as the eighth wonder of the world, yet few educational systems teach its strategic application. Compounding is not merely mathematical interest; it is the exponential accumulation of wisdom, trust, and productive capital over decades.',
+            'When wealth is built upon ethical enterprise—solving real human problems, creating sustainable employment, and fostering educational opportunities—it carries the blessings of the cosmos and stands resilient across market cycles.',
+            'Do not pursue quick riches through speculation. Build enduring institutional foundations that generate enduring value for generations to come.',
+          ],
+          ta: [
+            'ஆல்பர்ட் ஐன்ஸ்டீன் கூட்டு வட்டியை உலகின் எட்டாவது அதிசயம் என்றார். ஆனால் அதன் வியூகப் பயன்பாட்டை கல்வி நிறுவனங்கள் கற்றுக்கொடுப்பதில்லை. கூட்டு வட்டி என்பது வெறும் கணித கணக்கீடு மட்டுமல்ல; அது பல தசாப்தங்களாக சேர்க்கப்படும் அனுபவம், நற்பெயர் மற்றும் பயனுள்ள முதலீடுகளின் அபரிமிதமான வளர்ச்சியாகும்.',
+            'மனித பிரச்சனைகளுக்குத் தீர்வு காணுதல், வேலைவாய்ப்புகளை உருவாக்குதல், கல்வி வாய்ப்புகளைப் பெருக்குதல் போன்ற அறநெறி சார்ந்த தொழில்களின் வழியே ஈட்டப்படும் செல்வம் பிரபஞ்ச அருளைப் பெற்று பல தலைமுறைகளுக்கு நிலைத்து நிற்கும்.',
+            'ஊக வணிகத்தால் வரும் குறுகிய கால மாயச் செல்வத்தை நாடாதீர்கள். எதிர்காலத் தலைமுறைகளுக்குப் பயனளிக்கும் நிலையான நிறுவன அமைப்புகளையும், உற்பத்தி மூலதனத்தையும் உருவாக்குங்கள்.',
+          ],
+        },
+      },
+    ],
+  },
+  {
+    id: 'BK-004',
+    slug: 'emotional-intelligence',
+    coverImage: '/images/books/emotional_intelligence.jpg',
+    title: {
+      en: 'Emotional Intelligence (EI)',
+      ta: 'உணர்ச்சி நுண்ணறிவு (Emotional Intelligence)',
+    },
+    tagline: {
+      en: 'Mastering the Inner Weather: Self-Regulation, Empathy & Conscious Choice',
+      ta: 'மன உணர்வுகளை ஆளுமை செய்தல்: சுய கட்டுப்பாடு, பச்சாதாபம் மற்றும் விழிப்புணர்வுத் தேர்வுகள்',
+    },
+    author: {
+      en: 'Dr. J. Arawindhan',
+      ta: 'முனைவர் ஜே. அரவிந்தன்',
+    },
+    edition: 'Curriculum & Life Skills Edition',
+    language: 'English & Tamil',
+    status: 'Published',
+    claimId: 'CLM-023',
+    summary: {
+      en: 'A core pillar of the Dasavadani curriculum, this book offers a systematic roadmap for mastering interpersonal and intrapersonal awareness. It teaches children and young adults how to convert reactivity into responsiveness, manage exam and social anxieties, and practice empathetic communication in collaborative environments.',
+      ta: 'தசாவதானி பாடத்திட்டத்தின் பத்தாவது நுண்ணறிவான உணர்ச்சி நுண்ணறிவை விளக்கும் நூல். கோபம், பயம், கவலை போன்ற உணர்வுகளை எவ்வாறு ஆக்கப்பூர்வமான ஆற்றலாக மாற்றுவது என்றும், மற்றவர்களின் உணர்வுகளை மதித்து நல்லுறவை பேணுவது எப்படி என்றும் மாணவர்களுக்கு கற்பிக்கிறது.',
+    },
+    keyThemes: {
+      en: [
+        'The 3C framework: Change-maker, Choice-maker, Chance-maker',
+        'The 4H integration: Heart, Hand, Head, Health',
+        'Empathy building and conflict resolution in peer groups',
+        'Mindfulness protocols for emotional balance under pressure',
+      ],
+      ta: [
+        '3C கட்டமைப்பு: மாற்றம் உருவாக்குபவர், தேர்வு செய்பவர், வாய்ப்பு உருவாக்குபவர்',
+        '4H ஒருங்கிணைப்பு: இதயம் (Heart), கரம் (Hand), தலை (Head), உடல் நலம் (Health)',
+        'பச்சாதாபம் வளர்த்தல் மற்றும் சவால்களை சுமுகமாக தீர்த்தல்',
+        'அழுத்தமான சூழலிலும் மன அமைதி காக்கும் விழிப்புணர்வு பயிற்சிகள்',
+      ],
+    },
+    targetAudience: {
+      en: 'Adolescent learners, teachers, counselors, and organizational leaders.',
+      ta: 'பள்ளி-கல்லூரி மாணவர்கள், ஆசிரியர்கள், ஆலோசகர்கள் மற்றும் தலைமைப் பொறுப்பாளர்கள்.',
+    },
+    readMoreSnippet: {
+      en: '“IQ gets you in the door; EQ determines how far you travel. The strongest leader is not the one with the loudest voice, but the one who can master their own inner weather.”',
+      ta: '"ஐ.கியூ (IQ) உங்களுக்கு ஒரு வாசலைத் திறக்கலாம்; ஆனால் ஈ.கியூ (EQ) மட்டுமே நீங்கள் எவ்வளவு தூரம் பயணிப்பீர்கள் என்பதை தீர்மானிக்கிறது. உண்மையான தலைவர் தன் மன உணர்வுகளை ஆளத் தெரிந்தவரே."',
+    },
+    sampleChapters: [
+      {
+        title: {
+          en: 'Chapter 1: The Anatomy of Emotional Equilibrium',
+          ta: 'அத்தியாயம் 1: உணர்ச்சிச் சமநிலையின் கட்டமைப்பு',
+        },
+        subtitle: {
+          en: 'Responding with Wisdom Instead of Reacting in Impulse',
+          ta: 'உணர்ச்சித் தூண்டுதலில் சிதறாமல் ஞானத்தோடு எதிர்வினையாற்றுதல்',
+        },
+        paragraphs: {
+          en: [
+            'Between every external stimulus and our behavioral response, there is a sacred pause. In that pause lies our freedom and our growth. The untrained mind reacts instinctively with anger, fear, or insecurity, instantly surrendering its power to external provocations.',
+            'Emotional intelligence is the cultivated ability to witness feelings without becoming enslaved by them. Anger, jealousy, and anxiety are biological signals, not permanent identities. When you observe them with stillness, their destructive heat dissipates, revealing clarity and purpose.',
+            'The highest emotional mastery is not emotional suppression; it is emotional alchemy—transmuting turbulent feelings into creative vitality, unyielding courage, and deep empathy.',
+          ],
+          ta: [
+            'வெளிப்புறத்தில் நடக்கும் நிகழ்வுக்கும், அதற்கு நாம் காட்டும் எதிர்வினைக்கும் நடுவே ஒரு புனிதமான இடைவெளி உள்ளது. அந்த இடைவெளியில்தான் நமது விடுதலையும் ஆன்ம வளர்ச்சியும் அடங்கியுள்ளது. பயிற்சியற்ற மனம் கோபம், பயம் அல்லது தாழ்வுணர்ச்சியோடு உடனடி எதிர்வினை புரிந்து தன் ஆற்றலை இழந்துவிடுகிறது.',
+            'உணர்ச்சி நுண்ணறிவு என்பது நமது உணர்வுகளுக்கு அடிமையாகாமல் அவற்றை சாட்சியாக நின்று உற்றுநோக்கும் கலை. கோபமும், பதற்றமும் உடலியல் சமிக்ஞைகளே அன்றி நமது நிரந்தர அடையாளம் அல்ல. அவற்றை அமைதியோடு கவனிக்கும்போது, அவற்றின் தீவிரம் தணிந்து தெளிவு பிறக்கிறது.',
+            'உணர்ச்சிகளை அடக்கி வைப்பது ஆளுமை அல்ல; எதிர்மறை உணர்ச்சிகளை ஆக்கபூர்வமான உத்வேகமாகவும், துணிவாகவும், எல்லையற்ற கருணையாகவும் உருமாற்றுவதே உண்மையான உணர்ச்சி ஞானமாகும்.',
+          ],
+        },
+      },
+      {
+        title: {
+          en: 'Chapter 2: The Heart as an Organ of Perception',
+          ta: 'அத்தியாயம் 2: பேரன்பின் விழிப்புணர்வும் தலைமைத்துவமும்',
+        },
+        subtitle: {
+          en: 'Leading with Empathy, Compassion, and Coherence',
+          ta: 'கருணையோடு வழிநடத்துதல் மற்றும் உறவுகளின் இணக்கம்',
+        },
+        paragraphs: {
+          en: [
+            'Modern neurocardiology confirms that the human heart possesses its own complex neural network, generating an electromagnetic field thousands of times stronger than the brain. When heart rhythms enter coherence, cognitive capacity sharpens, stress hormone levels drop, and relational intuition awakens.',
+            'Great leadership does not stem from intimidation or detached intellect; it arises from the magnetic resonance of a heart that genuinely cares. When colleagues, students, and family members feel understood and validated, extraordinary collaboration unfolds naturally.',
+            'Practice heart-centered presence every morning: send silent goodwill to those who challenge you, forgive past slights, and enter every room with the commitment to elevate the spirits of everyone present.',
+          ],
+          ta: [
+            'நவீன நரம்பியல் ஆய்வுகள் மனித இதயத்திற்கு என்று தனித்துவமான நரம்பு மண்டலம் இருப்பதையும், அது மூளையை விடப் பல மடங்கு வலிமையான மின்காந்த ஆற்றலை வெளிப்படுத்துவதையும் உறுதி செய்கின்றன. இதயம் அமைதியான ஒத்திசைவை எட்டும்போது, மூளையின் சிந்திக்கும் திறன் கூர்மையடைந்து மனஅழுத்தம் குறைகிறது.',
+            'அதிகாரத்தாலோ அல்லது உணர்ச்சியற்ற புத்திசாலித்தனத்தாலோ சிறந்த தலைவர்கள் உருவாவதில்லை; பிறரை உளமார நேசிக்கும் அன்பின் காந்த ஈர்ப்பிலிருந்தே சிறந்த தலைமை பிறக்கிறது. மாணவர்கள் மற்றும் சக மனிதர்கள் மதிக்கப்படுவதாக உணரும்போது வியத்தகு சாதனைகள் இயல்பாக நிகழ்கின்றன.',
+            'ஒவ்வொரு நாளும் இதயப்பூர்வமான விழிப்புணர்வைப் பழகுங்கள்: உங்களுக்கு சவாலாக இருப்பவர்களுக்கும் நல்வாழ்த்துக்களை அனுப்புங்கள்; கடந்த கால கசப்புகளை மன்னியுங்கள்; நீங்கள் நுழையும் எந்த இடத்தையும் அன்பினால் உயர்த்தும் உறுதியோடு வாழுங்கள்.',
+          ],
+        },
+      },
+    ],
+  },
+  {
+    id: 'BK-005',
+    slug: 'master-stroke',
+    coverImage: '/images/books/master_stroke.jpg',
+    title: {
+      en: 'Master Stroke',
+      ta: 'மாஸ்டர் ஸ்ட்ரோக் (Master Stroke)',
+    },
+    tagline: {
+      en: 'Strategic Leadership, Institutional Architecture & The Art of Execution',
+      ta: 'வியூக தலைமைத்துவம், நிறுவன கட்டமைப்பு மற்றும் திட்டங்களை வெற்றிகரமாக நிறைவேற்றும் கலை',
+    },
+    author: {
+      en: 'Dr. J. Arawindhan',
+      ta: 'முனைவர் ஜே. அரவிந்தன்',
+    },
+    edition: 'Executive Leadership Edition',
+    language: 'English & Tamil',
+    status: 'Published',
+    claimId: 'CLM-023',
+    summary: {
+      en: 'Drawing on 25 years of building 18 colleges, 35 schools, and 61+ companies, Master Stroke deconstructs the science of scaling vision into reality. It details the Centre of Excellence governance model, the five-step chain of accountability, and how leaders maintain cultural coherence while expanding across states and sectors.',
+      ta: '25 ஆண்டுகளில் 18 கல்லூரிகள், 35 பள்ளிகள் மற்றும் 61+ நிறுவனங்களை உருவாக்கிய நிஜ அனுபவங்களின் தொகுப்பு. நிறுவன மேலாண்மை, பொறுப்புணர்வு சங்கிலி, சிறப்பு மேன்மை மைய (CoE) கட்டமைப்பு மற்றும் கொள்கைகளை சமரசமின்றி பல துறைகளில் வெற்றிகரமாக விரிவுபடுத்துவது எப்படி என்பதை விளக்குகிறது.',
+    },
+    keyThemes: {
+      en: [
+        'Good intentions do not scale; good systems do',
+        'The Five-Step Execution Chain: Approved → Enriched → Enabled → Executed → Ensured',
+        'The Six Engines of Institutional Excellence',
+        'From Solo Founder to Self-Sustaining Ecosystem',
+      ],
+      ta: [
+        'நல்ல எண்ணங்கள் மட்டும் விரிவடையாது; சிறந்த கட்டமைப்புகளே விரிவடையும்',
+        'ஐந்து படிநிலை செயல்பாட்டுச் சங்கிலி: ஒப்புதல் → செறிவூட்டல் → தயார்படுத்துதல் → செயல்படுத்துதல் → உறுதிசெய்தல்',
+        'நிறுவன மேன்மையின் ஆறு இயந்திரங்கள் (Six Engines)',
+        'தனிநபர் வழிகாட்டலில் இருந்து தற்சார்பு நிறுவன சூழலியலாக உருமாறுதல்',
+      ],
+    },
+    targetAudience: {
+      en: 'School principals, institutional founders, corporate managers, and system architects.',
+      ta: 'பள்ளி முதல்வர்கள், கல்வி நிறுவன நிறுவனர்கள், கார்ப்பரேட் மேலாளர்கள் மற்றும் நிர்வாகிகள்.',
+    },
+    readMoreSnippet: {
+      en: '“For doing repair work, we need to do prepare work. A master stroke in leadership is never accidental; it is the quiet result of an unbreakable daily process.”',
+      ta: '"பழுதுபார்க்கும் வேலையைத் தவிர்க்க, நாம் முன்கூட்டியே தயாரிப்பு வேலையைச் செய்ய வேண்டும். தலைமைத்துவத்தின் மாஸ்டர் ஸ்ட்ரோக் என்பது தற்செயலானது அல்ல; அது உறுதியான தினசரி வழிமுறையின் வெளிப்பாடு."',
+    },
+    sampleChapters: [
+      {
+        title: {
+          en: 'Chapter 1: The Geometry of Decisive Intervention',
+          ta: 'அத்தியாயம் 1: தீர்க்கமான முன்னெடுப்பின் வடிவியல்',
+        },
+        subtitle: {
+          en: 'How One Singular Strategic Action Transforms Entire Systems',
+          ta: 'ஒரே ஒரு வியூக நடவடிக்கை ஒட்டுமொத்த அமைப்பையும் மாற்றி அமைக்கும் விதம்',
+        },
+        paragraphs: {
+          en: [
+            'A master stroke is not frantic exertion; it is the precise, sovereign intervention that shifts an entire competitive landscape. In organizational leadership, amateurs attempt to fix a hundred symptoms simultaneously, exhausting resources while the core bottleneck remains untouched.',
+            'The visionary leader diagnoses the single fulcrum point where minimal leverage produces exponential movement. Like a master martial artist who strikes with effortless grace, strategic mastery lies in absolute timing, moral authority, and uncompromising execution.',
+            'When the right decision is made with moral conviction and unhesitating speed, resistance evaporates and institutional momentum surges forward.',
+          ],
+          ta: [
+            'மாஸ்டர் ஸ்ட்ரோக் என்பது பதற்றமான கடின உழைப்பு அல்ல; அது ஒட்டுமொத்த சூழலையும் மாற்றியமைக்கும் துல்லியமான, தீர்க்கமான முடிவாகும். சாதாரண நிர்வாகிகள் நூறு சிறு பிரச்சனைகளை ஒரே நேரத்தில் தீர்க்க முயன்று ஆற்றலை வீணடிக்கிறார்கள்; ஆனால் மூலக் காரணம் அப்படியே இருக்கும்.',
+            'தீர்க்கதரிசியான தலைவர் குறைந்தபட்ச முயற்சியில் மிகப்பெரிய மாற்றத்தை ஏற்படுத்தும் மையப்புள்ளியைக் கண்டறிகிறார். ஒரு தற்காப்புக் கலை நிபுணர் குறைந்த உழைப்பில் வெற்றியை நிலைநாட்டுவது போல, சரியான நேரம், அறநெறி அதிகாரம் மற்றும் சமரசமற்ற செயல்பாட்டிலேயே மாபெரும் வெற்றி அடங்கியுள்ளது.',
+            'உண்மையான அறவழியிலும், தயக்கமில்லாத வேகத்திலும் ஒரு முடிவு எடுக்கப்படும் போது, எதிர்ப்புகள் கரைந்து நிறுவனத்தின் முன்னேற்றம் தடையின்றிப் பாய்கிறது.',
+          ],
+        },
+      },
+      {
+        title: {
+          en: 'Chapter 2: Speed, Precision & Moral Authority',
+          ta: 'அத்தியாயம் 2: வேகம், துல்லியம் மற்றும் அறநெறி அதிகாரம்',
+        },
+        subtitle: {
+          en: 'Transcending Bureaucratic Paralysis to Create Quantum Leaps',
+          ta: 'செயலற்ற தயக்கங்களைத் தகர்த்து வியத்தகு சாதனைகளை உருவாக்குதல்',
+        },
+        paragraphs: {
+          en: [
+            'In a world overwhelmed by analysis paralysis, speed combined with precision is an insurmountable competitive advantage. Delay is the subtle grave where visionary projects rot into mediocrity.',
+            'Moral authority is the bedrock of rapid execution. When people know that a leader seeks no personal vanity but acts entirely for institutional excellence and societal welfare, they rally behind decisions with unreserved loyalty.',
+            'Dare to execute boldly. One well-timed, courageously executed master stroke achieves in a single day what decades of cautious deliberation could never produce.',
+          ],
+          ta: [
+            'அளவுக்கு அதிகமான ஆலோசனைகளால் உலகம் முடங்கிக் கிடக்கும் சூழலில், துல்லியத்தோடு கூடிய வேகமே மிகப்பெரிய பலமாகும். தாமதம் என்பது தொலைநோக்குத் திட்டங்களை பாழாக்கும் அமைதியான கல்லறையாகும்.',
+            'வேகமான செயல்பாட்டிற்கு அறநெறி அதிகாரமே அடித்தளம். ஒரு தலைவர் தன் சுயலாபத்திற்காக அன்றி, நிறுவனத்தின் மேன்மைக்காகவும் மக்கள் நலனுக்காகவும் மட்டுமே முடிவெடுக்கிறார் என்பதை மக்கள் உணரும்போது, முழு மனதோடு துணை நிற்பார்கள்.',
+            'துணிவோடு செயல்படுங்கள். தைரியமாக எடுக்கப்படும் ஒரு மாபெரும் நடவடிக்கை, பல ஆண்டுகள் யோசித்து செய்ய முடியாத சாதனையை ஒரே நாளில் நிகழ்த்திக் காட்டும்.',
+          ],
+        },
+      },
+    ],
+  },
+  {
+    id: 'BK-006',
+    slug: 'young-scientist',
+    coverImage: '/images/books/young_scientist.jpg',
+    title: {
+      en: 'Young Scientist',
+      ta: 'இளம் விஞ்ஞானி (Young Scientist)',
+    },
+    tagline: {
+      en: 'Igniting Curiosity, Hands-On Experimentation & Scientific Discovery in the Classroom',
+      ta: 'வகுப்பறையில் அறிவியல் ஆர்வம், செய்முறை சோதனைகள் மற்றும் புதிய கண்டுபிடிப்புகளின் எழுச்சி',
+    },
+    author: {
+      en: 'Dr. J. Arawindhan',
+      ta: 'முனைவர் ஜே. அரவிந்தன்',
+    },
+    edition: 'Lab & Innovation Edition',
+    language: 'English & Tamil',
+    status: 'Published',
+    claimId: 'CLM-023',
+    summary: {
+      en: 'Written to complement ACHARIYA’s network of 73+ LABS and Atal Tinkering Labs, Young Scientist guides educators and students through direct sensory exploration of physical laws. It advocates for inquiry-based learning where hypotheses are tested, failures are celebrated as data points, and innovation becomes a habit.',
+      ta: 'ஆச்சாரியாவின் 73+ செய்முறை ஆய்வகங்கள் மற்றும் அடல் டிங்கரிங் லேப்களின் பின்னணியில் உருவான நூல். ஏட்டுச் சுரைக்காயாக அறிவியலை படிக்காமல், குழந்தைகள் கைகளால் செய்து பார்த்து, சோதனைகள் மூலம் உண்மைகளைக் கண்டறியும் வழிமுறையை விளக்குகிறது.',
+    },
+    keyThemes: {
+      en: [
+        'Turning passive textbook science into living experiments',
+        'The Atal Tinkering mindset: Ideate, Prototype, Test, Iterate',
+        'Integration of robotics, green technology, and daily life science',
+        'Building observational rigor and the scientific temper',
+      ],
+      ta: [
+        'ஏட்டுப் படிப்பை நேரடி அறிவியல் பரிசோதனைகளாக மாற்றுதல்',
+        'அடல் டிங்கரிங் மனநிலை: யோசி, மாதிரி செய், சோதித்து மேம்படுத்து',
+        'ரோபாட்டிக்ஸ், பசுமை தொழில்நுட்பம் மற்றும் அன்றாட அறிவியல்',
+        'துல்லியமான உற்றுநோக்கல் மற்றும் அறிவியல் மனப்பான்மையை வளர்த்தல்',
+      ],
+    },
+    targetAudience: {
+      en: 'STEM educators, young innovators, school lab coordinators, and curious students.',
+      ta: 'அறிவியல் ஆசிரியர்கள், இளம் கண்டுபிடிப்பாளர்கள் மற்றும் மாணவர் சமூகம்.',
+    },
+    readMoreSnippet: {
+      en: '“A child is born a natural scientist. School must never replace that wide-eyed wonder with dull formulas; it must give them the tools to test the universe.”',
+      ta: '"ஒவ்வொரு குழந்தையும் பிறவியிலேயே ஒரு விஞ்ஞானி. பள்ளிக்கூடம் அவர்களின் வியப்பை மழுங்கடிக்காமல், இந்த பிரபஞ்சத்தை சோதித்து அறியும் கருவிகளை அவர்களின் கைகளில் கொடுக்க வேண்டும்."',
+    },
+    sampleChapters: [
+      {
+        title: {
+          en: 'Chapter 1: Rekindling the Fire of Scientific Wonder',
+          ta: 'அத்தியாயம் 1: அறிவியல் வியப்பின் சுடரை ஏற்றுதல்',
+        },
+        subtitle: {
+          en: 'Moving Children from Passive Memorization to Active Discovery',
+          ta: 'மனப்பாடக் கல்வியிலிருந்து சுயமாகக் கண்டறியும் ஆய்வுக் கல்விக்கு நகர்தல்',
+        },
+        paragraphs: {
+          en: [
+            'Every child is born a natural scientist, burning with an unquenchable curiosity to understand the mechanics of the universe. Yet traditional educational paradigms systematically extinguish this wonder, replacing exploratory questions with rigid syllabi and rote memorization.',
+            'Young Scientist provides a transformative manifesto for modern learning: the classroom must become an empirical laboratory where theories are tested, failures are celebrated as data points, and hypotheses are verified through creative hands-on experimentation.',
+            'When a young mind learns to observe without prejudice, formulate clear questions, and deduce fundamental laws from evidence, they acquire an intellectual sovereignty that endures for a lifetime.',
+          ],
+          ta: [
+            'ஒவ்வொரு குழந்தையும் பிறவியிலேயே ஒரு விஞ்ஞானி; இந்த பிரபஞ்சத்தின் ரகசியங்களை அறியும் தீராத ஆர்வம் அவர்களிடம் கொழுந்துவிட்டு எரிகிறது. ஆனால் பாரம்பரிய கல்வி முறைகள் குழந்தைகளை மனப்பாடம் செய்ய வைப்பதன் மூலம் அவர்களின் இயல்பான அறிவியல் வியப்பை அணைத்துவிடுகின்றன.',
+            'இளம் விஞ்ஞானி (Young Scientist) நூல் கற்றலுக்கான புரட்சிகரப் பாதையை வகுக்கிறது: வகுப்பறைகள் வெறும் பாடங்களை ஒப்பிக்கும் இடங்களாக இல்லாமல், புதிய சோதனைகள் நிகழும் அறிவியல் கூடங்களாக மாற வேண்டும். தோல்விகளை புதிய தரவுகளாகக் கொண்டாடி, சுயமாக ஆராய்ந்து கற்க வேண்டும்.',
+            'ஒரு குழந்தை எதையும் கண்மூடித்தனமாக ஏற்காமல், கூர்ந்து கவனித்து, துல்லியமான கேள்விகளை எழுப்பி, ஆதாரங்களின் அடிப்படையில் உண்மைகளைக் கண்டறியும்போது, வாழ்நாள் முழுமைக்குமான அறிவுச் சுயாட்சியைப் பெறுகிறது.',
+          ],
+        },
+      },
+      {
+        title: {
+          en: 'Chapter 2: The Laboratory of Life & Global Problem-Solving',
+          ta: 'அத்தியாயம் 2: வாழ்வியல் ஆய்வுக்கூடமும் உலகளாவிய தீர்வுகளும்',
+        },
+        subtitle: {
+          en: 'Transforming Textbook Formulas into Real-World Breakthroughs',
+          ta: 'புத்தகச் சூத்திரங்களை நிஜ உலகப் பிரச்சனைகளுக்கான தீர்வுகளாக மாற்றுதல்',
+        },
+        paragraphs: {
+          en: [
+            'Science detached from human welfare is an empty exercise. True scientific brilliance shines when young innovators direct their curiosity toward solving tangible societal challenges—purifying drinking water, harnessing renewable solar power, or engineering sustainable agricultural technologies.',
+            'Through experiential project-based challenges, students realize that principles of physics, biology, and chemistry are living instruments for community transformation. They cease to view science as an academic chore and embrace it as a sacred tool for civilizational progress.',
+            'India’s youth hold the intellectual potential to lead the global scientific renaissance. It begins by daring them to think critically, experiment fearlessly, and invent with purpose.',
+          ],
+          ta: [
+            'மனித நலனைத் தொடாத அறிவியல் பயனற்றது. இளைஞர்கள் தங்கள் அறிவியல் அறிவை நிஜ உலகப் பிரச்சனைகளுக்கான தீர்வுகளாக மாற்றும்போதுதான் உண்மையான மேதமை வெளிப்படுகிறது—தூய குடிநீர், சூரிய மின்சக்தி, மற்றும் நீடித்த விவசாயக் கருவிகள் போன்றவை இதற்கு உதாரணம்.',
+            'செயல்முறைத் திட்டங்களின் மூலம், இயற்பியல், வேதியியல், உயிரியல் பாடங்கள் சமுதாயத்தை மாற்றும் உயிருள்ள கருவிகள் என்பதை மாணவர்கள் உணர்கிறார்கள். அறிவியலை வெறும் தேர்வுக்கான பாடமாகப் பார்க்காமல், தேச நிர்மாணத்திற்கான புனிதக் கருவியாகப் போற்றுகிறார்கள்.',
+            'உலகளாவிய அறிவியல் மறுமலர்ச்சிக்குத் தலைமை தாங்கும் பேராற்றல் இந்திய இளைஞர்களிடம் உள்ளது. பயமன்றி சிந்திக்கவும், துணிவோடு பரிசோதிக்கவும், சமுதாய நோக்கோடு புதுமைகளைப் படைக்கவும் அவர்களை ஊக்குவிப்போம்.',
+          ],
+        },
+      },
+    ],
+  },
+  {
+    id: 'BK-007',
+    slug: 'iravadh-book',
+    coverImage: '/images/books/airavatha.jpg',
+    title: {
+      en: 'Iravadh',
+      ta: 'ஐராவத் (Iravadh)',
+    },
+    tagline: {
+      en: 'The 21 Levels of Teacher Evolution & The Sacred Dignity of Mentorship',
+      ta: 'ஆசிரியர் பரிணாமத்தின் 21 நிலைகள் மற்றும் குருத்துவத்தின் புனித மாண்பு',
+    },
+    author: {
+      en: 'Dr. J. Arawindhan',
+      ta: 'முனைவர் ஜே. அரவிந்தன்',
+    },
+    edition: 'ConCardios Teacher Training Edition',
+    language: 'English & Tamil',
+    status: 'Ecosystem Edition',
+    claimId: 'CLM-023',
+    summary: {
+      en: 'Named after the celestial elephant symbolizing steadfast strength and wisdom, Iravadh serves as the definitive manual for teacher transformation in ACHARIYA’s ConCardios training hierarchy. It maps out 21 progressive stages of teacher evolution, from a novice instructor struggling with classroom discipline to an enlightened mentor who awakens the latent genius in every student.',
+      ta: 'நிலைத்த வலிமை மற்றும் ஞானத்தின் அடையாளமான ஐராவதத்தின் பெயரால் அமைந்த இந்நூல், ஆச்சாரியாவின் கான்கார்டியோஸ் ஆசிரியர் பயிற்சிக்கான வழிகாட்டி நூலாகும். சாதாரண பயிற்றுவிப்பாளராக தொடங்கும் ஓர் ஆசிரியர், எவ்வாறு 21 நிலைகளைக் கடந்து, மாணவர்களின் உள்ளார்ந்த மேதமையை விழித்தெழச் செய்யும் ஞான குருவாக மாறுகிறார் என்பதை இந்நூல் விளக்குகிறது.',
+    },
+    keyThemes: {
+      en: [
+        'The 21 stages of teacher consciousness and craft mastery',
+        'Moving from instructing to inspiring and transforming',
+        'The Rope-In induction: Change, Evolve, Transcend',
+        'Creating an anxiety-free, participation-rich classroom culture',
+      ],
+      ta: [
+        'ஆசிரியர் விழிப்புணர்வு மற்றும் கற்பித்தல் ஆளுமையின் 21 படிநிலைகள்',
+        'பாடம் நடத்துவதில் இருந்து குழந்தைகளை ஊக்கப்படுத்தி மாற்றியமைக்கும் நிலைக்கு நகர்தல்',
+        'ரோப்-இன் தத்துவம்: மாறு, பரிணமி, உன்னத நிலையை அடை',
+        'பயமற்ற, மாணவர் ஈடுபாடு நிறைந்த வகுப்பறை கலாச்சாரம் உருவாக்குதல்',
+      ],
+    },
+    targetAudience: {
+      en: 'School educators, teacher educators, B.Ed/D.T.Ed scholars, and academic coordinators.',
+      ta: 'பள்ளி ஆசிரியர்கள், கல்வியியல் பேராசிரியர்கள் மற்றும் ஆசிரியர் பயிற்சி மாணவர்கள்.',
+    },
+    readMoreSnippet: {
+      en: '“The mediocre teacher tells. The good teacher explains. The superior teacher demonstrates. The great teacher awakens. Airavatha is the journey toward awakening.”',
+      ta: '"சாதாரண ஆசிரியர் சொல்வார்; நல்ல ஆசிரியர் விளக்குவார்; சிறந்த ஆசிரியர் செய்துகாட்டுவார்; ஆனால் மகா ஆசிரியர் விழித்தெழச் செய்வார். ஐராவத் என்பது அந்த விழிப்புணர்வு நோக்கிய பயணம்."',
+    },
+    sampleChapters: [
+      {
+        title: {
+          en: 'Chapter 1: The 21 Levels of Teacher Evolution',
+          ta: 'அத்தியாயம் 1: ஆசிரியர் பரிணாமத்தின் 21 படிநிலைகள்',
+        },
+        subtitle: {
+          en: 'From Classroom Manager to Enlightened Mentor and Catalyst',
+          ta: 'வகுப்பறைப் பயிற்றுவிப்பாளரிலிருந்து மாணவர்களை விழித்தெழச் செய்யும் ஞான குரு வரை',
+        },
+        paragraphs: {
+          en: [
+            'Named after the celestial white elephant representing steadfast fortitude and spiritual wisdom, Iravadh serves as the definitive master manual for educator transformation across the ACHARIYA ecosystem. It maps out the 21 progressive stages of teacher evolution.',
+            'The journey begins at Level 1 with an instructor struggling with classroom discipline and mechanical syllabus coverage. Through systematic conscious development, the educator evolves through stages of technical mastery, empathetic connection, inspirational storytelling, and spiritual presence, culminating at Level 21: the Enlightened Achariya who awakens the latent genius within every child without friction.',
+            'A mediocre teacher tells; a good teacher explains; a superior teacher demonstrates; but a great teacher awakens. Airavatha is the map of that sacred awakening.',
+          ],
+          ta: [
+            'நிலைத்த வலிமை, கம்பீரம் மற்றும் ஆன்ம ஞானத்தின் அடையாளமான ஐராவதத்தின் பெயரால் அமைந்த இந்நூல், ஆச்சாரியாவின் கான்கார்டியோஸ் ஆசிரியர் பயிற்சிக்கான வழிகாட்டி நூலாகும். சாதாரண ஆசிரியரிலிருந்து ஞான ஆசிரியராக உயரும் 21 பரிணாம நிலைகளை இந்நூல் துல்லியமாக வரைபடம் செய்கிறது.',
+            'வகுப்பறை ஒழுங்கு மற்றும் பாடங்களை முடிக்கும் கவலையில் தொடங்கும் ஆசிரியர், தொடர் பயிற்சியின் மூலம் தொழில் நுணுக்கத் தேர்ச்சி, அன்பான வழிகாட்டல், ஊக்கமளிக்கும் கற்பித்தல் என உயர்ந்து, 21-வது உச்சநிலையை அடைகிறார்: அதுவே மாணவர்களின் உள்ளார்ந்த மேதமையை எவ்வித வற்புறுத்தலுமின்றி விழித்தெழச் செய்யும் "ஆச்சாரியா" நிலை.',
+            'சாதாரண ஆசிரியர் சொல்வார்; நல்ல ஆசிரியர் விளக்குவார்; சிறந்த ஆசிரியர் செய்துகாட்டுவார்; ஆனால் மகா ஆசிரியர் விழித்தெழச் செய்வார். ஐராவத் என்பது அந்த ஆன்ம விழிப்புணர்வின் புனிதப் பயணமாகும்.',
+          ],
+        },
+      },
+      {
+        title: {
+          en: 'Chapter 2: The Rope-In Induction: Change, Evolve, Transcend',
+          ta: 'அத்தியாயம் 2: ரோப்-இன் தத்துவம்: மாறு, பரிணமி, உன்னத நிலையை அடை',
+        },
+        subtitle: {
+          en: 'Creating an Anxiety-Free, Participation-Rich Culture of Excellence',
+          ta: 'பயமற்ற, மாணவர் ஈடுபாடு நிறைந்த வகுப்பறை கலாச்சாரம் உருவாக்குதல்',
+        },
+        paragraphs: {
+          en: [
+            'Education cannot flourish where fear resides. Traditional classroom hierarchies often instill anxiety, driving creative children into defensive silence. The Rope-In philosophy dismantles this toxic barrier through unconditional acceptance, radical engagement, and mutual respect.',
+            'When an educator masters the Rope-In framework, classroom boundaries transform into collaborative sanctuaries. Every mistake is treated as a stepping stone of learning, every question is welcomed as a spark of curiosity, and learning becomes an exhilarating adventure.',
+            'To teach is not merely to transmit data; it is to touch an eternal soul and leave an indelible imprint of dignity, love, and courage upon the future of humanity.',
+          ],
+          ta: [
+            'பயம் இருக்கும் இடத்தில் உண்மையான கல்வி மலர முடியாது. பாரம்பரிய வகுப்பறை கட்டுப்பாடுகள் மாணவர்களிடையே பதற்றத்தை உண்டாக்கி அவர்களின் படைப்பாற்றலை முடக்குகின்றன. "ரோப்-இன்" தத்துவம் நிபந்தனையற்ற அன்பு, முழுமையான மாணவர் ஈடுபாடு ஆகியவற்றின் மூலம் இந்தத் தடைகளை உடைத்தெறிகிறது.',
+            'ஓர் ஆசிரியர் ரோப்-இன் தத்துவத்தை உணரும்போது, வகுப்பறைகள் அஞ்சாத ஆய்வுக்கூடங்களாக மாறுகின்றன. தவறுகள் கற்றலின் படிகளாக ஏற்கப்படுகின்றன; ஒவ்வொரு கேள்வியும் ஆர்வத்தின் சுடராக வரவேற்கப்படுகிறது; கற்றல் ஒரு மகிழ்ச்சியான அனுபவமாகிறது.',
+            'கற்பித்தல் என்பது வெறும் தகவல்களை வழங்குவது அல்ல; அது ஒரு குழந்தையின் ஆன்மாவைத் தொட்டு, அதன் எதிர்காலத்தில் சுயமரியாதை, அன்பு மற்றும் துணிவின் அழியாத முத்திரையைப் பதிக்கும் தவமாகும்.',
+          ],
+        },
+      },
+    ],
+  },
+  {
+    id: 'BK-011',
+    slug: 'the-lions-bank-account',
+    coverImage: '/images/books/lions_bank_account_v2.jpg',
+    title: {
+      en: "The Lion's Bank Account",
+      ta: 'சிங்கத்தின் வங்கிக் கணக்கு (The Lion’s Bank Account)',
+    },
+    tagline: {
+      en: 'Stop Chasing Rats, Start Hunting Deer · "Your first salary is not a flex. It’s a trap."',
+      ta: 'எலிகளைத் துரத்துவதை நிறுத்துங்கள், மான்களை வேட்டையாடத் தொடங்குங்கள் · உங்கள் முதல் சம்பளம் பெருமை அல்ல; அது ஒரு பொறி',
+    },
+    author: {
+      en: 'Dr. J. Aravindan',
+      ta: 'முனைவர் ஜே. அரவிந்தன்',
+    },
+    edition: 'Wealth Architecture & Mindset Edition',
+    language: 'English & Tamil',
+    status: 'Published',
+    claimId: 'CLM-023',
+    summary: {
+      en: 'Bold, provocative, and razor-sharp, The Lion\'s Bank Account opens with the disruptive reality: "Your first salary is not a flex. It’s a trap." Dr. J. Arawindhan challenges the salaried rat-race conditioning that enslaves ambitious minds in loops of consumerism. Distinguishing between the petty busywork of "chasing rats" and the strategic majesty of "hunting deer," this work delivers an unvarnished masterclass on equity, asset architecture, and sovereign financial independence.',
+      ta: '"உங்கள் முதல் சம்பளம் பெருமைக்குரிய விஷயம் அல்ல; அது ஒரு பொறி!" என்ற அதிரடி உண்மையோடு தொடங்குகிறது இந்நூல். நுகர்வுக் கலாச்சாரத்திலும் சம்பளச் சங்கிலியிலும் சிக்கித் தவிக்கும் இளைஞர்களுக்கு நிதி விடுதலையின் கதவுகளைத் திறக்கிறது. அற்ப விஷயங்களுக்காக ஆற்றலை வீணடிக்கும் எலி வேட்டையை நிறுத்திவிட்டு, பெருஞ்செல்வத்தையும் சுயசார்பையும் ஈட்டும் மான் வேட்டைக்குத் தயாராகுமாறு சிங்கத்தின் கம்பீரத்தோடு அறைகூவல் விடுக்கிறது.',
+    },
+    keyThemes: {
+      en: [
+        'The First Salary Paradox: When safety becomes the ultimate risk',
+        'The Predator’s Economy: Chasing rats (petty distractions) vs. hunting deer (transformative value)',
+        'Building asymmetric compounding wealth over linear wage-trading',
+        'From reactive consumer to autonomous institutional capital architect',
+      ],
+      ta: [
+        'முதல் சம்பள முரண்பாடு: பாதுகாப்பே மிக ஆபத்தான பொறியாக மாறும் விதம்',
+        'ஆற்றல் விரயத்தை தவிர்த்தல்: அற்ப கவனச்சிதறல்களை விடுத்து பெருமதிப்பை உருவாக்குதல்',
+        'நேரத்தை விற்று சம்பாதிக்கும் நிலையிலிருந்து கூட்டு வட்டி மற்றும் மூலதன உருவாக்கம் நோக்கி நகர்தல்',
+        'நுகர்வோர் மனநிலையிலிருந்து நிதிச் சுயாட்சி பெற்ற முதலீட்டாளராக மாறுதல்',
+      ],
+    },
+    targetAudience: {
+      en: 'Young professionals, startup founders, commerce students, and wealth seekers seeking radical financial liberation.',
+      ta: 'இளம் பணிபுரியோர், தொழில் நிறுவனர்கள் மற்றும் உண்மையான நிதி சுதந்திரத்தை நாடும் லட்சியவாதிகள்.',
+    },
+    readMoreSnippet: {
+      en: '“Your first salary is not a flex. It’s a trap. A lion never exhausts its majestic energy chasing field mice through the grass; it sleeps, strategizes, and strikes only when the quarry is worthy of its regal power.”',
+      ta: '"உங்கள் முதல் சம்பளம் பெருமை அல்ல; அது ஒரு பொறி. ஒரு சிங்கம் புல்வெளியில் எலிகளைத் துரத்தி தன் ஆற்றலை வீணடிப்பதில்லை; அது காத்திருக்கிறது, வியூகம் அமைக்கிறது, தன் வலிமைக்கு தகுதியான வேட்டையின் போது மட்டுமே பாய்கிறது."',
+    },
+    sampleChapters: [
+      {
+        title: {
+          en: 'Chapter 1: The First Salary Paradox: When Safety Becomes a Trap',
+          ta: 'அத்தியாயம் 1: முதல் சம்பளப் பொறி: போலிப் பாதுகாப்பின் ஆபத்து',
+        },
+        subtitle: {
+          en: '“Your first salary is not a flex. It’s a trap.”',
+          ta: '“உங்கள் முதல் சம்பளம் பெருமைக்குரிய விஷயம் அல்ல; அது ஒரு பொறி!”',
+        },
+        paragraphs: {
+          en: [
+            '“Your first salary is not a flex. It’s a trap.” With this provocative declaration, Dr. J. Arawindhan shatters the illusion of corporate security. The monthly paycheck is an addictive sedative designed to keep ambitious minds docile, spending their most creative youth servicing EMIs and consumer credit.',
+            'When a young professional receives their first compensation, they immediately celebrate with consumption—purchasing liabilities that force them to return to the desk next Monday. What felt like freedom was merely the click of a golden handcuff.',
+            'Wake up from the consumerist trance. Measure your wealth not by the luxury goods you display, but by the number of months you can survive in sovereign dignity without bowing to a wage master.',
+          ],
+          ta: [
+            '“உங்கள் முதல் சம்பளம் பெருமைக்குரிய விஷயம் அல்ல; அது ஒரு பொறி!” என்ற அதிரடி உண்மையோடு தொடங்குகிறது இந்நூல். மாதாந்திர ஊதியம் என்பது லட்சியவாதிகளை அமைதிப்படுத்தும் ஒரு போதை போன்றது; அது இளைஞர்களின் படைப்புத்திறன் மிக்க காலத்தை கடன்களையும் நுகர்வுப் பொருட்களையும் அடைப்பதிலேயே செலவழிக்க வைக்கிறது.',
+            'முதல் சம்பளம் கிடைத்ததும் இளைஞர்கள் ஆடம்பர நுகர்வுகளில் மூழ்கி, அடுத்த திங்கட்கிழமையும் மீண்டும் அதே மேசைக்குச் செல்ல வேண்டிய கட்டாயத்தை உருவாக்கிக் கொள்கிறார்கள். சுதந்திரம் என்று அவர்கள் நினைத்தது உண்மையில் ஒரு தங்க விலங்கின் பூட்டாகும்.',
+            'நுகர்வுக் கலாச்சாரத்தின் மயக்கத்திலிருந்து விழித்தெழுங்கள். நீங்கள் பகட்டாகக் காட்டும் பொருட்களால் உங்கள் செல்வத்தை மதிப்பிடாதீர்கள்; யாரிடமும் கையேந்தாமல் உங்கள் கொள்கைகளோடு எத்தனை காலம் வாழ முடியும் என்பதைக் கொண்டே செல்வத்தை அளவிடுங்கள்.',
+          ],
+        },
+      },
+      {
+        title: {
+          en: 'Chapter 2: Stop Chasing Rats, Start Hunting Deer',
+          ta: 'அத்தியாயம் 2: எலிகளைத் துரத்தாதே, மான்களை வேட்டையாடு',
+        },
+        subtitle: {
+          en: 'The Predator’s Economy: Conserving Regal Energy for Transformative Value',
+          ta: 'அற்ப கவனச்சிதறல்களை விடுத்து பெருமதிப்பை உருவாக்கும் சிங்கத்தின் வியூகம்',
+        },
+        paragraphs: {
+          en: [
+            'A lion never exhausts its majestic energy chasing field mice through the tall grass. A hundred mice will not sustain a lion’s strength, but chasing them exhausts its royal power. The lion sleeps, watches, strategizes, and strikes only when the quarry is worthy of its sovereign nature.',
+            'Most ambitious individuals fail in wealth architecture because they spend 80% of their day hunting rats: petty side-hustles, trivial gossip, reactive emails, and small incremental gains. They are constantly busy, utterly exhausted, and perpetually broke.',
+            'Conserve your regal energy. Stop hunting mice. Target high-leverage assets, scalable enterprises, and generational investments worthy of a lion’s power.',
+          ],
+          ta: [
+            'ஒரு சிங்கம் புல்வெளியில் எலிகளைத் துரத்தி தன் கம்பீரமான ஆற்றலை வீணடிப்பதில்லை. நூறு எலிகளைப் பிடித்தாலும் சிங்கத்தின் பசி தீராது; ஆனால் அதைத் துரத்துவதிலேயே அதன் முழு பலமும் தீர்ந்துவிடும். சிங்கம் படுத்திருக்கிறது, உற்றுநோக்குகிறது, வியூகம் அமைக்கிறது; தன் வலிமைக்குத் தகுதியான மான் வேட்டையின் போது மட்டுமே பாய்கிறது.',
+            'பல லட்சியவாதிகள் செல்வந்தர்களாக மாற முடியாமல் போவதற்குக் காரணம், அவர்கள் தங்கள் நாளின் பெரும்பகுதியை எலிகளைத் துரத்துவதிலேயே வீணடிக்கிறார்கள்: அற்ப வேலைகள், வதந்திகள், சிறு வருமானங்கள். அவர்கள் எப்போதும் பிஸியாக இருக்கிறார்கள், சோர்வடைகிறார்கள், ஆனால் ஏழ்மையிலேயே வாழ்கிறார்கள்.',
+            'உங்கள் ஆற்றலை வீணடிக்காதீர்கள். சிறு எலி வேட்டைகளை நிறுத்துங்கள். தலைமுறை தலைமுறையாக வளரும் மாபெரும் நிறுவனங்களையும், சொத்துக்களையும் உருவாக்கும் சிங்கத்தின் பாய்ச்சலுக்குத் தயாராகுங்கள்.',
           ],
         },
       },

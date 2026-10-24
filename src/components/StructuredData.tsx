@@ -65,7 +65,7 @@ export const StructuredData: React.FC<StructuredDataProps> = ({
         name: 'Mechanical Engineering',
       },
       description:
-        'Indian educationist, entrepreneur, author, and founder of ACHARIYA World Class Education (18 colleges, 101 schools, 61+ companies).',
+        'Indian educationist, entrepreneur, author, and founder of ACHARIYA World Class Education (18 colleges, 35 schools, 61+ companies).',
       award: [
         'Holistic Education Award (News7 Tamil Aatral Migu Asiriyar 2026)',
         'Edu Icon Award (The Times of India)',

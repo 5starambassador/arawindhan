@@ -45,7 +45,7 @@ export async function generateMetadata({
     return {
       title: 'அரவிந்தன் | முனைவர் ஜே. அரவிந்தன் — அதிகாரப்பூர்வ டிஜிட்டல் தளம் (Arawindhan)',
       description:
-        'முனைவர் ஜே. அரவிந்தன் (Arawindhan) அவர்களின் அதிகாரப்பூர்வ தளம். ஆச்சாரியா கல்வி நிறுவனங்களின் நிறுவனர், கல்வியியலாளர், மற்றும் 18 கல்லூரிகள், 101 பள்ளிகள், 61+ நிறுவனங்களின் தலைவர்.',
+        'முனைவர் ஜே. அரவிந்தன் (Arawindhan) அவர்களின் அதிகாரப்பூர்வ தளம். ஆச்சாரியா கல்வி நிறுவனங்களின் நிறுவனர், கல்வியியலாளர், மற்றும் 18 கல்லூரிகள், 35 பள்ளிகள், 61+ நிறுவனங்களின் தலைவர்.',
       keywords,
       authors: [{ name: 'Dr. J. Arawindhan', url: 'https://www.arawindhan.com' }],
       creator: 'Dr. J. Arawindhan',
@@ -112,7 +112,7 @@ export async function generateMetadata({
     metadataBase: new URL('https://www.arawindhan.com'),
     title: 'Arawindhan | Official Website of Dr. J. Arawindhan — Educationist & Founder',
     description:
-      'Official website and authority platform of Dr. J. Arawindhan (Arawindhan): Educationist, entrepreneur, author, and founder of ACHARIYA World Class Education (18 colleges, 101 schools, 61+ companies, 600+ world records).',
+      'Official website and authority platform of Dr. J. Arawindhan (Arawindhan): Educationist, entrepreneur, author, and founder of ACHARIYA World Class Education (18 colleges, 35 schools, 61+ companies, 600+ world records).',
     keywords,
     authors: [{ name: 'Dr. J. Arawindhan', url: 'https://www.arawindhan.com' }],
     creator: 'Dr. J. Arawindhan',

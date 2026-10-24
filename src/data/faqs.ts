@@ -15,8 +15,8 @@ export const faqsList: FAQItem[] = [
       ta: 'முனைவர் ஜே. அரவிந்தன் யார்?',
     },
     answer: {
-      en: 'Dr. J. Arawindhan is an Indian educationist, entrepreneur, author, and spiritual guide. Trained as a Mechanical Engineer, he founded ACHARIYA World Class Education in Puducherry in 2000. Over 25 years, he has built an ecosystem of 18 higher education colleges, 101 schools, 61+ companies, and over 302 educational initiatives across Tamil Nadu, Puducherry, Kerala, and Andhra Pradesh.',
-      ta: 'முனைவர் ஜே. அரவிந்தன் ஒரு இந்திய கல்வியியலாளர், தொழில்முனைவோர், எழுத்தாளர் மற்றும் ஆன்மீக வழிகாட்டி ஆவார். மெக்கானிக்கல் பொறியாளரான இவர், 2000-ஆம் ஆண்டு புதுச்சேரியில் ஆச்சாரியா கல்வி நிறுவனத்தை நிறுவினார். 25 ஆண்டுகளில் 18 கல்லூரிகள், 101 பள்ளிகள், 61+ நிறுவனங்கள் மற்றும் 302+ கல்வி முன்முயற்சிகளைக் கொண்ட மாபெரும் அமைப்பை உருவாக்கியுள்ளார்.',
+      en: 'Dr. J. Arawindhan is an Indian educationist, entrepreneur, author, and spiritual guide. Trained as a Mechanical Engineer, he founded ACHARIYA World Class Education in Puducherry in 2000. Over 25 years, he has built an ecosystem of 18 higher education colleges, 35 schools, 61+ companies, and over 302 educational initiatives across Tamil Nadu, Puducherry, Kerala, and Andhra Pradesh.',
+      ta: 'முனைவர் ஜே. அரவிந்தன் ஒரு இந்திய கல்வியியலாளர், தொழில்முனைவோர், எழுத்தாளர் மற்றும் ஆன்மீக வழிகாட்டி ஆவார். மெக்கானிக்கல் பொறியாளரான இவர், 2000-ஆம் ஆண்டு புதுச்சேரியில் ஆச்சாரியா கல்வி நிறுவனத்தை நிறுவினார். 25 ஆண்டுகளில் 18 கல்லூரிகள், 35 பள்ளிகள், 61+ நிறுவனங்கள் மற்றும் 302+ கல்வி முன்முயற்சிகளைக் கொண்ட மாபெரும் அமைப்பை உருவாக்கியுள்ளார்.',
     },
     relatedLink: '/biography',
   },
@@ -28,8 +28,8 @@ export const faqsList: FAQItem[] = [
       ta: 'ஆச்சாரியா கல்வி கட்டமைப்பில் எத்தனை பள்ளிகள் மற்றும் கல்லூரிகள் உள்ளன?',
     },
     answer: {
-      en: 'The ACHARIYA network encompasses 18 higher education colleges (covering Engineering, Arts & Science, Hospitality, Medical Sciences, and Teacher Education) and 101 schools operating across four relationship models: Owned (71 campuses including Siksha Mandir and Bala Siksha Mandir), Powered (independent partner schools using ACHARIYA curricula), Partnered (joint ventures), and Parented (mentored campuses).',
-      ta: 'ஆச்சாரியா கட்டமைப்பு 18 உயர்கல்விக் கல்லூரிகள் (பொறியியல், கலை & அறிவியல், ஹோட்டல் மேலாண்மை, மருத்துவம், கல்வியியல்) மற்றும் 101 பள்ளிகளை உள்ளடக்கியது. இவை சொந்தப் பள்ளிகள் (71 வளாகங்கள்), இணைக்கப்பட்ட பள்ளிகள், கூட்டுப் பங்களிப்புப் பள்ளிகள் மற்றும் வழிகாட்டல் பள்ளிகள் என 4 மாதிரிகளில் இயங்குகின்றன.',
+      en: 'The ACHARIYA network encompasses 18 higher education colleges (covering Engineering, Arts & Science, Hospitality, Medical Sciences, and Teacher Education) and 35 schools operating across four relationship models: Owned, Powered (independent partner schools using ACHARIYA curricula), Partnered (joint ventures), and Parented (mentored campuses).',
+      ta: 'ஆச்சாரியா கட்டமைப்பு 18 உயர்கல்விக் கல்லூரிகள் (பொறியியல், கலை & அறிவியல், ஹோட்டல் மேலாண்மை, மருத்துவம், கல்வியியல்) மற்றும் 35 பள்ளிகளை உள்ளடக்கியது. இவை சொந்தப் பள்ளிகள், இணைக்கப்பட்ட பள்ளிகள், கூட்டுப் பங்களிப்புப் பள்ளிகள் மற்றும் வழிகாட்டல் பள்ளிகள் என 4 மாதிரிகளில் இயங்குகின்றன.',
     },
     relatedLink: '/institutions',
   },

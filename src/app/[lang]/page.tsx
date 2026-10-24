@@ -41,7 +41,7 @@ export async function generateMetadata({
     return {
       title: 'முனைவர் ஜே. அரவிந்தன் | அதிகாரப்பூர்வ தளம் — கல்வியியலாளர் & நிறுவனர் (Arawindhan)',
       description:
-        'முனைவர் ஜே. அரவிந்தன் (Arawindhan) அவர்களின் அதிகாரப்பூர்வ தளம். ஆச்சாரியா கல்வி நிறுவனங்களின் நிறுவனர், கல்வியியலாளர், மற்றும் 18 கல்லூரிகள், 101 பள்ளிகள், 61+ நிறுவனங்களின் தலைவர்.',
+        'முனைவர் ஜே. அரவிந்தன் (Arawindhan) அவர்களின் அதிகாரப்பூர்வ தளம். ஆச்சாரியா கல்வி நிறுவனங்களின் நிறுவனர், கல்வியியலாளர், மற்றும் 18 கல்லூரிகள், 35 பள்ளிகள், 61+ நிறுவனங்களின் தலைவர்.',
       alternates: {
         canonical: 'https://www.arawindhan.com/ta',
         languages: {
@@ -71,7 +71,7 @@ export async function generateMetadata({
   return {
     title: 'Dr. J. Arawindhan | Official Website — Educationist, Founder & Visionary Leader',
     description:
-      'Official website and authority platform of Dr. J. Arawindhan (Arawindhan): Educationist, entrepreneur, author, and founder of ACHARIYA World Class Education (18 colleges, 101 schools, 61+ companies, 600+ world records).',
+      'Official website and authority platform of Dr. J. Arawindhan (Arawindhan): Educationist, entrepreneur, author, and founder of ACHARIYA World Class Education (18 colleges, 35 schools, 61+ companies, 600+ world records).',
     alternates: {
       canonical: 'https://www.arawindhan.com/en',
       languages: {
@@ -174,8 +174,8 @@ export default async function HomePage({
                 }}
               >
                 {lang === 'ta'
-                  ? '2000-ஆம் ஆண்டு புதுச்சேரியில் ஒரு மெக்கானிக்கல் பொறியாளரால் தொடங்கப்பட்ட கல்விப் புரட்சி. "ஒவ்வொரு குழந்தையும் தனக்கென தனித்துவமான நுண்ணறிவு சாம்ராஜ்யத்தைக் கொண்டுள்ளது" என்ற அசைக்க முடியாத நம்பிக்கையுடன் உருவான ஆச்சாரியா, இன்று 18 உயர்கல்விக் கல்லூரிகள், 101 பள்ளிகள், 61+ நிறுவனங்கள் மற்றும் 600+ உலக சாதனைகளைக் கொண்ட பெரும் அறிவுச் சூழலியலாக விரிவடைந்துள்ளது.'
-                  : 'In 2000, a trained Mechanical Engineer in Puducherry established ACHARIYA with one conviction: every child carries a unique kingdom of intelligences. Twenty-five years later, that vision has expanded into "One Parent with Four Children"—18 colleges, 101 schools, 61+ companies, and 302+ initiatives, educating over 14,000 students with 600+ world records.'}
+                  ? '2000-ஆம் ஆண்டு புதுச்சேரியில் ஒரு மெக்கானிக்கல் பொறியாளரால் தொடங்கப்பட்ட கல்விப் புரட்சி. "ஒவ்வொரு குழந்தையும் தனக்கென தனித்துவமான நுண்ணறிவு சாம்ராஜ்யத்தைக் கொண்டுள்ளது" என்ற அசைக்க முடியாத நம்பிக்கையுடன் உருவான ஆச்சாரியா, இன்று 18 உயர்கல்விக் கல்லூரிகள், 35 பள்ளிகள், 61+ நிறுவனங்கள் மற்றும் 600+ உலக சாதனைகளைக் கொண்ட பெரும் அறிவுச் சூழலியலாக விரிவடைந்துள்ளது.'
+                  : 'In 2000, a trained Mechanical Engineer in Puducherry established ACHARIYA with one conviction: every child carries a unique kingdom of intelligences. Twenty-five years later, that vision has expanded into "One Parent with Four Children"—18 colleges, 35 schools, 61+ companies, and 302+ initiatives, educating over 14,000 students with 600+ world records.'}
               </p>
 
               {/* CTAs */}

@@ -241,11 +241,11 @@ export const educationalExhibits: EducationalExhibit[] = [
     evidenceAndReach: {
       en: [
         'Parents, children, and educators review the identical diagnostic evidence together.',
-        'Systematically applied across ACHARIYA classroom operations in 101 schools.',
+        'Systematically applied across ACHARIYA classroom operations in 35 schools.',
       ],
       ta: [
         'பெற்றோர், ஆசிரியர் மற்றும் மாணவர் மூவரும் ஒரே கற்றல் அறிக்கையை ஆராய்கின்றனர்.',
-        '101 ஆச்சாரியா பள்ளிகளிலும் இம்முறை செயல்படுத்தப்படுகிறது.',
+        '35 ஆச்சாரியா பள்ளிகளிலும் இம்முறை செயல்படுத்தப்படுகிறது.',
       ],
     },
     iconName: 'CheckCircle',

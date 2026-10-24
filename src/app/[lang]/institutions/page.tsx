@@ -17,9 +17,9 @@ export async function generateMetadata({
 
   if (lang === 'ta') {
     return {
-      title: 'ஆச்சாரியா கல்வி நிறுவனங்கள் | 18 கல்லூரிகள், 101 பள்ளிகள், 61+ நிறுவனங்கள் — முனைவர் அரவிந்தன் (Arawindhan)',
+      title: 'ஆச்சாரியா கல்வி நிறுவனங்கள் | 18 கல்லூரிகள், 35 பள்ளிகள், 61+ நிறுவனங்கள் — முனைவர் அரவிந்தன் (Arawindhan)',
       description:
-        'முனைவர் ஜே. அரவிந்தன் (Arawindhan) அவர்களின் வழிகாட்டுதலில் உருவான ஆச்சாரியா கல்வி சாம்ராஜ்யம்: 18 கல்லூரிகள், 101 பள்ளிகள் மற்றும் 61+ நிறுவனங்கள்.',
+        'முனைவர் ஜே. அரவிந்தன் (Arawindhan) அவர்களின் வழிகாட்டுதலில் உருவான ஆச்சாரியா கல்வி சாம்ராஜ்யம்: 18 கல்லூரிகள், 35 பள்ளிகள் மற்றும் 61+ நிறுவனங்கள்.',
       alternates: {
         canonical: 'https://www.arawindhan.com/ta/institutions',
         languages: {
@@ -30,7 +30,7 @@ export async function generateMetadata({
       },
       openGraph: {
         title: 'ஆச்சாரியா கல்வி நிறுவனங்கள் | முனைவர் ஜே. அரவிந்தன்',
-        description: '18 கல்லூரிகள், 101 பள்ளிகள், 61+ நிறுவனங்களின் அதிகாரப்பூர்வ பட்டியல்.',
+        description: '18 கல்லூரிகள், 35 பள்ளிகள், 61+ நிறுவனங்களின் அதிகாரப்பூர்வ பட்டியல்.',
         url: 'https://www.arawindhan.com/ta/institutions',
         siteName: 'Dr. J. Arawindhan Official Platform',
         images: [
@@ -46,9 +46,9 @@ export async function generateMetadata({
   }
 
   return {
-    title: 'Institutions & Enterprises | Dr. J. Arawindhan — 18 Colleges, 101 Schools, 61+ Companies',
+    title: 'Institutions & Enterprises | Dr. J. Arawindhan — 18 Colleges, 35 Schools, 61+ Companies',
     description:
-      'Explore the multi-sector institutional ecosystem founded by Dr. J. Arawindhan (Arawindhan): 18 higher education colleges, 101 schools (4 expansion models), and 61+ corporate enterprises.',
+      'Explore the multi-sector institutional ecosystem founded by Dr. J. Arawindhan (Arawindhan): 18 higher education colleges, 35 schools (4 expansion models), and 61+ corporate enterprises.',
     alternates: {
       canonical: 'https://www.arawindhan.com/en/institutions',
       languages: {
@@ -60,7 +60,7 @@ export async function generateMetadata({
     openGraph: {
       title: 'Institutions & Enterprises | Dr. J. Arawindhan',
       description:
-        '18 Higher Education Colleges, 101 Schools, and 61+ Enterprises established across South India.',
+        '18 Higher Education Colleges, 35 Schools, and 61+ Enterprises established across South India.',
       url: 'https://www.arawindhan.com/en/institutions',
       siteName: 'Dr. J. Arawindhan Official Platform',
       images: [

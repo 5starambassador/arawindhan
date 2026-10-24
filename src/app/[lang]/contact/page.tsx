@@ -151,7 +151,7 @@ export default async function ContactPage({
                 ACHARIYA Education
               </div>
               <p style={{ fontSize: '0.82rem', color: 'var(--text-muted)', marginBottom: '0.75rem' }}>
-                Official portal for 18 colleges and 101 schools.
+                Official portal for 18 colleges and 35 schools.
               </p>
               <a href="https://achariya.in" target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.82rem', color: '#059669', fontWeight: 700, textDecoration: 'none' }}>achariya.in</a>
             </div>

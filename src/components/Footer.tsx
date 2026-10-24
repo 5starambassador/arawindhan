@@ -166,7 +166,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
                 { href: 'biography', en: 'Biography & 10 Avatar Phases', ta: 'வாழ்க்கை வரலாறு & 10 அவதாரங்கள்' },
                 { href: 'education', en: 'Dasavadani & 10 Educational Systems', ta: 'தசாவதானி & 10 கல்விக் கூடங்கள்' },
                 { href: 'books', en: `${booksList.length}+ Published Books & Thought Leadership`, ta: `${booksList.length}+ நூல்கள் & வெளியீடுகள்` },
-                { href: 'institutions', en: '18 Colleges, 101 Schools & 61+ Companies', ta: '18 கல்லூரிகள், 101 பள்ளிகள், 61+ நிறுவனங்கள்' },
+                { href: 'institutions', en: '18 Colleges, 35 Schools & 61+ Companies', ta: '18 கல்லூரிகள், 35 பள்ளிகள், 61+ நிறுவனங்கள்' },
               ].map((link) => (
                 <li key={link.href}>
                   <Link

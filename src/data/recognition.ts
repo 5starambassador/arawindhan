@@ -16,8 +16,8 @@ export const personalHonours: HonourItem[] = [
     claimId: 'CLM-007',
     verificationStatus: 'CONFIRMED',
     details: {
-      en: 'Conferred in recognition of visionary contributions to whole-brain education, combining neuroscience, martial arts, multiple intelligences, and moral grounding across 101 schools.',
-      ta: '101 பள்ளிகளில் நரம்பியல், கலைகள் மற்றும் பன்முக நுண்ணறிவு மூலம் மாணவர்களை முழுமையாக செதுக்கியதற்காக நியூஸ் 7 தமிழ் வழங்கிய உயரிய விருது.',
+      en: 'Conferred in recognition of visionary contributions to whole-brain education, combining neuroscience, martial arts, multiple intelligences, and moral grounding across 35 schools.',
+      ta: '35 பள்ளிகளில் நரம்பியல், கலைகள் மற்றும் பன்முக நுண்ணறிவு மூலம் மாணவர்களை முழுமையாக செதுக்கியதற்காக நியூஸ் 7 தமிழ் வழங்கிய உயரிய விருது.',
     },
   },
   {

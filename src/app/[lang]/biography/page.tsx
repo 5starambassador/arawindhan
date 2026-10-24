@@ -79,7 +79,7 @@ export async function generateMetadata({
   return {
     title: 'Biography & Life Journey | Dr. J. Arawindhan — Educationist & Philanthropist',
     description:
-      'Official biography and life journey of Dr. J. Arawindhan (Arawindhan): Mechanical engineer turned education pioneer, founder of ACHARIYA (18 colleges, 101 schools).',
+      'Official biography and life journey of Dr. J. Arawindhan (Arawindhan): Mechanical engineer turned education pioneer, founder of ACHARIYA (18 colleges, 35 schools).',
     alternates: {
       canonical: 'https://www.arawindhan.com/en/biography',
       languages: {
@@ -246,7 +246,7 @@ export default async function BiographyPage({
                 <span>{lang === 'ta' ? 'அதிகாரப்பூர்வ சுயவிவரம் & கல்வி அடித்தளம்' : 'AUTHORITATIVE PROFILE & FOUNDATIONAL ROOTS'}</span>
               </div>
               <span style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', color: '#065F46', padding: '0.2rem 0.65rem', borderRadius: '999px', fontSize: '0.75rem', fontWeight: 800 }}>
-                {lang === 'ta' ? '14,000+ மாணவர்கள் • 2,000+ பணியாளர்கள் • 18 கல்லூரிகள், 101 பள்ளிகள்' : '14,000+ Students • 2,000+ Educators & Staff • 18 Colleges, 101 Schools'}
+                {lang === 'ta' ? '14,000+ மாணவர்கள் • 2,000+ பணியாளர்கள் • 18 கல்லூரிகள், 35 பள்ளிகள்' : '14,000+ Students • 2,000+ Educators & Staff • 18 Colleges, 35 Schools'}
               </span>
             </div>
 

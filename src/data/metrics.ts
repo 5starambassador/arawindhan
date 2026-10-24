@@ -26,7 +26,7 @@ export const coreMetrics: MetricItem[] = [
     claimId: 'CLM-024',
   },
   {
-    number: '101',
+    number: '35',
     label: {
       en: 'Schools in Network',
       ta: 'பள்ளிகள் கட்டமைப்பு',
