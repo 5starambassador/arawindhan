@@ -130,7 +130,7 @@ export default async function BiographyPage({
           </div>
           <div style={{ flex: 1, height: '1px', background: 'linear-gradient(to right, #FDE68A, transparent)' }} />
           <div style={{ fontSize: '1.05rem', fontWeight: 800, color: '#B45309' }}>
-            {lang === 'ta' ? 'தொடக்கம் · 1998–2010' : 'The Spark · 1998–2010'}
+            {lang === 'ta' ? 'தொடக்கம் · 2000–2010' : 'The Spark · 2000–2010'}
           </div>
         </div>
 
@@ -146,7 +146,7 @@ export default async function BiographyPage({
         >
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', flexWrap: 'wrap', gap: '0.75rem' }}>
             <span style={{ color: 'var(--gold-glow)', fontSize: '0.85rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-              {lang === 'ta' ? 'கல்வித் தோற்றம்: 1998 முதல் 2026' : 'GENESIS & 28-YEAR ODYSSEY (1998–2026)'}
+              {lang === 'ta' ? 'கல்வித் தோற்றம்: 2000 முதல் 2026' : 'GENESIS & 25-YEAR ODYSSEY (2000–2026)'}
             </span>
             <ClaimBadge claimId="CLM-001" status="CONFIRMED" language={lang} />
           </div>
@@ -173,7 +173,7 @@ export default async function BiographyPage({
           >
             <img
               src="/images/institutions/golden_sunrise_campus_panorama.webp"
-              alt="28 Years of Vision: From Engineering Blueprints to 53 Campuses — ACHARIYA Campus Panorama at Golden Sunrise"
+              alt="25 Years of Vision: From Engineering Blueprints to 53 Campuses — ACHARIYA Campus Panorama at Golden Sunrise"
               style={{
                 width: '100%',
                 height: '380px',
@@ -204,7 +204,7 @@ export default async function BiographyPage({
             </div>
           </div>
 
-          {/* 1998 Origin Bedrock Box */}
+          {/* 2000 Origin Bedrock Box */}
           <div
             style={{
               background: 'linear-gradient(135deg, #FAF8F5 0%, #FFFBEB 100%)',
@@ -217,7 +217,7 @@ export default async function BiographyPage({
           >
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#B45309', fontWeight: 800, fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.65rem' }}>
               <Calendar size={16} color="#D97706" />
-              <span>{lang === 'ta' ? '1998 தொடக்கம்: ஆசிரியர்களை உருவாக்குவதே மூலவேர்' : '1998 Foundation: The Teacher as the Catalyst'}</span>
+              <span>{lang === 'ta' ? '2000 தொடக்கம்: ஆசிரியர்களை உருவாக்குவதே மூலவேர்' : '2000 Foundation: The Teacher as the Catalyst'}</span>
             </div>
             <h4 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#0F172A', marginBottom: '0.65rem' }}>
               {biographyData.originStory.foundation[lang]}

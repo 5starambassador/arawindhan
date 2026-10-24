@@ -655,12 +655,12 @@ export const booksList: BookItem[] = [
         paragraphs: {
           en: [
             'Spanning 121 comprehensive pages, The Luminous Legacy records the Ashtottara Shatanamavali—the traditional garland of one hundred and eight reverent titles offered to Dr. J. Arawindhan Ji across twenty-five years of visionary service.',
-            'Yet among all 108 titles—from Great Grand Master to Trendsetter and Nation Builder—the first and most foundational is Teacher. Born on August 2, 1977, and venturing into education in 1998 with a single teacher training institute, he chose the chalk and blackboard over comfortable industrial alternatives.',
+            'Yet among all 108 titles—from Great Grand Master to Trendsetter and Nation Builder—the first and most foundational is Teacher. Born on August 2, 1977, and venturing into education in 2000 with a single teacher training institute, he chose the chalk and blackboard over comfortable industrial alternatives.',
             '“Teacher: Before every other title, this is the root. It is the title he would keep even if every other were set aside, because every later achievement grew directly out of this one.”',
           ],
           ta: [
             '121 பக்கங்கள் கொண்ட இந்த வரலாற்று நூல், முனைவர் ஜே. அரவிந்தன் ஜி அவர்களுக்கு 25 ஆண்டுகால கல்வி மற்றும் மக்கள் சேவைக்காக சமர்ப்பிக்கப்பட்ட 108 அரிய போற்றித் திருநாமங்களை (அஷ்டோத்தர சத நாமாவளி) ஆவணப்படுத்துகிறது.',
-            'மகா வழிகாட்டி, புதுமைப் படைப்பாளி, தேச சிற்பி போன்ற 108 பட்டங்களுக்கும் முன்னால், அவர் நெஞ்சோடு ஏந்தும் ஒரே உன்னதப் பட்டம் "ஆசிரியர்" என்பதாகும். 1998-ல் ஆசிரியர் பயிற்சி கல்லூரியோடு தொடங்கிய அவரது கல்விப் புரட்சி இன்று உலகத் தரம் வாய்ந்த 35 கல்வி நிறுவனங்களாக மலர்ந்துள்ளது.',
+            'மகா வழிகாட்டி, புதுமைப் படைப்பாளி, தேச சிற்பி போன்ற 108 பட்டங்களுக்கும் முன்னால், அவர் நெஞ்சோடு ஏந்தும் ஒரே உன்னதப் பட்டம் "ஆசிரியர்" என்பதாகும். 2000-ல் ஆசிரியர் பயிற்சி கல்லூரியோடு தொடங்கிய அவரது கல்விப் புரட்சி இன்று உலகத் தரம் வாய்ந்த 35 கல்வி நிறுவனங்களாக மலர்ந்துள்ளது.',
             '“ஆசிரியர்: மற்ற அனைத்து பட்டங்களுக்கும் முன்னால், இதுவே மூல வேர். மற்ற அனைத்தும் விலக்கப்பட்டாலும் அவர் தன்னோடு தக்கவைத்துக்கொள்ளும் ஒரே பட்டம் இதுவே, ஏனெனில் பிற்காலத்து அனைத்து சாதனைகளும் இதிலிருந்தே முளைத்து வளர்ந்தன.”',
           ],
         },
