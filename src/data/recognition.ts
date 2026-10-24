@@ -59,55 +59,55 @@ export const personalHonours: HonourItem[] = [
   {
     id: 'HON-04',
     title: {
-      en: 'Outstanding Youth Award in Academics & Leadership',
-      ta: 'கல்வி மற்றும் தலைமைத்துவத்திற்கான சிறந்த இளைஞர் விருது',
+      en: 'Outstanding Youth Award in Academic Leadership',
+      ta: 'கல்வி தலைமைத்துவத்திற்கான சிறந்த இளைஞர் விருது (Outstanding Youth Award in Academic Leadership)',
     },
     conferredBy: {
-      en: 'Junior Chamber International (JCI), India',
-      ta: 'ஜூனியர் சேம்பர் இன்டர்நேஷனல் (JCI), இந்தியா',
+      en: 'Junior Chambers, India',
+      ta: 'ஜூனியர் சேம்பர்ஸ், இந்தியா (Junior Chambers, India)',
     },
     category: 'Personal Honour',
     claimId: 'CLM-012',
     verificationStatus: 'CONFIRMED',
     details: {
-      en: 'Recognizing outstanding early youth leadership, visionary institution building, and transformative pedagogical reform.',
-      ta: 'இளம் வயதிலேயே சிறந்த கல்வி நிறுவனங்களை உருவாக்கி சமூக மாற்றத்திற்கு வித்திட்டமைக்கான அங்கீகாரம்.',
+      en: 'Recognizing outstanding early youth leadership, visionary academic governance, and transformative pedagogical reform.',
+      ta: 'இளம் வயதிலேயே சிறந்த கல்வி தலைமைத்துவம் மற்றும் மாற்றத்திற்கான கற்பித்தல் சீர்திருத்தங்களை வழிநடத்தியமைக்கான அங்கீகாரம்.',
     },
   },
   {
     id: 'HON-05',
     title: {
-      en: 'Alumnus of the Decade Award',
-      ta: 'தசாப்தத்தின் சிறந்த முன்னாள் மாணவர் விருது',
+      en: 'Almanite of the Decade Award',
+      ta: 'தசாப்தத்தின் சிறந்த ஆல்மனைட் விருது (Almanite of the Decade Award)',
     },
     conferredBy: {
-      en: 'Infinite Thoughts Journal',
-      ta: 'இன்பினிட் தாட்ஸ் இதழ்',
+      en: 'Frozen Thoughts & Almamater',
+      ta: 'ஃப்ரோஸன் தாட்ஸ் & ஆல்மாமேட்டர் (Frozen Thoughts & Almamater)',
     },
     category: 'Personal Honour',
     claimId: 'CLM-013',
     verificationStatus: 'CONFIRMED',
     details: {
-      en: 'Conferred by the leading human potential publication for turning personal transformation into a national educational movement.',
-      ta: 'மனித ஆற்றல் மேம்பாட்டு இதழான இன்பினிட் தாட்ஸ் வழங்கிய சிறப்பு கௌரவம்.',
+      en: 'Conferred in recognition of extraordinary personal transformation, inspirational mentorship, and exemplary societal contribution.',
+      ta: 'மனித ஆற்றல் மேம்பாடு மற்றும் முன்னுதாரணமான சமூகப் பங்களிப்பிற்காக ஃப்ரோஸன் தாட்ஸ் & ஆல்மாமேட்டர் வழங்கிய கௌரவம்.',
     },
   },
   {
     id: 'HON-06',
     title: {
       en: 'Best Educator Award',
-      ta: 'சிறந்த கல்வியாளர் விருது',
+      ta: 'சிறந்த கல்வியாளர் விருது (Best Educator Award)',
     },
     conferredBy: {
-      en: 'Youth Peace Centre, Puducherry',
-      ta: 'யூத் பீஸ் சென்டர், புதுச்சேரி',
+      en: 'Youth Peace Centre, Pondicherry',
+      ta: 'யூத் பீஸ் சென்டர், புதுச்சேரி (Youth Peace Centre, Pondicherry)',
     },
     category: 'Personal Honour',
     claimId: 'CLM-011',
     verificationStatus: 'CONFIRMED',
     details: {
       en: 'Acknowledging selfless service to youth development, peace education, innovative teaching methodologies, and community advancement.',
-      ta: 'இளைஞர் நல்வாழ்வு, அமைதிக் கல்வி மற்றும் புதுமையான கற்பித்தல் முறைகளுக்காக வழங்கப்பட்டது.',
+      ta: 'இளைஞர் நல்வாழ்வு, அமைதிக் கல்வி மற்றும் புதுமையான கற்பித்தல் முறைகளுக்காக புதுச்சேரி யூத் பீஸ் சென்டர் வழங்கிய விருது.',
     },
   },
   {
@@ -117,15 +117,15 @@ export const personalHonours: HonourItem[] = [
       ta: 'ராஷ்ட்ரிய ரத்தன் விருது (Rashtriya Rattan Award)',
     },
     conferredBy: {
-      en: 'Citizens Integration Peace Society, New Delhi',
-      ta: 'சிட்டிசன்ஸ் இன்டகிரேஷன் பீஸ் சொசைட்டி, புது தில்லி',
+      en: 'The Global Economic Council',
+      ta: 'தி குளோபல் எகனாமிக் கவுன்சில் (The Global Economic Council)',
     },
     category: 'Personal Honour',
     claimId: 'CLM-010',
     verificationStatus: 'CONFIRMED',
     details: {
-      en: 'Conferred in New Delhi for distinguished national contributions to educational enterprise, whole-brain learning models, and nation-building.',
-      ta: 'தேசத்தைக் கட்டியெழுப்புதல் மற்றும் முழுமூளைக் கல்வி மாதிரிகளை உருவாக்கியமைக்கான உயரிய தேசிய கௌரவம்.',
+      en: 'Conferred for distinguished contributions to educational enterprise, whole-brain learning models, and socio-economic nation building.',
+      ta: 'கல்வி நிறுவன வளர்ச்சி, முழுமூளைக் கல்வி மாதிரிகள் மற்றும் சமூகப் பொருளாதார மேம்பாட்டிற்காக தி குளோபல் எகனாமிக் கவுன்சில் வழங்கிய உயரிய தேசிய கௌரவம்.',
     },
   },
   {
@@ -135,15 +135,52 @@ export const personalHonours: HonourItem[] = [
       ta: 'இந்திரா காந்தி சத்பாவனா விருது (Indira Gandhi Sadbhavana Award)',
     },
     conferredBy: {
-      en: 'National Integration Committee, New Delhi',
-      ta: 'தேசிய ஒருமைப்பாட்டுக் குழு, புது தில்லி',
+      en: 'The Global Economic Council',
+      ta: 'தி குளோபல் எகனாமிக் கவுன்சில் (The Global Economic Council)',
     },
     category: 'Personal Honour',
     claimId: 'CLM-010',
     verificationStatus: 'CONFIRMED',
     details: {
       en: 'Presented for outstanding dedication to national harmony, inclusive whole-child education, and youth character building.',
-      ta: 'தேசிய ஒற்றுமை, சமத்துவக் கல்வி மற்றும் இளைஞர் பண்பு மேம்பாட்டிற்கான அர்ப்பணிப்பிற்காக வழங்கப்பட்டது.',
+      ta: 'தேசிய ஒருமைப்பாடு, சமத்துவக் கல்வி மற்றும் இளைஞர் பண்பு மேம்பாட்டிற்கான அர்ப்பணிப்பிற்காக தி குளோபல் எகனாமிக் கவுன்சில் வழங்கிய விருது.',
+    },
+  },
+  {
+    id: 'HON-09',
+    title: {
+      en: 'Honorary Doctorate',
+      ta: 'மதிப்புறு முனைவர் பட்டம் (Honorary Doctorate)',
+    },
+    conferredBy: {
+      en: 'Yorker International University, Italy',
+      ta: 'யார்க்கர் சர்வதேச பல்கலைக்கழகம், இத்தாலி (Yorker International University, Italy)',
+    },
+    category: 'Personal Honour',
+    claimId: 'CLM-001',
+    verificationStatus: 'CONFIRMED',
+    details: {
+      en: 'Conferred in recognition of pioneering innovations in multiple intelligence pedagogy, whole-brain education frameworks, and global educational leadership.',
+      ta: 'பன்முக நுண்ணறிவுக் கல்வி மற்றும் உலகளாவிய கல்வி நிர்வாகத்தில் நிகழ்த்திய சாதனைகளுக்காக இத்தாலியின் யார்க்கர் சர்வதேச பல்கலைக்கழகம் வழங்கிய கௌரவ டாக்டர் பட்டம்.',
+    },
+  },
+  {
+    id: 'HON-10',
+    title: {
+      en: 'NATIONAL GOLD STAR AWARD',
+      ta: 'தேசிய தங்க நட்சத்திர விருது (National Gold Star Award)',
+    },
+    conferredBy: {
+      en: 'International Institute of Education & Management, New Delhi',
+      ta: 'சர்வதேச கல்வி மற்றும் மேலாண்மை நிறுவனம், புது தில்லி (IIEM)',
+    },
+    category: 'Personal Honour',
+    year: '2004',
+    claimId: 'CLM-010',
+    verificationStatus: 'CONFIRMED',
+    details: {
+      en: "Presented during the National Seminar on Individual's Achievements on 19th March 2004 in New Delhi for exemplary excellence and leadership in educational management.",
+      ta: '19 மார்ச் 2004 அன்று புது தில்லியில் நடைபெற்ற தனிநபர் சாதனைகளுக்கான தேசிய கருத்தரங்கில் கல்வி மேலாண்மை மற்றும் நிறுவன வளர்ச்சிக்காக வழங்கப்பட்ட விருது.',
     },
   },
 ];

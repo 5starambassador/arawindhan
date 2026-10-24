@@ -14,32 +14,32 @@ export const biographyData = {
     ta: 'நிறுவனர், முதன்மை வழிகாட்டி & நிர்வாக இயக்குனர், ஆச்சாரியா கல்வி நிறுவனம் | கல்வியியலாளர் | தொழில்முனைவோர் | ஞான குரு',
   },
   overview: {
-    en: 'In 2000, a trained Mechanical Engineer in Puducherry set out to build a school with a transformative conviction: every child carries a unique kingdom of intelligences, and school should help each child discover, express, and master it rather than rank them against a single standard. Twenty-five years later, that spark has matured into "One Parent with Four Children"—an expansive ecosystem encompassing 18 colleges, 101 schools, 61+ companies, and over 302 educational initiatives across Tamil Nadu, Puducherry, Kerala, Andhra Pradesh, and metropolitan hubs like Bangalore, Pune, and Hyderabad.',
-    ta: '2000-ஆம் ஆண்டு புதுச்சேரியில் மெக்கானிக்கல் பொறியாளராக இருந்த ஒருவர், ஒரு புரட்சிகர நம்பிக்கையோடு பள்ளி ஒன்றைத் தொடங்கினார்: "ஒவ்வொரு குழந்தையும் தனக்கென தனித்துவமான நுண்ணறிவு சாம்ராஜ்யத்தைக் கொண்டுள்ளது. பள்ளிக்கூடம் என்பது குழந்தைகளை ஒற்றை அளவுகோலில் மதிப்பிடுவதல்ல; அவர்களின் தனித்துவமான மேதமையை வெளிக்கொணர உதவுவது." இருபத்தைந்து ஆண்டுகளுக்குப் பிறகு, அந்த எண்ணம் 18 கல்லூரிகள், 101 பள்ளிகள், 61+ நிறுவனங்கள் மற்றும் 302+ கல்வி முன்முயற்சிகளைக் கொண்ட மாபெரும் ஆலமரமாக வளர்ந்து நிற்கிறது.',
+    en: 'Dr. J. Arawindhan (Dr. J. Aravindan) completed his engineering in the mechanical stream, and with sheer determination and being the visionary he is, started a B-Ed college in Puducherry by the year 1998 under the brand name “Achariya” which means “Guru”. Immediately thereafter, he started a matriculation school for the benefit of his B-Ed college students to experience live teaching. From then till now, the growth he has attained is formidable. The Achariya Group, under the leadership of Dr. J. Arawindhan as Founder, Chief Mentor and Managing Director, celebrating its 25th anniversary, has 35 schools at the K12 level with State Board, CBSE, and ICSE curriculum, a proprietary MiWay learning pedagogy based on Multiple Intelligence, and an Engineering College, Arts & Science College, and a Catering College under its institutional vertical. The group also encompasses private initiatives in competitive examination coaching, WOW schooling, publishing houses, e-commerce initiatives in educational aids, EdTech platforms, entrepreneurship initiatives and incubation centres, and language support initiatives.',
+    ta: 'முனைவர் ஜே. அரவிந்தன் மெக்கானிக்கல் பொறியியலில் பட்டம் பெற்று, அசைக்க முடியாத உறுதியோடும் தீர்க்கதரிசனத்தோடும் 1998-ஆம் ஆண்டு புதுச்சேரியில் "குரு" என்ற பொருள்படும் "ஆச்சாரியா" என்ற பெயரில் பி.எட் (B.Ed) ஆசிரியர் பயிற்சிக் கல்லூரியைத் தொடங்கினார். தொடர்ந்து, பயிற்சி ஆசிரியர்கள் நேரடி வகுப்பறை அனுபவத்தைப் பெறுவதற்காக மெட்ரிகுலேஷன் பள்ளியையும் நிறுவினார். அன்றிலிருந்து இன்று வரை அவர் அடைந்துள்ள வளர்ச்சி மகத்தானது. முனைவர் ஜே. அரவிந்தன் அவர்களின் நிறுவனர், முதன்மை வழிகாட்டி மற்றும் நிர்வாக இயக்குனர் தலைமையில் தனது 25-வது ஆண்டைக் கொண்டாடும் ஆச்சாரியா குழுமம், மாநில வாரியம், சிபிஎஸ்இ (CBSE) மற்றும் ஐசிஎஸ்இ (ICSE) பாடத்திட்டங்களுடன் கே-12 (K12) நிலையில் 35 பள்ளிகளையும், பன்முக நுண்ணறிவை அடிப்படையாகக் கொண்ட தனியுரிமை பெற்ற "மைவே" (MiWay) கற்றல் முறையையும், தனது உயர்கல்வி பிரிவின் கீழ் பொறியியல் கல்லூரி, கலை மற்றும் அறிவியல் கல்லூரி, மற்றும் கேட்டரிங் கல்லூரி ஆகியவற்றை வெற்றிகரமாக நடத்தி வருகிறது. மேலும், போட்டித் தேர்வுப் பயிற்சிகள், வாவ் (WOW) பள்ளிக் கல்வி, பதிப்பகம், கல்வி உபகரண மின்வணிகத் தளங்கள், எட்டெக் (EdTech) மென்பொருட்கள், தொழில்முனைவு மற்றும் அடைகாக்கும் மையங்கள், மொழி ஆதரவு முன்முயற்சிகள் என பல்துறை நிறுவனங்களை உள்ளடக்கியுள்ளது.',
   },
   threeVerticals: [
     {
       title: { en: 'The Educationist', ta: 'கல்வியியலாளர்' },
       question: { en: 'How should a child really learn?', ta: 'ஒரு குழந்தை எவ்வாறு உண்மையாகக் கற்க வேண்டும்?' },
       description: {
-        en: 'Creates original learning systems: Dasavadani (10 intelligences), MiWay K12 journey, Brain Activity System, Q-Math, and the TRACK assessment model.',
-        ta: 'தசாவதானி, மைவே, மூளை செயல்பாடு கட்டமைப்பு, கியூ-மேத்ஸ், ட்ராக் தேர்வு முறை போன்ற தனியுரிமை பெற்ற கல்வி அமைப்புகளை உருவாக்கியவர்.',
+        en: 'Architect of proprietary pedagogical breakthroughs: MiWay learning pedagogy based on Multiple Intelligence, Dasavadani (10 intelligences), Brain Activity System, Q-Math, and the TRACK assessment model across 35 K12 schools.',
+        ta: 'பன்முக நுண்ணறிவை அடிப்படையாகக் கொண்ட தனியுரிமை பெற்ற "மைவே" (MiWay) கற்பித்தல் முறை, தசாவதானி, மூளை செயல்பாடு கட்டமைப்பு, கியூ-மேத்ஸ், ட்ராக் தேர்வு முறை போன்ற உலகத்தரம் வாய்ந்த கல்வி அமைப்புகளை உருவாக்கியவர்.',
       },
     },
     {
-      title: { en: 'The Entrepreneur', ta: 'தொழில்முனைவோர்' },
-      question: { en: 'How does a good idea reach more people?', ta: 'ஒரு சிறந்த கல்விச் சிந்தனை எவ்வாறு பலரையும் சென்றடைய முடியும்?' },
+      title: { en: 'The Serial Entrepreneur', ta: 'தொடர் தொழில்முனைவோர்' },
+      question: { en: 'How does enterprise solve diverse societal needs?', ta: 'சமூகத்தின் பன்முகத் தேவைகளை தொழில்முனைவு எவ்வாறு பூர்த்தி செய்கிறது?' },
       description: {
-        en: 'Builds scalable institutional vehicles: 18 colleges, 101 schools (Owned, Powered, Partnered, Parented), and 61+ diversified companies across 8 sectors.',
-        ta: '18 கல்லூரிகள், 101 பள்ளிகள் மற்றும் உணவு, நல்வாழ்வு, தொழில், தொழில்நுட்பம் என 8 துறைகளில் 61+ நிறுவனங்களை நிறுவி வழிநடத்துபவர்.',
+        en: 'Ventured dynamically into food, hospitality, manufacturing, and leisure: operating Hope Café (chain of cafés), Le Pondy Cheese (artisanal cheese manufacturing unit), a global industry on mosquito repellents, an amusement park, and premium resorts.',
+        ta: 'கல்வியைத் தாண்டி உணவு மற்றும் விருந்தோம்பல் துறைகளிலும் தடம் பதித்து: ஹோப் கஃபே (Hope Café) உணவகச் சங்கிலி, பாலாடைக்கட்டி தயாரிக்கும் லே பாண்டி சீஸ் (Le Pondy Cheese), உலகளாவிய கொசு விரட்டி தயாரிப்புத் தொழிற்சாலை, பொழுதுபோக்கு பூங்கா மற்றும் ஆடம்பர ஓய்வு விடுதிகளை நிறுவியுள்ளார்.',
       },
     },
     {
-      title: { en: 'The Business Leader', ta: 'வணிக & நிர்வாகத் தலைவர்' },
-      question: { en: 'How do you deliver the same quality in every campus, every day?', ta: 'ஒவ்வொரு வளாகத்திலும் தினமும் அதே தரத்தை எவ்வாறு உறுதி செய்வது?' },
+      title: { en: 'The Brain Development Pioneer', ta: 'மூளை வளர்ச்சி & நரம்பியல் முன்னோடி' },
+      question: { en: 'How can we awaken dormant genius early in life?', ta: 'குழந்தைகளின் உறங்கும் மேதமையை சிறுவயதிலேயே எவ்வாறு விழித்தெழச் செய்வது?' },
       description: {
-        en: 'Applies an engineer’s rigor: Centre of Excellence (5-step chain: Approved → Enriched → Enabled → Executed → Ensured), 6 Engines of Leadership, and the 77 ConCardios training hierarchy.',
-        ta: 'பொறியியல் துல்லியத்துடன் கூடிய நிர்வாக முறை: சிறப்பு மேன்மை மையம் (5 படிநிலை சங்கிலி), தலைமைத்துவத்தின் 6 இயந்திரங்கள் மற்றும் 77 கான்கார்டியோஸ் பயிற்சிகள்.',
+        en: 'Ardent follower of brain development and right brain education techniques for children; National Master Franchise holder of global right brain brand “HEGURU”, setting up 10+ centres across Chennai, Puducherry, Bengaluru, and Hyderabad.',
+        ta: 'குழந்தைகளுக்கான மூளை வளர்ச்சி மற்றும் வலதுமூளைக் கல்வி நுட்பங்களில் ஆழ்ந்த ஈடுபாடு கொண்டவர்; ஜப்பானிய உலகளாவிய வலதுமூளைக் கல்வி பிராண்டான "ஹெகுரு" (HEGURU) நிறுவனத்தின் தேசிய முதன்மை உரிமையாளர் (Master Franchise), சென்னை, புதுச்சேரி, பெங்களூரு, ஹைதராபாத்தில் 10+ மையங்களை நிறுவியுள்ளார்.',
       },
     },
   ],
@@ -50,24 +50,25 @@ export const biographyData = {
   originStory: {
     year: 1998,
     foundation: {
-      en: 'Achariya College of Education (B.Ed. Teacher Training College)',
-      ta: 'ஆச்சாரியா கல்வியியல் கல்லூரி (பி.எட். ஆசிரியர் பயிற்சி கல்லூரி)',
+      en: 'Achariya College of Education & Demonstration School',
+      ta: 'ஆச்சாரியா கல்வியியல் கல்லூரி மற்றும் மாதிரிப் பள்ளி',
     },
     narrative: {
-      en: 'Trained as a Mechanical Engineer, Dr. J. Arawindhan realized that transforming the nation required transforming education—and transforming education required first transforming the teacher. In 1998 in Puducherry, he established a teacher-training college under the banner of Achariya. Soon after, he founded a matriculation school to provide trainee teachers with hands-on, live classroom teaching experience, testing and perfecting joyous, multi-intelligence pedagogies. By 2000, this institutional bedrock flowered into the flagship Achariya World Class Education network.',
-      ta: 'மெக்கானிக்கல் பொறியாளராகப் பட்டம் பெற்ற முனைவர் ஜே. அரவிந்தன், தேசத்தின் மாற்றத்திற்கு கல்வியே திறவுகோல் என்பதையும், கல்வி மலர ஆசிரியரே மூலவேர் என்பதையும் உணர்ந்தார். 1998-ல் புதுச்சேரியில் ஆசிரியர்களை உலகத்தரம் வாய்ந்த பயிற்றுநர்களாக உருவாக்கும் ஆச்சாரியா கல்வியியல் கல்லூரியை நிறுவினார். தொடர்ந்து, பயிற்சி ஆசிரியர்களுக்கு நேரடி வகுப்பறை அனுபவம் வழங்க ஒரு மெட்ரிகுலேஷன் பள்ளியைத் தொடங்கினார். இப்பயிற்சி களமே 2000-ல் உலகத்தரம் வாய்ந்த ஆச்சாரியா கல்வி இயக்கமாக உருவெடுத்தது.',
+      en: 'Dr. J. Arawindhan completed his engineering in the mechanical stream and with sheer determination and being the visionary he is, started a B-Ed college in Puducherry by the year 1998 under the brand name “Achariya” which means “Guru”. Immediately thereafter, he started a matriculation school for the benefit of his B-Ed college students to experience live teaching. From then till now, the growth he has attained is formidable. Celebrating its 25th anniversary, the Achariya Group has expanded to 35 K12 schools, premier Engineering, Arts & Science, and Catering colleges, and transformative brain development institutions nationwide.',
+      ta: 'முனைவர் ஜே. அரவிந்தன் மெக்கானிக்கல் பொறியியலில் பட்டம் பெற்று, அசைக்க முடியாத உறுதியோடும் தொலைநோக்குப் பார்வையோடும் 1998-ஆம் ஆண்டு புதுச்சேரியில் "குரு" என்ற பொருள்படும் "ஆச்சாரியா" என்ற பெயரில் பி.எட் (B.Ed) கல்வியியல் கல்லூரியைத் தொடங்கினார். உடனடியாக, தனது ஆசிரியர் பயிற்சி மாணவர்கள் நேரடி வகுப்பறை அனுபவத்தைப் பெறுவதற்காக ஒரு மெட்ரிகுலேஷன் பள்ளியையும் நிறுவினார். அன்றிலிருந்து இன்று வரை அவர் அடைந்துள்ள வளர்ச்சி மகத்தானது. தனது 25-வது ஆண்டைக் கொண்டாடும் ஆச்சாரியா குழுமம், 35 கே12 பள்ளிகள், புகழ்பெற்ற பொறியியல், கலை மற்றும் அறிவியல், கேட்டரிங் கல்லூரிகள் மற்றும் நாடு தழுவிய மூளை வளர்ச்சி மையங்களாக விஸ்வரூபம் எடுத்துள்ளது.',
     },
     milestones: [
-      { year: '1998', milestone: { en: 'Began educational journey with B.Ed. teacher training college in Puducherry', ta: 'புதுச்சேரியில் பி.எட் ஆசிரியர் பயிற்சி கல்லூரியுடன் கல்விப் பயணம் தொடக்கம்' } },
-      { year: '1999', milestone: { en: 'Established model laboratory school for real-time pedagogical innovation', ta: 'நிகழ்நேர கற்பித்தல் பயிற்சிக்கான மாதிரிப் பள்ளியை நிறுவுதல்' } },
-      { year: '2000', milestone: { en: 'Formally founded Achariya World Class Education ecosystem', ta: 'ஆச்சாரியா உலகத்தரம் வாய்ந்த கல்வி இயக்கத்தை முறைப்படி தொடங்குதல்' } },
+      { year: '1998', milestone: { en: 'Started B.Ed College in Puducherry under brand name "Achariya" (meaning "Guru")', ta: 'புதுச்சேரியில் "குரு" என்ற பொருள்படும் "ஆச்சாரியா" பெயரில் பி.எட் கல்வியியல் கல்லூரி தொடக்கம்' } },
+      { year: '1999', milestone: { en: 'Founded Matriculation School providing live teaching experience for B.Ed students', ta: 'பி.எட் பயிற்சி மாணவர்கள் நேரடி அனுபவம் பெற மெட்ரிகுலேஷன் பள்ளி தொடக்கம்' } },
+      { year: '2000s', milestone: { en: 'Expanded to 35 K12 schools with CBSE, ICSE & State Board, plus Engineering, Arts & Catering Colleges', ta: 'சிபிஎஸ்இ, ஐசிஎஸ்இ, மாநில வாரிய 35 பள்ளிகள் மற்றும் பொறியியல், கலை, கேட்டரிங் கல்லூரிகளாக விரிவாக்கம்' } },
+      { year: '2023+', milestone: { en: 'National Master Franchise for HEGURU (10+ centres across Chennai, Puducherry, Bengaluru, Hyderabad)', ta: 'ஹெகுரு (HEGURU) தேசிய முதன்மை உரிமை பெற்று சென்னை, புதுச்சேரி, பெங்களூரு, ஹைதராபாத்தில் 10+ மையங்கள்' } },
     ],
   },
   magazineCitation: {
     title: 'Silver Jubilee Commemorative Monograph (1998–2026)',
     scopeSummary: {
-      en: '46 Campuses • 14,000+ Students • 2,000+ Educators & Staff • 600+ World Records • 300+ National Championships • 1,000+ State Championships',
-      ta: '46 கல்வி வளாகங்கள் • 14,000+ மாணவர்கள் • 2,000+ ஆசிரியர்கள் & பணியாளர்கள் • 600+ உலக சாதனைகள் • 300+ தேசிய சாம்பியன்ஷிப் • 1,000+ மாநில சாம்பியன்ஷிப்',
+      en: '35 K12 Schools (CBSE, ICSE, State Board) • 3 Higher Education Colleges • 10+ Heguru Brain Centres • 14,000+ Students • 600+ World Records',
+      ta: '35 கே12 பள்ளிகள் (CBSE, ICSE, மாநில வாரியம்) • 3 உயர்கல்வி கல்லூரிகள் • 10+ ஹெகுரு மூளை மையங்கள் • 14,000+ மாணவர்கள் • 600+ உலக சாதனைகள்',
     },
   },
 };
