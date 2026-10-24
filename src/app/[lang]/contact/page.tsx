@@ -121,7 +121,7 @@ export default async function ContactPage({
                 ✉️ <strong>{lang === 'ta' ? 'முதன்மை மின்னஞ்சல்:' : 'Official Email:'}</strong> <a href="mailto:info@achariya.in" style={{ color: '#B45309', fontWeight: 700, textDecoration: 'none' }}>info@achariya.in</a>
               </div>
               <div style={{ background: 'var(--bg-subtle)', padding: '0.75rem 1rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-light)', fontSize: '0.88rem', color: 'var(--text-secondary)' }}>
-                🌐 <strong>{lang === 'ta' ? 'அதிகாரப்பூர்வ தளம்:' : 'Official Portal:'}</strong> <span style={{ color: '#059669', fontWeight: 700 }}>arawindhan.org</span>
+                🌐 <strong>{lang === 'ta' ? 'அதிகாரப்பூர்வ தளம்:' : 'Official Portal:'}</strong> <a href="https://arawindhan.org" target="_blank" rel="noopener noreferrer" style={{ color: '#059669', fontWeight: 700, textDecoration: 'none' }}>arawindhan.org</a>
               </div>
             </div>
           </div>
@@ -153,7 +153,7 @@ export default async function ContactPage({
               <p style={{ fontSize: '0.82rem', color: 'var(--text-muted)', marginBottom: '0.75rem' }}>
                 Official portal for 18 colleges and 101 schools.
               </p>
-              <span style={{ fontSize: '0.82rem', color: '#059669', fontWeight: 700 }}>achariya.in</span>
+              <a href="https://achariya.in" target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.82rem', color: '#059669', fontWeight: 700, textDecoration: 'none' }}>achariya.in</a>
             </div>
 
             <div style={{ background: 'var(--bg-subtle)', padding: '1.25rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-light)' }}>
@@ -163,7 +163,7 @@ export default async function ContactPage({
               <p style={{ fontSize: '0.82rem', color: 'var(--text-muted)', marginBottom: '0.75rem' }}>
                 Multiple Intelligence K-12 curriculum portal.
               </p>
-              <span style={{ fontSize: '0.82rem', color: '#059669', fontWeight: 700 }}>miway.in</span>
+              <a href="https://miway.in" target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.82rem', color: '#059669', fontWeight: 700, textDecoration: 'none' }}>miway.in</a>
             </div>
 
             <div style={{ background: 'var(--bg-subtle)', padding: '1.25rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-light)' }}>
@@ -173,7 +173,7 @@ export default async function ContactPage({
               <p style={{ fontSize: '0.82rem', color: 'var(--text-muted)', marginBottom: '0.75rem' }}>
                 Divya Yogam & annual Maha Shambala Puducherry.
               </p>
-              <span style={{ fontSize: '0.82rem', color: '#059669', fontWeight: 700 }}>divinegracefoundation.org</span>
+              <a href="https://divinegracefoundation.org" target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.82rem', color: '#059669', fontWeight: 700, textDecoration: 'none' }}>divinegracefoundation.org</a>
             </div>
           </div>
         </div>

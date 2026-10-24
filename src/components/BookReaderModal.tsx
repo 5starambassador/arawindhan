@@ -52,9 +52,11 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
   const [isFlipping, setIsFlipping] = useState<boolean>(false);
   const [flipDirection, setFlipDirection] = useState<'next' | 'prev' | null>(null);
   const [isMuted, setIsMuted] = useState<boolean>(false);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
 
   const containerRef = useRef<HTMLDivElement>(null);
   const textScrollRef = useRef<HTMLDivElement>(null);
+  const touchStartX = useRef<number>(0);
 
   const playFlipSound = () => {
     if (isMuted) return;
@@ -66,6 +68,13 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
       textScrollRef.current.scrollTo({ top: 0, behavior: 'instant' });
     }
   }, [activeBookSlug, activeChapterIndex, showRequestForm, readerMode]);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   useEffect(() => {
     const handleOpen = (e: CustomEvent<{ slug: string; mode?: 'flipbook' | 'text'; showRequestForm?: boolean }>) => {
@@ -133,7 +142,7 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
       document.body.style.overflow = '';
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [activeBookSlug, currentPage, totalFlipPages, showThumbnails, isFullscreen, readerMode]);
+  }, [activeBookSlug, currentPage, totalFlipPages, showThumbnails, isFullscreen, readerMode, isFlipping]);
 
   const toggleFullscreen = () => {
     if (!containerRef.current) return;
@@ -742,6 +751,12 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
                 perspective: '2400px',
                 overflow: 'auto',
                 padding: '1.5rem',
+              }}
+              onTouchStart={(e) => { touchStartX.current = e.touches[0].clientX; }}
+              onTouchEnd={(e) => {
+                const delta = e.changedTouches[0].clientX - touchStartX.current;
+                if (delta < -50) handleFlipNext();
+                else if (delta > 50) handleFlipPrev();
               }}
             >
               {/* Previous Page Clickable Overlay Trigger */}
@@ -1481,7 +1496,7 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
                             border: '1px solid ' + themeStyles.border,
                             background: themeStyles.bg,
                             color: themeStyles.text,
-                            fontSize: '0.92rem',
+                            fontSize: '1rem',
                           }}
                         />
                       </div>
@@ -1503,7 +1518,7 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
                             border: '1px solid ' + themeStyles.border,
                             background: themeStyles.bg,
                             color: themeStyles.text,
-                            fontSize: '0.92rem',
+                            fontSize: '1rem',
                           }}
                         />
                       </div>
@@ -1525,7 +1540,7 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
                             border: '1px solid ' + themeStyles.border,
                             background: themeStyles.bg,
                             color: themeStyles.text,
-                            fontSize: '0.92rem',
+                            fontSize: '1rem',
                           }}
                         />
                       </div>
@@ -1547,7 +1562,7 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
                             border: '1px solid ' + themeStyles.border,
                             background: themeStyles.bg,
                             color: themeStyles.text,
-                            fontSize: '0.92rem',
+                            fontSize: '1rem',
                           }}
                         />
                       </div>
@@ -2011,7 +2026,9 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
           {/* Quick Info Badge */}
           <div style={{ fontSize: '0.74rem', opacity: 0.7, color: readerMode === 'flipbook' ? '#94A3B8' : themeStyles.text }}>
             {readerMode === 'flipbook' ? (
-              <span>💡 Use &larr; &rarr; Arrow keys or click page edges to flip</span>
+              isMobile
+                ? <span>💡 Swipe left / right to flip pages</span>
+                : <span>💡 Use &larr; &rarr; Arrow keys or click page edges to flip</span>
             ) : (
               <span>{book.edition}</span>
             )}

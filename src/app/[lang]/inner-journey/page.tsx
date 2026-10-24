@@ -106,7 +106,7 @@ export default async function InnerJourneyPage({
                 style={{
                   position: 'relative',
                   width: '100%',
-                  maxWidth: '340px',
+                  maxWidth: 'min(280px, calc(100vw - 4rem))',
                   aspectRatio: '1 / 1',
                   margin: '0 auto',
                   borderRadius: '24px',
