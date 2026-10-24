@@ -406,38 +406,38 @@ export const booksList: BookItem[] = [
   {
     id: 'BK-008',
     slug: 'andava-the-victory-mode',
-    coverImage: '/images/books/andava_victory_mode.jpg',
+    coverImage: '/images/books/andava_victory_mode_v2.jpg',
     title: {
       en: 'ANDAVA: The Victory Mode',
       ta: 'ஆண்டவா: தி விக்டரி மோட் (ANDAVA: The Victory Mode)',
     },
     tagline: {
-      en: 'Switching from Victim to Creator of Your Life',
-      ta: 'பாதிக்கப்பட்ட மனநிலையில் இருந்து உங்கள் வாழ்வை உருவாக்கும் படைப்பாளியாக மாறுங்கள்',
+      en: 'Switching from Victim to Creator of Your Life · From Suffering to Bliss, From Tandava to Andava',
+      ta: 'பாதிக்கப்பட்ட மனநிலையிலிருந்து படைப்பாளியாக மாறுங்கள் · துன்பத்திலிருந்து பேரின்பம், தாண்டவத்திலிருந்து ஆண்டவா',
     },
     author: {
-      en: 'Dr. J. Arawindhan',
-      ta: 'முனைவர் ஜே. அரவிந்தன்',
+      en: 'Mahavadhani Sri Achariya Arawindhan GuruG',
+      ta: 'மகாவதானி ஸ்ரீ ஆச்சார்யா அரவிந்தன் குருஜி',
     },
-    edition: 'Life Mastery Edition',
+    edition: 'Life Mastery & Tamil Wisdom Edition',
     language: 'English & Tamil',
     status: 'Published',
     claimId: 'CLM-023',
     summary: {
-      en: 'In ANDAVA: The Victory Mode, Dr. J. Arawindhan addresses the subtle trap of modern victimhood—the instinct to blame circumstance, upbringing, or systems for personal stagnation. By deconstructing the neurological and psychological shift into "Victory Mode," this book provides an actionable blueprint to activate internal sovereignty, take radical personal ownership, and consciously engineer triumph in every dimension of life.',
-      ta: 'நவீன மனிதனை முடக்கிப் போடும் பலவீனமான மனநிலையை உடைத்தெறியும் வழிகாட்டி நூல். சூழ்நிலைகளையோ அல்லது பிறரையோ குறைசொல்லும் மனநிலையைக் கடந்து, தன் வாழ்வின் முழுப் பொறுப்பையும் தானே ஏற்றுக்கொண்டு, ஒரு படைப்பாளியாக "வெற்றி பயன்முறைக்கு" (Victory Mode) எவ்வாறு மாறுவது என்பதை உளவியல் மற்றும் ஆன்ம பலத்தோடு இந்நூல் விளக்குகிறது.',
+      en: 'Inspired by the wisdom of Tamil tradition and the timeless teachings of the Bhagavad Gita, ANDAVA: The Victory Mode addresses the subtle trap of modern victimhood. By deconstructing the neurological and spiritual shift from passive suffering to active sovereignty—from Tandava to Andava—this work provides an actionable blueprint to switch into Victory Mode and take radical personal ownership of life.',
+      ta: 'தமிழ் மரபின் மெய்ஞ்ஞானம் மற்றும் பகவத் கீதையின் போதனைகளால் ஈர்க்கப்பட்ட இந்நூல், நவீன மனிதனை முடக்கிப் போடும் பாதிக்கப்பட்ட மனநிலையை உடைத்தெறிகிறது. தாண்டவத்திலிருந்து ஆண்டவா நிலைக்கு நகர்ந்து, தன் வாழ்வின் முழுப் பொறுப்பையும் தானே ஏற்றுக்கொண்டு, ஒரு படைப்பாளியாக "வெற்றி பயன்முறைக்கு" (Victory Mode) எவ்வாறு மாறுவது என்பதை இந்நூல் விளக்குகிறது.',
     },
     keyThemes: {
       en: [
         'The binary shift: Victim consciousness vs. Creator consciousness',
-        'Radical self-ownership as the bedrock of enduring personal power',
-        'Neurological triggers of the "Victory Mode" state',
-        'Architecting daily rituals of unshakeable conviction and momentum',
+        'From Tandava (turmoil) to Andava (victorious bliss)',
+        'Inspired by Tamil spiritual traditions and the Bhagavad Gita',
+        'Architecting daily rituals of unshakeable conviction and victory',
       ],
       ta: [
         'பாதிக்கப்பட்ட மனநிலைக்கும் படைப்பாளி விழிப்புணர்வுக்கும் இடையிலான மாற்றம்',
-        'தன்னிறைவான பொறுப்பேற்பே உண்மையான அதிகாரத்தின் அடித்தளம்',
-        'வெற்றி மனநிலையைத் தூண்டும் நரம்பியல் பழக்கவழக்கங்கள்',
+        'தாண்டவத்திலிருந்து ஆண்டவா நிலைக்கு நகர்தல்',
+        'தமிழ் மரபின் ஞானம் மற்றும் பகவத் கீதையின் சாரங்கள்',
         'அசைக்க முடியாத தன்னம்பிக்கை மற்றும் தொடர் முன்னேற்றத்திற்கான தினசரி பயிற்சிகள்',
       ],
     },
@@ -453,7 +453,7 @@ export const booksList: BookItem[] = [
   {
     id: 'BK-009',
     slug: 'the-yoga-of-personality',
-    coverImage: '/images/books/yoga_of_personality.jpg',
+    coverImage: '/images/books/yoga_of_personality_v2.jpg',
     title: {
       en: 'The Yoga of Personality',
       ta: 'ஆளுமையின் யோகம் (The Yoga of Personality)',
@@ -463,8 +463,8 @@ export const booksList: BookItem[] = [
       ta: 'நீங்கள் ஏற்கனவே யார் என்பதை உணரும் ஆளுமைப் பயணம்',
     },
     author: {
-      en: 'Dr. J. Arawindhan',
-      ta: 'முனைவர் ஜே. அரவிந்தன்',
+      en: 'Mahavadhani Sri Achariya Arawindhan GuruG',
+      ta: 'மகாவதானி ஸ்ரீ ஆச்சார்யா அரவிந்தன் குருஜி',
     },
     edition: 'Consciousness & Leadership Edition',
     language: 'English & Tamil',
@@ -500,7 +500,7 @@ export const booksList: BookItem[] = [
   {
     id: 'BK-010',
     slug: 'from-knowing-to-doing',
-    coverImage: '/images/books/from_knowing_to_doing.jpg',
+    coverImage: '/images/books/from_knowing_to_doing_v2.jpg',
     title: {
       en: 'From Knowing to Doing',
       ta: 'அறிதலில் இருந்து செயலுக்கு (From Knowing to Doing)',
@@ -510,8 +510,8 @@ export const booksList: BookItem[] = [
       ta: 'இந்திய இளைஞர் அதிகாரமளித்தலின் 4 தூண்கள்: ஜென்-இசட் தலைமுறைக்கான திறன், மேதமை மற்றும் லட்சிய வழிகாட்டி',
     },
     author: {
-      en: 'Dr. J. Arawindhan',
-      ta: 'முனைவர் ஜே. அரவிந்தன்',
+      en: 'Mahavadhani Sri Achariya Arawindhan GuruG',
+      ta: 'மகாவதானி ஸ்ரீ ஆச்சார்யா அரவிந்தன் குருஜி',
     },
     edition: 'National Youth Empowerment Edition',
     language: 'English & Tamil',
@@ -547,17 +547,17 @@ export const booksList: BookItem[] = [
   {
     id: 'BK-011',
     slug: 'the-lions-bank-account',
-    coverImage: '/images/books/lions_bank_account.jpg',
+    coverImage: '/images/books/lions_bank_account_v2.jpg',
     title: {
       en: "The Lion's Bank Account",
       ta: 'சிங்கத்தின் வங்கிக் கணக்கு (The Lion’s Bank Account)',
     },
     tagline: {
-      en: 'Stop Chasing Rats, Start Hunting Deer',
-      ta: 'எலிகளைத் துரத்துவதை நிறுத்துங்கள்; மான்களை வேட்டையாடத் தொடங்குங்கள்',
+      en: 'Stop Chasing Rats, Start Hunting Deer · "Your first salary is not a flex. It’s a trap."',
+      ta: 'எலிகளைத் துரத்துவதை நிறுத்துங்கள், மான்களை வேட்டையாடத் தொடங்குங்கள் · உங்கள் முதல் சம்பளம் பெருமை அல்ல; அது ஒரு பொறி',
     },
     author: {
-      en: 'Dr. J. Arawindhan',
+      en: 'Dr. J. Aravindan',
       ta: 'முனைவர் ஜே. அரவிந்தன்',
     },
     edition: 'Wealth Architecture & Mindset Edition',
@@ -594,7 +594,7 @@ export const booksList: BookItem[] = [
   {
     id: 'BK-012',
     slug: 'science-of-divine-grace-tirukkural',
-    coverImage: '/images/books/science_of_divine_grace.jpg',
+    coverImage: '/images/books/science_of_divine_grace_v2.jpg',
     title: {
       en: 'The Science of Divine Grace: Achieving Heavenly Glory through the Tirukkuṟaḷ',
       ta: 'திருவருளின் அறிவியல் : திருக்குறள் வழி வான் புகழ் அடைதல்',
@@ -604,8 +604,8 @@ export const booksList: BookItem[] = [
       ta: 'திருக்குறள் காட்டும் மெய்ஞ்ஞான நெறி மற்றும் வான் புகழ் பெறுவதற்கான ஆன்ம அறிவியல்',
     },
     author: {
-      en: 'Dr. J. Arawindhan (Santoshi Shri Arawindhan)',
-      ta: 'முனைவர் ஜே. அரவிந்தன் (சந்தோஷி ஸ்ரீ அரவிந்தன்)',
+      en: 'Mahavadhani Sri Achariya Arawindhan GuruG',
+      ta: 'மகாவதானி ஸ்ரீ ஆச்சார்யா அரவிந்தன் குருஜி',
     },
     edition: 'Sacred Heritage & Philosophy Edition',
     language: 'Tamil & English',
@@ -736,5 +736,53 @@ export const booksList: BookItem[] = [
     pdfUrl: '/books/the-luminous-legacy.pdf',
     flipbookPages: Array.from({ length: 121 }, (_, i) => `/books/the-luminous-legacy/pages/page_${i + 1}.webp`),
   },
+  {
+    id: 'BK-015',
+    slug: 'iqqi',
+    coverImage: '/images/books/iqqi.jpg',
+    title: {
+      en: 'IQQI: The Blueprint for Raising the Next Generation of Human Potential',
+      ta: 'ஐகியூகியூஐ: அடுத்த தலைமுறை மனித ஆற்றலை வளர்த்தெடுப்பதற்கான வரைபடம் (IQQI)',
+    },
+    tagline: {
+      en: 'From IQ to QI (Quantum Intelligence) · How Children Can Develop Extraordinary Learning, Creativity, Consciousness and Human Potential in the Age of AI',
+      ta: 'ஐக்யூவில் இருந்து க்யூஐ (குவாண்டம் நுண்ணறிவு) வரை · AI யுகத்தில் வியத்தகு கற்றல், படைப்பாற்றல் மற்றும் உணர்வுநிலையை வளர்ப்பதற்கான முழுமையான அமைப்பு',
+    },
+    author: {
+      en: 'Mahavadhani Sri Achariya Arawindhan GuruG',
+      ta: 'மகாவதானி ஸ்ரீ ஆச்சார்யா அரவிந்தன் குருஜி',
+    },
+    edition: 'Quantum Intelligence & Future Leadership Edition',
+    language: 'English & Tamil',
+    status: 'Published',
+    claimId: 'CLM-023',
+    summary: {
+      en: 'In IQQI: The Blueprint for Raising the Next Generation of Human Potential, Mahavadhani Sri Achariya Arawindhan GuruG presents a groundbreaking paradigm shift: evolving traditional IQ into QI (Quantum Intelligence). In the rapidly expanding age of artificial intelligence, this definitive work provides parents, mentors, and educators with a complete, holistic system to develop extraordinary learning, multidimensional creativity, high consciousness, and compassionate leadership in children.',
+      ta: 'ஐகியூகியூஐ (IQQI) நூலில், பாரம்பரிய ஐக்யூவிலிருந்து குவாண்டம் நுண்ணறிவை (QI) நோக்கி நகரும் புரட்சிகரமான மாற்றத்தை மகாவதானி ஸ்ரீ ஆச்சார்யா அரவிந்தன் குருஜி முன்வைக்கிறார். செயற்கை நுண்ணறிவு (AI) ஆதிக்கம் செலுத்தும் இந்த யுகத்தில், குழந்தைகள் வழக்கத்திற்கு மாறான தீவிரக் கற்றல் திறன், எல்லையற்ற படைப்பாற்றல், ஆழ்ந்த விழிப்புணர்வு மற்றும் கருணைமிக்க தலைமைத்துவப் பண்புகளை வளர்த்தெடுப்பதற்கான முழுமையான வரைபடத்தை இந்நூல் வழங்குகிறது.',
+    },
+    keyThemes: {
+      en: [
+        'The paradigm leap: Moving from linear IQ to multidimensional QI (Quantum Intelligence)',
+        'The six core faculties: Learning, Creativity, Consciousness, Focus, Compassion, and Leadership',
+        'Future-proofing children and youth in the transformative age of Artificial Intelligence',
+        'A complete parenting and educational architecture for holistic genius',
+      ],
+      ta: [
+        'நேரியல் ஐக்யூவிலிருந்து பன்முக குவாண்டம் நுண்ணறிவு (QI) நோக்கிய பாய்ச்சல்',
+        'ஆறு முதன்மை ஆற்றல்கள்: கற்றல், படைப்பாற்றல், விழிப்புணர்வு, கவனம், கருணை மற்றும் தலைமைத்துவம்',
+        'செயற்கை நுண்ணறிவு (AI) காலத்தில் எதிர்காலத்திற்குத் தயாரான குழந்தைகளை உருவாக்குதல்',
+        'முழுமையான மேதமையை வளர்ப்பதற்கான பெற்றோர் மற்றும் கல்விசார் கட்டமைப்பு',
+      ],
+    },
+    targetAudience: {
+      en: 'Parents, educators, school principals, child psychologists, and visionary educational leaders.',
+      ta: 'பெற்றோர்கள், ஆசிரியர்கள், பள்ளி முதல்வர்கள் மற்றும் குழந்தை உளவியல் நிபுணர்கள்.',
+    },
+    readMoreSnippet: {
+      en: '“In the age of machine intelligence, teaching children to merely calculate or memorize is teaching them to be second-rate computers. We must ignite Quantum Intelligence—the infinite human faculty of consciousness, compassion, and divine creative will.”',
+      ta: '"இயந்திர நுண்ணறிவின் யுகத்தில், குழந்தைகளுக்கு வெறும் மனப்பாடத்தையும் கணக்கீடுகளையும் மட்டுமே கற்றுக்கொடுப்பது அவர்களை இரண்டாம் தர கணினிகளாக்குவதற்கு சமம். நாம் அவர்களின் குவாண்டம் நுண்ணறிவை—மனித விழிப்புணர்வு, கருணை மற்றும் தெய்வீக படைப்புத்திறனை—விழித்தெழச் செய்ய வேண்டும்."',
+    },
+  },
 ];
+
 
