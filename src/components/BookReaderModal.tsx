@@ -24,6 +24,7 @@ import {
 } from 'lucide-react';
 import { booksList } from '@/data/books';
 import { Language } from '@/types';
+import { playPageFlipAudio } from '@/utils/pageFlipSound';
 
 interface BookReaderModalProps {
   language?: Language;
@@ -50,73 +51,10 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
   const [isMuted, setIsMuted] = useState<boolean>(false);
 
   const containerRef = useRef<HTMLDivElement>(null);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const audio = new Audio('/sounds/page-flip.mp3');
-      audio.preload = 'auto';
-      audio.volume = 0.75;
-      audioRef.current = audio;
-    }
-  }, []);
 
   const playFlipSound = () => {
     if (isMuted) return;
-    try {
-      if (audioRef.current) {
-        audioRef.current.currentTime = 0;
-        const playPromise = audioRef.current.play();
-        if (playPromise !== undefined) {
-          playPromise.catch(() => {
-            synthesizeFlipSound();
-          });
-        }
-      } else {
-        const audio = new Audio('/sounds/page-flip.mp3');
-        audio.volume = 0.75;
-        audio.play().catch(() => synthesizeFlipSound());
-      }
-    } catch {
-      synthesizeFlipSound();
-    }
-  };
-
-  const synthesizeFlipSound = () => {
-    if (isMuted) return;
-    try {
-      const AudioCtx = window.AudioContext || (window as any).webkitAudioContext;
-      if (!AudioCtx) return;
-      const ctx = new AudioCtx();
-      const bufferSize = Math.floor(ctx.sampleRate * 0.2);
-      const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
-      const data = buffer.getChannelData(0);
-      let last = 0;
-      for (let i = 0; i < bufferSize; i++) {
-        const white = Math.random() * 2 - 1;
-        last = last * 0.88 + white * 0.12;
-        const prog = i / bufferSize;
-        const env = prog < 0.12 ? prog / 0.12 : Math.pow(1 - prog, 2.2);
-        data[i] = (last * 0.75 + white * 0.25) * env * 0.5;
-      }
-      const src = ctx.createBufferSource();
-      src.buffer = buffer;
-      const filter = ctx.createBiquadFilter();
-      filter.type = 'bandpass';
-      filter.frequency.setValueAtTime(750, ctx.currentTime);
-      filter.frequency.exponentialRampToValueAtTime(320, ctx.currentTime + 0.2);
-      filter.Q.value = 1.0;
-      const gain = ctx.createGain();
-      gain.gain.setValueAtTime(0.55, ctx.currentTime);
-      gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.2);
-      src.connect(filter);
-      filter.connect(gain);
-      gain.connect(ctx.destination);
-      src.start();
-      src.onended = () => ctx.close().catch(() => {});
-    } catch {
-      // AudioContext unavailable
-    }
+    playPageFlipAudio();
   };
 
   useEffect(() => {
@@ -192,6 +130,7 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
 
   const handleFlipNext = () => {
     if (readerMode === 'flipbook' && totalFlipPages > 0) {
+      if (isFlipping) return;
       if (currentPage < totalFlipPages) {
         playFlipSound();
         setIsFlipping(true);
@@ -205,7 +144,7 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
           }
           setIsFlipping(false);
           setFlipDirection(null);
-        }, 220);
+        }, 650);
       }
     } else {
       playFlipSound();
@@ -215,6 +154,7 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
 
   const handleFlipPrev = () => {
     if (readerMode === 'flipbook' && totalFlipPages > 0) {
+      if (isFlipping) return;
       if (currentPage > 1) {
         playFlipSound();
         setIsFlipping(true);
@@ -227,7 +167,7 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
           }
           setIsFlipping(false);
           setFlipDirection(null);
-        }, 220);
+        }, 650);
       }
     } else {
       playFlipSound();
@@ -815,45 +755,55 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
               <style>{`
                 @keyframes flipNext3D {
                   0% {
-                    transform: rotateY(0deg);
-                    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                    transform: rotateY(0deg) scale(1) translateZ(0px);
+                    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
                   }
-                  30% {
-                    transform: rotateY(-50deg) skewY(-1.5deg);
-                    box-shadow: -15px 5px 30px rgba(0,0,0,0.5);
+                  20% {
+                    transform: rotateY(-36deg) rotateZ(-1.8deg) scaleX(0.97) translateZ(30px);
+                    box-shadow: -12px 14px 32px rgba(0,0,0,0.42);
                   }
-                  60% {
-                    transform: rotateY(-110deg) skewY(1.5deg);
-                    box-shadow: 15px 5px 30px rgba(0,0,0,0.5);
+                  50% {
+                    transform: rotateY(-90deg) rotateZ(0deg) scaleX(0.93) translateZ(55px);
+                    box-shadow: 0 24px 48px rgba(0,0,0,0.55);
+                  }
+                  80% {
+                    transform: rotateY(-144deg) rotateZ(1.8deg) scaleX(0.97) translateZ(28px);
+                    box-shadow: 12px 14px 32px rgba(0,0,0,0.38);
                   }
                   100% {
-                    transform: rotateY(-180deg);
-                    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                    transform: rotateY(-180deg) rotateZ(0deg) scale(1) translateZ(0px);
+                    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
                   }
                 }
 
                 @keyframes flipPrev3D {
                   0% {
-                    transform: rotateY(0deg);
-                    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                    transform: rotateY(0deg) scale(1) translateZ(0px);
+                    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
                   }
-                  30% {
-                    transform: rotateY(50deg) skewY(1.5deg);
-                    box-shadow: 15px 5px 30px rgba(0,0,0,0.5);
+                  20% {
+                    transform: rotateY(36deg) rotateZ(1.8deg) scaleX(0.97) translateZ(30px);
+                    box-shadow: 12px 14px 32px rgba(0,0,0,0.42);
                   }
-                  60% {
-                    transform: rotateY(110deg) skewY(-1.5deg);
-                    box-shadow: -15px 5px 30px rgba(0,0,0,0.5);
+                  50% {
+                    transform: rotateY(90deg) rotateZ(0deg) scaleX(0.93) translateZ(55px);
+                    box-shadow: 0 24px 48px rgba(0,0,0,0.55);
+                  }
+                  80% {
+                    transform: rotateY(144deg) rotateZ(-1.8deg) scaleX(0.97) translateZ(28px);
+                    box-shadow: -12px 14px 32px rgba(0,0,0,0.38);
                   }
                   100% {
-                    transform: rotateY(180deg);
-                    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                    transform: rotateY(180deg) rotateZ(0deg) scale(1) translateZ(0px);
+                    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
                   }
                 }
 
                 @keyframes sweepShadow {
                   0% { opacity: 0; }
-                  45% { opacity: 0.6; }
+                  30% { opacity: 0.35; }
+                  50% { opacity: 0.65; }
+                  70% { opacity: 0.35; }
                   100% { opacity: 0; }
                 }
 
@@ -899,7 +849,7 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
                       borderRight: '3px solid rgba(0,0,0,0.4)',
                       transformOrigin: 'left center',
                       transform: isFlipping ? 'rotateY(-60deg)' : 'rotateY(0deg)',
-                      transition: isFlipping ? 'transform 0.48s cubic-bezier(0.25, 1, 0.5, 1)' : 'none',
+                      transition: isFlipping ? 'transform 0.65s cubic-bezier(0.25, 0.9, 0.35, 1)' : 'none',
                     }}
                     title="Click cover to open book"
                   >
@@ -1160,7 +1110,7 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
                           height: '100%',
                           transformOrigin: 'left center',
                           transformStyle: 'preserve-3d',
-                          animation: 'flipNext3D 0.48s cubic-bezier(0.25, 1, 0.5, 1) forwards',
+                          animation: 'flipNext3D 0.65s cubic-bezier(0.25, 0.9, 0.35, 1) forwards',
                           zIndex: 25,
                           pointerEvents: 'none',
                         }}
@@ -1190,7 +1140,7 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
                               position: 'absolute',
                               inset: 0,
                               background: 'linear-gradient(to left, rgba(0,0,0,0.45), rgba(0,0,0,0.08) 50%, transparent)',
-                              animation: 'sweepShadow 0.48s ease-in-out',
+                              animation: 'sweepShadow 0.65s ease-in-out',
                             }}
                           />
                         </div>
@@ -1221,7 +1171,7 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
                               position: 'absolute',
                               inset: 0,
                               background: 'linear-gradient(to right, rgba(0,0,0,0.35), transparent 70%)',
-                              animation: 'sweepShadow 0.48s ease-in-out',
+                              animation: 'sweepShadow 0.65s ease-in-out',
                             }}
                           />
                         </div>
@@ -1241,7 +1191,7 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
                           height: '100%',
                           transformOrigin: 'right center',
                           transformStyle: 'preserve-3d',
-                          animation: 'flipPrev3D 0.48s cubic-bezier(0.25, 1, 0.5, 1) forwards',
+                          animation: 'flipPrev3D 0.65s cubic-bezier(0.25, 0.9, 0.35, 1) forwards',
                           zIndex: 25,
                           pointerEvents: 'none',
                         }}
@@ -1270,7 +1220,7 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
                               position: 'absolute',
                               inset: 0,
                               background: 'linear-gradient(to right, rgba(0,0,0,0.45), rgba(0,0,0,0.08) 50%, transparent)',
-                              animation: 'sweepShadow 0.48s ease-in-out',
+                              animation: 'sweepShadow 0.65s ease-in-out',
                             }}
                           />
                         </div>
@@ -1300,7 +1250,7 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
                               position: 'absolute',
                               inset: 0,
                               background: 'linear-gradient(to left, rgba(0,0,0,0.35), transparent 70%)',
-                              animation: 'sweepShadow 0.48s ease-in-out',
+                              animation: 'sweepShadow 0.65s ease-in-out',
                             }}
                           />
                         </div>
