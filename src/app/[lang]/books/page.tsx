@@ -290,22 +290,22 @@ export default async function BooksPage({
                 </div>
               </div>
 
-              <div style={{ borderTop: '1px solid var(--border-light)', paddingTop: '1rem', display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+              <div style={{ borderTop: '1px solid var(--border-light)', paddingTop: '1rem', display: 'flex', gap: '0.45rem', alignItems: 'center', marginTop: 'auto' }}>
                 {book.flipbookPages && book.flipbookPages.length > 0 ? (
                   <>
                     <OpenReaderButton
                       slug={book.slug}
                       mode="flipbook"
-                      label={lang === 'ta' ? '📖 ஃபிளிப்புக்' : '📖 Flipbook'}
-                      style={{ flex: 1.15, padding: '0.55rem 0.65rem', fontSize: '0.82rem', borderRadius: 'var(--radius-full)', whiteSpace: 'nowrap' }}
+                      label={lang === 'ta' ? 'ஃபிளிப்புக்' : 'Flipbook'}
+                      style={{ flex: '1 1 auto', padding: '0.55rem 0.5rem', fontSize: '0.8rem', borderRadius: 'var(--radius-full)', whiteSpace: 'nowrap' }}
                       title={lang === 'ta' ? '3D பக்கம்பிரட்டும் ஃபிளிப்புக் வாசிக்க' : 'Read 3D Page-Turning Flipbook'}
                     />
                     <OpenReaderButton
                       slug={book.slug}
                       mode="text"
                       variant="outline"
-                      label={lang === 'ta' ? '📄 மாதிரி' : '📄 Sample'}
-                      style={{ flex: 0.95, padding: '0.55rem 0.65rem', fontSize: '0.82rem', borderRadius: 'var(--radius-full)', whiteSpace: 'nowrap' }}
+                      label={lang === 'ta' ? 'மாதிரி' : 'Sample'}
+                      style={{ flex: '0.9 1 auto', padding: '0.55rem 0.5rem', fontSize: '0.8rem', borderRadius: 'var(--radius-full)', whiteSpace: 'nowrap' }}
                       title={lang === 'ta' ? 'மாதிரி அத்தியாயங்களை வாசிக்க' : 'Read Sample Chapters'}
                     />
                   </>
@@ -313,8 +313,8 @@ export default async function BooksPage({
                   <OpenReaderButton
                     slug={book.slug}
                     mode="text"
-                    label={lang === 'ta' ? '📖 மாதிரி வாசிக்க' : '📖 Read Sample'}
-                    style={{ flex: 1, padding: '0.6rem 0.85rem', fontSize: '0.86rem', borderRadius: 'var(--radius-full)' }}
+                    label={lang === 'ta' ? 'மாதிரி வாசிக்க' : 'Read Sample'}
+                    style={{ flex: '1 1 auto', padding: '0.55rem 0.75rem', fontSize: '0.82rem', borderRadius: 'var(--radius-full)' }}
                     title={lang === 'ta' ? 'மாதிரி அத்தியாயங்களை வாசிக்க' : 'Read Sample Chapters'}
                   />
                 )}
@@ -322,9 +322,14 @@ export default async function BooksPage({
                   href={`/${lang}/books/${book.slug}`}
                   className="btn-outline"
                   style={{
-                    padding: '0.55rem 0.8rem',
-                    fontSize: '0.82rem',
+                    flex: '0.85 1 auto',
+                    padding: '0.55rem 0.55rem',
+                    fontSize: '0.8rem',
                     whiteSpace: 'nowrap',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '0.3rem',
                   }}
                   title={lang === 'ta' ? 'முழு நூல் விவரங்கள்' : 'Full Dossier & Themes'}
                 >
