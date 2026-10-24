@@ -616,7 +616,7 @@ export default async function HomePage({
             }}
           >
             <img
-              src="/images/records_showcase.jpg"
+              src="/images/institutions/guinness_world_records_celebration.webp"
               alt="ACHARIYA Mass Cognitive & Physical World Records Achievement"
               loading="lazy"
               style={{

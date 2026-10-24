@@ -172,8 +172,8 @@ export default async function BiographyPage({
             }}
           >
             <img
-              src="/images/biography_vision.jpg"
-              alt="28 Years of Vision: Engineering Blueprints Expanding into World-Class Campuses"
+              src="/images/institutions/achariya_campus.jpg"
+              alt="28 Years of Vision: From Engineering Blueprints to 53 Campuses — Dr. J. Arawindhan & ACHARIYA Campus"
               style={{
                 width: '100%',
                 height: '380px',

@@ -39,8 +39,8 @@ export default async function MediaPage({
           }}
         >
           <img
-            src="/images/media_hero.jpg"
-            alt="International Educational Leadership Keynote Address on Human Intelligence & AI"
+            src="/images/institutions/human_intelligence_ai_education.webp"
+            alt="Dr. J. Arawindhan Keynote Address on Human Intelligence & AI in Education"
             style={{
               width: '100%',
               height: '380px',
