@@ -23,9 +23,79 @@ import { ClaimBadge } from '@/components/ClaimBadge';
 import { SectionHeader } from '@/components/SectionHeader';
 import { QuantumMatrix } from '@/components/QuantumMatrix';
 import { Language } from '@/types';
+import type { Metadata } from 'next';
 
 export async function generateStaticParams() {
   return [{ lang: 'en' }, { lang: 'ta' }];
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const resolved = await params;
+  const lang = resolved.lang === 'ta' ? 'ta' : 'en';
+
+  if (lang === 'ta') {
+    return {
+      title: 'முனைவர் ஜே. அரவிந்தன் | அதிகாரப்பூர்வ தளம் — கல்வியியலாளர் & நிறுவனர் (Arawindhan)',
+      description:
+        'முனைவர் ஜே. அரவிந்தன் (Arawindhan) அவர்களின் அதிகாரப்பூர்வ தளம். ஆச்சாரியா கல்வி நிறுவனங்களின் நிறுவனர், கல்வியியலாளர், மற்றும் 18 கல்லூரிகள், 101 பள்ளிகள், 61+ நிறுவனங்களின் தலைவர்.',
+      alternates: {
+        canonical: 'https://www.arawindhan.com/ta',
+        languages: {
+          en: 'https://www.arawindhan.com/en',
+          ta: 'https://www.arawindhan.com/ta',
+          'x-default': 'https://www.arawindhan.com/en',
+        },
+      },
+      openGraph: {
+        title: 'முனைவர் ஜே. அரவிந்தன் | அதிகாரப்பூர்வ தளம் (Dr. J. Arawindhan)',
+        description:
+          'முனைவர் ஜே. அரவிந்தன் அவர்களின் அதிகாரப்பூர்வ தளம். ஆச்சாரியா கல்வி நிறுவனங்களின் நிறுவனர், கல்வியியலாளர், நூலாசிரியர்.',
+        url: 'https://www.arawindhan.com/ta',
+        siteName: 'Dr. J. Arawindhan Official Platform',
+        images: [
+          {
+            url: 'https://www.arawindhan.com/images/portrait_spiritual_authentic.jpg',
+            width: 1200,
+            height: 630,
+            alt: 'Dr. J. Arawindhan',
+          },
+        ],
+      },
+    };
+  }
+
+  return {
+    title: 'Dr. J. Arawindhan | Official Website — Educationist, Founder & Visionary Leader',
+    description:
+      'Official website and authority platform of Dr. J. Arawindhan (Arawindhan): Educationist, entrepreneur, author, and founder of ACHARIYA World Class Education (18 colleges, 101 schools, 61+ companies, 600+ world records).',
+    alternates: {
+      canonical: 'https://www.arawindhan.com/en',
+      languages: {
+        en: 'https://www.arawindhan.com/en',
+        ta: 'https://www.arawindhan.com/ta',
+        'x-default': 'https://www.arawindhan.com/en',
+      },
+    },
+    openGraph: {
+      title: 'Dr. J. Arawindhan | Official Website — Educationist & Founder',
+      description:
+        'Official website of Dr. J. Arawindhan: Educationist, entrepreneur, author, and founder of ACHARIYA World Class Education.',
+      url: 'https://www.arawindhan.com/en',
+      siteName: 'Dr. J. Arawindhan Official Platform',
+      images: [
+        {
+          url: 'https://www.arawindhan.com/images/portrait_spiritual_authentic.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Dr. J. Arawindhan',
+        },
+      ],
+    },
+  };
 }
 
 export default async function HomePage({
@@ -45,7 +115,7 @@ export default async function HomePage({
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-              gap: '3.5rem',
+              gap: 'clamp(1.5rem, 5vw, 3.5rem)',
               alignItems: 'center',
             }}
           >
@@ -140,7 +210,7 @@ export default async function HomePage({
                     position: 'relative',
                     width: '100%',
                     maxWidth: '380px',
-                    height: '420px',
+                    height: 'clamp(260px, 55vw, 420px)',
                     margin: '0 auto 1.5rem auto',
                     borderRadius: '24px',
                     overflow: 'hidden',
@@ -150,6 +220,8 @@ export default async function HomePage({
                 >
                   <img
                     src="/images/portrait_hero.jpg"
+                    fetchPriority="high"
+                    loading="eager"
                     alt={`${biographyData.name[lang]} - ${biographyData.spiritualName[lang]}`}
                     style={{
                       width: '100%',
@@ -547,15 +619,16 @@ export default async function HomePage({
               marginBottom: '3rem',
               border: '2px solid #FDE68A',
               boxShadow: '0 20px 40px -15px rgba(217, 119, 6, 0.25)',
-              maxHeight: '380px',
+              maxHeight: 'clamp(200px, 50vw, 380px)',
             }}
           >
             <img
               src="/images/records_showcase.jpg"
               alt="ACHARIYA Mass Cognitive & Physical World Records Achievement"
+              loading="lazy"
               style={{
                 width: '100%',
-                height: '380px',
+                height: 'clamp(200px, 50vw, 380px)',
                 objectFit: 'cover',
                 objectPosition: 'center',
                 display: 'block',

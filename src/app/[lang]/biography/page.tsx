@@ -32,9 +32,78 @@ import {
 import { SectionHeader } from '@/components/SectionHeader';
 import { ClaimBadge } from '@/components/ClaimBadge';
 import { Language } from '@/types';
+import type { Metadata } from 'next';
 
 export async function generateStaticParams() {
   return [{ lang: 'en' }, { lang: 'ta' }];
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const resolved = await params;
+  const lang = resolved.lang === 'ta' ? 'ta' : 'en';
+
+  if (lang === 'ta') {
+    return {
+      title: 'வாழ்க்கை வரலாறு | முனைவர் ஜே. அரவிந்தன் — கல்வியியலாளர் (Arawindhan)',
+      description:
+        'முனைவர் ஜே. அரவிந்தன் அவர்களின் முழுமையான வாழ்க்கை வரலாறு. கல்விப் புரட்சி, ஆச்சாரியா நிறுவனங்களின் உருவாக்கம் மற்றும் ஆன்மீகப் பயணம்.',
+      alternates: {
+        canonical: 'https://www.arawindhan.com/ta/biography',
+        languages: {
+          en: 'https://www.arawindhan.com/en/biography',
+          ta: 'https://www.arawindhan.com/ta/biography',
+          'x-default': 'https://www.arawindhan.com/en/biography',
+        },
+      },
+      openGraph: {
+        title: 'வாழ்க்கை வரலாறு | முனைவர் ஜே. அரவிந்தன்',
+        description: 'முனைவர் ஜே. அரவிந்தன் அவர்களின் வாழ்க்கை வரலாறு மற்றும் தலைமைத்துவப் பயணம்.',
+        url: 'https://www.arawindhan.com/ta/biography',
+        siteName: 'Dr. J. Arawindhan Official Platform',
+        images: [
+          {
+            url: 'https://www.arawindhan.com/images/portrait_spiritual_authentic.jpg',
+            width: 1200,
+            height: 630,
+            alt: 'Dr. J. Arawindhan Biography',
+          },
+        ],
+      },
+    };
+  }
+
+  return {
+    title: 'Biography & Life Journey | Dr. J. Arawindhan — Educationist & Philanthropist',
+    description:
+      'Official biography and life journey of Dr. J. Arawindhan (Arawindhan): Mechanical engineer turned education pioneer, founder of ACHARIYA (18 colleges, 101 schools).',
+    alternates: {
+      canonical: 'https://www.arawindhan.com/en/biography',
+      languages: {
+        en: 'https://www.arawindhan.com/en/biography',
+        ta: 'https://www.arawindhan.com/ta/biography',
+        'x-default': 'https://www.arawindhan.com/en/biography',
+      },
+    },
+    openGraph: {
+      title: 'Biography & Life Journey | Dr. J. Arawindhan',
+      description:
+        'Explore the life, educational revolution, and institutional leadership of Dr. J. Arawindhan.',
+      url: 'https://www.arawindhan.com/en/biography',
+      siteName: 'Dr. J. Arawindhan Official Platform',
+      images: [
+        {
+          url: 'https://www.arawindhan.com/images/portrait_spiritual_authentic.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Dr. J. Arawindhan Biography',
+        },
+      ],
+    },
+  };
 }
 
 export default async function BiographyPage({

@@ -6,9 +6,78 @@ import { SectionHeader } from '@/components/SectionHeader';
 import { ClaimBadge } from '@/components/ClaimBadge';
 import { OpenReaderButton } from '@/components/OpenReaderButton';
 import { Language } from '@/types';
+import type { Metadata } from 'next';
 
 export async function generateStaticParams() {
   return [{ lang: 'en' }, { lang: 'ta' }];
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const resolved = await params;
+  const lang = resolved.lang === 'ta' ? 'ta' : 'en';
+
+  if (lang === 'ta') {
+    return {
+      title: 'நூல்கள் & வெளியீடுகள் | முனைவர் ஜே. அரவிந்தன் — 16 படைப்புகள் (Arawindhan)',
+      description:
+        'கல்வி, பெற்றோர் வளர்ப்பு, தலைமைத்துவம், நிதிச் சுயாட்சி மற்றும் ஆன்மீக விழிப்புணர்வு குறித்து முனைவர் ஜே. அரவிந்தன் (Arawindhan) எழுதிய 16 நூல்கள் மற்றும் வெளியீடுகள்.',
+      alternates: {
+        canonical: 'https://www.arawindhan.com/ta/books',
+        languages: {
+          en: 'https://www.arawindhan.com/en/books',
+          ta: 'https://www.arawindhan.com/ta/books',
+          'x-default': 'https://www.arawindhan.com/en/books',
+        },
+      },
+      openGraph: {
+        title: 'நூல்கள் & வெளியீடுகள் | முனைவர் ஜே. அரவிந்தன்',
+        description: 'முனைவர் ஜே. அரவிந்தன் எழுதிய 16 நூல்கள் மற்றும் படைப்புகளின் அதிகாரப்பூர்வ பட்டியல்.',
+        url: 'https://www.arawindhan.com/ta/books',
+        siteName: 'Dr. J. Arawindhan Official Platform',
+        images: [
+          {
+            url: 'https://www.arawindhan.com/images/books/wow-parenting.jpg',
+            width: 800,
+            height: 1200,
+            alt: 'Books by Dr. J. Arawindhan',
+          },
+        ],
+      },
+    };
+  }
+
+  return {
+    title: 'Books & Publications | Dr. J. Arawindhan — 16 Published Titles & Thought Leadership',
+    description:
+      'Explore published books, research monographs, and treatises on education, conscious parenting, leadership, and youth empowerment authored by Dr. J. Arawindhan (Arawindhan).',
+    alternates: {
+      canonical: 'https://www.arawindhan.com/en/books',
+      languages: {
+        en: 'https://www.arawindhan.com/en/books',
+        ta: 'https://www.arawindhan.com/ta/books',
+        'x-default': 'https://www.arawindhan.com/en/books',
+      },
+    },
+    openGraph: {
+      title: 'Books & Publications | Dr. J. Arawindhan — 16 Published Titles',
+      description:
+        'Explore 16 published books, treatises, and monographs on education, parenting, and leadership authored by Dr. J. Arawindhan.',
+      url: 'https://www.arawindhan.com/en/books',
+      siteName: 'Dr. J. Arawindhan Official Platform',
+      images: [
+        {
+          url: 'https://www.arawindhan.com/images/books/wow-parenting.jpg',
+          width: 800,
+          height: 1200,
+          alt: 'Books by Dr. J. Arawindhan',
+        },
+      ],
+    },
+  };
 }
 
 export default async function BooksPage({
@@ -86,7 +155,7 @@ export default async function BooksPage({
                 {/* Book Cover Image */}
                 <div
                   style={{
-                    height: '240px',
+                    height: 'clamp(160px, 40vw, 240px)',
                     borderRadius: '12px',
                     overflow: 'hidden',
                     marginBottom: '1.25rem',
@@ -99,6 +168,7 @@ export default async function BooksPage({
                   <img
                     src={book.coverImage || '/images/books/shambala_book.jpg'}
                     alt={book.title[lang]}
+                    loading="lazy"
                     style={{
                       width: '100%',
                       height: '100%',

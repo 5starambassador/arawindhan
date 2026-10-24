@@ -80,6 +80,20 @@ export async function generateMetadata({
         description: 'முனைவர் ஜே. அரவிந்தன் அவர்களின் அதிகாரப்பூர்வ தளம்.',
         images: ['https://www.arawindhan.com/images/portrait_spiritual_authentic.jpg'],
       },
+      icons: {
+        icon: [
+          { url: '/favicon.ico', sizes: 'any' },
+          { url: '/favicon-48x48.png', sizes: '48x48', type: 'image/png' },
+          { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+          { url: '/favicon-192x192.png', sizes: '192x192', type: 'image/png' },
+          { url: '/icon.png', sizes: '512x512', type: 'image/png' },
+        ],
+        apple: [
+          { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
+          { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+        ],
+        shortcut: ['/favicon.ico'],
+      },
       robots: {
         index: true,
         follow: true,
@@ -95,6 +109,7 @@ export async function generateMetadata({
   }
 
   return {
+    metadataBase: new URL('https://www.arawindhan.com'),
     title: 'Arawindhan | Official Website of Dr. J. Arawindhan — Educationist & Founder',
     description:
       'Official website and authority platform of Dr. J. Arawindhan (Arawindhan): Educationist, entrepreneur, author, and founder of ACHARIYA World Class Education (18 colleges, 101 schools, 61+ companies, 600+ world records).',
@@ -133,6 +148,20 @@ export async function generateMetadata({
         'Official website of Dr. J. Arawindhan: Educationist, entrepreneur, and founder of ACHARIYA World Class Education.',
       images: ['https://www.arawindhan.com/images/portrait_spiritual_authentic.jpg'],
     },
+    icons: {
+      icon: [
+        { url: '/favicon.ico', sizes: 'any' },
+        { url: '/favicon-48x48.png', sizes: '48x48', type: 'image/png' },
+        { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+        { url: '/favicon-192x192.png', sizes: '192x192', type: 'image/png' },
+        { url: '/icon.png', sizes: '512x512', type: 'image/png' },
+      ],
+      apple: [
+        { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
+        { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+      ],
+      shortcut: ['/favicon.ico'],
+    },
     robots: {
       index: true,
       follow: true,
@@ -162,7 +191,11 @@ export default async function LangLayout({
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       </head>
       <body suppressHydrationWarning>
         <StructuredData />

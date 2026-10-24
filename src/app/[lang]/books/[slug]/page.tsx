@@ -8,6 +8,7 @@ import { ClaimBadge } from '@/components/ClaimBadge';
 import { StructuredData } from '@/components/StructuredData';
 import { OpenReaderButton } from '@/components/OpenReaderButton';
 import { Language } from '@/types';
+import type { Metadata } from 'next';
 
 export async function generateStaticParams() {
   const params: { lang: string; slug: string }[] = [];
@@ -17,6 +18,63 @@ export async function generateStaticParams() {
     }
   }
   return params;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string; slug: string }>;
+}): Promise<Metadata> {
+  const resolved = await params;
+  const lang = resolved.lang === 'ta' ? 'ta' : 'en';
+  const book = booksList.find((b) => b.slug === resolved.slug);
+
+  if (!book) {
+    return {
+      title: 'Book Not Found | Dr. J. Arawindhan',
+    };
+  }
+
+  const title = book.title[lang] || book.title.en;
+  const tagline = book.tagline[lang] || book.tagline.en;
+  const summary = book.summary[lang] || book.summary.en;
+  const description = `${title}: ${tagline}. Authored by Dr. J. Arawindhan (Arawindhan). ${summary.slice(0, 150)}...`;
+  const image = book.coverImage
+    ? (book.coverImage.startsWith('http') ? book.coverImage : `https://www.arawindhan.com${book.coverImage}`)
+    : 'https://www.arawindhan.com/images/portrait_spiritual_authentic.jpg';
+
+  return {
+    title: `${title} | Dr. J. Arawindhan Books`,
+    description,
+    alternates: {
+      canonical: `https://www.arawindhan.com/${lang}/books/${book.slug}`,
+      languages: {
+        en: `https://www.arawindhan.com/en/books/${book.slug}`,
+        ta: `https://www.arawindhan.com/ta/books/${book.slug}`,
+        'x-default': `https://www.arawindhan.com/en/books/${book.slug}`,
+      },
+    },
+    openGraph: {
+      title: `${title} | Book by Dr. J. Arawindhan`,
+      description,
+      url: `https://www.arawindhan.com/${lang}/books/${book.slug}`,
+      siteName: 'Dr. J. Arawindhan Books',
+      images: [
+        {
+          url: image,
+          width: 800,
+          height: 1200,
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${title} | Dr. J. Arawindhan`,
+      description,
+      images: [image],
+    },
+  };
 }
 
 export default async function BookDetailPage({

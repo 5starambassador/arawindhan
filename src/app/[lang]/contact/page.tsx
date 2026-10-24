@@ -3,9 +3,62 @@ import Link from 'next/link';
 import { Mail, MapPin, Building, ShieldCheck, FileSpreadsheet, ExternalLink, Globe } from 'lucide-react';
 import { SectionHeader } from '@/components/SectionHeader';
 import { Language } from '@/types';
+import type { Metadata } from 'next';
 
 export async function generateStaticParams() {
   return [{ lang: 'en' }, { lang: 'ta' }];
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const resolved = await params;
+  const lang = resolved.lang === 'ta' ? 'ta' : 'en';
+
+  if (lang === 'ta') {
+    return {
+      title: 'தொடர்புக்கு & தகவல் சரிபார்ப்பு | முனைவர் ஜே. அரவிந்தன் (Arawindhan)',
+      description:
+        'முனைவர் ஜே. அரவிந்தன் அவர்களின் அதிகாரப்பூர்வ தொடர்புக் களம். புதுச்சேரி, இந்தியா.',
+      alternates: {
+        canonical: 'https://www.arawindhan.com/ta/contact',
+        languages: {
+          en: 'https://www.arawindhan.com/en/contact',
+          ta: 'https://www.arawindhan.com/ta/contact',
+          'x-default': 'https://www.arawindhan.com/en/contact',
+        },
+      },
+      openGraph: {
+        title: 'தொடர்புக்கு | முனைவர் ஜே. அரவிந்தன்',
+        description: 'முனைவர் ஜே. அரவிந்தன் அவர்களைத் தொடர்பு கொள்ள அதிகாரப்பூர்வ இணைய தளம்.',
+        url: 'https://www.arawindhan.com/ta/contact',
+        siteName: 'Dr. J. Arawindhan Official Platform',
+      },
+    };
+  }
+
+  return {
+    title: 'Contact & Official Communications | Dr. J. Arawindhan — Puducherry, India',
+    description:
+      'Official contact desk for academic inquiries, keynote invitations, institutional collaborations, and communications with Dr. J. Arawindhan (Arawindhan).',
+    alternates: {
+      canonical: 'https://www.arawindhan.com/en/contact',
+      languages: {
+        en: 'https://www.arawindhan.com/en/contact',
+        ta: 'https://www.arawindhan.com/ta/contact',
+        'x-default': 'https://www.arawindhan.com/en/contact',
+      },
+    },
+    openGraph: {
+      title: 'Contact & Official Communications | Dr. J. Arawindhan',
+      description:
+        'Official institutional desk for academic inquiries and communications with Dr. J. Arawindhan.',
+      url: 'https://www.arawindhan.com/en/contact',
+      siteName: 'Dr. J. Arawindhan Official Platform',
+    },
+  };
 }
 
 export default async function ContactPage({

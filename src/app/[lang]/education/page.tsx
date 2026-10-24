@@ -6,9 +6,62 @@ import { internationalPartnerSchools, wowAcademyPrograms, competitiveCoachingDat
 import { SectionHeader } from '@/components/SectionHeader';
 import { ClaimBadge } from '@/components/ClaimBadge';
 import { Language } from '@/types';
+import type { Metadata } from 'next';
 
 export async function generateStaticParams() {
   return [{ lang: 'en' }, { lang: 'ta' }];
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const resolved = await params;
+  const lang = resolved.lang === 'ta' ? 'ta' : 'en';
+
+  if (lang === 'ta') {
+    return {
+      title: 'கல்வித் தத்துவம் & கண்டுபிடிப்புகள் | முனைவர் ஜே. அரவிந்தன் (Arawindhan)',
+      description:
+        'முனைவர் ஜே. அரவிந்தன் (Arawindhan) அவர்களின் 10 கல்விப் புத்தாக்கங்கள், தசாவதானி பாடத்திட்டம், மற்றும் முழு-மூளை வளர்ச்சி அமைப்புகள்.',
+      alternates: {
+        canonical: 'https://www.arawindhan.com/ta/education',
+        languages: {
+          en: 'https://www.arawindhan.com/en/education',
+          ta: 'https://www.arawindhan.com/ta/education',
+          'x-default': 'https://www.arawindhan.com/en/education',
+        },
+      },
+      openGraph: {
+        title: 'கல்விப் புத்தாக்கங்கள் | முனைவர் ஜே. அரவிந்தன்',
+        description: 'முனைவர் ஜே. அரவிந்தன் அவர்களின் 10 கல்விப் புத்தாக்கங்கள் மற்றும் தசாவதானி கற்பித்தல் முறை.',
+        url: 'https://www.arawindhan.com/ta/education',
+        siteName: 'Dr. J. Arawindhan Official Platform',
+      },
+    };
+  }
+
+  return {
+    title: 'Educational Philosophy & Innovations | Dr. J. Arawindhan — Dasavadani Pedagogy',
+    description:
+      'Discover Dr. J. Arawindhan (Arawindhan) original educational creations: Dasavadani Pedagogy, Whole-Brain neuro-development, and Multiple Intelligence systems.',
+    alternates: {
+      canonical: 'https://www.arawindhan.com/en/education',
+      languages: {
+        en: 'https://www.arawindhan.com/en/education',
+        ta: 'https://www.arawindhan.com/ta/education',
+        'x-default': 'https://www.arawindhan.com/en/education',
+      },
+    },
+    openGraph: {
+      title: 'Educational Innovations | Dr. J. Arawindhan — Dasavadani Pedagogy',
+      description:
+        'Proprietary curricula, frameworks, and whole-brain learning systems developed by Dr. J. Arawindhan.',
+      url: 'https://www.arawindhan.com/en/education',
+      siteName: 'Dr. J. Arawindhan Official Platform',
+    },
+  };
 }
 
 export default async function EducationPage({

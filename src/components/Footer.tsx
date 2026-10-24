@@ -26,7 +26,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
         position: 'relative',
         marginTop: '6rem',
         paddingTop: '4.5rem',
-        paddingBottom: '2.5rem',
+        paddingBottom: 'calc(2.5rem + env(safe-area-inset-bottom, 0px))',
       }}
     >
       {/* Decorative Gold Accent Bar */}
@@ -355,7 +355,6 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
                 fontWeight: 700,
               }}
             >
-              <span>🌐</span>
               <span>{lang === 'en' ? 'தமிழ் பதிப்பு' : 'English Edition'}</span>
             </Link>
           </div>

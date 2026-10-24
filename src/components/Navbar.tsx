@@ -97,7 +97,6 @@ export const Navbar: React.FC<NavbarProps> = ({ lang }) => {
                 fontWeight: 500,
                 letterSpacing: '0.02em',
                 lineHeight: 1.25,
-                whiteSpace: 'nowrap',
               }}
             >
               {uiLabels.platformTagline[lang]}
@@ -108,7 +107,7 @@ export const Navbar: React.FC<NavbarProps> = ({ lang }) => {
         {/* Desktop Navigation */}
         <nav style={{ display: 'none', alignItems: 'center', gap: '0.9rem' }} className="desktop-nav">
           <style jsx>{`
-            @media (min-width: 1080px) {
+            @media (min-width: 1025px) {
               .desktop-nav {
                 display: flex !important;
               }
@@ -161,13 +160,15 @@ export const Navbar: React.FC<NavbarProps> = ({ lang }) => {
               background: '#FFFFFF',
               border: '1px solid var(--border-light)',
               borderRadius: 'var(--radius-sm)',
-              padding: '0.4rem',
+              padding: '0.75rem',
               color: 'var(--text-main)',
               cursor: 'pointer',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               boxShadow: 'var(--shadow-sm)',
+              minWidth: '44px',
+              minHeight: '44px',
             }}
           >
             {mobileOpen ? <X size={22} /> : <Menu size={22} />}

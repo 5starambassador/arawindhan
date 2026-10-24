@@ -5,9 +5,62 @@ import { innerJourneyData } from '@/data/innerJourney';
 import { SectionHeader } from '@/components/SectionHeader';
 import { ClaimBadge } from '@/components/ClaimBadge';
 import { Language } from '@/types';
+import type { Metadata } from 'next';
 
 export async function generateStaticParams() {
   return [{ lang: 'en' }, { lang: 'ta' }];
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const resolved = await params;
+  const lang = resolved.lang === 'ta' ? 'ta' : 'en';
+
+  if (lang === 'ta') {
+    return {
+      title: 'உள்முகப் பயணம் & ஆன்மீக நிலை | முனைவர் ஜே. அரவிந்தன் (Arawindhan)',
+      description:
+        'முனைவர் ஜே. அரவிந்தன் (மகா அவதானி ஸ்ரீ ஆச்சாரியா அரவிந்தன் குருஜி) அவர்களின் ஆன்மீக விழிப்புணர்வு, திவ்ய யோகம் மற்றும் அகப்பயணத் தத்துவம்.',
+      alternates: {
+        canonical: 'https://www.arawindhan.com/ta/inner-journey',
+        languages: {
+          en: 'https://www.arawindhan.com/en/inner-journey',
+          ta: 'https://www.arawindhan.com/ta/inner-journey',
+          'x-default': 'https://www.arawindhan.com/en/inner-journey',
+        },
+      },
+      openGraph: {
+        title: 'உள்முகப் பயணம் & திவ்ய யோகம் | முனைவர் ஜே. அரவிந்தன்',
+        description: 'முனைவர் ஜே. அரவிந்தன் அவர்களின் ஆன்மீக விழிப்புணர்வு மற்றும் திவ்ய யோகம்.',
+        url: 'https://www.arawindhan.com/ta/inner-journey',
+        siteName: 'Dr. J. Arawindhan Official Platform',
+      },
+    };
+  }
+
+  return {
+    title: 'Inner Journey & Spiritual Dimensions | Dr. J. Arawindhan — Divya Yogam',
+    description:
+      'Spiritual awakening, Mahavadhani GuruG realization, Divya Yogam, and inner consciousness philosophy of Dr. J. Arawindhan (Arawindhan).',
+    alternates: {
+      canonical: 'https://www.arawindhan.com/en/inner-journey',
+      languages: {
+        en: 'https://www.arawindhan.com/en/inner-journey',
+        ta: 'https://www.arawindhan.com/ta/inner-journey',
+        'x-default': 'https://www.arawindhan.com/en/inner-journey',
+      },
+    },
+    openGraph: {
+      title: 'Inner Journey & Spiritual Dimensions | Dr. J. Arawindhan',
+      description:
+        'Explore the spiritual realization, Divya Yogam, and inner dimensions of Dr. J. Arawindhan.',
+      url: 'https://www.arawindhan.com/en/inner-journey',
+      siteName: 'Dr. J. Arawindhan Official Platform',
+    },
+  };
 }
 
 export default async function InnerJourneyPage({
