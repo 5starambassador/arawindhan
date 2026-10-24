@@ -16,6 +16,7 @@ export const navigationLinks: NavLink[] = [
   { href: 'inner-journey', label: { en: 'Inner Journey', ta: 'திவ்ய யோகம்' }, shortLabel: { en: 'Inner Journey', ta: 'திவ்ய யோகம்' } },
   { href: 'governance', label: { en: 'Governance & Systems', ta: 'நிர்வாகக் கட்டமைப்பு' }, shortLabel: { en: 'Governance', ta: 'நிர்வாகம்' } },
   { href: 'media', label: { en: 'Media & Speeches', ta: 'உரைகள் & ஊடகம்' }, shortLabel: { en: 'Media', ta: 'ஊடகம்' } },
+  { href: 'blog', label: { en: 'Research & Blog', ta: 'ஆய்வுக் கட்டுரைகள்' }, shortLabel: { en: 'Blog', ta: 'வலைப்பதிவு' } },
   { href: 'faq', label: { en: 'Answer Engine & FAQs', ta: 'கேள்வி & பதில்கள்' }, shortLabel: { en: 'FAQs', ta: 'FAQs' } },
   { href: 'contact', label: { en: 'Contact & Verification', ta: 'தொடர்பு & சரிபார்ப்பு' }, shortLabel: { en: 'Contact', ta: 'தொடர்பு' } },
 ];

@@ -109,3 +109,39 @@ export interface TransformationRipple {
   focus: { en: string; ta: string };
   impact: { en: string; ta: string };
 }
+
+export interface BlogSubsection {
+  title: { en: string; ta: string };
+  content: { en: string[]; ta: string[] };
+}
+
+export interface BlogSection {
+  id: string;
+  heading: { en: string; ta: string };
+  content: { en: string[]; ta: string[] };
+  subsections?: BlogSubsection[];
+}
+
+export interface BlogFaq {
+  question: { en: string; ta: string };
+  answer: { en: string; ta: string };
+}
+
+export interface BlogPost {
+  id: string;
+  slug: string;
+  title: { en: string; ta: string };
+  category: { en: string; ta: string };
+  focusKeyword: { en: string; ta: string };
+  relatedKeywords: { en: string[]; ta: string[] };
+  tags: { en: string[]; ta: string[] };
+  metaDescription: { en: string; ta: string };
+  author: { en: string; ta: string };
+  publishedAt: string;
+  readTime: string;
+  claimId?: string;
+  podcastReference?: { en: string; ta: string };
+  sections: BlogSection[];
+  faqs: BlogFaq[];
+}
+

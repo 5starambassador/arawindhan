@@ -167,6 +167,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
                 { href: 'education', en: 'Dasavadani & 10 Educational Systems', ta: 'தசாவதானி & 10 கல்விக் கூடங்கள்' },
                 { href: 'books', en: `${booksList.length}+ Published Books & Thought Leadership`, ta: `${booksList.length}+ நூல்கள் & வெளியீடுகள்` },
                 { href: 'institutions', en: '18 Colleges, 35 Schools & 61+ Companies', ta: '18 கல்லூரிகள், 35 பள்ளிகள், 61+ நிறுவனங்கள்' },
+                { href: 'blog', en: 'Research & Thought Leadership (Neo Sapiens)', ta: 'ஆய்வுக் கட்டுரைகள் (நியோ சேபியன்ஸ்)' },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
