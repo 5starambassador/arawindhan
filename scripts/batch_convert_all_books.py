@@ -29,6 +29,8 @@ PUBLIC_IMAGES_DIR = BASE_DIR / "public" / "images" / "books"
 DATA_BOOKS_TS = BASE_DIR / "src" / "data" / "books.ts"
 
 KNOWN_MAPPINGS = {
+    "andava": "andava-the-victory-mode",
+    "victory": "andava-the-victory-mode",
     "dictionary": "wow-dictionary",
     "shambala": "shambala-book",
     "parenting": "wow-parenting-book",
@@ -43,6 +45,11 @@ KNOWN_MAPPINGS = {
     "heguru": "heguru-genius-development",
     "spirituality": "mind-body-spirituality",
     "corporate": "corporate-governance",
+    "ayngara": "ayngara",
+    "iqqi": "iqqi",
+    "luminous": "the-luminous-legacy",
+    "personality": "the-yoga-of-personality",
+    "yoga": "the-yoga-of-personality",
 }
 
 def slugify(text):

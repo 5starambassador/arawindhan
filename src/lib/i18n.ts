@@ -26,8 +26,8 @@ export const uiLabels = {
     ta: 'முனைவர் ஜே. அரவிந்தன்',
   },
   platformTagline: {
-    en: 'Global Digital Authority & Knowledge Platform',
-    ta: 'அதிகாரப்பூர்வ டிஜிட்டல் அறிவுத் தளம்',
+    en: 'Educationist • Institution Builder • Spiritual Mentor',
+    ta: 'கல்வியாளர் • நிறுவனச் சிற்பி • ஆன்மீக வழிகாட்டி',
   },
   evidenceRegister: {
     en: 'Evidence & Claims Register',

@@ -384,7 +384,7 @@ export default async function HomePage({
                 {lang === 'ta' ? 'நூல் வெளியீடுகள்' : 'INTELLECTUAL WORKS'}
               </span>
               <h2 className="font-serif heading-gold" style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.5rem)', fontWeight: 800 }}>
-                {lang === 'ta' ? 'முனைவர் அரவிந்தன் எழுதிய 7 நூல்கள்' : 'Seven Major Published Titles'}
+                {lang === 'ta' ? `முனைவர் அரவிந்தன் எழுதிய ${booksList.length}+ நூல்கள் & வெளியீடுகள்` : `${booksList.length}+ Published Works & Thought Leadership`}
               </h2>
             </div>
             <Link href={`/${lang}/books`} className="btn-outline">

@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Building2, School, Factory, Utensils, HeartPulse, Laptop, Palmtree, GraduationCap, ShieldCheck, Filter, Calendar, Users, Award } from 'lucide-react';
-import { collegesList, schoolsSummary, enterprisesList, heguruMilestones, trustOverview, officialFoundingChronology } from '@/data/institutions';
+import { collegesList, schoolsSummary, enterprisesList, heguruMilestones, trustOverview } from '@/data/institutions';
 import { SectionHeader } from '@/components/SectionHeader';
 import { ClaimBadge } from '@/components/ClaimBadge';
 import { Language } from '@/types';
@@ -408,109 +408,7 @@ export default function InstitutionsPage({
           </div>
         )}
 
-        {/* Official Institutional Founding Chronology (2000–2011) */}
-        <div
-          style={{
-            maxWidth: '1000px',
-            margin: '4rem auto 0 auto',
-            background: '#FFFFFF',
-            border: '1.5px solid #E2E8F0',
-            borderRadius: '20px',
-            padding: '2.25rem',
-            boxShadow: '0 8px 30px -5px rgba(15, 23, 42, 0.05)',
-          }}
-        >
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.75rem', marginBottom: '1.5rem' }}>
-            <div>
-              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.45rem', background: '#FFFBEB', border: '1px solid #FDE68A', padding: '0.2rem 0.65rem', borderRadius: '999px', fontSize: '0.72rem', fontWeight: 800, color: '#B45309', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.4rem' }}>
-                <Calendar size={13} color="#D97706" />
-                <span>{lang === 'ta' ? 'அதிகாரப்பூர்வ தொடக்க கால வரலாற்றுப் பதிவேடு' : 'OFFICIAL FOUNDING CHRONOLOGY (2000–2011)'}</span>
-              </div>
-              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.6rem', fontWeight: 800, color: '#0F172A', margin: 0 }}>
-                {lang === 'ta' ? 'ஆச்சாரியா உலகத்தரம் வாய்ந்த கல்வி நிறுவனங்கள்' : 'Achariya Group of World Class Educational Institutions'}
-              </h3>
-            </div>
-            <div style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', color: '#065F46', padding: '0.35rem 0.85rem', borderRadius: '999px', fontSize: '0.8rem', fontWeight: 800 }}>
-              {lang === 'ta' ? 'மொத்த பணியாளர்கள்: 1,100 நபர்கள்' : 'Total Employees: 1,100 Workforce'}
-            </div>
-          </div>
 
-          <p style={{ color: '#475569', fontSize: '0.92rem', lineHeight: 1.7, marginBottom: '1.75rem' }}>
-            {lang === 'ta'
-              ? 'முனைவர் ஜே. அரவிந்தன் அவர்களின் வழிகாட்டுதலில், 2000-ஆம் ஆண்டு ஆசிரியர் கல்விக் கல்லூரியில் தொடங்கி, பொறியியல் கல்லூரி, கலை & அறிவியல் கல்லூரி, மேலாண்மை மற்றும் சென்னை, கோவை வளாகங்கள் வரை தொடர்ச்சியாக நிறுவப்பட்ட முதன்மை நிறுவனங்களின் அதிகாரப்பூர்வ பதிவேடு.'
-              : 'The documented historical chronology of Achariya institutions established under the visionary mentorship of Dr. J. Arawindhan, scaling from pioneering teacher education in 2000 into multi-campus higher education colleges and metropolitan school networks.'}
-          </p>
-
-          {/* Chronological Table / List */}
-          <div
-            style={{
-              overflowX: 'auto',
-              borderRadius: '12px',
-              border: '1px solid #E2E8F0',
-            }}
-          >
-            <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', fontSize: '0.88rem' }}>
-              <thead>
-                <tr style={{ background: '#F8FAFC', borderBottom: '1px solid #E2E8F0', color: '#0F172A', fontWeight: 800 }}>
-                  <th style={{ padding: '0.85rem 1.25rem', width: '60px' }}>#</th>
-                  <th style={{ padding: '0.85rem 1.25rem' }}>{lang === 'ta' ? 'நிறுவனத்தின் பெயர்' : 'Name of the Institution'}</th>
-                  <th style={{ padding: '0.85rem 1.25rem', width: '160px' }}>{lang === 'ta' ? 'தொடங்கப்பட்ட ஆண்டு' : 'Established in'}</th>
-                  <th style={{ padding: '0.85rem 1.25rem', width: '200px' }}>{lang === 'ta' ? 'கல்விப் பிரிவு' : 'Category'}</th>
-                </tr>
-              </thead>
-              <tbody>
-                {officialFoundingChronology.map((item, idx) => (
-                  <tr
-                    key={idx}
-                    style={{
-                      borderBottom: idx === officialFoundingChronology.length - 1 ? 'none' : '1px solid #F1F5F9',
-                      background: idx % 2 === 0 ? '#FFFFFF' : '#FAFAFA',
-                    }}
-                  >
-                    <td style={{ padding: '0.8rem 1.25rem', color: '#64748B', fontWeight: 700, fontFamily: 'monospace' }}>
-                      {String(idx + 1).padStart(2, '0')}
-                    </td>
-                    <td style={{ padding: '0.8rem 1.25rem', color: '#0F172A', fontWeight: 700 }}>
-                      {item.institution}
-                    </td>
-                    <td style={{ padding: '0.8rem 1.25rem', color: '#B45309', fontWeight: 800, fontFamily: 'monospace' }}>
-                      {item.established}
-                    </td>
-                    <td style={{ padding: '0.8rem 1.25rem', color: '#475569' }}>
-                      <span style={{ background: '#F1F5F9', border: '1px solid #E2E8F0', padding: '0.2rem 0.55rem', borderRadius: '6px', fontSize: '0.78rem', fontWeight: 600 }}>
-                        {item.category}
-                      </span>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-
-          <div
-            style={{
-              marginTop: '1.25rem',
-              padding: '1rem 1.25rem',
-              background: '#F8FAFC',
-              borderRadius: '10px',
-              border: '1px solid #E2E8F0',
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              flexWrap: 'wrap',
-              gap: '0.75rem',
-              fontSize: '0.84rem',
-              color: '#475569',
-            }}
-          >
-            <div>
-              <strong>{lang === 'ta' ? 'நிறுவனர் & முதன்மை வழிகாட்டி:' : 'Founder & Chief Mentor:'}</strong> Dr. J. Arawindhan | <strong>{lang === 'ta' ? 'அறக்கட்டளை:' : 'Promoted by:'}</strong> Achariya Educational Public Trust
-            </div>
-            <div style={{ fontWeight: 800, color: '#D97706' }}>
-              {lang === 'ta' ? 'மொத்த பணியாளர்கள்: ~1200 | மாணவர்கள்: 12000+' : 'Total Workforce: ~1,200 Employees | Students: 12,000+'}
-            </div>
-          </div>
-        </div>
 
         {/* Heguru India National Milestones Showcase */}
         <div

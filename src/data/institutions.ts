@@ -338,9 +338,9 @@ export const trustOverview = {
     en: 'Empowering young Indians across the Nation to attain educational excellence and create the new India based on Intelligence, as dreamt by Dr. A.P.J. Abdul Kalam.',
     ta: 'டாக்டர் ஏ.பி.ஜே. அப்துல் கலாம் அவர்களின் கனவுப்படி, இளம் இந்தியர்களை நுண்ணறிவுமிக்க ஆற்றலாளர்களாக மாற்றி புதிய இந்தியாவை உருவாக்குதல்.',
   },
-  totalInstitutions: 'Over 42 Institutions in its Fold',
-  totalEmployees: 'Around 1,200 Dedicated Employees',
-  totalStudents: '12,000+ Active Students',
+  totalInstitutions: '18 Colleges & 101 Schools in Network',
+  totalEmployees: '2,000+ Dedicated Educators & Staff',
+  totalStudents: '14,000+ Active Students',
   curriculaAffiliations: 'CBSE, ICSE, IGCSE & State Boards of Education',
 };
 

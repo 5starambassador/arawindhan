@@ -48,27 +48,27 @@ export default async function ContactPage({
             </div>
           </div>
 
-          {/* Factual Integrity & Archival Access */}
+          {/* Official Inquiries & Communication Channels */}
           <div className="card-premium">
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem', color: '#059669' }}>
-              <ShieldCheck size={22} />
-              <h3 className="font-serif heading-white" style={{ fontSize: '1.35rem', fontWeight: 800 }}>
-                {lang === 'ta' ? 'உண்மைச் சரிபார்ப்புக் கொள்கை' : 'Factual Verification & Claims Archive'}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem', color: '#B45309' }}>
+              <Mail size={22} />
+              <h3 className="font-serif heading-gold" style={{ fontSize: '1.35rem', fontWeight: 800 }}>
+                {lang === 'ta' ? 'அதிகாரப்பூர்வ தொடர்புகள்' : 'Official Communications & Desk'}
               </h3>
             </div>
 
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.92rem', lineHeight: 1.7, marginBottom: '1.5rem' }}>
               {lang === 'ta'
-                ? 'இத்தளத்தில் வெளியிடப்பட்டுள்ள 30-க்கும் மேற்பட்ட முக்கிய புள்ளிவிவரங்கள் மற்றும் சாதனைகள், முதன்மை ஆவணங்களுடன் ஒப்பீடு செய்யப்பட்டு "மாஸ்டர் க்ளைம்ஸ் ரெஜிஸ்டரில்" பதிவு செய்யப்பட்டுள்ளன.'
-                : 'Every quantitative statement and historical milestone is maintained in the Master Claims Register with discrete verification states (CONFIRMED, SOURCE_CLAIM, PENDING_VERIFICATION).'}
+                ? 'முனைவர் ஜே. அரவிந்தன் அவர்களின் கல்வி, ஆன்மீகம் மற்றும் நிறுவன முன்முயற்சிகள் தொடர்பான ஆலோசனைகள் மற்றும் கூட்டுக் கல்வித் திட்டங்களுக்கான அதிகாரப்பூர்வ தொடர்பு வழிகள்.'
+                : 'For educational collaborations, keynote invitations, institutional affiliations, and official correspondence with the office of Dr. J. Arawindhan.'}
             </p>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-              <div style={{ background: 'var(--bg-subtle)', padding: '0.75rem 1rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-light)', fontSize: '0.85rem', color: 'var(--text-secondary)', fontWeight: 600 }}>
-                📊 <strong>MASTER_CLAIMS_REGISTER.csv</strong> — Complete 30-Point Audit
+              <div style={{ background: 'var(--bg-subtle)', padding: '0.75rem 1rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-light)', fontSize: '0.88rem', color: 'var(--text-secondary)' }}>
+                ✉️ <strong>{lang === 'ta' ? 'முதன்மை மின்னஞ்சல்:' : 'Official Email:'}</strong> <a href="mailto:info@achariya.in" style={{ color: '#B45309', fontWeight: 700, textDecoration: 'none' }}>info@achariya.in</a>
               </div>
-              <div style={{ background: 'var(--bg-subtle)', padding: '0.75rem 1rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-light)', fontSize: '0.85rem', color: 'var(--text-secondary)', fontWeight: 600 }}>
-                📋 <strong>CONTENT_VERIFICATION_POLICY.md</strong> — Verification Standards
+              <div style={{ background: 'var(--bg-subtle)', padding: '0.75rem 1rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-light)', fontSize: '0.88rem', color: 'var(--text-secondary)' }}>
+                🌐 <strong>{lang === 'ta' ? 'அதிகாரப்பூர்வ தளம்:' : 'Official Portal:'}</strong> <span style={{ color: '#059669', fontWeight: 700 }}>arawindhan.org</span>
               </div>
             </div>
           </div>

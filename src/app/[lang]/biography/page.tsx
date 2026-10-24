@@ -177,7 +177,7 @@ export default async function BiographyPage({
                 <span>{lang === 'ta' ? 'அதிகாரப்பூர்வ சுயவிவரம் & கல்வி அடித்தளம்' : 'AUTHORITATIVE PROFILE & FOUNDATIONAL ROOTS'}</span>
               </div>
               <span style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', color: '#065F46', padding: '0.2rem 0.65rem', borderRadius: '999px', fontSize: '0.75rem', fontWeight: 800 }}>
-                {lang === 'ta' ? '12,000+ மாணவர்கள் • 1,200 பணியாளர்கள் • 42+ நிறுவனங்கள்' : '12,000+ Students • 1,200 Workforce • 42+ Institutions'}
+                {lang === 'ta' ? '14,000+ மாணவர்கள் • 2,000+ பணியாளர்கள் • 18 கல்லூரிகள், 101 பள்ளிகள்' : '14,000+ Students • 2,000+ Educators & Staff • 18 Colleges, 101 Schools'}
               </span>
             </div>
 
@@ -227,8 +227,8 @@ export default async function BiographyPage({
             <div
               style={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))',
-                gap: '1rem',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 360px), 1fr))',
+                gap: '1.25rem',
                 marginBottom: '1.5rem',
               }}
             >
@@ -448,7 +448,7 @@ export default async function BiographyPage({
             <div
               style={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(170px, 1fr))',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(135px, 1fr))',
                 gap: '0.75rem',
               }}
             >

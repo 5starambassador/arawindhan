@@ -76,4 +76,126 @@ export const innerJourneyData = {
       ta: 'ஆண்டுதோறும் டிசம்பர் 21 அன்று புதுச்சேரியில் நடைபெறும் மாபெரும் ஆன்மீக சங்கமம். ஆயிரக்கணக்கான மக்கள் ஒன்று கூடி ஒருமை தியானம், பிரமிடு ஆற்றல் தியானம் மற்றும் சந்தோஷி ஸ்ரீ அரவிந்தன் அவர்களின் மெய்யறிவு உரைகளைக் கேட்டுப் பயன்பெறுகின்றனர்.',
     },
   },
+  journeyPhases: [
+    {
+      num: 'I',
+      realm: 'outer',
+      title: { en: 'Education', ta: 'கல்வி' },
+      subtitle: { en: 'Learning reimagined', ta: 'புதிய முறையில் கற்றல்' },
+      desc: { en: 'Reimagining learning beyond academics into life mastery.', ta: 'வெறும் ஏட்டுக் கல்வியைத் தாண்டி முழுமையான வாழ்வியல் கற்றல்.' },
+    },
+    {
+      num: 'II',
+      realm: 'outer',
+      title: { en: 'Human Potential', ta: 'மனித ஆற்றல்' },
+      subtitle: { en: 'Possibilities expanded', ta: 'விரிவடையும் சாத்தியங்கள்' },
+      desc: { en: 'Unlocking intelligence, creativity, memory, emotional and life skills.', ta: 'நுண்ணறிவு, படைப்பாற்றல், நினைவாற்றல் மற்றும் உணர்ச்சி சமநிலையை வெளிக்கொணர்தல்.' },
+    },
+    {
+      num: 'III',
+      realm: 'outer',
+      title: { en: 'Leadership', ta: 'தலைமைத்துவம்' },
+      subtitle: { en: 'People empowered', ta: 'ஆற்றல்மிக்க மனிதர்கள்' },
+      desc: { en: 'Creating conscious, capable, and value-driven individuals.', ta: 'விழிப்புணர்வும் நற்பண்புகளும் கொண்ட ஆற்றல்மிகு தலைவர்களை உருவாக்குதல்.' },
+    },
+    {
+      num: 'IV',
+      realm: 'outer',
+      title: { en: 'Wellbeing', ta: 'நல்வாழ்வு' },
+      subtitle: { en: 'Life harmonised', ta: 'சீர்மிகு வாழ்வியல்' },
+      desc: { en: 'Bringing deep balance to body, mind, emotion, and everyday life.', ta: 'உடல், மனம், உணர்வு மற்றும் அன்றாட வாழ்க்கையை முழுமையான நல்லிணக்கத்திற்கு கொண்டுவருதல்.' },
+    },
+    {
+      num: 'V',
+      realm: 'inner',
+      title: { en: 'Meditation', ta: 'தியானம்' },
+      subtitle: { en: 'The journey turns inward', ta: 'அகமுகப் பயணம்' },
+      desc: { en: 'Turning the journey inward through stillness, breath, and pure awareness.', ta: 'மௌனம், மூச்சு மற்றும் தூய விழிப்புணர்வின் வழி அகத்தை நோக்கித் திரும்புதல்.' },
+    },
+    {
+      num: 'VI',
+      realm: 'inner',
+      title: { en: 'Consciousness', ta: 'உணர்வுநிலை' },
+      subtitle: { en: 'Awareness deepens', ta: 'ஆழமாகும் விழிப்புணர்வு' },
+      desc: { en: 'Exploring the deeper spiritual dimensions of human existence.', ta: 'மனித வாழ்வின் ஆழமான ஆன்மீக பரிமாணங்களை உணர்ந்து நிலைபெறுதல்.' },
+    },
+    {
+      num: 'VII',
+      realm: 'inner',
+      title: { en: 'Divya Yogam', ta: 'திவ்ய யோகம்' },
+      subtitle: { en: 'The journey within', ta: 'அகப் பேரொளி' },
+      desc: { en: 'Bringing the outer journey and the inner journey into sacred harmony.', ta: 'புற உலகப் பயணத்தையும் அக உலக ஆன்மப் பயணத்தையும் உன்னத ஒருமைக்கு உயர்த்துதல்.' },
+    },
+  ],
+  visionMission: {
+    vision: {
+      en: 'Awaken the Inner Being. Elevate the Human Experience.',
+      ta: 'ஆன்மாவை விழிப்படையச் செய். மனித அனுபவத்தை மேன்மையாக்கு.',
+    },
+    visionStatement: {
+      en: 'To nurture a world of conscious, balanced and awakened individuals who recognise their inner potential, live with greater awareness and contribute to the wellbeing of the world around them.',
+      ta: 'தங்கள் உள்ளார்ந்த ஆற்றலை உணர்ந்து, ஆழ்ந்த விழிப்புணர்வுடன் வாழ்ந்து, உலகத்தின் ஒட்டுமொத்த நல்வாழ்விற்குப் பங்களிக்கும் ஆன்ம விழிப்புணர்வு கொண்ட மனித சமுதாயத்தை உருவாக்குதல்.',
+    },
+    pillars: [
+      { num: '1', title: { en: 'Awareness', ta: 'விழிப்புணர்வு' }, focus: { en: 'Know the self', ta: 'தன்னை அறிதல்' } },
+      { num: '2', title: { en: 'Harmony', ta: 'நல்லிணக்கம்' }, focus: { en: 'Align the whole being', ta: 'முழுமையை சீரமைத்தல்' } },
+      { num: '3', title: { en: 'Stillness', ta: 'மௌனம்' }, focus: { en: 'Create space within', ta: 'அக அமைதி காத்தல்' } },
+      { num: '4', title: { en: 'Evolution', ta: 'பரிணாமம்' }, focus: { en: 'Go beyond the known', ta: 'அறியப்பட்டதைக் கடத்தல்' } },
+      { num: '5', title: { en: 'Oneness', ta: 'ஒருமை' }, focus: { en: 'Experience interconnectedness', ta: 'பிரபஞ்ச இணைப்பை உணர்தல்' } },
+    ],
+    gateways: [
+      { title: { en: 'Awaken', ta: 'விழித்தெழுதல்' }, desc: { en: 'Become conscious of the true self.', ta: 'மெய்யான ஆன்மாவை விழிப்புணர்வுடன் அறிதல்.' } },
+      { title: { en: 'Align', ta: 'ஒருங்கிணைத்தல்' }, desc: { en: 'Bring body, mind, emotion and intellect into harmony.', ta: 'உடல், மனம், உணர்வு, புத்தியை சீரமைத்தல்.' } },
+      { title: { en: 'Experience', ta: 'நேரடி அனுபவம்' }, desc: { en: 'Discover the transformative power of stillness.', ta: 'மௌனம் மற்றும் அமைதியின் உருமாற்றும் ஆற்றலை உணர்தல்.' } },
+      { title: { en: 'Evolve', ta: 'பரிணாம வளர்ச்சி' }, desc: { en: 'Grow beyond limitation into higher possibilities.', ta: 'எல்லைகளைக் கடந்து மேலான சாத்தியங்களாக மலர்தல்.' } },
+      { title: { en: 'Express', ta: 'வெளிப்படுத்துதல்' }, desc: { en: 'Carry inner clarity into relationships and work.', ta: 'அகத் தெளிவை உறவுகளிலும் செயலிலும் வெளிப்படுத்துதல்.' } },
+      { title: { en: 'Contribute', ta: 'பங்களிப்பு' }, desc: { en: 'Transform personal awakening into collective wellbeing.', ta: 'தனிமனித விழிப்பை உலக நல்வாழ்விற்கான சேவையாக்குதல்.' } },
+    ],
+  },
+  pathsAndOfferings: {
+    paths: [
+      {
+        id: '01',
+        title: { en: 'Yoga — Awaken the Body', ta: 'யோகா — உடலை விழிப்படையச் செய்தல்' },
+        desc: { en: 'Cultivate physical awareness, balance, and disciplined movement as a sacred foundation for inner wellbeing.', ta: 'உடல் விழிப்புணர்வு, சமநிலை மற்றும் ஒழுங்கமைக்கப்பட்ட யோகப் பயிற்சிகள் மூலம் நல்வாழ்வை உறுதி செய்தல்.' },
+      },
+      {
+        id: '02',
+        title: { en: 'Golden Smile Meditation — Quiet the Mind', ta: 'பொன்சிரிப்பு தியானம் — மனதை அமைதிப்படுத்துதல்' },
+        desc: { en: 'Create an inward space for stillness, joy, and deeper awareness. Includes AOM (Achariya Only Meditation) and Oneness Meditation.', ta: 'மௌனம், ஆனந்தம் மற்றும் ஆழமான விழிப்புணர்வை அகத்தில் மலரச் செய்தல். ஏஓஎம் மற்றும் ஒருமை தியானம் இதில் அடங்கும்.' },
+      },
+      {
+        id: '03',
+        title: { en: 'Retreats — Step Away. Go Within.', ta: 'ஆன்மீக முகாம்கள் — அகத்தை நோக்கிச் செல்லுதல்' },
+        desc: { en: 'Immersive residential experiences that create quiet space for reflection, practice, renewal, and profound inner connection.', ta: 'அன்றாட இரைச்சல்களிலிருந்து விலகி ஆழமான தியானம், புத்துணர்வு மற்றும் ஆன்ம இணைப்பைத் தரும் உறைவிட முகாம்கள்.' },
+      },
+      {
+        id: '04',
+        title: { en: 'Courses — Learn. Practise. Transform.', ta: 'பயிற்சிப் பட்டறைகள் — கற்றல், பயிற்சி, உருமாற்றம்' },
+        desc: { en: 'Structured modules that translate spiritual wisdom into practical tools for conscious daily living, family, and leadership.', ta: 'ஆன்மீக மெய்யறிவை அன்றாட குடும்பம், தொழில் மற்றும் தலைமைத்துவத்திற்கான செயல்முறைப் பயிற்சிகளாக வழங்குதல்.' },
+      },
+    ],
+    soulEvolutionPath: [
+      { step: 1, name: 'Avadhani', ta: 'அவதானி', desc: { en: 'Foundation & Sensory Integration', ta: 'அடித்தளம் மற்றும் புலனடக்கம்' } },
+      { step: 2, name: 'Ayngara', ta: 'ஐங்கரன்', desc: { en: 'Transformation of Instinct to Consciousness', ta: 'விலங்கு இயல்பிலிருந்து ஆன்ம விழிப்புணர்வு' } },
+      { step: 3, name: 'Anantha', ta: 'அனந்தா', desc: { en: 'Expansion of Mind & Infinite Stillness', ta: 'எல்லையற்ற மன விரிவு மற்றும் அமைதி' } },
+      { step: 4, name: 'Amirtha', ta: 'அமிர்தா', desc: { en: 'Pranic Vitality & Nectar of Immortality', ta: 'பிராண ஜீவ சக்தி மற்றும் அமிர்த நிலை' } },
+      { step: 5, name: 'Amogha', ta: 'அமோகா', desc: { en: 'Infallible Spiritual Purpose & Power', ta: 'தவறாத ஆன்மீக இலக்கு மற்றும் தெய்வீக ஆற்றல்' } },
+      { step: 6, name: 'Adwaita', ta: 'அத்வைதா', desc: { en: 'Non-Dual Realisation & Universal Oneness', ta: 'இருமையற்ற மெய்ப்பொருள் மற்றும் பிரபஞ்ச ஒருமை' } },
+    ],
+  },
+  legacyAndBenediction: {
+    title: {
+      en: 'Not What He Created. Instead, What He Awakened.',
+      ta: 'அவர் உருவாக்கியவை மட்டுமல்ல; அவர் விழிப்படையச் செய்ததே உண்மை சாதனை.',
+    },
+    message: {
+      en: 'The true measure of a mentor is not the number of institutions, programmes or achievements left behind. It is the number of lives transformed — people who have learnt, grown, led, discovered themselves, and begun to look within.',
+      ta: 'ஒரு ஞான ஆசிரியரின் மெய்யான அடையாளம் அவர் விட்டுச் சென்ற நிறுவனங்களோ திட்டங்களோ அல்ல; அவர் மூலமாக உருமாற்றம் அடைந்த மனிதர்களின் எண்ணிக்கையே ஆகும் — கற்று, வளர்ந்து, தங்களை உணர்ந்து, அகத்தை நோக்கிப் பார்க்கத் தொடங்கிய ஒவ்வொரு உயிரிலும் அவர் வாழ்கிறார்.',
+    },
+    benediction: {
+      en: 'May every seeker find clarity.\nMay every heart experience peace.\nMay every life become an expression of Divine Grace.\n\nBegin where you are … go as deep as you are ready.',
+      ta: 'ஒவ்வொரு தேடுபவரும் பேரொளித் தெளிவைப் பெறுக.\nஒவ்வொரு இதயமும் பூரண அமைதியை உணர்க.\nஒவ்வொரு வாழ்க்கையும் இறை அருளின் திவ்ய வெளிப்பாடாக மலர்க.\n\nநீங்கள் இருக்கும் இடத்திலிருந்தே தொடங்குங்கள் … உங்கள் பக்குவத்திற்கு ஏற்ப ஆழமாகச் செல்லுங்கள்.',
+    },
+  },
 };

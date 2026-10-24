@@ -77,8 +77,8 @@ export const biographyData = {
       ta: 'கல்வித்துறைக்கு ஆற்றிய மகத்தான பங்களிப்பைப் பாராட்டி இத்தாலியின் யார்க்கர் சர்வதேச பல்கலைக்கழகம் 2010-ல் மதிப்புறு முனைவர் பட்டம் வழங்கியது.',
     },
     managingTrustee: {
-      en: 'Managing Trustee & Founder of Achariya Educational Public Trust (Est. 2002), promoting Achariya World Class Institutions (42+ institutions, 12,000+ students, 1,200 employees).',
-      ta: 'ஆச்சாரியா உலகத்தரம் வாய்ந்த கல்வி நிறுவனங்களை (42+ நிறுவனங்கள், 12,000+ மாணவர்கள், 1,200 ஊழியர்கள்) வழிநடத்தும் ஆச்சாரியா கல்வி பொது அறக்கட்டளையின் (2002) நிறுவன நிர்வாக அறங்காவலர்.',
+      en: 'Managing Trustee & Founder of Achariya Educational Public Trust (Est. 2002), promoting Achariya World Class Institutions (18 Colleges, 101 Schools, 14,000+ students, 2,000+ educators & staff).',
+      ta: 'ஆச்சாரியா உலகத்தரம் வாய்ந்த கல்வி நிறுவனங்களை (18 கல்லூரிகள், 101 பள்ளிகள், 14,000+ மாணவர்கள், 2,000+ ஆசிரியர்கள் & பணியாளர்கள்) வழிநடத்தும் ஆச்சாரியா கல்வி பொது அறக்கட்டளையின் (2002) நிறுவன நிர்வாக அறங்காவலர்.',
     },
     teacherTransformerTitle: {
       en: 'Tr J Arawindhan (Teacher / Trainer / Transformer)',
@@ -96,9 +96,9 @@ export const biographyData = {
       en: 'Creating the new India based on Intelligence, as dreamt by Dr. A.P.J. Abdul Kalam.',
       ta: 'பாரத ரத்னா டாக்டர் ஏ.பி.ஜே. அப்துல் கலாம் அவர்களின் கனவான நுண்ணறிவுமிக்க புதிய பாரதத்தை உருவாக்குதல்.',
     },
-    totalInstitutions: 'Over 42 Institutions in its Fold',
-    totalStudents: '12,000+ Active Students',
-    totalEmployees: 'Around 1,200 Dedicated Employees & Faculty Members',
+    totalInstitutions: '18 Colleges & 101 Schools in Network',
+    totalStudents: '14,000+ Active Students',
+    totalEmployees: '2,000+ Dedicated Educators & Staff Members',
   },
   globalStudyTravel: [
     'Finland',

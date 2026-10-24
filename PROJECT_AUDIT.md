@@ -83,4 +83,9 @@ During portfolio cross-referencing, several quantitative variations were identif
   - `Institutions/Schools Tab`: Rebalanced from uneven 3-column row to balanced 2x2 grid with pinned footers and equal card heights.
   - `Colleges & Enterprises`: Enforced bottom-pinned descriptions and height parity across all cards.
 - **Brand Identity Adherence:** Strictly verified single authoritative name **Dr. J. Arawindhan** across all files.
+- **Dynamic Book Counting & Catalogue Scaling:**
+  - Upgraded book counts across the platform (Footer Quick Links, Homepage Intellectual Works, and Verification Claims) from static numbers to dynamic template bindings driven directly by `booksList.length` (`${booksList.length}+ Published Books & Thought Leadership`).
+  - As new books and monographs are added incrementally, the count automatically reflects the live catalogue length without requiring code or template edits.
+- **Security Audit:**
+  - Patched `postcss <=8.5.22` via `"overrides": { "postcss": "^8.5.31" }` in `package.json`, reducing high vulnerabilities to 0 (`found 0 vulnerabilities`).
 

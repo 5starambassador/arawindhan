@@ -9,4 +9,5 @@ scratch/
 *.tsbuildinfo
 *.pdf
 !public/books/*.pdf
+incoming_books/
 

@@ -17,13 +17,42 @@ export const StructuredData: React.FC<StructuredDataProps> = ({
 }) => {
   let schemaGraph: any[] = [
     {
+      '@type': 'WebSite',
+      '@id': 'https://www.arawindhan.com/#website',
+      url: 'https://www.arawindhan.com',
+      name: 'Arawindhan',
+      alternateName: [
+        'Arawindhan Official Website',
+        'Dr. J. Arawindhan',
+        'arawindhan.com',
+        'www.arawindhan.com',
+      ],
+      description: 'Official digital authority platform and website of Dr. J. Arawindhan.',
+      publisher: {
+        '@id': 'https://www.arawindhan.com/#person',
+      },
+      inLanguage: ['en', 'ta'],
+    },
+    {
       '@type': 'Person',
       '@id': 'https://www.arawindhan.com/#person',
       name: 'Dr. J. Arawindhan',
+      givenName: 'Arawindhan',
+      familyName: 'J.',
+      url: 'https://www.arawindhan.com',
+      mainEntityOfPage: 'https://www.arawindhan.com',
+      image: 'https://www.arawindhan.com/images/portrait_spiritual_authentic.jpg',
       alternateName: [
+        'Arawindhan',
+        'Dr. Arawindhan',
+        'Dr Arawindhan',
+        'J. Arawindhan',
+        'Dr. J. Aravindan',
+        'Aravindan',
         'Santoshi Shri Arawindhan',
-        'Dr. J. Arawindhan',
+        'Mahavadhani Sri Achariya Arawindhan GuruG',
         'முனைவர் ஜே. அரவிந்தன்',
+        'அரவிந்தன்',
       ],
       jobTitle: 'Founder, Chief Mentor & Managing Director',
       worksFor: {
@@ -50,6 +79,11 @@ export const StructuredData: React.FC<StructuredDataProps> = ({
         'K-12 School Architecture',
         'Quantum Intelligence (HI + AI)',
         'Divya Yogam & Consciousness',
+      ],
+      sameAs: [
+        'https://achariya.in',
+        'https://www.facebook.com/achariyaworldclasseducation',
+        'https://www.youtube.com/@AchariyaEducationalInstitutions',
       ],
     },
   ];

@@ -771,6 +771,8 @@ export const booksList: BookItem[] = [
         },
       },
     ],
+    pdfUrl: '/books/andava.pdf',
+    flipbookPages: Array.from({ length: 139 }, (_, i) => `/books/andava/pages/page_${i + 1}.webp`),
   },
   {
     id: 'BK-009',
