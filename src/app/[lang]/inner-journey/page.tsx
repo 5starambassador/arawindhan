@@ -44,7 +44,7 @@ export async function generateMetadata({
   return {
     title: 'Inner Journey & Spiritual Dimensions | Dr. J. Arawindhan — Divya Yogam',
     description:
-      'Spiritual awakening, Mahavadhani GuruG realization, Divya Yogam, and inner consciousness philosophy of Dr. J. Arawindhan (Arawindhan).',
+      'Spiritual awakening, Mahavadhani GuruG awakening, Divya Yogam, and inner consciousness philosophy of Dr. J. Arawindhan (Arawindhan).',
     alternates: {
       canonical: 'https://www.arawindhan.com/en/inner-journey',
       languages: {

@@ -183,7 +183,7 @@ export default async function BiographyPage({
               }}
             >
               <div style={{ fontSize: '0.8rem', fontWeight: 800, color: '#FEF3C7', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                {lang === 'ta' ? '28 ஆண்டு தொலைநோக்கு • பொறியியல் முதல் பல்கலைக்கழகங்கள் வரை' : 'The 28-Year Odyssey: From Engineering Blueprints to 101 Campuses'}
+                {lang === 'ta' ? '28 ஆண்டு தொலைநோக்கு • பொறியியல் முதல் பல்கலைக்கழகங்கள் வரை' : 'The 28-Year Odyssey: From Engineering Blueprints to 53 Campuses'}
               </div>
               <div style={{ fontSize: '0.88rem', color: '#E2E8F0', marginTop: '0.2rem' }}>
                 {lang === 'ta'
@@ -268,7 +268,7 @@ export default async function BiographyPage({
               <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                 <img
                   src="/images/arawindhan_blue_shirt.jpg"
-                  alt="Tr J Arawindhan - Teacher / Trainer / Transformer"
+                  alt="Dr. J. Arawindhan — Teacher, Trainer, Transformer"
                   style={{
                     width: '64px',
                     height: '64px',
