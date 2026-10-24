@@ -8,3 +8,5 @@ build/
 scratch/
 *.tsbuildinfo
 *.pdf
+!public/books/*.pdf
+
