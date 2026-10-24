@@ -4,6 +4,7 @@ import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { StructuredData } from '@/components/StructuredData';
 import { ClaimModal } from '@/components/ClaimModal';
+import { BookReaderModal } from '@/components/BookReaderModal';
 import { Language } from '@/types';
 
 export async function generateStaticParams() {
@@ -72,6 +73,7 @@ export default async function LangLayout({
         <main>{children}</main>
         <Footer lang={lang} />
         <ClaimModal language={lang} />
+        <BookReaderModal language={lang} />
       </body>
     </html>
   );

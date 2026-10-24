@@ -4,6 +4,7 @@ import { ArrowRight, BookOpen, ShieldCheck, Bookmark, Sparkles } from 'lucide-re
 import { booksList } from '@/data/books';
 import { SectionHeader } from '@/components/SectionHeader';
 import { ClaimBadge } from '@/components/ClaimBadge';
+import { OpenReaderButton } from '@/components/OpenReaderButton';
 import { Language } from '@/types';
 
 export async function generateStaticParams() {
@@ -181,14 +182,24 @@ export default async function BooksPage({
                 </div>
               </div>
 
-              <div style={{ borderTop: '1px solid var(--border-light)', paddingTop: '1rem', textAlign: 'right' }}>
+              <div style={{ borderTop: '1px solid var(--border-light)', paddingTop: '1rem', display: 'flex', gap: '0.65rem', alignItems: 'center' }}>
+                <OpenReaderButton
+                  slug={book.slug}
+                  label={lang === 'ta' ? 'வாசிக்க' : 'Read Sample'}
+                  style={{ flex: 1, padding: '0.6rem 0.85rem', fontSize: '0.86rem', borderRadius: 'var(--radius-full)' }}
+                />
                 <Link
                   href={`/${lang}/books/${book.slug}`}
-                  className="btn-gold"
-                  style={{ width: '100%', justifyContent: 'center', fontSize: '0.85rem', padding: '0.55rem 1rem' }}
+                  className="btn-outline"
+                  style={{
+                    padding: '0.6rem 0.95rem',
+                    fontSize: '0.84rem',
+                    whiteSpace: 'nowrap',
+                  }}
+                  title={lang === 'ta' ? 'முழு நூல் விவரங்கள்' : 'Full Dossier & Themes'}
                 >
-                  <span>{lang === 'ta' ? 'நூல் விவரங்கள் & சாரம்' : 'View Book Details'}</span>
-                  <ArrowRight size={14} />
+                  <span>{lang === 'ta' ? 'விவரங்கள்' : 'Details'}</span>
+                  <ArrowRight size={13} />
                 </Link>
               </div>
             </div>

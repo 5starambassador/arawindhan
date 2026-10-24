@@ -6,6 +6,7 @@ import { booksList } from '@/data/books';
 import { SectionHeader } from '@/components/SectionHeader';
 import { ClaimBadge } from '@/components/ClaimBadge';
 import { StructuredData } from '@/components/StructuredData';
+import { OpenReaderButton } from '@/components/OpenReaderButton';
 import { Language } from '@/types';
 
 export async function generateStaticParams() {
@@ -138,6 +139,21 @@ export default async function BookDetailPage({
               <p style={{ color: 'var(--text-secondary)', fontSize: '1.02rem', lineHeight: 1.8, marginBottom: '1.5rem' }}>
                 {book.summary[lang]}
               </p>
+
+              {/* Reader Action CTAs */}
+              <div style={{ display: 'flex', gap: '0.85rem', flexWrap: 'wrap', alignItems: 'center', marginBottom: '1.5rem' }}>
+                <OpenReaderButton
+                  slug={book.slug}
+                  label={lang === 'ta' ? '📖 மாதிரி அத்தியாயத்தை வாசிக்க' : '📖 Read Sample Online'}
+                  style={{ padding: '0.75rem 1.75rem', fontSize: '0.96rem', fontWeight: 800 }}
+                />
+                <OpenReaderButton
+                  slug={book.slug}
+                  variant="outline"
+                  label={lang === 'ta' ? 'முழு பதிப்பைப் பெற' : 'Request Full Edition'}
+                  style={{ padding: '0.75rem 1.5rem', fontSize: '0.92rem' }}
+                />
+              </div>
             </div>
           </div>
 

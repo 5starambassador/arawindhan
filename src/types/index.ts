@@ -28,6 +28,12 @@ export interface EducationalExhibit {
   relatedBooks?: string[];
 }
 
+export interface BookChapter {
+  title: { en: string; ta: string };
+  subtitle?: { en: string; ta: string };
+  paragraphs: { en: string[]; ta: string[] };
+}
+
 export interface BookItem {
   id: string;
   slug: string;
@@ -43,6 +49,8 @@ export interface BookItem {
   targetAudience: { en: string; ta: string };
   readMoreSnippet?: { en: string; ta: string };
   coverImage?: string;
+  pdfUrl?: string;
+  sampleChapters?: BookChapter[];
 }
 
 export interface InstitutionEntry {
