@@ -52,13 +52,14 @@ export default async function InnerJourneyPage({
               <div
                 style={{
                   position: 'relative',
-                  width: '240px',
-                  height: '280px',
+                  width: '100%',
+                  maxWidth: '320px',
+                  height: '380px',
                   margin: '0 auto',
-                  borderRadius: '20px',
+                  borderRadius: '24px',
                   overflow: 'hidden',
                   border: '3px solid #D97706',
-                  boxShadow: '0 20px 35px -10px rgba(180, 83, 9, 0.25), 0 0 0 6px #FFFBEB',
+                  boxShadow: '0 25px 45px -12px rgba(180, 83, 9, 0.3), 0 0 0 6px #FFFBEB',
                 }}
               >
                 <img
@@ -68,7 +69,7 @@ export default async function InnerJourneyPage({
                     width: '100%',
                     height: '100%',
                     objectFit: 'cover',
-                    objectPosition: 'top center',
+                    objectPosition: 'center 15%',
                     display: 'block',
                   }}
                 />
@@ -78,20 +79,17 @@ export default async function InnerJourneyPage({
                     bottom: 0,
                     left: 0,
                     right: 0,
-                    padding: '0.45rem',
+                    padding: '0.6rem',
                     background: 'linear-gradient(to top, rgba(15, 23, 42, 0.9), transparent)',
                     color: '#FEF3C7',
-                    fontSize: '0.72rem',
+                    fontSize: '0.75rem',
                     fontWeight: 700,
-                    letterSpacing: '0.08em',
+                    letterSpacing: '0.1em',
                     textTransform: 'uppercase',
                   }}
                 >
                   DIVYA YOGAM • ESTD. 2000
                 </div>
-              </div>
-              <div style={{ marginTop: '1rem', display: 'flex', justifyContent: 'center' }}>
-                <ClaimBadge claimId="CLM-028" status="CONFIRMED" language={lang} />
               </div>
             </div>
 

@@ -82,8 +82,8 @@ export const uiLabels = {
     ta: 'நிறுவனங்கள் & இயக்கங்கள்',
   },
   contactHeading: {
-    en: 'Official Verification Desk',
-    ta: 'அதிகாரப்பூர்வ சரிபார்ப்பு மையம்',
+    en: 'Connect & Inquiries',
+    ta: 'தொடர்புகள் & விசாரணைகள்',
   },
   footerDisclaimer: {
     en: 'This official digital knowledge platform documents the educational systems, enterprises, publications, and philosophies founded and led by Dr. J. Arawindhan. Every factual statement is cross-referenced with institutional primary documents.',

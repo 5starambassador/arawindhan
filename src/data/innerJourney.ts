@@ -1,7 +1,7 @@
 export const innerJourneyData = {
   spiritualTitle: {
-    en: 'Santoshi Shri Arawindhan',
-    ta: 'சந்தோஷி ஸ்ரீ அரவிந்தன்',
+    en: 'Santoshi Shri Arawindhan ji',
+    ta: 'சந்தோஷி ஸ்ரீ அரவிந்தன் ஜி',
   },
   spiritualRoles: {
     en: 'Spiritual Master • Mahaavadhani • Spiritual Guide to Inner Transformation',

@@ -271,7 +271,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
                 }}
               >
                 <HelpCircle size={15} color="#D97706" />
-                <span>{lang === 'ta' ? 'தேடுபொறி & AI வினா-விடைகள் (AEO)' : 'Answer Engine & FAQs (AEO)'}</span>
+                <span>{lang === 'ta' ? 'அடிக்கடி கேட்கப்படும் கேள்விகள் (FAQ)' : 'Frequently Asked Questions (FAQ)'}</span>
               </Link>
 
               <Link
@@ -293,7 +293,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
                 }}
               >
                 <CheckCircle2 size={15} color="#059669" />
-                <span>{lang === 'ta' ? 'அதிகாரப்பூர்வ தொடர்புகள் & தணிக்கை' : 'Official Profiles & Contacts'}</span>
+                <span>{lang === 'ta' ? 'அதிகாரப்பூர்வ தொடர்புகள்' : 'Official Profiles & Contacts'}</span>
               </Link>
             </div>
 
@@ -319,7 +319,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
           </div>
         </div>
 
-        {/* Bottom Bar: Copyright & Governance Links */}
+        {/* Bottom Bar: Copyright & Language Switcher */}
         <div
           style={{
             borderTop: '1px solid #E2E8F0',
@@ -338,35 +338,6 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
-            <button
-              type="button"
-              onClick={openClaimsModal}
-              style={{
-                background: 'transparent',
-                border: 'none',
-                color: '#475569',
-                cursor: 'pointer',
-                fontSize: '0.85rem',
-                fontWeight: 600,
-                padding: 0,
-                textDecoration: 'underline',
-              }}
-            >
-              {lang === 'ta' ? 'உண்மைச் சரிபார்ப்புக் கொள்கை' : 'Verification Policy'}
-            </button>
-
-            <Link
-              href={`/${lang}/faq`}
-              style={{
-                color: '#475569',
-                textDecoration: 'none',
-                fontWeight: 600,
-                fontSize: '0.85rem',
-              }}
-            >
-              {lang === 'ta' ? 'AEO வினாக்கள் பட்டியல்' : 'AEO Index'}
-            </Link>
-
             <Link
               href={`/${lang === 'en' ? 'ta' : 'en'}`}
               style={{
