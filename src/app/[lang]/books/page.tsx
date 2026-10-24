@@ -88,6 +88,15 @@ export default async function BooksPage({
   const resolved = await params;
   const lang: Language = resolved.lang === 'ta' ? 'ta' : 'en';
 
+  // Auto-arrange: Books with 3D Flipbooks always appear first; books without flipbooks automatically go to the end
+  const autoArrangedBooks = [...booksList].sort((a, b) => {
+    const aHasFb = Boolean(a.flipbookPages && a.flipbookPages.length > 0);
+    const bHasFb = Boolean(b.flipbookPages && b.flipbookPages.length > 0);
+    if (aHasFb && !bHasFb) return -1;
+    if (!aHasFb && bHasFb) return 1;
+    return 0;
+  });
+
   return (
     <div className="section-py">
       <div className="container">
@@ -105,7 +114,7 @@ export default async function BooksPage({
             alignItems: 'stretch',
           }}
         >
-          {booksList.map((book) => (
+          {autoArrangedBooks.map((book) => (
             <div
               key={book.id}
               className="card-premium"

@@ -1535,6 +1535,8 @@ export const booksList: BookItem[] = [
         },
       },
     ],
+    pdfUrl: '/books/the-lions-bank-account.pdf',
+    flipbookPages: Array.from({ length: 146 }, (_, i) => `/books/the-lions-bank-account/pages/page_${i + 1}.webp`),
   },
 ];
 

@@ -5,7 +5,7 @@ export const governanceData = {
   },
   overview: {
     en: "Running 18 colleges, 35 schools, and 61+ companies with more than 2,000 educators and staff requires an engineer’s mindset: define the process, assign clear ownership, measure the outcome, and review it on a fixed cadence. Dr. Arawindhan established the ACHARIYA Centre of Excellence (CoE) to ensure consistent quality across every campus, every single day.",
-    ta: ‘18 கல்லூரிகள், 35 பள்ளிகள் மற்றும் 61+ நிறுவனங்களை 2,000-க்கும் மேற்பட்ட பணியாளர்களுடன் வழிநடத்த ஒரு பொறியாளரின் துல்லியம் தேவைப்படுகிறது. ஆச்சாரியா சிறப்பு மேன்மை மையம் (CoE) மூலம் அனைத்து வளாகங்களிலும் தினமும் ஒரே தரமான கல்வி வழங்கப்படுவதை முனைவர் அரவிந்தன் உறுதிசெய்கிறார்.’,
+    ta: '18 கல்லூரிகள், 35 பள்ளிகள் மற்றும் 61+ நிறுவனங்களை 2,000-க்கும் மேற்பட்ட பணியாளர்களுடன் வழிநடத்த ஒரு பொறியாளரின் துல்லியம் தேவைப்படுகிறது. ஆச்சாரியா சிறப்பு மேன்மை மையம் (CoE) மூலம் அனைத்து வளாகங்களிலும் தினமும் ஒரே தரமான கல்வி வழங்கப்படுவதை முனைவர் அரவிந்தன் உறுதிசெய்கிறார்.',
   },
   fiveStepChain: [
     {

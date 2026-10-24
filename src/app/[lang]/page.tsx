@@ -106,6 +106,15 @@ export default async function HomePage({
   const resolved = await params;
   const lang: Language = resolved.lang === 'ta' ? 'ta' : 'en';
 
+  // Auto-arrange: Prioritize titles with interactive 3D Flipbooks
+  const autoArrangedBooks = [...booksList].sort((a, b) => {
+    const aHasFb = Boolean(a.flipbookPages && a.flipbookPages.length > 0);
+    const bHasFb = Boolean(b.flipbookPages && b.flipbookPages.length > 0);
+    if (aHasFb && !bHasFb) return -1;
+    if (!aHasFb && bHasFb) return 1;
+    return 0;
+  });
+
   return (
     <div>
       {/* 1. HERO SECTION */}
@@ -466,7 +475,7 @@ export default async function HomePage({
           </div>
 
           <div className="grid-3">
-            {booksList.slice(0, 3).map((book) => (
+            {autoArrangedBooks.slice(0, 3).map((book) => (
               <div key={book.id} className="card-premium" style={{ display: 'flex', flexDirection: 'column' }}>
                 {book.coverImage && (
                   <div
