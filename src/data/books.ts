@@ -90,6 +90,77 @@ export const booksList: BookItem[] = [
       en: 'Parents of preschool, primary, and adolescent students.',
       ta: 'மழலையர், தொடக்க மற்றும் வளரிளம் பருவக் குழந்தைகளின் பெற்றோர்கள்.',
     },
+    pdfUrl: '/books/wow_parenting_book_final.pdf',
+    epubUrl: '/books/wow_parenting.epub',
+    flipbookPages: Array.from({ length: 38 }, (_, i) => `/books/wow_parenting/pages/page_${i + 1}.webp`),
+    sampleChapters: [
+      {
+        title: {
+          en: 'Part 1: The Call for WOW Parenting & Raising Supera Children',
+          ta: 'பகுதி 1: வாவ் (WOW) பேரண்டிங் அழைப்பு மற்றும் சுப்ரா குழந்தைகளை உருவாக்குதல்',
+        },
+        subtitle: {
+          en: 'Awakening Limitless Potential with the 5H Foundation',
+          ta: '5H அடித்தளத்தின் மூலம் வரம்பற்ற திறனை வெளிக்கொணருதல்',
+        },
+        paragraphs: {
+          en: [
+            'Every generation of parents dreams of giving their children something better—not just more possessions, but more strength, more wisdom, and more joy. In today’s world of wonders, distractions and constant acceleration, our children need something far deeper than conventional coaching: they need a holistic foundation.',
+            'WOW Parenting is a comprehensive, multi-level framework that nurtures the whole child through the 5H Foundation: Head (sharpening the mind and building focus), Hand (developing skills, creativity, and craftsmanship), Heart (emotional resilience, empathy, and spiritual depth), Health (physical vitality and wholesome energy), and Happiness (inner contentment and lasting purpose).',
+            'When parents and educators come together in conscious alignment, we do not merely teach lessons—we raise "Supera Children" who are resilient against failure, compassionate in action, and joyful in every breath.',
+          ],
+          ta: [
+            'ஒவ்வொரு தலைமுறை பெற்றோரும் தங்கள் குழந்தைகளுக்கு சிறந்ததைக் கொடுக்கவே கனவு காண்கிறார்கள்—வெறும் உடைமைகளை மட்டுமல்ல, அதிக வலிமை, ஞானம் மற்றும் எல்லையற்ற மகிழ்ச்சியை வழங்க விரும்புகிறார்கள். இன்றைய வேகமான உலகில் நம் குழந்தைகளுக்கு வழக்கமான மதிப்பெண் பயிற்சிகளை விட ஆழமான வாழ்க்கை அடித்தளம் தேவைப்படுகிறது.',
+            'வாவ் (WOW) பேரண்டிங் என்பது 5H அடித்தளத்தின் மூலம் குழந்தையின் முழுமையான ஆற்றலையும் மலரச் செய்யும் ஒரு புரட்சிகர கட்டமைப்பு ஆகும்: Head (கூர்மையான அறிவு மற்றும் மனக்குவிப்பு), Hand (கைத்திறன் மற்றும் படைப்பாற்றல்), Heart (உணர்ச்சி நுண்ணறிவு மற்றும் ஆன்மீக ஆழம்), Health (உடல் ஆரோக்கியம் மற்றும் சக்தி), Happiness (நீடித்த ஆனந்தம் மற்றும் வாழ்க்கை நோக்கம்).',
+            'பெற்றோரும் ஆசிரியர்களும் விழிப்புணர்வோடு இணையும் போது, நாம் வெறும் பாடங்களை மட்டும் கற்பிப்பதில்லை; தோல்விகளைக் கண்டு அஞ்சாத, கருணைமிக்க, ஆனந்தம் நிறைந்த "சுப்ரா குழந்தைகளை" (Supera Children) உருவாக்குகிறோம்.',
+          ],
+        },
+      },
+      {
+        title: {
+          en: 'Part 2: The WOW Levels of Parenting & Archetypes',
+          ta: 'பகுதி 2: பெற்றோரின் நான்கு வளர்ச்சி நிலைகள்',
+        },
+        subtitle: {
+          en: 'From Protective Guardian to Enlightened WOW Parent',
+          ta: 'பாதுகாவலர் நிலையிலிருந்து விழிப்படைந்த வாவ் பெற்றோர் வரை',
+        },
+        paragraphs: {
+          en: [
+            'Parenting is not a fixed title; it is a progressive journey of self-evolution. Most parents operate within distinct archetypes: The Protective Guardian Parent (Homeguard Parent) who prioritizes safety and physical shelter; The Leadership-Oriented Parent (Commander Parent) who sets strict milestones and drives achievements; and The Caring Provider Parent who focuses on warmth, resources, and material comfort.',
+            'While each level has its value, the Enlightened WOW Parent transcends limitations. This parent does not project unresolved ambitions onto the child. Instead, they act as an inspiring mirror and conscious co-creator—awakening the child’s unique nature without fear, guilt, or coercive comparison.',
+            'In the WOW approach, we replace command with connection, anxiety with curiosity, and competition with intrinsic celebration of talent.',
+          ],
+          ta: [
+            'பெற்றோராக இருப்பது ஒரு நிலையான பட்டம் அல்ல; அது தொடர்ச்சியான சுய பரிணாமப் பயணம். பெரும்பாலான பெற்றோர்கள் மூன்று முக்கிய நிலைகளில் செயல்படுகிறார்கள்: பாதுகாப்பு மட்டுமே முக்கியம் எனக் கருதும் "பாதுகாவலர் பெற்றோர்" (Homeguard Parent), சாதனைகளையும் இலக்குகளையும் துரத்தும் "கட்டளைப் பெற்றோர்" (Commander Parent), மற்றும் வசதி வாய்ப்புகளை அள்ளித் தரும் "வழங்குநர் பெற்றோர்" (Caring Provider Parent).',
+            'இந்த நிலைகள் ஒவ்வொன்றுக்கும் ஒரு மதிப்பு இருந்தாலும், "விழிப்படைந்த வாவ் பெற்றோர்" (Enlightened WOW Parent) இந்த வரம்புகளைக் கடந்து உயர்கிறார். தன் தீராத ஆசைகளை குழந்தையின் மீது திணிக்காமல், குழந்தையின் தனித்துவமான இயல்பை அச்சமின்றி மலரச் செய்யும் உன்னத வழிகாட்டியாக மாறுகிறார்.',
+            'வாவ் அணுகுமுறையில், அதிகாரத்திற்குப் பதிலாக அன்பான பிணைப்பும், பதற்றத்திற்குப் பதிலாக அறிவார்ந்த வழிகாட்டலும், தேவையற்ற ஒப்பீடுகளுக்குப் பதிலாக குழந்தையின் தனித்திறன் கொண்டாட்டமும் முன்வைக்கப்படுகிறது.',
+          ],
+        },
+      },
+      {
+        title: {
+          en: 'Part 3: Personalized Parenting with BMIT & The 3D Cycle',
+          ta: 'பகுதி 3: BMIT வழியிலான தனிப்பயனாக்கப்பட்ட வளர்ப்பு முறை & 3D சுழற்சி',
+        },
+        subtitle: {
+          en: 'Discover, Develop, Deliver: Parenting with Clarity, Not Guesswork',
+          ta: 'கண்டறிதல், வளர்த்தெடுத்தல், வெளிப்படுத்துதல்: தெளிவான பெற்றோர் முறை',
+        },
+        paragraphs: {
+          en: [
+            'No two fingerprints are alike, and no two brains are wired the same. Traditional education and conventional parenting spend years guessing what a child might be good at, often causing immense frustration when a fish is forced to climb a tree.',
+            'Through BMIT (Brain Multiple Intelligence Test) developed by Dr. J. Arawindhan, parents gain an empirical, scientific lens into their child’s inborn neural strengths—whether Musical-Rhythmic, Spatial, Bodily-Kinesthetic, Intrapersonal, or Logical.',
+            'The WOW Roadmap operates on the 3D Cycle: 1. Discover the natural talent; 2. Develop it through deliberate, joyful practice; and 3. Deliver real-world platforms for the child to express their gifts with unshakeable confidence.',
+          ],
+          ta: [
+            'உலகில் எந்த இரு மனிதர்களின் கைரேகையும் ஒன்றாக இருப்பதில்லை; அதுபோலவே எந்த இரு குழந்தைகளின் மூளையமைப்பும் ஒரே மாதிரியாக இருப்பதில்லை. மீனை மரம் ஏறச் சொல்லி கட்டாயப்படுத்துவது போல, குழந்தையின் இயல்பை அறியாமல் பல ஆண்டுகள் ஊகத்தின் அடிப்படையில் வளர்ப்பது தேவையற்ற மன உளைச்சலையே தருகிறது.',
+            'முனைவர் ஜே. அரவிந்தன் அவர்களால் உருவாக்கப்பட்ட BMIT (Brain Multiple Intelligence Test) முறை மூலம், குழந்தையின் இயல்பான நரம்பியல் திறன்களையும் உள்ளார்ந்த நுண்ணறிவுகளையும் அறிவியல் பூர்வமாக நாம் துல்லியமாக அறிய முடியும்.',
+            'வாவ் வரைபடம் 3D சுழற்சியில் இயங்குகிறது: 1. Discover (இயற்கையான திறனைக் கண்டறிதல்), 2. Develop (மகிழ்ச்சியான பயிற்சியின் மூலம் அதை வளர்த்தெடுத்தல்), 3. Deliver (அந்த திறனை உலகிற்கு வெளிப்படுத்த மேடைகள் அமைத்துத் தருதல்). இதன் மூலம் பெற்றோர்கள் குழப்பமின்றி முழுத் தெளிவோடு குழந்தைகளை வழிநடத்த முடியும்.',
+          ],
+        },
+      },
+    ],
     readMoreSnippet: {
       en: '“School starts at Home, continues at School, and it should end at Home, easily. When parents and teachers share the same vocabulary of encouragement, the child blossoms naturally.”',
       ta: '"பள்ளி வீட்டில் தொடங்குகிறது, பள்ளியில் தொடர்கிறது, மீண்டும் வீட்டில் எளிதாக முடிய வேண்டும். பெற்றோரும் ஆசிரியரும் ஒரே நேர்மறை மொழியைப் பேசும்போது குழந்தை இயல்பாக மலர்கிறது."',

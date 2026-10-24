@@ -50,6 +50,8 @@ export interface BookItem {
   readMoreSnippet?: { en: string; ta: string };
   coverImage?: string;
   pdfUrl?: string;
+  epubUrl?: string;
+  flipbookPages?: string[];
   sampleChapters?: BookChapter[];
 }
 

@@ -107,6 +107,41 @@ export default async function BooksPage({
                       display: 'block',
                     }}
                   />
+                  {/* Format Pills Overlay */}
+                  <div style={{ position: 'absolute', bottom: '8px', left: '8px', display: 'flex', gap: '4px' }}>
+                    {book.epubUrl && (
+                      <span
+                        style={{
+                          background: 'rgba(16, 185, 129, 0.92)',
+                          color: '#FFFFFF',
+                          fontSize: '0.68rem',
+                          fontWeight: 800,
+                          padding: '2px 7px',
+                          borderRadius: '4px',
+                          letterSpacing: '0.04em',
+                          boxShadow: '0 2px 4px rgba(0,0,0,0.2)',
+                        }}
+                      >
+                        EPUB
+                      </span>
+                    )}
+                    {book.pdfUrl && (
+                      <span
+                        style={{
+                          background: 'rgba(220, 38, 38, 0.92)',
+                          color: '#FFFFFF',
+                          fontSize: '0.68rem',
+                          fontWeight: 800,
+                          padding: '2px 7px',
+                          borderRadius: '4px',
+                          letterSpacing: '0.04em',
+                          boxShadow: '0 2px 4px rgba(0,0,0,0.2)',
+                        }}
+                      >
+                        PDF
+                      </span>
+                    )}
+                  </div>
                 </div>
 
                 {/* Book Title - Fixed Baseline */}
