@@ -65,13 +65,13 @@ export default async function MediaPage({
                 KEYNOTE LEADERSHIP
               </span>
               <span style={{ color: '#FEF3C7', fontSize: '0.85rem', fontWeight: 700 }}>
-                {lang === 'ta' ? 'சர்வதேச கல்வி மாநாட்டுத் தலைமை உரை' : 'Global Summit: Human Intelligence & AI in Education'}
+                {lang === 'ta' ? 'மாநாட்டு உரைகள் & சிந்தனைத் தலைமை' : 'Keynote Addresses & Thought Leadership'}
               </span>
             </div>
             <p style={{ color: '#E2E8F0', fontSize: '0.92rem', margin: 0, maxWidth: '800px', lineHeight: 1.6 }}>
               {lang === 'ta'
-                ? 'பள்ளி முதல்வர்கள், ஆசிரியர்கள் மற்றும் சர்வதேசக் கல்வியாளர்கள் மத்தியில் “மனித நுண்ணறிவு + AI = குவாண்டம் நுண்ணறிவு” என்ற பார்வையை முன்வைக்கும் சிந்தனைத் தலைமை.'
-                : 'Codified thought leadership: synthesizing cognitive neuroscience, character pedagogy, and generative AI for next-generation learners.'}
+                ? 'பள்ளி முதல்வர்கள், கல்வியாளர்கள் மற்றும் சர்வதேச தலைவர்கள் மத்தியில் 25 ஆண்டுகளாக நிகழ்த்திய தொலைநோக்கு உரைகள் மற்றும் வழிகாட்டல் பகிர்வுகள்.'
+                : 'Addressing over 50,000 educators, school principals, and global delegates across a quarter-century of pioneering educational leadership.'}
             </p>
           </div>
         </div>
@@ -155,7 +155,7 @@ export default async function MediaPage({
             </div>
             <div style={{ background: 'var(--bg-subtle)', padding: '1rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-light)', textAlign: 'center' }}>
               <div style={{ color: 'var(--gold-glow)', fontWeight: 800, fontSize: '1rem', marginBottom: '0.25rem' }}>🇯🇵 Japan</div>
-              <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)' }}>Heguru 9 Early Childhood Centres</div>
+              <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)' }}>Heguru 10+ Early Childhood Centres</div>
             </div>
             <div style={{ background: 'var(--bg-subtle)', padding: '1rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-light)', textAlign: 'center' }}>
               <div style={{ color: 'var(--gold-glow)', fontWeight: 800, fontSize: '1rem', marginBottom: '0.25rem' }}>🇫🇷 France</div>

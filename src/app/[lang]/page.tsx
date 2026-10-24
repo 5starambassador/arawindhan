@@ -184,8 +184,8 @@ export default async function HomePage({
                 }}
               >
                 {lang === 'ta'
-                  ? '2000-ஆம் ஆண்டு புதுச்சேரியில் ஒரு மெக்கானிக்கல் பொறியாளரால் தொடங்கப்பட்ட கல்விப் புரட்சி. "ஒவ்வொரு குழந்தையும் தனக்கென தனித்துவமான நுண்ணறிவு சாம்ராஜ்யத்தைக் கொண்டுள்ளது" என்ற அசைக்க முடியாத நம்பிக்கையுடன் உருவான ஆச்சாரியா, இன்று 18 உயர்கல்விக் கல்லூரிகள், 35 பள்ளிகள், 61+ நிறுவனங்கள் மற்றும் 600+ உலக சாதனைகளைக் கொண்ட பெரும் அறிவுச் சூழலியலாக விரிவடைந்துள்ளது.'
-                  : 'In 2000, a trained Mechanical Engineer in Puducherry established ACHARIYA with one conviction: every child carries a unique kingdom of intelligences. Twenty-five years later, that vision has expanded into "One Parent with Four Children"—18 colleges, 35 schools, 61+ companies, and 302+ initiatives, educating over 14,000 students with 600+ world records.'}
+                  ? '2000-ஆம் ஆண்டு "ஒவ்வொரு குழந்தையும் தனக்கென தனித்துவமான நுண்ணறிவு சாம்ராஜ்யத்தைக் கொண்டுள்ளது" என்ற அசைக்க முடியாத நம்பிக்கையுடன் முனைவர் ஜே. அரவிந்தன் தொடங்கிய கல்விப் புரட்சி. கடந்த 25 ஆண்டுகளில் நரம்பியல் மூளை வளர்ச்சி, பண்புசார் தலைமைத்துவம் மற்றும் உலகத்தரம் வாய்ந்த கற்பித்தல் முறைகளை ஒருங்கிணைத்து, எதிர்காலத் தலைமுறையினரை உருவாக்கும் ஒரு மாபெரும் அறிவுச் சூழலியலை நிறுவியுள்ளார்.'
+                  : 'In 2000, Dr. J. Arawindhan set out with a transformative conviction: every child carries an innate kingdom of intelligences waiting to be awakened. Over a quarter-century of visionary leadership, he has synthesized cognitive neuroscience, character architecture, and values-driven enterprise—building a benchmark educational ecosystem engineered for holistic human excellence and future-ready leadership.'}
               </p>
 
               {/* CTAs */}

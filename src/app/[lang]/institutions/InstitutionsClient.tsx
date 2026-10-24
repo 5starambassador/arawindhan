@@ -141,8 +141,8 @@ export function InstitutionsClient({ lang }: InstitutionsClientProps) {
             </h3>
             <p style={{ color: '#E2E8F0', fontSize: '0.92rem', maxWidth: '750px', lineHeight: 1.5, margin: 0 }}>
               {lang === 'ta'
-                ? 'நவீன சர்வதேச உள்கட்டமைப்புடன் கூடிய ஆச்சாரியா முதன்மை வளாகம். 18 கல்லூரிகள், 35 பள்ளிகள் மற்றும் 14,000-க்கும் மேற்பட்ட மாணவர்களுக்கான வழிகாட்டுதல் மையம்.'
-                : 'Central flagship campus in Puducherry — the nerve center uniting 18 higher education colleges, 35 schools, and 61+ enterprises across southern India.'}
+                ? 'புதுச்சேரி வில்லியனூரில் அமைந்துள்ள ஆச்சாரியா முதன்மை வளாகம் — அதிநவீன விளையாட்டு அரங்கங்கள், அறிவியல் ஆய்வுக்கூடங்கள் மற்றும் பசுமைச் சூழலுடன் கூடிய மாதிரி கற்றல் களம்.'
+                : 'Central flagship campus in Puducherry — a lush, sprawling academic sanctuary in Villianur featuring world-class sports facilities, research laboratories, and experiential learning zones.'}
             </p>
           </div>
         </div>
@@ -176,8 +176,8 @@ export function InstitutionsClient({ lang }: InstitutionsClientProps) {
             </h4>
             <p style={{ color: '#475569', fontSize: '0.9rem', lineHeight: 1.6, margin: '0 0 0.85rem 0' }}>
               {lang === 'ta'
-                ? `ஆச்சாரியா கல்வி பொது அறக்கட்டளையின் நிறுவன நிர்வாக அறங்காவலராக முனைவர் ஜே. அரவிந்தன் செயல்பட்டு வருகிறார். அறக்கட்டளையின் கீழ் ${trustOverview.totalInstitutions}, ${trustOverview.totalStudents} மற்றும் ${trustOverview.totalEmployees} இயங்கி வருகின்றனர்.`
-                : `Achariya World Class Institutions are promoted by ${trustOverview.trustName.en} with ${trustOverview.managingTrustee.en}. The trust oversees ${trustOverview.totalInstitutions}, ${trustOverview.totalStudents}, and ${trustOverview.totalEmployees} across CBSE, ICSE, IGCSE & State Boards.`}
+                ? 'முனைவர் ஜே. அரவிந்தன் அவர்களால் நிறுவப்பட்ட இந்த அறக்கட்டளை, அனைத்து ஆச்சாரியா நிறுவனங்களின் உத்திசார் மேலாண்மை, விழுமிய வழிகாட்டல் மற்றும் உலகத்தரம் வாய்ந்த கல்வித் தரத்தை முன்னின்று வழிநடத்துகிறது.'
+                : `Achariya World Class Institutions are steered by ${trustOverview.trustName.en} with ${trustOverview.managingTrustee.en}, providing visionary governance and lifelong values-based stewardship across southern India.`}
             </p>
             <div style={{ fontSize: '0.84rem', color: '#1E293B', fontStyle: 'italic', background: '#FFFFFF', padding: '0.65rem 1rem', borderRadius: '8px', borderLeft: '3px solid #D97706' }}>
               "{trustOverview.mission[lang]}"

@@ -306,21 +306,21 @@ export default async function EducationPage({
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.75rem' }}>
                 <Compass size={18} color="var(--gold-glow)" />
                 <span style={{ color: 'var(--gold-glow)', fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em' }}>
-                  {lang === 'ta' ? 'ஆன்ம சமநிலை & நல்வாழ்வு' : 'SPIRITUAL & MENTAL ALIGNMENT'}
+                  {lang === 'ta' ? 'மாணவர் மனநலம் & கவனக்குவிப்பு' : 'STUDENT MINDFULNESS & EMOTIONAL GROUNDING'}
                 </span>
               </div>
               <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.5rem', fontWeight: 800, color: '#FFFFFF', margin: '0 0 0.85rem 0' }}>
-                “Inner Silence, Outer Vibrance”
+                {lang === 'ta' ? 'அமைதியான மனம், ஆற்றல்மிக்க செயல்பாடு' : 'Mindfulness, Focus & Stress-Free Learning'}
               </h3>
               <p style={{ color: '#E2E8F0', fontSize: '0.92rem', lineHeight: 1.7, margin: 0 }}>
                 {lang === 'ta'
-                  ? 'மாணவர்கள் வகுப்பறைகள், பாடப்புத்தகங்கள் மற்றும் தேர்வுகளுக்கு அப்பால் சிந்தித்து வாழ்க்கையை முழுமையுடன் கொண்டாட வழிகாட்டப்படுகிறார்கள். யோகா மற்றும் தியானத்தின் மூலம் மன ஒருமைப்பாடு மற்றும் அக அமைதி உருவாக்கப்பட்டு, வெளிப்புற செயல்களில் அபார ஆற்றல் வெளிப்படுகிறது.'
-                  : 'He is very particular in creating “Inner Silence, Outer Vibrance” — enabling a spiritual alignment in all students through meditation & yoga. Empowering students to think beyond the classroom, textbooks, and exams to celebrate life in all abundance.'}
+                  ? 'ஆச்சாரியாவின் ஒவ்வொரு பள்ளி நாளும் சப்த மகாகிரியா, மூச்சுப் பயிற்சி மற்றும் அமைதியான தியானத்துடன் தொடங்குகிறது. மாணவர்களிடம் தேர்வு பயம் மற்றும் மன அழுத்தத்தைக் களைந்து, ஆழ்ந்த கவனக்குவிப்பு, நினைவாற்றல் மற்றும் தன்னம்பிக்கையை வளர்ப்பதற்கான நடைமுறைக் கல்வி வழிமுறையாக இது வகுப்பறைகளில் ஒருங்கிணைக்கப்பட்டுள்ளது.'
+                  : 'ACHARIYA classrooms embed daily mindfulness, Saptha Mahakriya, and quiet focus rituals before academic sessions begin. By cultivating calm emotional grounding, students conquer exam anxiety, unlock deep cognitive endurance, and build the inner poise required for lifelong academic excellence.'}
               </p>
             </div>
             <div style={{ marginTop: '1.5rem', paddingTop: '1rem', borderTop: '1px solid rgba(255, 255, 255, 0.1)', display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--gold-glow)', fontSize: '0.82rem', fontWeight: 700 }}>
               <CheckCircle size={15} />
-              <span>{lang === 'ta' ? 'தினசரி தியானம் & யோகா வழிகாட்டல்' : 'Integrated Daily Yoga & Dhyana Practice'}</span>
+              <span>{lang === 'ta' ? 'தினசரி தியானம் & மன அமைதிப் பயிற்சி' : 'Daily Morning Dhyana & Focus Conditioning'}</span>
             </div>
           </div>
 
