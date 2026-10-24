@@ -961,6 +961,8 @@ export const booksList: BookItem[] = [
         },
       },
     ],
+    pdfUrl: '/books/from-knowing-to-doing.pdf',
+    flipbookPages: Array.from({ length: 36 }, (_, i) => `/books/from-knowing-to-doing/pages/page_${i + 1}.webp`),
   },
   {
     id: 'BK-011',

@@ -10,4 +10,6 @@ scratch/
 *.pdf
 !public/books/*.pdf
 incoming_books/
+__pycache__/
+*.pyc
 
