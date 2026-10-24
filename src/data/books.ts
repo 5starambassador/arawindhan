@@ -783,6 +783,59 @@ export const booksList: BookItem[] = [
       ta: '"இயந்திர நுண்ணறிவின் யுகத்தில், குழந்தைகளுக்கு வெறும் மனப்பாடத்தையும் கணக்கீடுகளையும் மட்டுமே கற்றுக்கொடுப்பது அவர்களை இரண்டாம் தர கணினிகளாக்குவதற்கு சமம். நாம் அவர்களின் குவாண்டம் நுண்ணறிவை—மனித விழிப்புணர்வு, கருணை மற்றும் தெய்வீக படைப்புத்திறனை—விழித்தெழச் செய்ய வேண்டும்."',
     },
   },
+  {
+    id: 'BK-016',
+    slug: 'ayngara',
+    coverImage: '/images/books/ayngara.jpg',
+    title: {
+      en: 'AYNGARA: Form to Transform',
+      ta: 'ஐங்கரன்: உருவத்தின் வழி உயரிய உருமாற்றம் (AYNGARA)',
+    },
+    tagline: {
+      en: 'The Sacred Journey from Animal Instinct to Divine Consciousness · Bridging Body, Mind, and Spirit',
+      ta: 'விலங்கு இயல்பிலிருந்து தெய்வீக விழிப்புணர்வு நோக்கிய ஆன்மப் பயணம் · உடல், மனம், ஆன்மாவின் முழுமையான ஒருங்கிணைப்பு',
+    },
+    author: {
+      en: 'Tr. J. Arawindhan (Teacher · Trainer · Transformer · Trendsetter)',
+      ta: 'முனைவர் ஜே. அரவிந்தன் (ஆசிரியர் · பயிற்றுநர் · உருமாற்றுபவர் · முன்னோடி)',
+    },
+    edition: 'Spiritual Science & Holistic Well-Being Edition (115 Pages)',
+    language: 'English',
+    status: 'Published',
+    claimId: 'CLM-023',
+    summary: {
+      en: 'AYNGARA: Form to Transform is a masterwork on holistic spiritual human engineering by Tr. J. Arawindhan. Rooted in the sacred archetype of Ayngara—the five-armed primordial lord of beginnings who synthesizes animal instinct with highest cosmic intelligence—this 115-page compendium provides an exact roadmap to transcend conditioned survival impulses (the monkey mind) and awaken into heroic, divine consciousness (Hanuman state). Guiding seekers through Deha Shuddhi, Saptamaha Kriya, Golden Smile Meditation, Vaak Siddhi, and the Four Laws of Sacred Order, it offers an actionable methodology for complete physical vitality, mental resilience, emotional mastery, and spiritual liberation.',
+      ta: 'ஐங்கரன் (AYNGARA: Form to Transform) என்பது மனித விழிப்புணர்வை விலங்கு நிலையிலிருந்து தெய்வீக நிலைக்கு உயர்த்தும் ஒரு முழுமையான ஆன்ம அறிவியல் வழிகாட்டி நூலாகும். தொடக்கங்களின் முழுமுதல் தெய்வமான ஐங்கரனின் திருவுருவத் தத்துவத்தின் வழியே, மனிதன் தன் கீழ்நிலை ஆசைகளையும் பயங்களையும் (குரங்கு மனம்) கடந்து, பராக்கிரமமும் தவமும் நிறைந்த உயர்ந்த விழிப்புணர்வை (அனுமன் நிலை) எவ்வாறு அடைவது என்பதை முனைவர் ஜே. அரவிந்தன் இந்நூலில் 115 பக்கங்களில் விளக்குகிறார். சப்தமகா கிரியை, பொன்சிரிப்பு தியானம் (Golden Smile Meditation), வாக்கு சுத்தி மற்றும் சித்தி, அஷ்டலட்சுமி பரிமாண சூத்திரம் ஆகியவற்றின் வழி மனிதனின் உடல், மனம், சொல், ஆன்மா ஆகிய அனைத்தையும் ஒருங்கிணைத்து முழுமையான உருமாற்றத்தை அடைய வழிகாட்டுகிறது.',
+    },
+    keyThemes: {
+      en: [
+        'Monkey-to-Hanuman Paradigm: Transforming primal animal reaction into divine purposeful action',
+        'The Panchatantra Architecture: Physically Healthy, Mentally Strong, Emotionally Balanced, Intellectually Sharp, Spiritually Aligned',
+        'Panchakosas, Deha Shuddhi, Saptamaha Kriya, and the Golden Smile Meditation',
+        'The Science of Vaak: Vaak Suddhi, Vaak Siddhi, and Vaak Shakthi in human manifestation',
+        'The Fourfold Sacred Order: Space, Time, Purpose, and Beauty in everyday life',
+        'Ashtalakshmi Dimensions: Distinguishing the Asura route from the Deva route to enduring abundance',
+      ],
+      ta: [
+        'குரங்கிலிருந்து அனுமன் வரை: இயல்புணர்ச்சியைக் கடந்து தெய்வீக விழிப்புணர்வாக உருமாறுதல்',
+        'பஞ்சதந்திரக் கட்டமைப்பு: உடல் நலம், மன உறுதி, உணர்வுச் சமநிலை, அறிவுத் தெளிவு, ஆன்ம இணைப்பு',
+        'பஞ்ச கோசங்கள், தேக சுத்தி, சப்தமகா கிரியை மற்றும் பொன்சிரிப்பு தியானம்',
+        'வாக்கின் அறிவியல்: வாக்கு சுத்தி, வாக்கு சித்தி மற்றும் வாக்கு சக்தி',
+        'நான்கு புனித விதிகள்: இடம், காலம், நோக்கம் மற்றும் அழகியல் ஒழுங்குமுறை',
+        'அஷ்டலட்சுமி பரிமாணம்: அசுரப் பாதையைக் கடந்து தேவப் பாதையில் பெருஞ்செல்வம் ஈட்டுதல்',
+      ],
+    },
+    targetAudience: {
+      en: 'Spiritual seekers, yoga practitioners, educators, leaders, and anyone committed to transcending limitations and mastering their physical, mental, and energetic life.',
+      ta: 'ஆன்மீக சாதகர்கள், யோகப் பயிற்சியாளர்கள், கல்வியாளர்கள் மற்றும் தங்கள் வாழ்க்கையை முழுமையான சமநிலையோடு வாழ விரும்பும் அனைவரும்.',
+    },
+    readMoreSnippet: {
+      en: '“Ayngara is the sacred bridge between our animal instincts and divine insights. The monkey mind reacts to the world in fear and hunger; the awakened consciousness responds with boundless wisdom, unshakeable courage, and divine love.”',
+      ta: '"ஐங்கரன் என்பது நமது விலங்கு இயல்புகளுக்கும் தெய்வீக விழிப்புணர்வுக்குமான புனிதப் பாலமாகும். குரங்கு மனம் பயத்திலும் பசியிலும் உலகை எதிர்கொள்கிறது; ஆனால் விழித்தெழுந்த அனுமன் மனம் எல்லையற்ற ஞானத்தோடும், அஞ்சா நெஞ்சத்தோடும், பேரன்போடும் உலகிற்கு வழிகாட்டுகிறது."',
+    },
+    pdfUrl: '/books/ayngara.pdf',
+    flipbookPages: Array.from({ length: 115 }, (_, i) => `/books/ayngara/pages/page_${i + 1}.webp`),
+  },
 ];
 
 
