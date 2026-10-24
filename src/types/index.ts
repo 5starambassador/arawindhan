@@ -131,6 +131,7 @@ export interface BlogPost {
   id: string;
   slug: string;
   title: { en: string; ta: string };
+  metaTitle?: { en: string; ta: string };
   category: { en: string; ta: string };
   focusKeyword: { en: string; ta: string };
   relatedKeywords: { en: string[]; ta: string[] };
@@ -140,6 +141,7 @@ export interface BlogPost {
   publishedAt: string;
   readTime: string;
   claimId?: string;
+  coverImage?: string;
   podcastReference?: { en: string; ta: string };
   sections: BlogSection[];
   faqs: BlogFaq[];

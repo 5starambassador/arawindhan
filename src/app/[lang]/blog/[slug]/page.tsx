@@ -33,7 +33,7 @@ export async function generateMetadata({
     };
   }
 
-  const title = blog.title[lang];
+  const title = (blog.metaTitle && blog.metaTitle[lang]) || blog.title[lang];
   const description = blog.metaDescription[lang];
 
   return {
