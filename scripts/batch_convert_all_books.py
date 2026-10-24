@@ -111,7 +111,56 @@ def update_books_data(slug, total_pages):
     slug_str = f"slug: '{slug}'"
     idx = content.find(slug_str)
     if idx == -1:
-        print(f"ℹ️  Book slug '{slug}' is not yet in booksList.")
+        print(f"✨ Book slug '{slug}' is new! Automatically registering in booksList...")
+        title_words = [w.capitalize() for w in slug.replace("-", " ").split()]
+        formatted_title = " ".join(title_words)
+        
+        ids = re.findall(r"id:\s*'BK-(\d+)'", content)
+        next_num = max([int(n) for n in ids]) + 1 if ids else 1
+        new_id = f"BK-{next_num:03d}"
+
+        new_entry = f"""  {{
+    id: '{new_id}',
+    slug: '{slug}',
+    coverImage: '/images/books/{slug}.jpg',
+    title: {{
+      en: '{formatted_title}',
+      ta: '{formatted_title}',
+    }},
+    tagline: {{
+      en: 'Official Monograph & Platform Edition',
+      ta: 'அதிகாரப்பூர்வ சிறப்புப் பதிப்பு',
+    }},
+    author: {{
+      en: 'Dr. J. Arawindhan',
+      ta: 'முனைவர் ஜே. அரவிந்தன்',
+    }},
+    edition: 'Official Edition',
+    language: 'English',
+    status: 'Published',
+    claimId: 'CLM-023',
+    summary: {{
+      en: '{formatted_title} by Dr. J. Arawindhan.',
+      ta: '{formatted_title} - முனைவர் ஜே. அரவிந்தன்.',
+    }},
+    keyThemes: {{
+      en: ['Visionary Education', 'Self-Mastery', 'Leadership'],
+      ta: ['கல்வி தொலைநோக்கு', 'சுய ஆளுமை', 'தலைமைத்துவம்'],
+    }},
+    targetAudience: {{
+      en: 'Educators, leaders, students, and life-long learners.',
+      ta: 'கல்வியாளர்கள், தலைவர்கள் மற்றும் மாணவர்கள்.',
+    }},
+    pdfUrl: '/books/{slug}.pdf',
+    flipbookPages: Array.from({{ length: {total_pages} }}, (_, i) => `/books/{slug}/pages/page_${{i + 1}}.webp`),
+  }},
+"""
+        end_list_idx = content.rfind("\n];")
+        if end_list_idx != -1:
+            content = content[:end_list_idx] + "\n" + new_entry + content[end_list_idx:]
+            DATA_BOOKS_TS.write_text(content, encoding="utf-8")
+            print(f"🎉 Successfully registered '{slug}' as {new_id} in {DATA_BOOKS_TS.relative_to(BASE_DIR)}!")
+            return
         return
 
     # Find the closing "  }," of this book item

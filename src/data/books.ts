@@ -687,5 +687,54 @@ export const booksList: BookItem[] = [
     pdfUrl: '/books/wow-dictionary.pdf',
     flipbookPages: Array.from({ length: 72 }, (_, i) => `/books/wow-dictionary/pages/page_${i + 1}.webp`),
   },
+  {
+    id: 'BK-014',
+    slug: 'the-luminous-legacy',
+    coverImage: '/images/books/the-luminous-legacy.jpg',
+    title: {
+      en: 'The Luminous Legacy',
+      ta: 'தி லூமினஸ் லெகசி (The Luminous Legacy)',
+    },
+    tagline: {
+      en: 'A Garland of One Hundred and Eight Titles Offered in Reverence to Dr. J. Arawindhan Ji',
+      ta: 'முனைவர் ஜே. அரவிந்தன் ஜி அவர்களுக்கு சமர்ப்பிக்கப்பட்ட 108 அரிய பட்டங்கள் மற்றும் பெருமைகள்',
+    },
+    author: {
+      en: 'Achariya Centre of Excellence (Offered to Dr. J. Arawindhan Ji)',
+      ta: 'ஆச்சாரியா சிறப்பியல் மையம் (முனைவர் ஜே. அரவிந்தன் ஜி அவர்களுக்கு அர்ப்பணிக்கப்பட்டது)',
+    },
+    edition: 'First Edition (2026) · Commemorative Citation Edition',
+    language: 'English',
+    status: 'Published',
+    claimId: 'CLM-023',
+    summary: {
+      en: 'Presented in the sacred spirit of the Ashtottara Shatanamavali—the traditional garland of one hundred and eight reverent names—The Luminous Legacy honors Dr. J. Arawindhan Ji across four monumental pillars: the Education Revolution, the Spiritual Path, Modern & Advancing Technology, and Societal Service. Spanning 121 comprehensive pages, each title is meticulously cited, justified, and celebrated—from Teacher, Trainer, and Father of WOW Academy to Great Visionary and Great Grand Master.',
+      ta: 'அஷ்டோத்தர சத நாமாவளி என்னும் 108 போற்றித் திருநாமங்களின் மரபில், முனைவர் ஜே. அரவிந்தன் ஜி அவர்களின் வாழ்க்கை மற்றும் பணிகளை நான்கு பெரும் தூண்களின் வழியே கௌரவிக்கும் மாபெரும் நூல்: கல்விப் புரட்சி, ஆன்மீகப் பாதை, நவீன தொழில்நுட்பம் மற்றும் மக்கள் சேவை. ஆசிரியர், பயிற்சியாளர், வாவ் அகாடமியின் தந்தை முதல் மகா வழிகாட்டி வரை 108 பட்டங்களும் விரிவான விளக்கங்களுடன் இந்நூலில் ஆவணப்படுத்தப்பட்டுள்ளன.',
+    },
+    keyThemes: {
+      en: [
+        'The 108 Ashtottara Shatanamavali titles honoring Dr. J. Arawindhan Ji',
+        'Four pillars: Education Revolution, Spiritual Path, Technology, Societal Service',
+        'Root titles: Teacher, Trainer, Transformer, Trendsetter, and Total Reformer',
+        'Philosophical justifications and historical milestones of a visionary life',
+      ],
+      ta: [
+        'முனைவர் ஜே. அரவிந்தன் ஜி அவர்களுக்குரிய 108 சிறப்பான பட்டங்கள்',
+        'நான்கு பெரும் தூண்கள்: கல்விப் புரட்சி, ஆன்மீகம், நவீன தொழில்நுட்பம், சமுதாயப் பணி',
+        'மூலப் பட்டங்கள்: ஆசிரியர், பயிற்சியாளர், உருமாற்றுபவர், முன்னோடி மற்றும் சீர்திருத்தவாதி',
+        'ஒரு மாபெரும் தீர்க்கதரிசியின் வாழ்வியல் சாதனைகளின் தத்துவார்த்த ஆவணம்',
+      ],
+    },
+    targetAudience: {
+      en: 'Students, educators, alumni, spiritual seekers, and leaders studying institutional greatness.',
+      ta: 'மாணவர்கள், ஆசிரியர்கள், முன்னாள் மாணவர்கள், ஆன்மீக அன்பர்கள் மற்றும் நிறுவனத் தலைவர்கள்.',
+    },
+    readMoreSnippet: {
+      en: '“Teacher: Before every other title, this is the root. It is the title he would keep even if every other were set aside, because every later achievement grew directly out of this one.”',
+      ta: '"ஆசிரியர்: மற்ற அனைத்து பட்டங்களுக்கும் முன்னால், இதுவே மூல வேர். மற்ற அனைத்தும் விலக்கப்பட்டாலும் அவர் தன்னோடு தக்கவைத்துக்கொள்ளும் ஒரே பட்டம் இதுவே, ஏனெனில் பிற்காலத்து அனைத்து சாதனைகளும் இதிலிருந்தே முளைத்து வளர்ந்தன."',
+    },
+    pdfUrl: '/books/the-luminous-legacy.pdf',
+    flipbookPages: Array.from({ length: 121 }, (_, i) => `/books/the-luminous-legacy/pages/page_${i + 1}.webp`),
+  },
 ];
 
