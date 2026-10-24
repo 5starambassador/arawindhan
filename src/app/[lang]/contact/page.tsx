@@ -95,10 +95,6 @@ export default async function ContactPage({
               Puducherry – 605 110, India.
             </p>
 
-            <div style={{ color: 'var(--text-muted)', fontSize: '0.88rem', borderTop: '1px solid var(--border-light)', paddingTop: '1rem' }}>
-              <div><strong>{lang === 'ta' ? 'திட்டங்கள் & கூட்டாண்மை:' : 'Programs & Partnerships:'}</strong> Director – Learning Academy (MIWAY)</div>
-              <div><strong>{lang === 'ta' ? 'பொது விசாரணைகள்:' : 'General Enquiries:'}</strong> Achariya Central Administrative Office, Villianur</div>
-            </div>
           </div>
 
           {/* Official Inquiries & Communication Channels */}
