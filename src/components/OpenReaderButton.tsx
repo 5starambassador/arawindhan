@@ -6,6 +6,7 @@ import { BookOpen } from 'lucide-react';
 interface OpenReaderButtonProps {
   slug: string;
   label?: string;
+  title?: string;
   className?: string;
   style?: React.CSSProperties;
   variant?: 'primary' | 'outline' | 'pill';
@@ -16,6 +17,7 @@ interface OpenReaderButtonProps {
 export const OpenReaderButton: React.FC<OpenReaderButtonProps> = ({
   slug,
   label = 'Read Online Sample',
+  title,
   className = '',
   style = {},
   variant = 'primary',
@@ -40,6 +42,7 @@ export const OpenReaderButton: React.FC<OpenReaderButtonProps> = ({
         type="button"
         onClick={handleClick}
         className={className}
+        title={title}
         style={{
           display: 'inline-flex',
           alignItems: 'center',
@@ -77,6 +80,7 @@ export const OpenReaderButton: React.FC<OpenReaderButtonProps> = ({
         type="button"
         onClick={handleClick}
         className={className}
+        title={title}
         style={{
           display: 'inline-flex',
           alignItems: 'center',
@@ -115,6 +119,7 @@ export const OpenReaderButton: React.FC<OpenReaderButtonProps> = ({
       type="button"
       onClick={handleClick}
       className={`btn-gold ${className}`}
+      title={title}
       style={{
         display: 'inline-flex',
         alignItems: 'center',

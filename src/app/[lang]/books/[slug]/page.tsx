@@ -142,12 +142,30 @@ export default async function BookDetailPage({
 
               {/* Reader Action CTAs */}
               <div style={{ display: 'flex', gap: '0.85rem', flexWrap: 'wrap', alignItems: 'center', marginBottom: '1.5rem' }}>
-                <OpenReaderButton
-                  slug={book.slug}
-                  mode="flipbook"
-                  label={lang === 'ta' ? '📖 மாதிரி அத்தியாயத்தை வாசிக்க (Flipbook)' : '📖 Read Online (Flipbook)'}
-                  style={{ padding: '0.75rem 1.75rem', fontSize: '0.96rem', fontWeight: 800 }}
-                />
+                {book.flipbookPages && book.flipbookPages.length > 0 ? (
+                  <>
+                    <OpenReaderButton
+                      slug={book.slug}
+                      mode="flipbook"
+                      label={lang === 'ta' ? '📖 3D ஃபிளிப்புக் வாசிக்க' : '📖 Read 3D Flipbook'}
+                      style={{ padding: '0.75rem 1.75rem', fontSize: '0.96rem', fontWeight: 800 }}
+                    />
+                    <OpenReaderButton
+                      slug={book.slug}
+                      mode="text"
+                      variant="outline"
+                      label={lang === 'ta' ? '📄 மாதிரி அத்தியாயங்கள் (Sample)' : '📄 Read Sample Excerpts'}
+                      style={{ padding: '0.75rem 1.5rem', fontSize: '0.92rem' }}
+                    />
+                  </>
+                ) : (
+                  <OpenReaderButton
+                    slug={book.slug}
+                    mode="text"
+                    label={lang === 'ta' ? '📖 மாதிரி அத்தியாயங்களை வாசிக்க' : '📖 Read Sample Chapters'}
+                    style={{ padding: '0.75rem 1.75rem', fontSize: '0.96rem', fontWeight: 800 }}
+                  />
+                )}
                 <OpenReaderButton
                   slug={book.slug}
                   showRequestForm={true}
