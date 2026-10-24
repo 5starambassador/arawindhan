@@ -902,6 +902,27 @@ export default async function InnerJourneyPage({
             </div>
           </div>
         </div>
+
+        {/* ─── Narrative Bridge ─── */}
+        <div style={{ maxWidth: '1100px', margin: '4rem auto 0 auto', padding: '2rem 2.5rem', background: 'linear-gradient(135deg, #FAF8F5 0%, #FFFBEB 100%)', border: '1px solid #FDE68A', borderRadius: '16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1.5rem', flexWrap: 'wrap' }}>
+          <div>
+            <div style={{ fontSize: '0.72rem', color: '#B45309', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.4rem' }}>
+              {lang === 'ta' ? 'தொடர்ந்து அறிய' : 'CONTINUE THE JOURNEY'}
+            </div>
+            <div style={{ fontSize: '1.1rem', fontWeight: 800, color: '#0F172A', marginBottom: '0.25rem' }}>
+              {lang === 'ta' ? 'அடிக்கடி கேட்கப்படும் கேள்விகள்' : 'Frequently Asked Questions'}
+            </div>
+            <div style={{ fontSize: '0.88rem', color: '#64748B' }}>
+              {lang === 'ta'
+                ? 'தத்துவம், நிறுவனங்கள் அல்லது பாதை குறித்த கேள்விகள் உள்ளதா? FAQ பக்கத்தில் சரிபார்க்கப்பட்ட பதில்களைக் காண்க.'
+                : 'Have questions about the philosophy, the institutions, or the path? Find authoritative, AI-ready answers on the FAQ page.'}
+            </div>
+          </div>
+          <Link href={`/${lang}/faq`} className="btn-gold" style={{ flexShrink: 0 }}>
+            <span>{lang === 'ta' ? 'FAQ பக்கத்தை காண்க' : 'Visit the FAQ'}</span>
+            <ArrowRight size={16} />
+          </Link>
+        </div>
       </div>
     </div>
   );

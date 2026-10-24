@@ -263,6 +263,27 @@ export default async function GovernancePage({
             </div>
           </div>
         )}
+
+        {/* ─── Narrative Bridge ─── */}
+        <div style={{ maxWidth: '1050px', margin: '4rem auto 0 auto', padding: '2rem 2.5rem', background: 'linear-gradient(135deg, #FAF8F5 0%, #FFFBEB 100%)', border: '1px solid #FDE68A', borderRadius: '16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1.5rem', flexWrap: 'wrap' }}>
+          <div>
+            <div style={{ fontSize: '0.72rem', color: '#B45309', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.4rem' }}>
+              {lang === 'ta' ? 'தொடர்ந்து அறிய' : 'CONTINUE THE JOURNEY'}
+            </div>
+            <div style={{ fontSize: '1.1rem', fontWeight: 800, color: '#0F172A', marginBottom: '0.25rem' }}>
+              {lang === 'ta' ? 'நூல்கள் & வெளியீடுகள்' : 'Books & Publications'}
+            </div>
+            <div style={{ fontSize: '0.88rem', color: '#64748B' }}>
+              {lang === 'ta'
+                ? 'இந்தப் பக்கத்தில் விவரிக்கப்பட்ட கட்டமைப்புகள் முனைவர் அரவிந்தனின் நூல்களில் ஆவணப்படுத்தப்பட்டுள்ளன.'
+                : 'The systems described on this page are documented in Dr. Arawindhan\'s books — written to share the ACHARIYA method with educators and leaders worldwide.'}
+            </div>
+          </div>
+          <Link href={`/${lang}/books`} className="btn-gold" style={{ flexShrink: 0 }}>
+            <span>{lang === 'ta' ? 'நூல்களை ஆராயுங்கள்' : 'Explore the Books'}</span>
+            <ArrowRight size={16} />
+          </Link>
+        </div>
       </div>
     </div>
   );

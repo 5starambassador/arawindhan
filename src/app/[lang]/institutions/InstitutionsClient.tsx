@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Building2, School, Factory, Utensils, HeartPulse, Laptop, Palmtree, GraduationCap, ShieldCheck, Filter, Calendar, Users, Award } from 'lucide-react';
+import { Building2, School, Factory, Utensils, HeartPulse, Laptop, Palmtree, GraduationCap, ShieldCheck, Filter, Calendar, Users, Award, ArrowRight } from 'lucide-react';
 import { collegesList, schoolsSummary, enterprisesList, heguruMilestones, trustOverview } from '@/data/institutions';
 import { SectionHeader } from '@/components/SectionHeader';
 import { ClaimBadge } from '@/components/ClaimBadge';
@@ -547,6 +547,27 @@ export function InstitutionsClient({ lang }: InstitutionsClientProps) {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* ─── Narrative Bridge ─── */}
+        <div style={{ maxWidth: '1000px', margin: '4rem auto 0 auto', padding: '2rem 2.5rem', background: 'linear-gradient(135deg, #FAF8F5 0%, #FFFBEB 100%)', border: '1px solid #FDE68A', borderRadius: '16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1.5rem', flexWrap: 'wrap' }}>
+          <div>
+            <div style={{ fontSize: '0.72rem', color: '#B45309', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.4rem' }}>
+              {lang === 'ta' ? 'தொடர்ந்து அறிய' : 'CONTINUE THE JOURNEY'}
+            </div>
+            <div style={{ fontSize: '1.1rem', fontWeight: 800, color: '#0F172A', marginBottom: '0.25rem' }}>
+              {lang === 'ta' ? 'நிர்வாகக் கட்டமைப்பு' : 'The Governance System'}
+            </div>
+            <div style={{ fontSize: '0.88rem', color: '#64748B' }}>
+              {lang === 'ta'
+                ? 'ஒவ்வொரு வளாகத்திலும் தினமும் ஒரே தரத்தை உறுதிசெய்யும் ஐந்து படிநிலை கட்டமைப்பையும் 77 கான்கார்டியோஸ் பயிற்சிகளையும் அறியுங்கள்.'
+                : 'Discover the 5-step accountability chain, 6 engines of excellence, and the ConCardios faculty development system that keeps quality consistent across every campus.'}
+            </div>
+          </div>
+          <Link href={`/${lang}/governance`} className="btn-gold" style={{ flexShrink: 0 }}>
+            <span>{lang === 'ta' ? 'நிர்வாக முறையை காண்க' : 'See the Governance Model'}</span>
+            <ArrowRight size={16} />
+          </Link>
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Award, Trophy, Medal, Star, ShieldCheck, CheckCircle2, AlertCircle } from 'lucide-react';
+import { Award, Trophy, Medal, Star, ShieldCheck, CheckCircle2, AlertCircle, ArrowRight } from 'lucide-react';
 import { personalHonours, institutionalAccolades, worldRecordsData } from '@/data/recognition';
 import { SectionHeader } from '@/components/SectionHeader';
 import { ClaimBadge } from '@/components/ClaimBadge';
@@ -275,6 +275,27 @@ export default async function RecognitionPage({
               </div>
             ))}
           </div>
+        </div>
+
+        {/* ─── Narrative Bridge ─── */}
+        <div style={{ maxWidth: '1200px', margin: '4rem auto 0 auto', padding: '2rem 2.5rem', background: 'linear-gradient(135deg, #FAF8F5 0%, #FFFBEB 100%)', border: '1px solid #FDE68A', borderRadius: '16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1.5rem', flexWrap: 'wrap' }}>
+          <div>
+            <div style={{ fontSize: '0.72rem', color: '#B45309', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.4rem' }}>
+              {lang === 'ta' ? 'தொடர்ந்து அறிய' : 'CONTINUE THE JOURNEY'}
+            </div>
+            <div style={{ fontSize: '1.1rem', fontWeight: 800, color: '#0F172A', marginBottom: '0.25rem' }}>
+              {lang === 'ta' ? 'முழுமையான வாழ்க்கை வரலாறு' : 'The Full Biography'}
+            </div>
+            <div style={{ fontSize: '0.88rem', color: '#64748B' }}>
+              {lang === 'ta'
+                ? 'இந்த விருதுகள் 28 ஆண்டுப் பயணத்தின் மைல்கற்கள். ஒரு மெக்கானிக்கல் பொறியாளரிலிருந்து கல்வி சாம்ராஜ்யம் வரையிலான முழு வரலாற்றை வாசியுங்கள்.'
+                : 'These honours mark milestones in a 28-year journey. Read the full story — from a mechanical engineer\'s workshop to a world-class education ecosystem.'}
+            </div>
+          </div>
+          <Link href={`/${lang}/biography`} className="btn-gold" style={{ flexShrink: 0 }}>
+            <span>{lang === 'ta' ? 'வாழ்க்கை வரலாற்றை வாசிக்க' : 'Read the Biography'}</span>
+            <ArrowRight size={16} />
+          </Link>
         </div>
       </div>
     </div>

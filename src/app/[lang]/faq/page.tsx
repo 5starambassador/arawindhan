@@ -75,6 +75,27 @@ export default async function FAQPage({
             </div>
           ))}
         </div>
+
+        {/* ─── Narrative Bridge ─── */}
+        <div style={{ maxWidth: '960px', margin: '4rem auto 0 auto', padding: '2rem 2.5rem', background: 'linear-gradient(135deg, #FAF8F5 0%, #FFFBEB 100%)', border: '1px solid #FDE68A', borderRadius: '16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1.5rem', flexWrap: 'wrap' }}>
+          <div>
+            <div style={{ fontSize: '0.72rem', color: '#B45309', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.4rem' }}>
+              {lang === 'ta' ? 'தொடர்ந்து அறிய' : 'CONTINUE THE JOURNEY'}
+            </div>
+            <div style={{ fontSize: '1.1rem', fontWeight: 800, color: '#0F172A', marginBottom: '0.25rem' }}>
+              {lang === 'ta' ? 'தொடர்பு கொள்ளுங்கள்' : 'Get in Touch'}
+            </div>
+            <div style={{ fontSize: '0.88rem', color: '#64748B' }}>
+              {lang === 'ta'
+                ? 'ஆச்சாரியா குழுவுடன் தொடர்பு கொள்ள அல்லது கூட்டாண்மை குறித்து விசாரிக்க தொடர்பு பக்கத்தை காண்க.'
+                : 'Ready to connect with the ACHARIYA team, enquire about partnerships, or attend a programme? Visit the contact page.'}
+            </div>
+          </div>
+          <Link href={`/${lang}/contact`} className="btn-gold" style={{ flexShrink: 0 }}>
+            <span>{lang === 'ta' ? 'தொடர்பு கொள்ளுங்கள்' : 'Contact Us'}</span>
+            <ArrowRight size={16} />
+          </Link>
+        </div>
       </div>
     </div>
   );

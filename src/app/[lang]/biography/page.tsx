@@ -123,6 +123,17 @@ export default async function BiographyPage({
           subtitle={biographyData.roles[lang]}
         />
 
+        {/* ─── ACT HEADER I ─── */}
+        <div style={{ maxWidth: '1000px', margin: '0 auto 2rem auto', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+          <div style={{ background: 'linear-gradient(135deg, #D97706, #B45309)', color: '#FFFFFF', padding: '0.3rem 0.85rem', borderRadius: '6px', fontSize: '0.7rem', fontWeight: 800, letterSpacing: '0.12em', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>
+            {lang === 'ta' ? 'அத்தியாயம் I' : 'ACT I'}
+          </div>
+          <div style={{ flex: 1, height: '1px', background: 'linear-gradient(to right, #FDE68A, transparent)' }} />
+          <div style={{ fontSize: '1.05rem', fontWeight: 800, color: '#B45309' }}>
+            {lang === 'ta' ? 'தொடக்கம் · 1998–2010' : 'The Spark · 1998–2010'}
+          </div>
+        </div>
+
         {/* Narrative & Genesis */}
         <div
           className="card-premium"
@@ -554,6 +565,17 @@ export default async function BiographyPage({
           </div>
         </div>
 
+        {/* ─── ACT HEADER II ─── */}
+        <div style={{ maxWidth: '1000px', margin: '0 auto 2rem auto', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+          <div style={{ background: 'linear-gradient(135deg, #D97706, #B45309)', color: '#FFFFFF', padding: '0.3rem 0.85rem', borderRadius: '6px', fontSize: '0.7rem', fontWeight: 800, letterSpacing: '0.12em', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>
+            {lang === 'ta' ? 'அத்தியாயம் II' : 'ACT II'}
+          </div>
+          <div style={{ flex: 1, height: '1px', background: 'linear-gradient(to right, #FDE68A, transparent)' }} />
+          <div style={{ fontSize: '1.05rem', fontWeight: 800, color: '#B45309' }}>
+            {lang === 'ta' ? 'உருவாக்கம் · 2010–2020' : 'The Build · 2010–2020'}
+          </div>
+        </div>
+
         {/* Editorial Insights: Seven Lessons from the Leader */}
         <div style={{ maxWidth: '1000px', margin: '0 auto 4.5rem auto' }}>
           <SectionHeader
@@ -708,6 +730,17 @@ export default async function BiographyPage({
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* ─── ACT HEADER III ─── */}
+        <div style={{ maxWidth: '1000px', margin: '0 auto 2rem auto', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+          <div style={{ background: 'linear-gradient(135deg, #D97706, #B45309)', color: '#FFFFFF', padding: '0.3rem 0.85rem', borderRadius: '6px', fontSize: '0.7rem', fontWeight: 800, letterSpacing: '0.12em', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>
+            {lang === 'ta' ? 'அத்தியாயம் III' : 'ACT III'}
+          </div>
+          <div style={{ flex: 1, height: '1px', background: 'linear-gradient(to right, #FDE68A, transparent)' }} />
+          <div style={{ fontSize: '1.05rem', fontWeight: 800, color: '#B45309' }}>
+            {lang === 'ta' ? 'மரபு · 2020–தற்போது' : 'The Legacy · 2020–Present'}
           </div>
         </div>
 
@@ -887,8 +920,13 @@ export default async function BiographyPage({
           </div>
 
           <div style={{ textAlign: 'center', marginTop: '3.5rem' }}>
-            <Link href={`/${lang}/education`} className="btn-gold">
-              <span>{lang === 'ta' ? 'அவரது கல்விப் புத்தாக்கங்களை அறிக' : 'Explore His Educational Innovations'}</span>
+            <p style={{ color: '#64748B', fontSize: '0.95rem', marginBottom: '1.25rem', maxWidth: '560px', margin: '0 auto 1.25rem auto' }}>
+              {lang === 'ta'
+                ? 'இந்த தொலைநோக்கு எவ்வாறு 18 கல்லூரிகள், 35 பள்ளிகள், 61+ நிறுவனங்களாக உருவெடுத்தது என்று காண்க.'
+                : 'See how this vision became 18 colleges, 35 schools, and 61+ enterprises across South India.'}
+            </p>
+            <Link href={`/${lang}/institutions`} className="btn-gold">
+              <span>{lang === 'ta' ? 'கல்வி நிறுவனங்களை ஆராயுங்கள்' : 'Explore the Institutions'}</span>
               <ArrowRight size={16} />
             </Link>
           </div>
