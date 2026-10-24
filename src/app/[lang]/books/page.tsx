@@ -29,10 +29,9 @@ export default async function BooksPage({
 
         <div
           style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'center',
-            gap: '1.75rem',
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
+            gap: '2rem',
             alignItems: 'stretch',
           }}
         >
@@ -41,34 +40,46 @@ export default async function BooksPage({
               key={book.id}
               className="card-premium"
               style={{
-                flex: '1 1 320px',
-                maxWidth: '370px',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
                 borderRadius: '16px',
-                padding: '1.75rem',
+                padding: '1.65rem',
                 border: '1px solid #E2E8F0',
                 boxShadow: '0 4px 16px rgba(15, 23, 42, 0.04)',
+                height: '100%',
               }}
             >
               <div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.85rem' }}>
+                {/* Top Status & Verified Badge Row - Laser Aligned */}
+                <div
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    height: '28px',
+                    marginBottom: '1rem',
+                    gap: '0.5rem',
+                  }}
+                >
                   <span
                     style={{
                       background: '#FFFBEB',
                       border: '1px solid #FDE68A',
                       color: 'var(--gold-glow)',
                       fontWeight: 800,
-                      fontSize: '0.78rem',
-                      padding: '0.2rem 0.6rem',
+                      fontSize: '0.72rem',
+                      padding: '0.2rem 0.55rem',
                       borderRadius: 'var(--radius-sm)',
                       textTransform: 'uppercase',
+                      letterSpacing: '0.04em',
+                      whiteSpace: 'nowrap',
+                      lineHeight: 1,
                     }}
                   >
-                    {book.status}
+                    {book.status === 'Ecosystem Edition' ? (lang === 'ta' ? 'நிறுவனப் பதிப்பு' : 'Ecosystem') : (lang === 'ta' ? 'வெளியிடப்பட்டது' : 'Published')}
                   </span>
-                  <ClaimBadge claimId={book.claimId} status="SOURCE_CLAIM" language={lang} />
+                  <ClaimBadge claimId={book.claimId} status="SOURCE_CLAIM" language={lang} compact />
                 </div>
 
                 {/* Book Cover Image */}
@@ -97,20 +108,59 @@ export default async function BooksPage({
                   />
                 </div>
 
-                <h3 className="font-serif heading-gold" style={{ fontSize: '1.35rem', marginBottom: '0.35rem', fontWeight: 800 }}>
+                {/* Book Title - Fixed Baseline */}
+                <h3
+                  className="font-serif heading-gold"
+                  style={{
+                    fontSize: '1.3rem',
+                    marginBottom: '0.4rem',
+                    fontWeight: 800,
+                    minHeight: '3.4rem',
+                    display: 'flex',
+                    alignItems: 'flex-start',
+                    lineHeight: 1.3,
+                  }}
+                >
                   {book.title[lang]}
                 </h3>
 
-                <p style={{ color: 'var(--text-muted)', fontSize: '0.86rem', fontStyle: 'italic', marginBottom: '1rem' }}>
+                {/* Book Tagline - Fixed Baseline */}
+                <p
+                  style={{
+                    color: 'var(--text-muted)',
+                    fontSize: '0.84rem',
+                    fontStyle: 'italic',
+                    marginBottom: '0.85rem',
+                    minHeight: '2.8rem',
+                    display: '-webkit-box',
+                    WebkitLineClamp: 2,
+                    WebkitBoxOrient: 'vertical',
+                    overflow: 'hidden',
+                    lineHeight: 1.45,
+                  }}
+                >
                   {book.tagline[lang]}
                 </p>
 
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: 1.7, marginBottom: '1.25rem' }}>
+                {/* Summary - Uniform 4 Lines */}
+                <p
+                  style={{
+                    color: 'var(--text-secondary)',
+                    fontSize: '0.88rem',
+                    lineHeight: 1.65,
+                    marginBottom: '1.25rem',
+                    display: '-webkit-box',
+                    WebkitLineClamp: 4,
+                    WebkitBoxOrient: 'vertical',
+                    overflow: 'hidden',
+                    minHeight: '5.8rem',
+                  }}
+                >
                   {book.summary[lang]}
                 </p>
 
-                {/* Key Themes Chips */}
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.35rem', marginBottom: '1.5rem' }}>
+                {/* Key Themes Chips - Fixed Height */}
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.35rem', marginBottom: '1.25rem', minHeight: '1.8rem', alignItems: 'center' }}>
                   {book.keyThemes[lang].slice(0, 2).map((theme, idx) => (
                     <span
                       key={idx}
@@ -122,6 +172,7 @@ export default async function BooksPage({
                         fontWeight: 500,
                         padding: '0.15rem 0.5rem',
                         borderRadius: 'var(--radius-full)',
+                        whiteSpace: 'nowrap',
                       }}
                     >
                       {theme}
