@@ -17,6 +17,9 @@ import {
   Calendar,
   MapPin,
   TrendingUp,
+  Globe,
+  Briefcase,
+  Users,
 } from 'lucide-react';
 import {
   biographyData,
@@ -154,6 +157,130 @@ export default async function BiographyPage({
                   </span>
                 </div>
               ))}
+            </div>
+          </div>
+
+          {/* Authoritative Personal Dossier & Institutional Roots */}
+          <div
+            style={{
+              background: '#FFFFFF',
+              border: '1.5px solid #E2E8F0',
+              borderRadius: '16px',
+              padding: '1.75rem',
+              marginBottom: '2rem',
+              boxShadow: '0 4px 20px rgba(15, 23, 42, 0.04)',
+            }}
+          >
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1.25rem' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#B45309', fontWeight: 800, fontSize: '0.82rem', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                <Award size={16} color="#D97706" />
+                <span>{lang === 'ta' ? 'அதிகாரப்பூர்வ சுயவிவரம் & கல்வி அடித்தளம்' : 'AUTHORITATIVE PROFILE & FOUNDATIONAL ROOTS'}</span>
+              </div>
+              <span style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', color: '#065F46', padding: '0.2rem 0.65rem', borderRadius: '999px', fontSize: '0.75rem', fontWeight: 800 }}>
+                {lang === 'ta' ? '1,100+ பணியாளர்கள் • 25+ நிறுவனங்கள்' : '1,100+ Workforce • 25+ Institutions'}
+              </span>
+            </div>
+
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))',
+                gap: '1rem',
+                marginBottom: '1.5rem',
+              }}
+            >
+              <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '1rem' }}>
+                <div style={{ fontSize: '0.72rem', fontWeight: 800, color: '#64748B', textTransform: 'uppercase', letterSpacing: '0.04em', marginBottom: '0.25rem' }}>
+                  {lang === 'ta' ? 'பிறந்த நாள் & கல்வி' : 'BIRTH & QUALIFICATIONS'}
+                </div>
+                <div style={{ fontWeight: 800, color: '#0F172A', fontSize: '0.95rem', marginBottom: '0.2rem' }}>
+                  {biographyData.personalProfile.dob}
+                </div>
+                <div style={{ fontSize: '0.84rem', color: '#475569', lineHeight: 1.5 }}>
+                  {biographyData.personalProfile.education[lang]}
+                </div>
+              </div>
+
+              <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '1rem' }}>
+                <div style={{ fontSize: '0.72rem', fontWeight: 800, color: '#64748B', textTransform: 'uppercase', letterSpacing: '0.04em', marginBottom: '0.25rem' }}>
+                  {lang === 'ta' ? 'முதல் தொழில்முனைவு (2000)' : 'EARLY ENTREPRENEURSHIP (2000)'}
+                </div>
+                <div style={{ fontWeight: 800, color: '#0F172A', fontSize: '0.95rem', marginBottom: '0.2rem' }}>
+                  Pondy Pipes (Est. 2000)
+                </div>
+                <div style={{ fontSize: '0.84rem', color: '#475569', lineHeight: 1.5 }}>
+                  {biographyData.personalProfile.earlyEntrepreneurship[lang]}
+                </div>
+              </div>
+
+              <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '1rem' }}>
+                <div style={{ fontSize: '0.72rem', fontWeight: 800, color: '#64748B', textTransform: 'uppercase', letterSpacing: '0.04em', marginBottom: '0.25rem' }}>
+                  {lang === 'ta' ? 'அறக்கட்டளை தலைமை (2002)' : 'TRUST STEWARDSHIP (EST. 2002)'}
+                </div>
+                <div style={{ fontWeight: 800, color: '#0F172A', fontSize: '0.95rem', marginBottom: '0.2rem' }}>
+                  Achariya Educational Public Trust
+                </div>
+                <div style={{ fontSize: '0.84rem', color: '#475569', lineHeight: 1.5 }}>
+                  {biographyData.personalProfile.managingTrustee[lang]}
+                </div>
+              </div>
+
+              <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '1rem' }}>
+                <div style={{ fontSize: '0.72rem', fontWeight: 800, color: '#64748B', textTransform: 'uppercase', letterSpacing: '0.04em', marginBottom: '0.25rem' }}>
+                  {lang === 'ta' ? 'சர்வதேச முனைவர் பட்டம் (2010)' : 'HONORARY DOCTORATE (2010)'}
+                </div>
+                <div style={{ fontWeight: 800, color: '#0F172A', fontSize: '0.95rem', marginBottom: '0.2rem' }}>
+                  Yorker International University, Italy
+                </div>
+                <div style={{ fontSize: '0.84rem', color: '#475569', lineHeight: 1.5 }}>
+                  {biographyData.personalProfile.honoraryDoctorate[lang]}
+                </div>
+              </div>
+            </div>
+
+            {/* Global Education Study & Cultural Research Odyssey */}
+            <div
+              style={{
+                background: 'linear-gradient(135deg, #FAF8F5 0%, #FFFBEB 100%)',
+                border: '1px solid #FDE68A',
+                borderRadius: '12px',
+                padding: '1.25rem',
+              }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
+                <Globe size={18} color="#D97706" />
+                <h5 style={{ margin: 0, fontSize: '0.96rem', fontWeight: 800, color: '#0F172A' }}>
+                  {lang === 'ta' ? 'உலகளாவிய கல்விக் கள ஆய்வுகள் & கலாச்சாரப் பயணங்கள் (11 நாடுகள்)' : 'Global Education Systems & Cultural Research Odyssey (11 Nations Visited)'}
+                </h5>
+              </div>
+              <p style={{ color: '#475569', fontSize: '0.88rem', lineHeight: 1.6, marginBottom: '0.85rem' }}>
+                {lang === 'ta'
+                  ? 'உலகெங்கிலும் உள்ள சிறந்த கல்வி முறைகள் மற்றும் சமூக கலாச்சாரங்களை நேரில் ஆய்வு செய்து, ஆச்சாரியாவின் தனித்துவமான "தசாவதானி" மற்றும் "மைவே" (MiWay) பாடத்திட்டங்களை வடிவமைக்க முனைவர் ஜே. அரவிந்தன் விரிவான கல்விப் பயணங்களை மேற்கொண்டுள்ளார்.'
+                  : 'In his quest to learn about the education systems and social cultures across the world, Dr. Arawindhan has travelled extensively to research and synthesize the world’s most progressive pedagogical models into ACHARIYA’s Dasavadani and MiWay frameworks.'}
+              </p>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+                {biographyData.globalStudyTravel.map((country, cIdx) => (
+                  <span
+                    key={cIdx}
+                    style={{
+                      background: '#FFFFFF',
+                      border: '1px solid #E2E8F0',
+                      color: '#1E293B',
+                      fontSize: '0.8rem',
+                      fontWeight: 700,
+                      padding: '0.3rem 0.75rem',
+                      borderRadius: '999px',
+                      boxShadow: '0 1px 3px rgba(15, 23, 42, 0.05)',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '0.35rem',
+                    }}
+                  >
+                    <span>🌐</span>
+                    <span>{country}</span>
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
 

@@ -276,6 +276,42 @@ export const institutionalAccolades: HonourItem[] = [
       ta: 'கல்லூரிகள் மற்றும் பள்ளிகளின் நிர்வாகம் மற்றும் கற்பித்தல் தரத்திற்கான அதிகாரப்பூர்வ சர்வதேச தரச்சான்றுகள்.',
     },
   },
+  {
+    id: 'INS-06',
+    title: {
+      en: 'Most Innovative Curriculum amongst CBSE Schools',
+      ta: 'சிபிஎஸ்இ பள்ளிகளில் மிகவும் புதுமையான பாடத்திட்டத்திற்கான விருது',
+    },
+    conferredBy: {
+      en: 'Brands Academy',
+      ta: 'பிராண்ட்ஸ் அகாடமி (Brands Academy)',
+    },
+    category: 'Institutional Accolade',
+    claimId: 'CLM-007',
+    verificationStatus: 'CONFIRMED',
+    details: {
+      en: 'Recognizing ACHARIYA’s pioneering Dasavadani and MiWay 10-intelligence curriculum frameworks implemented across CBSE school networks.',
+      ta: 'சிபிஎஸ்இ பள்ளிகளில் பன்முக நுண்ணறிவை வளர்க்கும் தசாவதானி மற்றும் மைவே கல்வித் திட்டங்களுக்காக பிராண்ட்ஸ் அகாடமி வழங்கிய மதிப்புமிக்க விருது.',
+    },
+  },
+  {
+    id: 'INS-07',
+    title: {
+      en: 'National Genius School & National Genius Students Award',
+      ta: 'தேசிய மேதை பள்ளி மற்றும் தேசிய மேதை மாணவர்கள் விருது',
+    },
+    conferredBy: {
+      en: 'National Genius Search Foundation, India',
+      ta: 'நேஷனல் ஜீனியஸ் சர்ச் பவுண்டேஷன், இந்தியா (NGSF)',
+    },
+    category: 'Institutional Accolade',
+    claimId: 'CLM-007',
+    verificationStatus: 'CONFIRMED',
+    details: {
+      en: 'Honoring exceptional institutional cultivation of raw cognitive genius, analytical acumen, and nationwide student academic distinctions.',
+      ta: 'மாணவர்களின் அபாரமான சிந்திக்கும் திறன் மற்றும் தேசிய அளவிலான முதன்மை கல்விச் சாதனைகளுக்காக நேஷனல் ஜீனியஸ் சர்ச் பவுண்டேஷன் வழங்கிய கௌரவம்.',
+    },
+  },
 ];
 
 export const worldRecordsData = {

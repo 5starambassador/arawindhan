@@ -64,11 +64,42 @@ export const biographyData = {
       { year: '2023+', milestone: { en: 'National Master Franchise for HEGURU (10+ centres across Chennai, Puducherry, Bengaluru, Hyderabad)', ta: 'ஹெகுரு (HEGURU) தேசிய முதன்மை உரிமை பெற்று சென்னை, புதுச்சேரி, பெங்களூரு, ஹைதராபாத்தில் 10+ மையங்கள்' } },
     ],
   },
+  personalProfile: {
+    dob: '2nd August 1977',
+    birthplace: { en: 'Puducherry, India', ta: 'புதுச்சேரி, இந்தியா' },
+    education: { en: 'Schooling in Puducherry; Qualified Mechanical Engineer', ta: 'புதுச்சேரியில் பள்ளிப் படிப்பு; தகுதிவாய்ந்த மெக்கானிக்கல் பொறியாளர்' },
+    earlyEntrepreneurship: {
+      en: 'Ventured as an entrepreneur in 2000 with Pondy Pipes, a PVC Pipes manufacturing unit in Pondicherry, before dedicating his life to educational reform.',
+      ta: 'கல்விச் சீர்திருத்தத்தில் தன்னை முழுமையாக ஈடுபடுத்துவதற்கு முன், 2000-ஆம் ஆண்டில் புதுச்சேரியில் "பாண்டி பைப்ஸ்" (Pondy Pipes) பிவிசி குழாய் உற்பத்தி நிறுவனத்தைத் தொடங்கி தொழில்முனைவோராக உருவெடுத்தார்.',
+    },
+    honoraryDoctorate: {
+      en: 'Conferred Honorary Doctorate by Yorker International University, Italy in 2010 recognizing monumental contributions to education.',
+      ta: 'கல்வித்துறைக்கு ஆற்றிய மகத்தான பங்களிப்பைப் பாராட்டி இத்தாலியின் யார்க்கர் சர்வதேச பல்கலைக்கழகம் 2010-ல் மதிப்புறு முனைவர் பட்டம் வழங்கியது.',
+    },
+    managingTrustee: {
+      en: 'Managing Trustee & Founder of Achariya Educational Public Trust (Est. 2002), promoting Achariya World Class Institutions.',
+      ta: 'ஆச்சாரியா உலகத்தரம் வாய்ந்த கல்வி நிறுவனங்களை வழிநடத்தும் ஆச்சாரியா கல்வி பொது அறக்கட்டளையின் (2002) நிறுவன நிர்வாக அறங்காவலர்.',
+    },
+    totalEmployees: '1,100+ Dedicated Educators & Staff',
+  },
+  globalStudyTravel: [
+    'Singapore',
+    'Malaysia',
+    'Japan',
+    'Canada',
+    'China',
+    'Italy',
+    'USA',
+    'Sri Lanka',
+    'New Zealand',
+    'Hong Kong',
+    'Brazil',
+  ],
   magazineCitation: {
     title: 'Silver Jubilee Commemorative Monograph (1998–2026)',
     scopeSummary: {
-      en: '35 K12 Schools (CBSE, ICSE, State Board) • 3 Higher Education Colleges • 10+ Heguru Brain Centres • 14,000+ Students • 600+ World Records',
-      ta: '35 கே12 பள்ளிகள் (CBSE, ICSE, மாநில வாரியம்) • 3 உயர்கல்வி கல்லூரிகள் • 10+ ஹெகுரு மூளை மையங்கள் • 14,000+ மாணவர்கள் • 600+ உலக சாதனைகள்',
+      en: 'Over 25 Premier Institutions • 35 K12 Schools (CBSE, ICSE, IGCSE, State Board) • 3 Higher Education Colleges • 1,100+ Staff • 14,000+ Students • 600+ World Records',
+      ta: '25-க்கும் மேற்பட்ட முதன்மை நிறுவனங்கள் • 35 கே12 பள்ளிகள் (CBSE, ICSE, IGCSE, மாநில வாரியம்) • 3 உயர்கல்வி கல்லூரிகள் • 1,100+ பணியாளர்கள் • 14,000+ மாணவர்கள் • 600+ உலக சாதனைகள்',
     },
   },
 };

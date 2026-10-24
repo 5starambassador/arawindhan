@@ -311,3 +311,34 @@ export const heguruMilestones = [
     },
   },
 ];
+
+export const trustOverview = {
+  trustName: {
+    en: 'Achariya Educational Public Trust',
+    ta: 'ஆச்சாரியா கல்வி பொது அறக்கட்டளை',
+  },
+  established: 2002,
+  managingTrustee: {
+    en: 'Dr. J. Arawindhan (Managing Trustee & Founder)',
+    ta: 'முனைவர் ஜே. அரவிந்தன் (நிறுவன நிர்வாக அறங்காவலர்)',
+  },
+  totalInstitutions: 'Over 25 Premier Institutions',
+  totalEmployees: '1,100+ Employees & Faculty Members',
+  curriculaAffiliations: 'CBSE, ICSE, IGCSE & State Boards of Education',
+};
+
+export const officialFoundingChronology = [
+  { institution: 'Achariya College of Education', established: 'June 2000', category: 'Teacher Education' },
+  { institution: 'Achariya Teacher Education Academy', established: 'June 2000', category: 'Teacher Education' },
+  { institution: 'Achariya Bala Siksha Mandir', established: 'June 2001', category: 'Foundational Schooling' },
+  { institution: 'Achariya Siksha Mandir', established: 'June 2002', category: 'K12 Schooling' },
+  { institution: 'Achariya Vidya Bhavan', established: 'August 2002', category: 'K12 Schooling' },
+  { institution: 'Achariya Arts and Science College', established: 'August 2004', category: 'Collegiate Education' },
+  { institution: 'Aklavya ICSE School', established: 'June 2005', category: 'ICSE Schooling' },
+  { institution: 'Sri Sampourna Vidyalayam', established: 'June 2005', category: 'K12 Schooling' },
+  { institution: 'Achariya School of Business & Technology', established: 'June 2008', category: 'Management Education' },
+  { institution: 'Achariya School of Tourism & Hotel Management', established: 'June 2009', category: 'Hospitality Education' },
+  { institution: 'Achariya College of Engineering Technology', established: 'August 2010', category: 'Engineering Education' },
+  { institution: 'Achariya Bala Siksha Mandir - Chennai Centres', established: 'June 2010', category: 'Metropolitan Campus' },
+  { institution: 'Achariya Bala Siksha Mandir - Coimbatore Centres', established: 'June 2011', category: 'Metropolitan Campus' },
+];

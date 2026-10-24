@@ -77,4 +77,38 @@ export const governanceData = {
       { name: 'WOW', tamilName: 'வாவ் (WOW) உச்ச நிலை', desc: { en: 'Master mentors embodying the 21 levels of Airavatha consciousness.', ta: 'ஐராவத தத்துவத்தின் 21 நிலைகளை அடைந்த முதன்மை குரு நிலை.' } },
     ],
   },
+  officesHeld: [
+    {
+      role: { en: 'President', ta: 'தலைவர்' },
+      organization: {
+        en: 'The Pondicherry State Badminton (Shuttle) Association',
+        ta: 'புதுச்சேரி மாநில பேட்மிண்டன் (இறகுப்பந்து) சங்கம்',
+      },
+      category: 'Sports Governance & Youth Development',
+    },
+    {
+      role: { en: 'Joint Secretary', ta: 'இணைச் செயலாளர்' },
+      organization: {
+        en: 'Badminton Association of India (BAI)',
+        ta: 'இந்திய பேட்மிண்டன் சங்கம் (BAI)',
+      },
+      category: 'National Sports Governance',
+    },
+    {
+      role: { en: 'Convener of Education and Skills Panel', ta: 'கல்வி & திறன் மேம்பாட்டுக் குழு ஒருங்கிணைப்பாளர்' },
+      organization: {
+        en: 'Confederation of Indian Industry (CII) – Puducherry',
+        ta: 'இந்திய தொழில் கூட்டமைப்பு (CII) – புதுச்சேரி',
+      },
+      category: 'Industry & Education Policy',
+    },
+    {
+      role: { en: 'Managing Trustee & Founder', ta: 'நிர்வாக அறங்காவலர் & நிறுவனர்' },
+      organization: {
+        en: 'Achariya Educational Public Trust (Est. 2002)',
+        ta: 'ஆச்சாரியா கல்வி பொது அறக்கட்டளை (தொடக்கம் 2002)',
+      },
+      category: 'Institutional Trust Governance',
+    },
+  ],
 };

@@ -191,6 +191,78 @@ export default async function GovernancePage({
             ))}
           </div>
         </div>
+
+        {/* Offices Held for Societal Benefits */}
+        {governanceData.officesHeld && (
+          <div
+            className="card-premium"
+            style={{
+              padding: '2.5rem',
+              border: '1px solid var(--border-light)',
+              marginTop: '2.5rem',
+            }}
+          >
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.25rem' }}>
+              <span style={{ color: 'var(--gold-glow)', fontSize: '0.85rem', fontWeight: 800, textTransform: 'uppercase' }}>
+                {lang === 'ta' ? 'சமூக நன்மைகளுக்கான பொதுப் பொறுப்புகள்' : 'PUBLIC LEADERSHIP & SOCIETAL GOVERNANCE'}
+              </span>
+              <ClaimBadge claimId="CLM-011" status="CONFIRMED" language={lang} />
+            </div>
+
+            <h3 className="font-serif heading-gold" style={{ fontSize: '1.6rem', marginBottom: '0.75rem', fontWeight: 800 }}>
+              {lang === 'ta' ? 'சமூக நன்மைகளுக்காக வகித்த முக்கியப் பொறுப்புகள்' : 'Offices Held for Societal Benefit'}
+            </h3>
+
+            <p style={{ color: 'var(--text-secondary)', fontSize: '0.96rem', lineHeight: 1.75, marginBottom: '1.75rem' }}>
+              {lang === 'ta'
+                ? 'முனைவர் ஜே. அரவிந்தன் கல்வி நிர்வாகத்துடன் இணைந்து மாநில, தேசிய அளவிலான விளையாட்டு மற்றும் தொழிற்துறை கொள்கை அமைப்புகளில் சமூக மேம்பாட்டிற்கான தலைமைப் பொறுப்புகளை ஆற்றி வருகிறார்.'
+                : 'Beyond institutional stewardship, Dr. J. Arawindhan actively serves in prominent regional and national public leadership capacities across sports governance, industry panels, and public educational trusts.'}
+            </p>
+
+            <div className="grid-2" style={{ gap: '1.25rem' }}>
+              {governanceData.officesHeld.map((office, idx) => (
+                <div
+                  key={idx}
+                  style={{
+                    background: '#FFFFFF',
+                    border: '1.5px solid #FDE68A',
+                    borderRadius: '16px',
+                    padding: '1.5rem',
+                    boxShadow: '0 4px 14px rgba(217, 119, 6, 0.06)',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between',
+                  }}
+                >
+                  <div>
+                    <span
+                      style={{
+                        background: '#FFFBEB',
+                        border: '1px solid #FDE68A',
+                        color: '#B45309',
+                        fontSize: '0.74rem',
+                        fontWeight: 800,
+                        padding: '0.2rem 0.6rem',
+                        borderRadius: '999px',
+                        textTransform: 'uppercase',
+                        display: 'inline-block',
+                        marginBottom: '0.75rem',
+                      }}
+                    >
+                      {office.category}
+                    </span>
+                    <h4 style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--text-main)', marginBottom: '0.35rem' }}>
+                      {office.role[lang]}
+                    </h4>
+                    <p style={{ color: 'var(--text-secondary)', fontSize: '0.92rem', lineHeight: 1.6, margin: 0 }}>
+                      {office.organization[lang]}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
