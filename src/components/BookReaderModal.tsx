@@ -262,27 +262,42 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
     },
   }[theme];
 
-  const handleRequestSubmit = (e: React.FormEvent) => {
+  const handleRequestSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setRequested(true);
     setHasUnlocked(true);
+
+    const leadPayload = {
+      name: reqName,
+      phone: reqPhone,
+      email: reqEmail,
+      institution: reqOrg,
+      bookSlug: activeBookSlug || 'general',
+      bookTitle: book?.title[language] || activeBookSlug || 'General Request',
+      date: new Date().toISOString(),
+      timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+    };
+
     try {
       const existingLeads = JSON.parse(localStorage.getItem('arawindhan_book_leads') || '[]');
-      existingLeads.push({
-        bookSlug: activeBookSlug,
-        bookTitle: book?.title[language] || activeBookSlug,
-        name: reqName,
-        phone: reqPhone,
-        email: reqEmail,
-        institution: reqOrg,
-        date: new Date().toISOString(),
-      });
+      existingLeads.push(leadPayload);
       localStorage.setItem('arawindhan_book_leads', JSON.stringify(existingLeads));
       if (activeBookSlug) {
         localStorage.setItem(`book_unlocked_${activeBookSlug}`, 'true');
       }
     } catch {
       // storage unavailable
+    }
+
+    // Automatically dispatch lead to backend for Google Sheets sync
+    try {
+      await fetch('/api/book-lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(leadPayload),
+      });
+    } catch (err) {
+      console.warn('Could not sync lead to API route', err);
     }
   };
 
