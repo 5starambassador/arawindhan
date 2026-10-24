@@ -1456,7 +1456,7 @@ export const booksList: BookItem[] = [
       ta: 'எலிகளைத் துரத்துவதை நிறுத்துங்கள், மான்களை வேட்டையாடத் தொடங்குங்கள் · உங்கள் முதல் சம்பளம் பெருமை அல்ல; அது ஒரு பொறி',
     },
     author: {
-      en: 'Dr. J. Aravindan',
+      en: 'Dr. J. Arawindhan',
       ta: 'முனைவர் ஜே. அரவிந்தன்',
     },
     edition: 'Wealth Architecture & Mindset Edition',
