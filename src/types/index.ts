@@ -165,4 +165,31 @@ export interface YouTubeChannelInfo {
   channelUrl: string;
 }
 
+export type SocialPlatform = 'all' | 'youtube' | 'instagram' | 'linkedin';
+
+export interface SocialPostItem {
+  id: string;
+  platform: 'youtube' | 'instagram' | 'linkedin';
+  title: { en: string; ta: string };
+  content: { en: string; ta: string };
+  url: string;
+  date: string;
+  author: {
+    name: string;
+    handle: string;
+    avatarUrl?: string;
+  };
+  mediaUrl?: string;
+  mediaType?: 'video' | 'image';
+  youtubeId?: string;
+  tag?: { en: string; ta: string };
+  metrics?: {
+    likes?: string;
+    comments?: string;
+    views?: string;
+  };
+  featured?: boolean;
+}
+
+
 
