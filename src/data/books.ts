@@ -1730,6 +1730,80 @@ export const booksList: BookItem[] = [
     flipbookPages: Array.from({ length: 88 }, (_, i) => `/books/heguru-parenting-mini-book/pages/page_${i + 1}.webp`),
   },
 
+  {
+    id: 'BK-019',
+    slug: 'the-future-mind',
+    coverImage: '/images/books/the-future-mind.jpg',
+    title: {
+      en: 'The Future Mind',
+      ta: 'தி ஃபியூச்சர் மைண்ட்',
+    },
+    tagline: {
+      en: 'Nurturing Potential in a New Era — Heguru India & Japan',
+      ta: 'புதிய சகாப்தத்தில் குழந்தைகளின் எல்லையற்ற திறனை மலரச் செய்தல்',
+    },
+    author: {
+      en: 'Dr. J. Arawindhan & Heguru Japan',
+      ta: 'முனைவர் ஜே. அரவிந்தன் & ஹெகுரு ஜப்பான்',
+    },
+    edition: 'Official Edition',
+    language: 'English & Tamil',
+    status: 'Published',
+    claimId: 'CLM-023',
+    summary: {
+      en: 'A transformative treatise on unlocking children\'s innate genius in a fast-evolving era. Developed in collaboration with Heguru Japan pioneers Ruiko Henmi and Hirotada Henmi, The Future Mind outlines how early right-brain stimulation, Hado reading, and compassionate mentorship equip young minds with focus, intuition, and adaptability for 2047 and beyond.',
+      ta: 'வேகமாக மாறிவரும் இந்த புதிய சகாப்தத்தில் குழந்தைகளின் உள்ளார்ந்த மேதைமையை வெளிக்கொணரும் புரட்சிகரமான நூல். ஹெகுரு ஜப்பான் நிறுவனர்களான ரூயிகோ ஹென்மி மற்றும் ஹிரோடாடா ஹென்மி ஆகியோருடன் இணைந்து உருவாக்கப்பட்ட இந்நூல், ஆரம்பகால வலது மூளைத் தூண்டுதல், ஹாடோ வாசிப்பு மற்றும் வழிகாட்டுதல் மூலம் எதிர்கால உலகை எதிர்கொள்ளும் திறனை எவ்வாறு உருவாக்குவது என்பதை விளக்குகிறது.',
+    },
+    keyThemes: {
+      en: [
+        'Heguru Japan & India Collaborative Pedagogy',
+        'Early Childhood Brain Potential & Hado Speed Reading',
+        'Nurturing Focus, Intuition & Boundless Imagination',
+        'Future-Ready Mindsets for 2047 and Beyond',
+      ],
+      ta: [
+        'ஹெகுரு ஜப்பான் மற்றும் இந்தியாவின் கூட்டுப் பயிற்றுமுறை',
+        'ஆரம்பகால மூளை ஆற்றல் மற்றும் ஹாடோ அதிவேக வாசிப்பு',
+        'கவனக்குவிப்பு, உள்ளுணர்வு மற்றும் படைப்பாற்றலை வளர்த்தல்',
+        '2047 மற்றும் எதிர்கால சகாப்தத்திற்கான சிந்தனை முறை',
+      ],
+    },
+    targetAudience: {
+      en: 'Parents, educators, institutional leaders, and cognitive development specialists.',
+      ta: 'பெற்றோர்கள், கல்வியாளர்கள், கல்வி நிறுவனத் தலைவர்கள் மற்றும் மூளை வளர்ச்சி நிபுணர்கள்.',
+    },
+    readMoreSnippet: {
+      en: '“Backed by global pioneers in brain education, this proven system is inspired by the visionary minds behind Heguru Japan, a world leader in early childhood brain development.”',
+      ta: '“உலகத்தரம் வாய்ந்த நரம்பியல் ஆய்வுகளின் அடிப்படையில், ஆரம்பகால மூளை வளர்ச்சியில் சர்வதேச அளவில் முன்னிலை வகிக்கும் ஹெகுரு ஜப்பானின் முன்னோடிகளால் வழிநடத்தப்படும் நிரூபிக்கப்பட்ட கல்வி முறை.”',
+    },
+    sampleChapters: [
+      {
+        title: {
+          en: 'Introduction: The Future Mind & Right-Brain Genius',
+          ta: 'முன்னுரை: தி ஃபியூச்சர் மைண்ட் மற்றும் வலது மூளை மேதைமை',
+        },
+        subtitle: {
+          en: 'Awakening Whole-Brain Excellence in a Fast-Changing World',
+          ta: 'வேகமாக மாறும் உலகில் முழு-மூளை மேதைமையை வெளிக்கொணருதல்',
+        },
+        paragraphs: {
+          en: [
+            'Welcome to a world where every child\'s potential is nurtured with care, creativity, and purpose. At Heguru India, we believe early childhood is the foundation for focus, confidence, imagination, and lifelong learning. Every child is born with extraordinary potential waiting to be ignited.',
+            'The Origin of Hado Reading began in 1997 in Japan, when Hirotada and Ruiko Henmi set out to explore the limitless potential of the human brain. Today, HEGL (Heguru) is globally recognized for right-brain education that cultivates photographic memory, speed computation, and boundless emotional balance.',
+            'Backed by global pioneers in brain education, this proven system blends love with science, memory with imagination, and creativity with courage—empowering children to navigate future eras with wisdom and self-belief.',
+          ],
+          ta: [
+            'ஒவ்வொரு குழந்தையின் எல்லையற்ற திறனும் அன்பு, படைப்பாற்றல் மற்றும் நோக்கத்தோடு வளர்க்கப்படும் உலகிற்கு உங்களை வரவேற்கிறோம். ஆரம்பகாலக் குழந்தை பருவமே கவனக்குவிப்பு, நம்பிக்கை, கற்பனை மற்றும் வாழ்நாள் கற்றலுக்கான அடித்தளம் என்பதை ஹெகுரு இந்தியா உறுதியாக நம்புகிறது.',
+            'ஹாடோ வாசிப்பின் தொடக்கம் 1997-ஆம் ஆண்டு ஜப்பானில் உருவானது. ஹிரோடாடா மற்றும் ரூயிகோ ஹென்மி ஆகியோர் மனித மூளையின் எல்லையற்ற திறனை வெளிக்கொணரும் முயற்சியில் ஈடுபட்டதன் விளைவாக உருவானதே இன்றைய உலகப் புகழ்பெற்ற ஹெகுரு வலது மூளைக் கல்வி முறையாகும்.',
+            'அறிவியலோடு அன்பையும், நினைவாற்றலோடு கற்பனையையும், படைப்பாற்றலோடு தைரியத்தையும் இணைக்கும் இந்த முறை, குழந்தைகள் தன்னம்பிக்கையோடும் மதிநுட்பத்தோடும் எதிர்காலத்தை வழிநடத்த வழிகாட்டுகிறது.',
+          ],
+        },
+      },
+    ],
+    pdfUrl: '/books/the-future-mind.pdf',
+    flipbookPages: Array.from({ length: 44 }, (_, i) => `/books/the-future-mind/pages/page_${i + 1}.webp`),
+  },
+
 ];
 
 
