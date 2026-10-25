@@ -42,6 +42,8 @@ KNOWN_MAPPINGS = {
     "victory": "andava-the-victory-mode",
     "dictionary": "wow-dictionary",
     "shambala": "shambala-book",
+    "heguru parenting master": "heguru-parenting-master-book",
+    "heguru_parenting_master": "heguru-parenting-master-book",
     "heguru_parenting": "heguru-parenting-mini-book",
     "heguru": "heguru-parenting-mini-book",
     "parenting": "wow-parenting-book",
