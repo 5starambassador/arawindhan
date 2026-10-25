@@ -147,3 +147,22 @@ export interface BlogPost {
   faqs: BlogFaq[];
 }
 
+export interface YouTubeVideoItem {
+  id: string;
+  title: { en: string; ta: string };
+  description: { en: string; ta: string };
+  category?: { en: string; ta: string };
+  publishedAt?: string;
+  thumbnailUrl?: string;
+  duration?: string;
+  featured?: boolean;
+}
+
+export interface YouTubeChannelInfo {
+  channelId: string;
+  channelHandle: string;
+  channelTitle: string;
+  channelUrl: string;
+}
+
+

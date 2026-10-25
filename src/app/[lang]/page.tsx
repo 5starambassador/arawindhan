@@ -23,6 +23,8 @@ import { ClaimBadge } from '@/components/ClaimBadge';
 import { SectionHeader } from '@/components/SectionHeader';
 import { QuantumMatrix } from '@/components/QuantumMatrix';
 import { BookCoverCardImage } from '@/components/BookCoverCardImage';
+import { YouTubeShowcase } from '@/components/YouTubeShowcase';
+import { getLatestYouTubeVideos } from '@/lib/youtube';
 import { Language } from '@/types';
 import type { Metadata } from 'next';
 
@@ -106,6 +108,8 @@ export default async function HomePage({
 }) {
   const resolved = await params;
   const lang: Language = resolved.lang === 'ta' ? 'ta' : 'en';
+
+  const latestVideos = await getLatestYouTubeVideos();
 
   // Auto-arrange: Prioritize titles with interactive 3D Flipbooks
   const autoArrangedBooks = [...booksList].sort((a, b) => {
@@ -525,6 +529,9 @@ export default async function HomePage({
           </div>
         </div>
       </section>
+
+      {/* 5.5 OFFICIAL YOUTUBE BROADCASTS & TALKS */}
+      <YouTubeShowcase initialVideos={latestVideos} lang={lang} />
 
       {/* 6. DIVYA YOGAM & MAHA SHAMBALA */}
       <section className="section-py" style={{ background: 'linear-gradient(180deg, #FFFBEB 0%, #FEF3C7 50%, #F8FAFC 100%)', borderTop: '1px solid var(--border-gold)', borderBottom: '1px solid var(--border-light)' }}>
