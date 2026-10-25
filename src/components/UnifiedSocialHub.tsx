@@ -48,44 +48,23 @@ export function UnifiedSocialHub({ initialPosts = curatedSocialPosts, lang }: Un
   const [posts, setPosts] = useState<SocialPostItem[]>(initialPosts);
   const [activeVideoModal, setActiveVideoModal] = useState<SocialPostItem | null>(null);
 
-  // Auto-refresh dynamic YouTube videos from API route
+  // Auto-refresh dynamic social posts from API route (YouTube RSS + Webhook-synced Instagram/LinkedIn)
   useEffect(() => {
     let isMounted = true;
-    fetch('/api/youtube/latest')
+    fetch('/api/social/latest')
       .then((res) => res.json())
       .then((data) => {
-        if (isMounted && data.success && Array.isArray(data.videos)) {
-          // Merge dynamic YouTube videos with static Instagram & LinkedIn posts
-          const ytPosts: SocialPostItem[] = data.videos.map((v: any, index: number) => ({
-            id: `yt-live-${v.id}`,
-            platform: 'youtube',
-            youtubeId: v.id,
-            title: v.title,
-            content: v.description,
-            url: `https://www.youtube.com/watch?v=${v.id}`,
-            date: v.publishedAt || 'Recent',
-            author: {
-              name: 'Arawindhan Official',
-              handle: '@ArawindhanOfficial',
-              avatarUrl: '/images/arawindhan_blue_shirt.jpg',
-            },
-            tag: v.category || { en: 'YouTube Broadcast', ta: 'காணொளி உரை' },
-            mediaType: 'video',
-            mediaUrl: `https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`,
-            featured: index === 0,
-          }));
-
-          const nonYt = initialPosts.filter((p) => p.platform !== 'youtube');
-          setPosts([...ytPosts, ...nonYt]);
+        if (isMounted && data.success && Array.isArray(data.posts) && data.posts.length > 0) {
+          setPosts(data.posts);
         }
       })
       .catch(() => {
-        // Fallback to initial
+        // Fallback to initialPosts
       });
     return () => {
       isMounted = false;
     };
-  }, [initialPosts]);
+  }, []);
 
   // Handle escape key for video modal
   useEffect(() => {
