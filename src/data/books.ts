@@ -1804,6 +1804,101 @@ export const booksList: BookItem[] = [
     flipbookPages: Array.from({ length: 44 }, (_, i) => `/books/the-future-mind/pages/page_${i + 1}.webp`),
   },
 
+  {
+    id: 'BK-020',
+    slug: 'heguru-parenting-master-book',
+    coverImage: '/images/books/heguru-parenting-master-book.jpg',
+    title: {
+      en: 'Heguru Parenting Master Book',
+      ta: 'ஹெகுரு பேரண்டிங் மாஸ்டர் புக்',
+    },
+    tagline: {
+      en: 'A Calm, Connected Guide for Raising Brighter Children (Ages 0–12 yrs)',
+      ta: '0–12 வயதுக் குழந்தைகளின் முழு-மூளை வளர்ச்சியை வழிகாட்டும் முழுமையான வழிகாட்டி',
+    },
+    author: {
+      en: 'Dr. J. Arawindhan & Heguru Japan',
+      ta: 'முனைவர் ஜே. அரவிந்தன் & ஹெகுரு ஜப்பான்',
+    },
+    edition: 'Master Edition (Comprehensive 0–12 Yrs Guide)',
+    language: 'English & Tamil',
+    status: 'Published',
+    claimId: 'CLM-023',
+    summary: {
+      en: 'The definitive master handbook on Heguru whole-brain education, spanning from infancy to age 12. Providing an exhaustive curriculum across 13 core parts, this comprehensive guide combines early neuro-development, the subconscious imprint phase, right-brain photographic memory games, and daily home flow rituals with dedicated tools and techniques for toddlers, preschoolers (ages 3–6), and elementary students (ages 6–12).',
+      ta: 'ஹெகுரு முழு-மூளைக் கல்வி முறையின் முழுமையான மற்றும் விரிவான முதன்மை வழிகாட்டி நூல். பிறப்பு முதல் 12 வயது வரையிலான அனைத்து நிலைகளுக்கும் 13 விரிவான பகுதிகளைக் கொண்டுள்ளது. ஆரம்பகால நரம்பியல் வளர்ச்சி, ஆழ்மனப் பதிவுக் கட்டம், புகைப்பட நினைவாற்றல் விளையாட்டுகள், தினசரி வீட்டுப் பயிற்சிகள் மற்றும் 3–6 வயது, 6–12 வயதுக் குழந்தைகளுக்கான பிரத்யேக மூளைத் தூண்டுதல் பயிற்சிகளை வழங்குகிறது.',
+    },
+    keyThemes: {
+      en: [
+        'Complete 0–12 Years Whole-Brain Neuro-Development',
+        'Right-Brain, Left-Brain & Whole-Brain Activation for Ages 6–12',
+        'Daily Heguru Systems, Red Dot Math & Home Printables',
+        'Understanding Screen Time & Gentle Parenting Scripts in Action',
+      ],
+      ta: [
+        '0–12 வயதுக் குழந்தைகளுக்கான முழு-மூளை நரம்பியல் வளர்ச்சி',
+        '6–12 வயதுக் குழந்தைகளுக்கான வலது, இடது மற்றும் முழு-மூளைத் தூண்டுதல்',
+        'தினசரி ஹெகுரு வீட்டுப் பயிற்சிகள் மற்றும் கணித அட்டைகள்',
+        'திரை நேர மேலாண்மை மற்றும் அன்பான வளர்ப்பு முறை வழிகாட்டல்கள்',
+      ],
+    },
+    targetAudience: {
+      en: 'Parents of children ages 0–12, early childhood educators, primary school teachers, and whole-brain development practitioners.',
+      ta: '0–12 வயதுக் குழந்தைகளின் பெற்றோர்கள், ஆரம்ப மற்றும் தொடக்கப் பள்ளி ஆசிரியர்கள் மற்றும் குழந்தை மூளை வளர்ச்சி நிபுணர்கள்.',
+    },
+    readMoreSnippet: {
+      en: '“Start early. Think deeper. Raise brighter. The Master Edition connects every phase from infant brain wiring through adolescent cognitive mastery into one seamless developmental rhythm.”',
+      ta: '“ஆரம்பத்திலேயே தொடங்குங்கள். ஆழமாக சிந்தியுங்கள். பிரகாசமான எதிர்காலத்தை உருவாக்குங்கள். மழலையர் மூளை வளர்ச்சி முதல் வளரிளம் பருவத்தின் முழு-மூளை ஆளுமை வரை அனைத்தையும் ஒருங்கிணைக்கும் விரிவான வழிகாட்டி.”',
+    },
+    sampleChapters: [
+      {
+        title: {
+          en: 'Part 1: Foundations of Early Parenting & Brain Wiring for Life',
+          ta: 'பகுதி 1: ஆரம்பகால பெற்றோர் வளர்ப்பின் அடித்தளங்கள் மற்றும் வாழ்நாள் மூளை உருவாக்கம்',
+        },
+        subtitle: {
+          en: 'Why the First 3 Years Are Everything & The Subconscious Imprint Phase',
+          ta: 'முதல் 3 ஆண்டுகள் ஏன் மிக முக்கியம் மற்றும் ஆழ்மனப் பதிவுக் கட்டம்',
+        },
+        paragraphs: {
+          en: [
+            'The first 1,000 days of your child\'s life, from conception to the age of two, are a "superpower" period of growth. During this incredible time, their brain builds as many as one million new connections every second, shaping the very foundation of their toddlerhood and beyond. It is not just about learning facts; your child is also wiring deep patterns of trust, safety, curiosity, and emotion through each responsive interaction.',
+            'At Heguru, we believe that every child is born with immense potential, waiting to be awakened. Grounded in Japanese research and developed through decades of refinement by Ruiko Henmi and Hirotada Henmi, our right-brain education method is designed not just to enhance learning, but to cultivate the whole child—emotionally, intellectually, and intuitively.',
+            'Parenting, in its truest form, is not about control but connection. When love becomes the language of growth and memory becomes the bridge between dreams and possibilities, children grow stronger, brighter, and braver.',
+          ],
+          ta: [
+            'குழந்தையின் வாழ்க்கையில் கருவுற்ற காலம் முதல் இரண்டு வயது வரையிலான முதல் 1,000 நாட்கள் ஒரு "மகா சக்தி" வளர்ச்சி சகாப்தமாகும். இந்த வியக்கத்தக்க காலத்தில், மூளை ஒவ்வொரு நொடியும் பத்து லட்சத்திற்கும் மேற்பட்ட புதிய இணைப்புகளை உருவாக்குகிறது. நீங்கள் தரும் ஒவ்வொரு அன்பான கவனிப்பும் குழந்தையின் மூளையில் பாதுகாப்பு மற்றும் நம்பிக்கையை நரம்பியல் ரீதியாகப் பதிக்கிறது.',
+            'ஹெகுருவில், ஒவ்வொரு குழந்தையும் அளப்பரிய ஆற்றலோடு பிறக்கிறது என்பதை நாங்கள் உறுதியாக நம்புகிறோம். ரூயிகோ ஹென்மி மற்றும் ஹிரோடாடா ஹென்மி ஆகியோரின் ஜப்பானிய ஆராய்ச்சி வழிகாட்டுதலில், முழுமையான ஆளுமை வளர்ச்சிக்கான வலது மூளைக் கல்வி முறை வடிவமைக்கப்பட்டுள்ளது.',
+            'பெற்றோர்த்துவம் என்பது அதிகாரத்தின் வெளிப்பாடு அல்ல; அது அன்பான இணைப்பின் வெளிப்பாடு. அன்பும் கல்வியும் இணையும் போது குழந்தைகள் மகிழ்ச்சியான, தைரியமான சாதனையாளர்களாக மலர்கிறார்கள்.',
+          ],
+        },
+      },
+      {
+        title: {
+          en: 'Chapter 12: 6–12 Years Kids — Whole-Brain Tools & Techniques',
+          ta: 'அத்தியாயம் 12: 6–12 வயதுக் குழந்தைகள் — முழு-மூளை பயிற்சிகள் மற்றும் உத்திகள்',
+        },
+        subtitle: {
+          en: 'Balancing Right-Brain Creativity with Left-Brain Logic and Scientific Evidence',
+          ta: 'வலது மூளைப் படைப்பாற்றலையும் இடது மூளை தர்க்கத்தையும் அறிவியல் பூர்வமாக இணைத்தல்',
+        },
+        paragraphs: {
+          en: [
+            'As children transition from early childhood into primary schooling (ages 6 to 12), their cognitive architecture undergoes a profound shift. The analytical, language-driven left brain matures rapidly, yet the intuitive, speed-processing power of the right brain remains open to lifelong consolidation.',
+            'Heguru\'s comprehensive framework bridges both hemispheres. Through speed listening, spatial visualization, linking memory sequences, and multidimensional problem solving, students learn to absorb vast quantities of academic information effortlessly while maintaining creative curiosity.',
+            'When whole-brain activation becomes a steady habit during elementary years, children develop unshakeable academic confidence, high emotional resilience, and deep executive function that will serve them for a lifetime.',
+          ],
+          ta: [
+            'குழந்தைகள் மழலையர் நிலையிலிருந்து தொடக்கப் பள்ளி பருவத்திற்கு (6 முதல் 12 வயது) மாறும்போது, அவர்களின் மூளை வளர்ச்சியில் ஒரு முக்கிய மாற்றம் நிகழ்கிறது. இடது மூளையின் தர்க்கரீதியான சிந்தனை வேகமாக வளரும் அதே வேளையில், வலது மூளையின் வேக வாசிப்பு மற்றும் உள்ளுணர்வு ஆற்றல் நிலைபெறத் தொடங்குகிறது.',
+            'ஹெகுருவின் முழுமையான கட்டமைப்பு மூளையின் இரண்டு பகுதிகளையும் இணைக்கிறது. வேக வாசிப்பு, காட்சி நினைவாற்றல் மற்றும் பல பரிமாணப் பிரச்சனைகளைத் தீர்க்கும் பயிற்சிகள் மூலம் மாணவர்கள் கல்வித் தகவல்களை எளிதாக கிரகித்து நினைவில் நிறுத்துகின்றனர்.',
+            'தொடக்கப் பள்ளிப் பருவத்தில் முழு-மூளைப் பயிற்சி நிலையான பழக்கமாக மாறும்போது, மாணவர்கள் கல்வி ரீதியான தன்னம்பிக்கையும், உணர்ச்சி சமநிலையும் பெற்று எதிர்காலத்தில் எதையும் சாதிக்கும் ஆற்றலைப் பெறுகிறார்கள்.',
+          ],
+        },
+      },
+    ],
+    pdfUrl: '/books/heguru-parenting-master-book.pdf',
+    flipbookPages: Array.from({ length: 227 }, (_, i) => `/books/heguru-parenting-master-book/pages/page_${i + 1}.webp`),
+  },
 ];
 
 
