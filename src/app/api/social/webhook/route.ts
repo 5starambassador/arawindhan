@@ -50,37 +50,57 @@ export async function POST(req: NextRequest) {
     }
 
     const body = await req.json();
-    const { platform, title, content, caption, url, mediaUrl, imageUrl, tag, metrics } = body;
 
-    if (!platform || !['instagram', 'linkedin', 'youtube'].includes(platform.toLowerCase())) {
+    // Extract fields with full Make.com / Integromat / Zapier compatibility
+    const rawUrl = body.url || body.permalink || body.link || body.shareUrl || body.postUrl || '';
+    const rawContent = body.content || body.caption || body.text || body.message || body.title || 'New executive dispatch';
+    const rawTitle = body.title || (typeof rawContent === 'string' && rawContent.length > 70 ? rawContent.slice(0, 70) + '...' : rawContent);
+    const rawMediaUrl = body.mediaUrl || body.media_url || body.imageUrl || body.image_url || body.thumbnail_url || null;
+
+    // Smart platform detection if not explicitly passed
+    let platform = (body.platform || '').toLowerCase();
+    if (!platform) {
+      if (rawUrl.includes('instagram.com') || body.media_type) platform = 'instagram';
+      else if (rawUrl.includes('linkedin.com')) platform = 'linkedin';
+      else if (rawUrl.includes('youtube.com') || rawUrl.includes('youtu.be')) platform = 'youtube';
+      else platform = 'instagram'; // default
+    }
+
+    if (!['instagram', 'linkedin', 'youtube'].includes(platform)) {
       return NextResponse.json(
         { success: false, error: 'Platform must be "instagram", "linkedin", or "youtube".' },
         { status: 400 }
       );
     }
 
-    const postPlatform = platform.toLowerCase() as 'instagram' | 'linkedin' | 'youtube';
-    const textContent = content || caption || title || 'New executive dispatch';
-    const postTitle = title || (textContent.length > 60 ? textContent.slice(0, 60) + '...' : textContent);
-    const postMediaUrl = mediaUrl || imageUrl || null;
+    const postPlatform = platform as 'instagram' | 'linkedin' | 'youtube';
+
+    // Metrics formatting (likes & comments count)
+    let metrics = body.metrics;
+    if (!metrics && (body.like_count !== undefined || body.likes !== undefined)) {
+      metrics = {
+        likes: String(body.like_count || body.likes || '0'),
+        comments: String(body.comments_count || body.comments || '0'),
+      };
+    }
 
     const formattedPost: SocialPostItem = {
       id: `dyn-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
       platform: postPlatform,
-      title: typeof postTitle === 'object' ? postTitle : { en: postTitle, ta: postTitle },
-      content: typeof textContent === 'object' ? textContent : { en: textContent, ta: textContent },
-      url: url || officialSocialAccounts[postPlatform].url,
+      title: typeof rawTitle === 'object' ? rawTitle : { en: rawTitle, ta: rawTitle },
+      content: typeof rawContent === 'object' ? rawContent : { en: rawContent, ta: rawContent },
+      url: rawUrl || officialSocialAccounts[postPlatform].url,
       date: new Date().toLocaleDateString('en-US', { month: 'short', year: 'numeric' }),
       author: {
         name: officialSocialAccounts[postPlatform].name,
         handle: officialSocialAccounts[postPlatform].handle,
         avatarUrl: '/images/arawindhan_blue_shirt.jpg',
       },
-      mediaType: postMediaUrl ? 'image' : undefined,
-      mediaUrl: postMediaUrl || (postPlatform === 'instagram' ? '/images/heguru_center.jpg' : '/images/institutions/human_intelligence_ai_education.webp'),
-      tag: typeof tag === 'object' ? tag : {
-        en: tag || (postPlatform === 'instagram' ? 'Instagram Dispatch' : postPlatform === 'linkedin' ? 'LinkedIn Article' : 'YouTube Broadcast'),
-        ta: tag || (postPlatform === 'instagram' ? 'இன்ஸ்டாகிராம் பதிவு' : postPlatform === 'linkedin' ? 'லிங்க்ட்இன் சிந்தனை' : 'யூடியூப் உரை'),
+      mediaType: rawMediaUrl ? 'image' : undefined,
+      mediaUrl: rawMediaUrl || (postPlatform === 'instagram' ? '/images/heguru_center.jpg' : '/images/institutions/human_intelligence_ai_education.webp'),
+      tag: typeof body.tag === 'object' ? body.tag : {
+        en: body.tag || (postPlatform === 'instagram' ? 'Instagram Dispatch' : postPlatform === 'linkedin' ? 'LinkedIn Article' : 'YouTube Broadcast'),
+        ta: body.tag || (postPlatform === 'instagram' ? 'இன்ஸ்டாகிராம் பதிவு' : postPlatform === 'linkedin' ? 'லிங்க்ட்இன் சிந்தனை' : 'யூடியூப் உரை'),
       },
       metrics: metrics || undefined,
       featured: false,
