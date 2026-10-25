@@ -1720,11 +1720,11 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
                         lineHeight: 1.25,
                       }}
                     >
-                      {currentChapter.title[language]}
+                      {currentChapter?.title?.[language] || currentChapter?.title?.en || ''}
                     </h2>
-                    {currentChapter.subtitle && (
+                    {currentChapter?.subtitle && (
                       <p style={{ opacity: 0.75, fontSize: '0.95rem', fontStyle: 'italic', margin: 0 }}>
-                        {currentChapter.subtitle[language]}
+                        {currentChapter.subtitle[language] || currentChapter.subtitle.en || ''}
                       </p>
                     )}
                     <div
@@ -1746,7 +1746,12 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
                       letterSpacing: '0.01em',
                     }}
                   >
-                    {currentChapter.paragraphs[language].map((para, pIdx) => (
+                    {((currentChapter?.paragraphs?.[language] ||
+                      currentChapter?.paragraphs?.en ||
+                      currentChapter?.paragraphs?.ta ||
+                      (currentChapter as any)?.content?.[language] ||
+                      (currentChapter as any)?.content?.en ||
+                      []) as string[]).map((para, pIdx) => (
                       <p
                         key={pIdx}
                         style={{

@@ -1899,6 +1899,116 @@ export const booksList: BookItem[] = [
     pdfUrl: '/books/heguru-parenting-master-book.pdf',
     flipbookPages: Array.from({ length: 227 }, (_, i) => `/books/heguru-parenting-master-book/pages/page_${i + 1}.webp`),
   },
+  {
+    id: 'BK-021',
+    slug: 'the-visionary-leader',
+    coverImage: '/images/books/the-visionary-leader.jpg',
+    title: {
+      en: 'The Visionary Leader',
+      ta: 'தி விஷனரி லீடர்',
+    },
+    tagline: {
+      en: 'Celebrating the Leader Behind Brighter Minds — Leadership Journey, Heguru Milestones & Lessons from the Leader',
+      ta: 'ஒளிரும் மனங்களின் பின்னணியில் உள்ள தலைவரை போற்றும் சிறப்புப் பதிப்பு — தலைமைத்துவப் பயணம், ஹெகுரு மைல்கற்கள் மற்றும் படிப்பினைகள்',
+    },
+    author: {
+      en: 'Dr. J. Arawindhan',
+      ta: 'முனைவர் ஜே. அரவிந்தன்',
+    },
+    edition: 'Visionary Edition',
+    language: 'English',
+    status: 'Published',
+    claimId: 'CLM-023',
+    summary: {
+      en: 'A premier commemorative monograph celebrating the transformative journey of Dr. J. Arawindhan—an engineer who became an educationist, an institution builder, and a pioneer in whole-brain cognitive development. Spanning 32 richly illustrated pages, this volume chronicles the dawn of ACHARIYA in 2000, the visionary expansion into higher education and multi-sector enterprise, the nationwide establishment of 10+ Heguru India brain development centres, and the 7 foundational leadership maxims that turn ambitious ideas into lasting human legacies.',
+      ta: 'முனைவர் ஜே. அரவிந்தன் அவர்களின் தொலைநோக்குப் பார்வையை விவரிக்கும் சிறப்புப் பதிப்பு. ஒரு பொறியாளராகத் தொடங்கி, கல்வியாளராகவும், மாபெரும் நிறுவனங்களின் சிற்பியாகவும், மனித மூளை வளர்ச்சி முன்னோடியாகவும் உருவெடுத்த அவரது 25+ ஆண்டுகால தலைமைத்துவப் பயணத்தை இந்நூல் ஆவணப்படுத்துகிறது. 2000-ல் ஆசாரியாவின் ஆரம்பம், உயர்கல்வி மற்றும் தொழில்முனைவு விரிவு, இந்தியாவில் 10+ ஹெகுரு மையங்களை நிறுவிய மைல்கற்கள் மற்றும் தொலைநோக்குக் கருத்துக்களை நிரந்தர நிறுவன அமைப்புகளாக மாற்றும் 7 முக்கிய தலைமைத்துவக் கோட்பாடுகளை 32 பக்கங்களில் அழகாக தொகுத்து வழங்குகிறது.',
+    },
+    keyThemes: {
+      en: [
+        'Leadership Journey: From Modest Origins to an Educational Movement',
+        'Heguru Milestones: National Master Franchise & 10+ South India Centres',
+        'Lessons from the Leader: The 7 Core Principles of Enduring Institutions',
+        'Holistic Educational Continuum: Schools, Colleges & Technical Campuses',
+        'Entrepreneurial Mindset: Turning Ideas into Sustainable Systems',
+      ],
+      ta: [
+        'தலைமைத்துவப் பயணம்: சிறிய தொடக்கத்திலிருந்து கல்வி இயக்கம் வரை',
+        'ஹெகுரு மைல்கற்கள்: தேசிய முதன்மை உரிமை மற்றும் 10+ தென்னிந்திய மையங்கள்',
+        'தலைவரின் படிப்பினைகள்: நிறுவனங்களை நிலைநிறுத்தும் 7 அடிப்படைக் கோட்பாடுகள்',
+        'முழுமையான கல்விக் கட்டமைப்பு: பள்ளிகள், கல்லூரிகள் மற்றும் தொழில்முறை வளாகங்கள்',
+        'தொழில்முனைவு சிந்தனை: கருத்துக்களை நீடித்த அமைப்புகளாக மாற்றுதல்',
+      ],
+    },
+    targetAudience: {
+      en: 'Educators, institution builders, entrepreneurs, parents, and leaders seeking to understand how visionary ideas transform into scalable, values-driven systems.',
+      ta: 'கல்வியாளர்கள், நிறுவன அமைப்பாளர்கள், தொழில்முனைவோர், பெற்றோர்கள் மற்றும் தொலைநோக்குத் தலைவர்கள்.',
+    },
+    sampleChapters: [
+      {
+        title: {
+          en: 'Pillar 1: The Leadership Journey — Humble Origins, Lofty Aspirations',
+          ta: 'தூண் 1: தலைமைத்துவப் பயணம் — எளிய தொடக்கம், உயர்ந்த இலட்சியங்கள்',
+        },
+        paragraphs: {
+          en: [
+            'Dr. J. Arawindhan\'s journey is the story of an engineer who became an educationist, an educationist who became an institution-builder, and an institution-builder whose vision expanded into entrepreneurship, innovation, and brain development.',
+            'Around the dawn of the millennium in 2000, starting with an ambitious aspiration to move beyond conventional rote-heavy schooling, he established the ACHARIYA ecosystem. Grounded in the first principle that "Education becomes meaningful when learning is connected to experience," this vision expanded from a foundational B.Ed. teacher training institute and matriculation schools into premier CBSE campuses, technical universities, arts and science colleges, and catering institutes across Puducherry and Tamil Nadu.',
+            'Beyond education, this entrepreneurial instinct manifested in diverse societal ventures—including Hope Café, Le Pondy Cheese, and hospitality initiatives—proving that when purpose drives creation, growth enriches communities.',
+          ],
+          ta: [
+            'முனைவர் ஜே. அரவிந்தனின் பயணம் என்பது ஒரு பொறியாளர் கல்வியாளராகவும், கல்வியாளர் மாபெரும் நிறுவனங்களின் அமைப்பாளராகவும், நிறுவன அமைப்பாளர் தொழில்முனைவு மற்றும் மூளை வளர்ச்சி முன்னோடியாகவும் மாறிய ஒரு வரலாற்றுப் பயணம்.',
+            '2000-ம் ஆண்டின் தொடக்கத்தில், வழக்கமான மனப்பாடக் கல்வியைத் தாண்டி குழந்தையின் முழுமையான ஆற்றலை வெளிக்கொணரும் நோக்கத்துடன் ஆசாரியா இயக்கம் தொடங்கப்பட்டது. "அனுபவத்துடன் இணையும் போதே கல்வி முழுமை பெறுகிறது" என்ற முதல் கோட்பாட்டின் அடிப்படையில் ஆசிரியர் பயிற்சிக் கல்லூரி, மெட்ரிக் மற்றும் சிபிஎஸ்இ பள்ளிகள், பொறியியல், கலை-அறிவியல் மற்றும் கேட்டரிங் கல்லூரிகள் என பரந்து விரிந்தது.',
+          ],
+        },
+      },
+      {
+        title: {
+          en: 'Pillar 2: Heguru Milestones — Awakening Potential Through Right-Brain Science',
+          ta: 'தூண் 2: ஹெகுரு மைல்கற்கள் — வலதுமூளை அறிவியலின் வழி ஆற்றலை விழிப்படையச் செய்தல்',
+        },
+        paragraphs: {
+          en: [
+            'Dr. Arawindhan\'s relentless exploration of human intelligence eventually led toward early neuro-development and right-brain activation. Recognizing that early childhood is the critical window when neurological wiring occurs most rapidly, he brought Heguru Japan—founded by Ruiko Henmi and Hirotada Henmi—to India.',
+            'Serving as the National Master Franchise for Heguru India, he spearheaded the establishment of more than 10 dedicated brain centres across Chennai, Puducherry, Bengaluru, Hyderabad, and Pune. Introducing Heguru represented far more than launching a curriculum; it embodied a revolutionary shift from passive schooling to foundational capacity-building: nurturing photographic memory, speed computation, spatial intuition, and emotional resilience in young children.',
+            'Together, ACHARIYA and Heguru reflect one connected conviction: "When potential is recognized early, supported consistently, and guided intelligently, children gain the freedom to create extraordinary futures."',
+          ],
+          ta: [
+            'மனித நுண்ணறிவின் எல்லைகளை நோக்கிய முனைவர் அரவிந்தனின் தேடல், ஜப்பானின் உலகப்புகழ்பெற்ற ஹெகுரு (Heguru) வலதுமூளைக் கல்வி முறையை இந்தியாவிற்கு கொண்டுவந்தது. ருய்கோ ஹென்மி மற்றும் ஹிரோதடா ஹென்மி உருவாக்கிய இம்முறையின் தேசிய முதன்மை உரிமையாளராக (National Master Franchise) பொறுப்பேற்றார்.',
+            'சென்னை, புதுச்சேரி, பெங்களூரு, ஹைதராபாத், புனே என 10-க்கும் மேற்பட்ட பிரத்யேக மையங்களை நிறுவி, குழந்தைகளின் புகைப்பட நினைவாற்றல், அதிவேக கணிப்புத்திறன் மற்றும் உணர்வு சமநிலையை வளர்க்கும் புதிய புரட்சியை உருவாக்கினார்.',
+          ],
+        },
+      },
+      {
+        title: {
+          en: 'Pillar 3: Lessons from the Leader — The 7 Principles Behind the Vision',
+          ta: 'தூண் 3: தலைவரின் படிப்பினைகள் — தொலைநோக்குப் பார்வையின் பின்னிருக்கும் 7 அடிப்படைக் கோட்பாடுகள்',
+        },
+        paragraphs: {
+          en: [
+            '1. Believe in Human Potential: Every child carries abilities that may not yet be visible. Education must not judge potential early, but create the fertile environment in which it flourishes.',
+            '2. Think Beyond the Ordinary: Progress begins when someone is willing to question existing orthodoxies and reimagine what learning can achieve.',
+            '3. Turn Ideas into Systems: A vision creates direction; systems give that vision continuity. Curricula, training, processes, and technology ensure lasting societal impact.',
+            '4. Build People Along with Institutions: Buildings provide space; people provide purpose. Teachers, leaders, and parents turn educational philosophy into living reality.',
+            '5. Keep Learning: Leadership does not mean having every answer; it means remaining curious, adapting to change, and continuously serving.',
+            '6. Create Opportunities, Not Limitations: Equip individuals to recognize possibilities, make confident decisions, and choose meaningful paths.',
+            '7. Lead with Purpose: Growth becomes valuable when it improves lives. "A powerful vision is sustained by the values that people continue to practise even when the founder is not in the room."',
+          ],
+          ta: [
+            '1. மனித ஆற்றலை நம்புங்கள்: ஒவ்வொரு குழந்தையிலும் மறைந்திருக்கும் ஆற்றலை வெளிக்கொணரும் சூழலை கல்வி உருவாக்க வேண்டும்.',
+            '2. வழக்கத்திற்கு மாறாகச் சிந்தியுங்கள்: புதிய சாத்தியக்கூறுகளை கற்பனை செய்யும்போதுதான் முன்னேற்றம் தொடங்குகிறது.',
+            '3. கருத்துக்களை அமைப்புகளாக மாற்றுங்கள்: தொலைநோக்கு வழிகாட்டுகிறது; முறையான நடைமுறைகளும் தொழில்நுட்பமும் அதற்கு நிலைத்தன்மையை அளிக்கின்றன.',
+            '4. நிறுவனங்களோடு மனிதர்களையும் உருவாக்குங்கள்: கட்டடங்கள் இடத்தை தருகின்றன; மனிதர்களே அதன் நோக்கத்தை வாழ வைக்கின்றனர்.',
+            '5. தொடர்ந்து கற்றுக்கொண்டே இருங்கள்: தலைமைத்துவம் என்பது எல்லாவற்றையும் அறிந்திருப்பது அல்ல; தொடர்ந்து கற்கும் மனப்பான்மையே ஆகும்.',
+            '6. தடைகளை அல்ல, வாய்ப்புகளை உருவாக்குங்கள்: சுயமாக சிந்தித்து சரியான முடிவுகளை எடுக்கும் தன்னம்பிக்கையை வழங்குங்கள்.',
+            '7. தெளிவான நோக்கத்தோடு வழிநடத்துங்கள்: "நிறுவனர் இல்லாதபோதும் சக மனிதர்கள் தொடர்ந்து கடைப்பிடிக்கும் நற்பண்புகளில்தான் ஒரு உன்னத தொலைநோக்குப் பார்வை நிலைத்து நிற்கிறது."',
+          ],
+        },
+      },
+    ],
+    pdfUrl: '/books/the-visionary-leader.pdf',
+    flipbookPages: Array.from({ length: 32 }, (_, i) => `/books/the-visionary-leader/pages/page_${i + 1}.webp`),
+  },
+
 ];
 
 
