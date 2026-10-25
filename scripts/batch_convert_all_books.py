@@ -126,11 +126,74 @@ def process_pdf(pdf_path, explicit_slug=None):
         if page_num % 10 == 0 or page_num == total_pages:
             print(f"   ✓ Rendered page {page_num}/{total_pages} (WebP)")
 
-    update_books_data(slug, total_pages)
+    # Ensure destination PDF stays under GitHub's 100MB limit
+    if dest_pdf.exists() and dest_pdf.stat().st_size > 95 * 1024 * 1024:
+        print(f"⚡ PDF size ({dest_pdf.stat().st_size / (1024*1024):.1f} MB) exceeds GitHub 100MB limit. Optimizing from WebP pages...")
+        try:
+            from PIL import Image
+            imgs = []
+            for i in range(1, total_pages + 1):
+                p = out_pages_dir / f"page_{i}.webp"
+                if p.exists():
+                    imgs.append(Image.open(p).convert("RGB"))
+            if imgs:
+                imgs[0].save(dest_pdf, "PDF", save_all=True, append_images=imgs[1:], quality=85, optimize=True)
+                print(f"✨ Optimized PDF to: {dest_pdf.stat().st_size / (1024*1024):.1f} MB (GitHub safe)")
+        except Exception as e:
+            print(f"⚠️  PDF optimization error: {e}")
+
+    update_books_data(slug, total_pages, doc)
     print(f"✅ Successfully converted '{slug}' with {total_pages} pages!\n")
     return slug, total_pages
 
-def update_books_data(slug, total_pages):
+def ts_escape(text):
+    """Escape text for a single-quoted TypeScript string literal."""
+    return (text.replace("\\", "\\\\").replace("'", "\\'")
+                .replace("\r", " ").replace("\n", " "))
+
+def extract_auto_metadata(doc, formatted_title):
+    """Build summary, tagline, themes, quote and a sample chapter from the PDF text."""
+    paras, headings = [], []
+    try:
+        for i in range(min(len(doc), 30)):
+            raw = doc[i].get_textpage().get_text_range() or ""
+            text = re.sub(r"[\r\n]+", "\n", raw)
+            lines = [l.strip() for l in text.split("\n") if l.strip()]
+            buf = []
+            for l in lines:
+                if len(l) >= 3 and len(l) <= 60 and not l.endswith(".") and sum(c.isalpha() for c in l) >= 3:
+                    if l.isupper() or l.istitle():
+                        headings.append(l.title())
+                buf.append(l)
+            joined = " ".join(buf)
+            joined = re.sub(r"\s+", " ", joined).strip()
+            if len(joined) > 250:
+                paras.append(joined)
+    except Exception as exc:
+        print(f"⚠️  Could not read PDF text: {exc}")
+
+    if not paras:
+        return None
+
+    summary = paras[0][:650].rsplit(" ", 1)[0].rstrip(",;:") + "..."
+    all_sentences = [s for p in paras[1:] + paras[:1] for s in re.split(r"(?<=[.!?])\s+", p)]
+    good = [s for s in all_sentences if 60 <= len(s) <= 220 and s[-1] in ".!?" and not re.search(r"\d", s) and not s.isupper()]
+    quote = good[0] if good else paras[0][:200]
+
+    seen, themes = set(), []
+    for h in headings:
+        key = h.lower()
+        if key in seen or key in formatted_title.lower() or len(h.split()) > 8:
+            continue
+        seen.add(key)
+        themes.append(h)
+        if len(themes) == 4:
+            break
+
+    chapter_paras = [p[:520].rsplit(" ", 1)[0] + "..." for p in paras[:3]]
+    return {"summary": summary, "quote": quote, "themes": themes, "chapter": chapter_paras}
+
+def update_books_data(slug, total_pages, doc=None):
     if not DATA_BOOKS_TS.exists():
         print(f"⚠️  {DATA_BOOKS_TS} not found, skipping TS registration.")
         return
@@ -142,6 +205,25 @@ def update_books_data(slug, total_pages):
         print(f"✨ Book slug '{slug}' is new! Automatically registering in booksList...")
         title_words = [w.capitalize() for w in slug.replace("-", " ").split()]
         formatted_title = " ".join(title_words)
+        auto = extract_auto_metadata(doc, formatted_title) if doc is not None else None
+        if auto:
+            summary_en = ts_escape(auto["summary"])
+            themes_en = auto["themes"] or ["Visionary Education", "Self-Mastery", "Leadership"]
+            themes_str = ", ".join("'" + ts_escape(t) + "'" for t in themes_en)
+            quote_en = ts_escape(auto["quote"])
+            chapter_str = ", ".join("'" + ts_escape(p) + "'" for p in auto["chapter"])
+            extra_fields = (
+                f"    readMoreSnippet: {{\n      en: '“{quote_en}”',\n      ta: '“{quote_en}”',\n    }},\n"
+                f"    sampleChapters: [\n      {{\n        title: {{ en: 'Introduction', ta: 'முன்னுரை' }},\n"
+                f"        subtitle: {{ en: '{ts_escape(formatted_title)}', ta: '{ts_escape(formatted_title)}' }},\n"
+                f"        paragraphs: {{\n          en: [{chapter_str}],\n          ta: [{chapter_str}],\n        }},\n      }},\n    ],\n"
+            )
+            print("📝 Auto-generated description, themes, quote and sample chapter from PDF text.")
+        else:
+            summary_en = f"{formatted_title} by Dr. J. Arawindhan."
+            themes_str = "'Visionary Education', 'Self-Mastery', 'Leadership'"
+            extra_fields = ""
+            print("⚠️  No readable text in PDF (scanned?) - using basic placeholder description.")
         
         ids = re.findall(r"id:\s*'BK-(\d+)'", content)
         next_num = max([int(n) for n in ids]) + 1 if ids else 1
@@ -168,18 +250,18 @@ def update_books_data(slug, total_pages):
     status: 'Published',
     claimId: 'CLM-023',
     summary: {{
-      en: '{formatted_title} by Dr. J. Arawindhan.',
-      ta: '{formatted_title} - முனைவர் ஜே. அரவிந்தன்.',
+      en: '{summary_en}',
+      ta: '{summary_en}',
     }},
     keyThemes: {{
-      en: ['Visionary Education', 'Self-Mastery', 'Leadership'],
-      ta: ['கல்வி தொலைநோக்கு', 'சுய ஆளுமை', 'தலைமைத்துவம்'],
+      en: [{themes_str}],
+      ta: [{themes_str}],
     }},
     targetAudience: {{
       en: 'Educators, leaders, students, and life-long learners.',
       ta: 'கல்வியாளர்கள், தலைவர்கள் மற்றும் மாணவர்கள்.',
     }},
-    pdfUrl: '/books/{slug}.pdf',
+{extra_fields}    pdfUrl: '/books/{slug}.pdf',
     flipbookPages: Array.from({{ length: {total_pages} }}, (_, i) => `/books/{slug}/pages/page_${{i + 1}}.webp`),
   }},
 """

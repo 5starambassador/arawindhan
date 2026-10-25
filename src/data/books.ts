@@ -1538,6 +1538,102 @@ export const booksList: BookItem[] = [
     pdfUrl: '/books/the-lions-bank-account.pdf',
     flipbookPages: Array.from({ length: 146 }, (_, i) => `/books/the-lions-bank-account/pages/page_${i + 1}.webp`),
   },
+  {
+    id: 'BK-017',
+    slug: 'q-minds',
+    coverImage: '/images/books/q-minds.jpg',
+    title: {
+      en: 'Q Minds: Supra Sapiens',
+      ta: 'கியூ மைண்ட்ஸ்: சுப்ரா சேபியன்ஸ் (Q Minds)',
+    },
+    tagline: {
+      en: 'Empowering Young Minds to Become Supra Sapiens in the Age of AI',
+      ta: 'செயற்கை நுண்ணறிவு யுகத்தில் குழந்தைகளை சுப்ரா சேபியன்ஸாக மாற்றும் குவாண்டம் கல்வி',
+    },
+    author: {
+      en: 'Mahavadhani Sri Achariya Arawindhan GuruG',
+      ta: 'மகாவதானி ஸ்ரீ ஆச்சாரியா அரவிந்தன் குருஜி',
+    },
+    edition: 'Supra Sapiens & Genius Leadership Edition (217 Pages)',
+    language: 'English & Tamil',
+    status: 'Published',
+    claimId: 'CLM-023',
+    summary: {
+      en: 'Spanning 217 comprehensive pages, Q Minds: Supra Sapiens presents Mahavadhani Sri Achariya Arawindhan GuruG’s definitive masterwork on Whole-Brain Quantum Development and Future Leadership. Designed for an era where artificial intelligence and automation are redefining human society, this monumental volume synthesizes Heguru whole-brain stimulation, Booshido ethical character, MiWay academic reasoning, WOW Academy innovation, and Divya Drishti conscious vision. It provides an actionable roadmap to cultivate children across 10 vital intelligences—equipping them with photographic memory, Q-Reading, Q-Math, and alpha-state focus so they lead the future as enlightened Supra Sapiens rather than passive observers.',
+      ta: '217 பக்கங்களைக் கொண்ட "கியூ மைண்ட்ஸ்: சுப்ரா சேபியன்ஸ்" நூல், செயற்கை நுண்ணறிவு (AI) ஆதிக்கம் செலுத்தும் புதிய யுகத்தில் குழந்தைகளை முழுமையான ஆற்றல் கொண்ட மேதைகளாக வளர்ப்பதற்கான முழுமையான வழிகாட்டியாகும். ஹெகுரு முழு-மூளை வளர்ச்சி, பூஷிடோ ஒழுக்க மாண்பு, மிவே செயல்முறைக் கல்வி, வாவ் அகாடமி படைப்பாற்றல் மற்றும் திவ்ய திருஷ்டி ஆன்ம விழிப்புணர்வு ஆகிய 6 தூண்களை ஒருங்கிணைத்து இந்நூல் கட்டமைக்கப்பட்டுள்ளது. குழந்தைகளுக்கு புகைப்பட நினைவாற்றல், கியூ-மேத், கியூ-ரீடிங் மற்றும் ஆல்ஃபா கற்றல் நுட்பங்களைப் பயிற்றுவித்து, 10 பன்முக நுண்ணறிவுகளிலும் குழந்தைகளை "சுப்ரா சேபியன்ஸ்" (Supra Sapiens) என்ற உச்ச நிலைக்கு உயர்த்துகிறது.',
+    },
+    keyThemes: {
+      en: [
+        'The Genius Leadership Framework: Nurturing the Whole Child across 10 Intelligences',
+        'Whole-Brain Neurological Activation: Heguru, Photographic Memory, and Alpha Learning',
+        'Quantum Cognitive Mastery: Q-Reading (10x speed), Q-Math, and Lateral Innovation',
+        'Transcending the AI Paradigm: Raising Creative, Ethical, and Conscious Supra Sapiens',
+      ],
+      ta: [
+        'மேதைமை தலைமைத்துவக் கட்டமைப்பு: 10 பன்முக நுண்ணறிவுகளிலும் முழு மனிதனை உருவாக்குதல்',
+        'முழு-மூளை நரம்பியல் தூண்டுதல்: ஹெகுரு, புகைப்பட நினைவாற்றல் மற்றும் ஆல்ஃபா தியானக் கற்றல்',
+        'குவாண்டம் அறிவாற்றல் தேர்ச்சி: கியூ-ரீடிங் (10x வாசிப்பு வேகம்), கியூ-மேத் மற்றும் புத்தாக்கச் சிந்தனை',
+        'AI யுகத்தை வெல்லும் ஆற்றல்: படைப்பாற்றல், அறநெறி மற்றும் ஆன்ம விழிப்புணர்வு கொண்ட சுப்ரா சேபியன்ஸ்',
+      ],
+    },
+    targetAudience: {
+      en: 'School principals, progressive educators, STEM lab coordinators, parents of Gen Alpha/Gen Z, and institutional founders.',
+      ta: 'பள்ளி முதல்வர்கள், ஆசிரியர்கள், புதிய தலைமுறைப் பெற்றோர்கள் மற்றும் கல்வி நிறுவன நிர்வாகிகள்.',
+    },
+    readMoreSnippet: {
+      en: '“In an era where machines calculate and artificial intelligence codes, human education must ascend beyond rote memory into Quantum Consciousness. Q Minds is the blueprint for awakening the Supra Sapiens within every child.”',
+      ta: '"இயந்திரங்கள் கணக்கிடும், செயற்கை நுண்ணறிவு நிரலெழுதும் இந்த புதிய யுகத்தில், மனிதக் கல்வி என்பது மனப்பாடத்தைத் தாண்டி குவாண்டம் விழிப்புணர்வாக மலர வேண்டும். ஒவ்வொரு குழந்தையிடமும் உறங்கிக் கிடக்கும் சுப்ரா சேபியன்ஸ் மேதைமையை விழித்தெழச் செய்யும் வரைபடமே கியூ மைண்ட்ஸ் ஆகும்."',
+    },
+    sampleChapters: [
+      {
+        title: {
+          en: 'Chapter 1: The Future Q Mind Vision & The Child as a Universe',
+          ta: 'அத்தியாயம் 1: எதிர்கால கியூ மைண்ட் தொலைநோக்கும் பிரபஞ்சக் குழந்தையும்',
+        },
+        subtitle: {
+          en: 'Why AI Demands a New Educational Paradigm Beyond Rote Academics',
+          ta: 'மனப்பாடக் கல்வியைக் கடந்து புதிய கல்விப் புரட்சி ஏன் அவசியமாகிறது?',
+        },
+        paragraphs: {
+          en: [
+            'The world is entering an era unlike any in human history. Artificial Intelligence is transforming industries, automation is redefining careers, and access to information has become virtually limitless. In this rapidly evolving landscape, success will no longer depend solely on academic excellence or the ability to memorize facts.',
+            'Instead, it will belong to individuals who can think creatively, solve complex problems, lead with integrity, adapt to change, collaborate across cultures, and make ethical decisions with wisdom and compassion.',
+            'The Genius Leadership Framework serves as the foundation of the Future Q Mind Philosophy—bringing together the educational strengths of whole-brain neuro-development, value-based character, and quantum consciousness into one integrated ecosystem.',
+          ],
+          ta: [
+            'மனித வரலாற்றில் இதுவரை கண்டிராத ஒரு புதிய சகாப்தத்திற்குள் நாம் நுழைகிறோம். செயற்கை நுண்ணறிவு தொழில்துறைகளை மாற்றியமைக்கிறது, தானியங்கி அமைப்புகள் வேலைவாய்ப்புகளை மாற்றி அமைக்கின்றன. இத்தகைய வேகமான சூழலில், தேர்வு மதிப்பெண்களும் மனப்பாட ஆற்றலும் மட்டுமே வெற்றியைத் தந்துவிட முடியாது.',
+            'மாறாக, ஆக்கப்பூர்வமாகச் சிந்திப்பவர்கள், சிக்கலான பிரச்சனைகளுக்குத் தீர்வு காண்பவர்கள், நேர்மையோடு வழிநடத்துபவர்கள் மற்றும் கருணையோடு முடிவெடுக்கும் மேதைகளுக்கே எதிர்காலம் சொந்தமாகும்.',
+            'மேதைமை தலைமைத்துவக் கட்டமைப்பு என்பது எதிர்கால "கியூ மைண்ட்" தத்துவத்தின் அடித்தளமாகும்—முழு-மூளை நரம்பியல் வளர்ச்சி, அறநெறி மற்றும் குவாண்டம் விழிப்புணர்வை ஒருங்கிணைத்து முழுமையான மனிதனை உருவாக்குவதே இதன் இலக்காகும்.',
+          ],
+        },
+      },
+      {
+        title: {
+          en: 'Chapter 2: The Six Pillars: From Whole-Brain Heguru to Divya Drishti',
+          ta: 'அத்தியாயம் 2: ஆறு தூண்கள்: முழு-மூளை ஹெகுரு முதல் திவ்ய திருஷ்டி வரை',
+        },
+        subtitle: {
+          en: 'Integrating Brain Development, Character, Academics, Creativity, Consciousness & Future Skills',
+          ta: 'மூளை வளர்ச்சி, ஒழுக்கம், கல்வி, படைப்பாற்றல் மற்றும் ஆன்ம விழிப்புணர்வை இணைத்தல்',
+        },
+        paragraphs: {
+          en: [
+            'Every learning journey begins with the brain. Heguru provides the neurological foundation by stimulating whole-brain development during the critical early years through image-based visualization, speed calculation, and photographic memory exercises.',
+            'Yet knowledge without character can never create great leaders. The Booshido pillar emphasizes values and ethical responsibility, while MiWay bridges conceptual clarity with real-world application, WOW Academy sparks creative innovation, and Divya Drishti awakens the higher spiritual quotient (SQ).',
+            'When children receive the opportunity to develop their minds, hearts, character, and purpose together, they transcend conditioned limitations to become true Supra Sapiens.',
+          ],
+          ta: [
+            'ஒவ்வொரு கற்றல் பயணமும் மூளையிலிருந்தே தொடங்குகிறது. குழந்தை பருவத்தின் பொன்னான ஆண்டுகளில் புகைப்பட நினைவாற்றல், வேகக் கணக்கீடு மற்றும் காட்சிப்படுத்தல் மூலம் ஹெகுரு முழு-மூளை வளர்ச்சியைத் தூண்டுகிறது.',
+            'ஆனால் நற்பண்பு இல்லாத அறிவு சிறந்த தலைவர்களை உருவாக்க முடியாது. பூஷிடோ அறநெறி ஒழுக்கத்தையும், மிவே செயல்முறைக் கல்வியையும், வாவ் அகாடமி புத்தாக்கத்தையும், திவ்ய திருஷ்டி ஆன்மீக விழிப்புணர்வையும் வழங்குகின்றன.',
+            'அறிவு, இதயம், ஒழுக்கம் மற்றும் வாழ்க்கை நோக்கம் ஆகிய நான்கையும் ஒருசேர வளர்க்கும் வாய்ப்பைப் பெறும் குழந்தை, எல்லைகளைக் கடந்து நிஜமான "சுப்ரா சேபியன்ஸ்" மேதையாக மிளிர்கிறது.',
+          ],
+        },
+      },
+    ],
+    pdfUrl: '/books/q-minds.pdf',
+    flipbookPages: Array.from({ length: 217 }, (_, i) => `/books/q-minds/pages/page_${i + 1}.webp`),
+  },
+
 ];
 
 
