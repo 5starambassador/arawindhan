@@ -43,7 +43,7 @@ export const booksList: BookItem[] = [
       en: 'Parents of preschool, primary, and adolescent students.',
       ta: 'மழலையர், தொடக்க மற்றும் வளரிளம் பருவக் குழந்தைகளின் பெற்றோர்கள்.',
     },
-    pdfUrl: '/books/wow-parenting.pdf',
+    pdfUrl: '/books/wow-parenting-book.pdf',
     epubUrl: '/books/wow_parenting.epub',
     flipbookPages: Array.from({ length: 39 }, (_, i) => `/books/wow-parenting/pages/page_${i + 1}.webp`),
     sampleChapters: [
@@ -1632,6 +1632,102 @@ export const booksList: BookItem[] = [
     ],
     pdfUrl: '/books/q-minds.pdf',
     flipbookPages: Array.from({ length: 217 }, (_, i) => `/books/q-minds/pages/page_${i + 1}.webp`),
+  },
+
+  {
+    id: 'BK-018',
+    slug: 'heguru-parenting-mini-book',
+    coverImage: '/images/books/heguru-parenting-mini-book.jpg',
+    title: {
+      en: 'Heguru Parenting Mini Book',
+      ta: 'ஹெகுரு பேரண்டிங் மினி புக்',
+    },
+    tagline: {
+      en: 'A Calm, Connected Guide for Raising Brighter Children (Ages 0–3)',
+      ta: '0–3 வயதுக் குழந்தைகளின் அறிவுத்திறனை வளர்க்கும் அமைதியான, அன்பான வழிகாட்டி',
+    },
+    author: {
+      en: 'Dr. J. Arawindhan & Heguru Japan',
+      ta: 'முனைவர் ஜே. அரவிந்தன் & ஹெகுரு ஜப்பான்',
+    },
+    edition: 'Official Konica Print Edition',
+    language: 'English & Tamil',
+    status: 'Published',
+    claimId: 'CLM-023',
+    summary: {
+      en: 'A comprehensive, science-backed manual introducing the celebrated Heguru Japanese right-brain education method to parents. Focuses on the critical first 1,000 days from birth to age 3—explaining how rapid neuro-pathway formation, visual flashcards, subconscious imprint phases, and loving emotional connection work together to nurture photographic memory, boundless curiosity, and calm, confident learners.',
+      ta: 'புகழ்பெற்ற ஜப்பானிய ஹெகுரு வலது மூளைக் கல்வி முறையை பெற்றோர்களுக்கு அறிமுகப்படுத்தும் முழுமையான வழிகாட்டி நூல். பிறப்பு முதல் 3 வயது வரையிலான முதல் 1,000 பொன்னான நாட்களில் குழந்தையின் மூளை வளர்ச்சி, புகைப்பட நினைவாற்றல், வேகக் கற்றல் மற்றும் ஆழ்மனப் பதிவுகள் எவ்வாறு உருவாகின்றன என்பதை அறிவியல் பூர்வமாகவும் அன்பான அணுகுமுறையோடும் விளக்குகிறது.',
+    },
+    keyThemes: {
+      en: [
+        'Foundations of Early Brain Development (Ages 0–3)',
+        'Right Brain Education (RBE) & Glenn Doman Principles',
+        'Overcoming Parental Anxiety & Managing Healthy Screen Time',
+        'Daily 5-Minute At-Home Right-Brain Rituals & Rhythm Over Routine',
+      ],
+      ta: [
+        'ஆரம்பகால மூளை வளர்ச்சியின் அடித்தளங்கள் (வயது 0–3)',
+        'வலது மூளைக் கல்வி (RBE) மற்றும் கிளென் டோமன் கொள்கைகள்',
+        'பெற்றோரின் மன அழுத்தத்தைத் தவிர்த்தல் மற்றும் திரை நேர மேலாண்மை',
+        'தினசரி 5 நிமிட வீட்டுப் பயிற்சிகள் மற்றும் வாழ்வியல் தாளம்',
+      ],
+    },
+    targetAudience: {
+      en: 'Parents of infants, toddlers, and young children (Ages 0–6), early childhood educators, and cognitive development specialists.',
+      ta: 'மழலையர் மற்றும் 0–6 வயதுக் குழந்தைகளின் பெற்றோர்கள், ஆரம்பக் கல்வி பயிற்றுனர்கள் மற்றும் குழந்தை மனநல ஆலோசகர்கள்.',
+    },
+    readMoreSnippet: {
+      en: '“You are not just raising a child — you are wiring a brain. The first 1,000 days are a superpower period of growth, building over a million new neural connections every single second.”',
+      ta: '“நீங்கள் ஒரு குழந்தையை மட்டும் வளர்க்கவில்லை — ஒரு மனித மூளையின் நரம்பியல் அடித்தளத்தை உருவாக்குகிறீர்கள். முதல் 1,000 நாட்கள் ஒரு மகத்தான வளர்ச்சி சகாப்தம்; ஒவ்வொரு நொடியும் பத்து லட்சத்திற்கும் மேற்பட்ட புதிய நரம்பு இணைப்புகள் உருவாகின்றன.”',
+    },
+    sampleChapters: [
+      {
+        title: {
+          en: 'Chapter 1: Foundations of Early Parenting & Right-Brain Education',
+          ta: 'அத்தியாயம் 1: ஆரம்பகால வளர்ப்பின் அடித்தளங்கள் மற்றும் வலது மூளைக் கல்வி',
+        },
+        subtitle: {
+          en: 'Why the First 3 Years Are Everything & The Subconscious Imprint Phase',
+          ta: 'முதல் 3 ஆண்டுகள் ஏன் மிக முக்கியம் மற்றும் ஆழ்மனப் பதிவுக் கட்டம்',
+        },
+        paragraphs: {
+          en: [
+            'The first 1,000 days of your child\'s life, from conception to the age of two, are a "superpower" period of growth. During this incredible time, their brain builds as many as one million new connections every second, shaping the very foundation of their toddlerhood and beyond. It\'s not just about learning facts; your child is also wiring deep patterns of trust, safety, curiosity, and emotion through each responsive hug, comforting word, and playful interaction.',
+            'At Heguru, we believe that every child is born with immense potential, waiting to be awakened. Grounded in Japanese research and developed through decades of refinement by Ruiko Henmi and Hirotada Henmi, our right-brain education method is designed not just to enhance learning, but to cultivate the whole child—emotionally, intellectually, and intuitively.',
+            'Parenting, in its truest form, is not about control but connection. It is about stepping into your child\'s world with wonder, embracing their questions, celebrating their discoveries, and learning from their boundless imagination. This is the essence of Heguru: where love and learning weave seamlessly together, crafting not just smarter children, but happier, braver, and more creative souls.',
+          ],
+          ta: [
+            'குழந்தையின் வாழ்க்கையில் கருவுற்ற காலம் முதல் இரண்டு வயது வரையிலான முதல் 1,000 நாட்கள் ஒரு "மகா சக்தி" வளர்ச்சி சகாப்தமாகும். இந்த வியக்கத்தக்க காலத்தில், மூளை ஒவ்வொரு நொடியும் பத்து லட்சத்திற்கும் மேற்பட்ட புதிய இணைப்புகளை உருவாக்குகிறது. இது வெறும் தகவல்களைக் கற்பது மட்டுமல்ல; நீங்கள் தரும் ஒவ்வொரு அணைப்பு, ஆறுதல் வார்த்தை மற்றும் பாசப் பார்வை மூலமாக குழந்தை பாதுகாப்பு, நம்பிக்கை மற்றும் உணர்ச்சி சமநிலையை நரம்பியல் ரீதியாகப் பதிவு செய்கிறது.',
+            'ஹெகுருவில், ஒவ்வொரு குழந்தையும் மகத்தான ஆற்றலோடு பிறக்கிறது என்பதை நாங்கள் உறுதியாக நம்புகிறோம். ரூயிகோ ஹென்மி மற்றும் ஹிரோடாடா ஹென்மி ஆகியோரின் பல தசாப்த கால ஜப்பானிய ஆராய்ச்சியின் மூலம் உருவாக்கப்பட்ட வலது மூளைக் கல்வி முறை, அறிவை மட்டும் வளர்ப்பதோடு நின்றுவிடாமல், உணர்ச்சி, அறிவு மற்றும் உள்ளுணர்வு என முழுமையான ஆளுமையை மலரச் செய்கிறது.',
+            'பெற்றோர்த்துவம் என்பது அதிகாரத்தின் வெளிப்பாடு அல்ல; அது அன்பான இணைப்பின் வெளிப்பாடு. குழந்தையின் வியப்பு நிறைந்த உலகிற்குள் நாமும் காலடி எடுத்து வைத்து, அவர்களின் கேள்விகளை ஏற்று, கண்டுபிடிப்புகளைக் கொண்டாடுவதே ஹெகுருவின் தாரக மந்திரம். அன்பும் கல்வியும் இணையும் போது குழந்தைகள் புத்திசாலிகளாக மட்டுமல்ல, மகிழ்ச்சியான, தைரியமான சாதனையாளர்களாகவும் வளர்கிறார்கள்.',
+          ],
+        },
+      },
+      {
+        title: {
+          en: 'Chapter 2: Real Pains, Real Solutions & Daily Heguru Systems at Home',
+          ta: 'அத்தியாயம் 2: நடைமுறைச் சவால்கள், தீர்வுகள் மற்றும் அன்றாட வீட்டுப் பயிற்சிகள்',
+        },
+        subtitle: {
+          en: 'Overcoming Developmental Anxiety, Managing Screen Time & 5-Minute Daily Rituals',
+          ta: 'வளர்ச்சி சார்ந்த கவலைகளை வெல்லுதல், திரை நேரத்தைக் கட்டுப்படுத்துதல் மற்றும் 5 நிமிட தினசரி பயிற்சிகள்',
+        },
+        paragraphs: {
+          en: [
+            'Every parent today dreams of giving their child the best start in life, yet modern parenting is fraught with challenges: excessive screen time, lack of focus, fear of missing critical development windows, and social media comparison. Heguru\'s methodology addresses these exact pain points by replacing passive digital overstimulation with high-speed, interactive, and joyful activities that capture the child\'s innate curiosity.',
+            'The daily Heguru home system does not require elaborate setups or expensive gadgets. Simple 5-minute daily rituals—such as high-speed red dot math visuals, picture and word flashcards, linking memory games, and sensory visualization—naturally strengthen focus, concentration, and photographic memory in a stress-free rhythm.',
+            'Rhythm over routine is the golden rule: when learning becomes a joyous, consistent pulse in your household, parents stop feeling like taskmasters and instead become playful co-learners, celebrating steady transformations day after day.',
+          ],
+          ta: [
+            'இன்றைய பெற்றோர்கள் தங்கள் குழந்தைக்குச் சிறந்த தொடக்கத்தை அளிக்க விரும்பினாலும், பல சவால்களை எதிர்கொள்கின்றனர்: அதிகப்படியான திரை நேரம் (Screen Time), கவனச்சிதறல், சரியான வாய்ப்புகளைத் தவறவிட்டு விடுவோமோ என்ற பயம் மற்றும் சமூக ஊடக ஒப்பீடுகள். ஹெகுருவின் முறை செயலற்ற டிஜிட்டல் ஈடுபாட்டை மாற்றி, அதிவேக, ஊடாடும் மற்றும் மகிழ்ச்சியான பயிற்சிகள் மூலம் குழந்தையின் கவனத்தை ஈர்க்கிறது.',
+            'வீட்டிலேயே பின்பற்றக்கூடிய ஹெகுரு அமைப்புக்கு விலையுயர்ந்த சாதனங்கள் தேவையில்லை. தினசரி 5 நிமிட பயிற்சிகள்—சிவப்பு புள்ளி கணித அட்டைகள் (Red Dot Math), பட மற்றும் வார்த்தை ஃபிளாஷ் கார்டுகள், நினைவாற்றல் விளையாட்டுக்கள் மற்றும் காட்சிப்படுத்துதல்—மன அழுத்தமின்றி குழந்தையின் நினைவாற்றலையும் கவனக்குவிப்பையும் அபரிமிதமாக உயர்த்துகின்றன.',
+            'திட்டமிடப்பட்ட கடமையை விட இயல்பான வாழ்வியல் தாளமே (Rhythm over routine) முக்கியமானது. கற்றல் வீட்டில் ஒரு மகிழ்ச்சியான அனுபவமாக மாறும்போது, பெற்றோர் கண்காணிப்பாளராக இல்லாமல் அன்பான கற்றல் தோழனாக மாறுகிறார்கள்.',
+          ],
+        },
+      },
+    ],
+    pdfUrl: '/books/heguru-parenting-mini-book.pdf',
+    flipbookPages: Array.from({ length: 87 }, (_, i) => `/books/heguru-parenting-mini-book/pages/page_${i + 1}.webp`),
   },
 
 ];

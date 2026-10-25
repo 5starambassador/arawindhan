@@ -42,6 +42,8 @@ KNOWN_MAPPINGS = {
     "victory": "andava-the-victory-mode",
     "dictionary": "wow-dictionary",
     "shambala": "shambala-book",
+    "heguru_parenting": "heguru-parenting-mini-book",
+    "heguru": "heguru-parenting-mini-book",
     "parenting": "wow-parenting-book",
     "financial": "financial-intelligence",
     "master": "master-stroke",
@@ -51,7 +53,6 @@ KNOWN_MAPPINGS = {
     "dasavadani": "dasavadani-pedagogy",
     "twenty": "twenty-five-years-legacy",
     "future": "future-of-schooling",
-    "heguru": "heguru-genius-development",
     "spirituality": "mind-body-spirituality",
     "corporate": "corporate-governance",
     "ayngara": "ayngara",
@@ -74,6 +75,8 @@ def slugify(text):
         return "iravadh-book"
     if "dictionary" in clean:
         return "wow-dictionary"
+    if "heguru" in clean:
+        return "heguru-parenting-mini-book"
     if "parenting" in clean:
         return "wow-parenting-book"
     if "andava" in clean or "victory" in clean:
