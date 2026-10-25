@@ -1643,8 +1643,8 @@ export const booksList: BookItem[] = [
       ta: 'ஹெகுரு பேரண்டிங் மினி புக்',
     },
     tagline: {
-      en: 'A Calm, Connected Guide for Raising Brighter Children (Ages 0–12 yrs)',
-      ta: '0–12 வயதுக் குழந்தைகளின் அறிவுத்திறனை வளர்க்கும் அமைதியான, அன்பான வழிகாட்டி',
+      en: 'A Calm, Connected Guide for Raising Brighter Children (Ages 0–3 yrs)',
+      ta: '0–3 வயதுக் குழந்தைகளின் அறிவுத்திறனை வளர்க்கும் அமைதியான, அன்பான வழிகாட்டி',
     },
     author: {
       en: 'Dr. J. Arawindhan & Heguru Japan',
@@ -1655,26 +1655,26 @@ export const booksList: BookItem[] = [
     status: 'Published',
     claimId: 'CLM-023',
     summary: {
-      en: 'A comprehensive, science-backed manual introducing the celebrated Heguru Japanese right-brain education method to parents. Focuses on the critical developmental window from infancy through age 12—explaining how rapid neuro-pathway formation, visual flashcards, subconscious imprint phases, and loving emotional connection work together to nurture photographic memory, boundless curiosity, and calm, confident learners.',
-      ta: 'புகழ்பெற்ற ஜப்பானிய ஹெகுரு வலது மூளைக் கல்வி முறையை பெற்றோர்களுக்கு அறிமுகப்படுத்தும் முழுமையான வழிகாட்டி நூல். பிறப்பு முதல் 12 வயது வரையிலான பொன்னான வளர்ச்சிப் பருவத்தில் குழந்தையின் மூளை வளர்ச்சி, புகைப்பட நினைவாற்றல், வேகக் கற்றல் மற்றும் ஆழ்மனப் பதிவுகள் எவ்வாறு உருவாகின்றன என்பதை அறிவியல் பூர்வமாகவும் அன்பான அணுகுமுறையோடும் விளக்குகிறது.',
+      en: 'A comprehensive, science-backed manual introducing the celebrated Heguru Japanese right-brain education method to parents. Focuses on the critical developmental window from infancy through age 3—explaining how rapid neuro-pathway formation, visual flashcards, subconscious imprint phases, and loving emotional connection work together to nurture photographic memory, boundless curiosity, and calm, confident learners.',
+      ta: 'புகழ்பெற்ற ஜப்பானிய ஹெகுரு வலது மூளைக் கல்வி முறையை பெற்றோர்களுக்கு அறிமுகப்படுத்தும் முழுமையான வழிகாட்டி நூல். பிறப்பு முதல் 3 வயது வரையிலான பொன்னான வளர்ச்சிப் பருவத்தில் குழந்தையின் மூளை வளர்ச்சி, புகைப்பட நினைவாற்றல், வேகக் கற்றல் மற்றும் ஆழ்மனப் பதிவுகள் எவ்வாறு உருவாகின்றன என்பதை அறிவியல் பூர்வமாகவும் அன்பான அணுகுமுறையோடும் விளக்குகிறது.',
     },
     keyThemes: {
       en: [
-        'Foundations of Early Brain Development (Ages 0–12 yrs)',
+        'Foundations of Early Brain Development (Ages 0–3 yrs)',
         'Right Brain Education (RBE) & Glenn Doman Principles',
         'Overcoming Parental Anxiety & Managing Healthy Screen Time',
         'Daily 5-Minute At-Home Right-Brain Rituals & Rhythm Over Routine',
       ],
       ta: [
-        'ஆரம்பகால மூளை வளர்ச்சியின் அடித்தளங்கள் (வயது 0–12)',
+        'ஆரம்பகால மூளை வளர்ச்சியின் அடித்தளங்கள் (வயது 0–3)',
         'வலது மூளைக் கல்வி (RBE) மற்றும் கிளென் டோமன் கொள்கைகள்',
         'பெற்றோரின் மன அழுத்தத்தைத் தவிர்த்தல் மற்றும் திரை நேர மேலாண்மை',
         'தினசரி 5 நிமிட வீட்டுப் பயிற்சிகள் மற்றும் வாழ்வியல் தாளம்',
       ],
     },
     targetAudience: {
-      en: 'Parents of children from infancy through age 12 (Ages 0–12 yrs), early childhood educators, and whole-brain learning specialists.',
-      ta: '0–12 வயதுக் குழந்தைகளின் பெற்றோர்கள், ஆரம்பக் கல்வி பயிற்றுனர்கள் மற்றும் மூளை வளர்ச்சி நிபுணர்கள்.',
+      en: 'Parents of infants and toddlers (Ages 0–3 yrs), early childhood educators, and whole-brain learning specialists.',
+      ta: '0–3 வயதுக் குழந்தைகளின் பெற்றோர்கள், ஆரம்பக் கல்வி பயிற்றுனர்கள் மற்றும் மூளை வளர்ச்சி நிபுணர்கள்.',
     },
     readMoreSnippet: {
       en: '“You are not just raising a child — you are wiring a brain. The first 1,000 days are a superpower period of growth, building over a million new neural connections every single second.”',
