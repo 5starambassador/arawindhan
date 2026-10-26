@@ -67,8 +67,8 @@ export const curatedSocialPosts: SocialPostItem[] = [
       ta: 'மனித நுண்ணறிவு + செயற்கை நுண்ணறிவு = குவாண்டம் நுண்ணறிவு',
     },
     content: {
-      en: 'Artificial Intelligence does not create something entirely new; it creates new patterns from what already exists. The human role in 2026 and beyond is not to compete with algorithms, but to co-create with them.\n\nWhile traditional schooling treats Listening, Speaking, Reading, and Writing (LSRW) as the ceiling, at ACHARIYA we treat them as the floor. Above them sits Analytical Reasoning, Critical Inquiry, and Character Architecture.',
-      ta: 'செயற்கை நுண்ணறிவு புதிதாக எதையும் உருவாக்குவதில்லை; ஏற்கனவே உள்ளவற்றிலிருந்து புதிய வடிவங்களை உருவாக்குகிறது. மனிதன் அதனுடன் போட்டி போடாமல், இணைந்து செயல்படும்போது குவாண்டம் நுண்ணறிவு பிறக்கிறது.\n\nகேட்டல், பேசுதல், படித்தல், எழுதுதல் ஆகியவற்றை உச்சமாகக் கருதாமல், அவற்றை தொடக்கப் படியாகக் கொண்டு பகுத்தறிவு மற்றும் விமர்சன சிந்தனையை வளர்ப்பதே எதிர்காலத்திற்குத் தேவைப்படும் கல்வி.',
+      en: 'Artificial Intelligence does not create something entirely new; it creates new patterns from what already exists. The human role in 2026 and beyond is not to compete with algorithms, but to co-create with them.',
+      ta: 'செயற்கை நுண்ணறிவு புதிதாக எதையும் உருவாக்குவதில்லை; ஏற்கனவே உள்ளவற்றிலிருந்து புதிய வடிவங்களை உருவாக்குகிறது. மனிதன் அதனுடன் போட்டி போடாமல், இணைந்து செயல்படும்போது குவாண்டம் நுண்ணறிவு பிறக்கிறது.',
     },
     url: 'https://www.linkedin.com/in/dr-j-arawindhan-jayakumar-b1a056124/',
     date: 'September 2026',
@@ -188,8 +188,8 @@ export const curatedSocialPosts: SocialPostItem[] = [
       ta: 'கருத்துக்களை அமைப்புகளாக மாற்றுங்கள்: நிறுவனங்களை நிலைநிறுத்தும் தலைமைத்துவக் கோட்பாடுகள்',
     },
     content: {
-      en: 'A vision creates direction, but systems give that vision continuity. Curricula, processes, standard operating procedures, and capable teams ensure that an idea reaches tens of thousands and outlasts its founder.\n\n"A powerful vision is sustained by the values that people continue to practise even when the founder is not in the room."',
-      ta: 'தொலைநோக்கு வழிகாட்டுகிறது; ஆனால் முறையான நடைமுறைகளும், செயல்முறைகளும், திறமையான குழுக்களுமே அதற்கு நிலைத்தன்மையை அளிக்கின்றன.\n\n"நிறுவனர் இல்லாதபோதும் சக மனிதர்கள் தொடர்ந்து கடைப்பிடிக்கும் நற்பண்புகளில்தான் ஒரு உன்னத தொலைநோக்குப் பார்வை நிலைத்து நிற்கிறது."',
+      en: 'A vision creates direction, but systems give that vision continuity. Curricula, processes, standard operating procedures, and capable teams ensure that an idea reaches tens of thousands and outlasts its founder.',
+      ta: 'தொலைநோக்கு வழிகாட்டுகிறது; ஆனால் முறையான நடைமுறைகளும், செயல்முறைகளும், திறமையான குழுக்களுமே அதற்கு நிலைத்தன்மையை அளிக்கின்றன.',
     },
     url: 'https://www.linkedin.com/in/dr-j-arawindhan-jayakumar-b1a056124/',
     date: 'August 2026',

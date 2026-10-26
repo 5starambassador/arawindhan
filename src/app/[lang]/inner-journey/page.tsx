@@ -71,8 +71,678 @@ export default async function InnerJourneyPage({
   const resolved = await params;
   const lang: Language = resolved.lang === 'ta' ? 'ta' : 'en';
 
+  const innerJourneySchema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebPage',
+        '@id': `https://www.arawindhan.com/${lang}/inner-journey#webpage`,
+        url: `https://www.arawindhan.com/${lang}/inner-journey`,
+        name:
+          lang === 'ta'
+            ? 'உள்முகப் பயணம் & ஆன்மீக நிலை | திவ்ய யோகம் & சந்தோஷி ஸ்ரீ அரவிந்தன் ஜி'
+            : 'Inner Journey | Divya Yogam & Santoshi Shri Arawindhan ji',
+        description:
+          'Divya Yogam, the inner journey founded by Santoshi Shri Arawindhan ji (Dr. J. Arawindhan) in 2000: the Seven-Step Inner Journey, Five Principles, Soul Evolution Path, Maha Shambala Puducherry and eleven foundational teachings.',
+        inLanguage: lang,
+        isPartOf: {
+          '@id': 'https://www.arawindhan.com/#website',
+        },
+        about: [
+          {
+            '@id': `https://www.arawindhan.com/${lang}/inner-journey#divya-yogam`,
+          },
+          {
+            '@id': 'https://www.arawindhan.com/#person',
+          },
+        ],
+        mainEntity: {
+          '@id': `https://www.arawindhan.com/${lang}/inner-journey#divya-yogam`,
+        },
+        primaryImageOfPage: {
+          '@id': `https://www.arawindhan.com/${lang}/inner-journey#primaryimage`,
+        },
+        image: {
+          '@id': `https://www.arawindhan.com/${lang}/inner-journey#primaryimage`,
+        },
+        breadcrumb: {
+          '@id': `https://www.arawindhan.com/${lang}/inner-journey#breadcrumb`,
+        },
+        mentions: [
+          {
+            '@id': `https://www.arawindhan.com/${lang}/inner-journey#seven-steps`,
+          },
+          {
+            '@id': `https://www.arawindhan.com/${lang}/inner-journey#five-principles`,
+          },
+          {
+            '@id': `https://www.arawindhan.com/${lang}/inner-journey#phases`,
+          },
+          {
+            '@id': `https://www.arawindhan.com/${lang}/inner-journey#mission`,
+          },
+          {
+            '@id': `https://www.arawindhan.com/${lang}/inner-journey#paths`,
+          },
+          {
+            '@id': `https://www.arawindhan.com/${lang}/inner-journey#soul-evolution-path`,
+          },
+          {
+            '@id': `https://www.arawindhan.com/${lang}/inner-journey#eleven-thoughts`,
+          },
+        ],
+      },
+      {
+        '@type': 'ImageObject',
+        '@id': `https://www.arawindhan.com/${lang}/inner-journey#primaryimage`,
+        url: 'https://www.arawindhan.com/images/santoshi_shri_arawindhan.png',
+        contentUrl: 'https://www.arawindhan.com/images/santoshi_shri_arawindhan.png',
+        caption: 'Santoshi Shri Arawindhan ji',
+        about: {
+          '@id': 'https://www.arawindhan.com/#person',
+        },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `https://www.arawindhan.com/${lang}/inner-journey#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: lang === 'ta' ? 'முகப்பு' : 'Home',
+            item: `https://www.arawindhan.com/${lang}`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: lang === 'ta' ? 'உள்முகப் பயணம்' : 'Inner Journey',
+            item: `https://www.arawindhan.com/${lang}/inner-journey`,
+          },
+        ],
+      },
+      {
+        '@type': 'Organization',
+        '@id': `https://www.arawindhan.com/${lang}/inner-journey#divya-yogam`,
+        name: 'Divya Yogam',
+        url: `https://www.arawindhan.com/${lang}/inner-journey`,
+        foundingDate: '2000',
+        slogan: 'Develop the human. Awaken the being.',
+        description:
+          "Conceived in 2000 alongside Dr. J. Arawindhan's educational journey, Divya Yogam is a path of inner stillness, clarity and conscious living built on the inquiry: what is the highest possibility within a human being?",
+        founder: {
+          '@id': 'https://www.arawindhan.com/#person',
+        },
+        parentOrganization: {
+          '@id': 'https://www.arawindhan.com/#organization',
+        },
+        areaServed: {
+          '@type': 'Place',
+          name: 'Puducherry, India',
+        },
+        knowsAbout: [
+          'Meditation',
+          'Yoga',
+          'Consciousness',
+          'Oneness Meditation',
+          'Conscious living',
+          'Spiritual wellbeing',
+        ],
+        hasOfferCatalog: {
+          '@id': `https://www.arawindhan.com/${lang}/inner-journey#paths`,
+        },
+        event: {
+          '@id': `https://www.arawindhan.com/${lang}/inner-journey#maha-shambala`,
+        },
+      },
+      {
+        '@type': 'ItemList',
+        '@id': `https://www.arawindhan.com/${lang}/inner-journey#seven-steps`,
+        name: 'The Seven-Step Inner Journey',
+        description:
+          'Each step moves the seeker deeper, from seeing oneself clearly to living with awareness every day.',
+        numberOfItems: 7,
+        itemListOrder: 'https://schema.org/ItemListOrderAscending',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Awareness (See Within)',
+            description: 'Recognise thoughts, emotions, and habitual mental patterns.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Acceptance (Meet Yourself)',
+            description: 'Embrace yourself completely without harsh self-judgement.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'Alignment (Come Into Balance)',
+            description: 'Bring body, mind, intellect, and inner life into quiet harmony.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 4,
+            name: 'Stillness (Be Present)',
+            description: 'Move beyond constant repetitive thought and restlessness.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 5,
+            name: 'Experience (Go Deeper)',
+            description: 'Transform intellectual understanding into direct inner perception.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 6,
+            name: 'Oneness (Feel Connected)',
+            description: 'Dissolve artificial separation towards an interconnected universe.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 7,
+            name: 'Awakening (Live Consciously)',
+            description: 'Carry unshakeable inner awareness into family, work, and service.',
+          },
+        ],
+      },
+      {
+        '@type': 'ItemList',
+        '@id': `https://www.arawindhan.com/${lang}/inner-journey#five-principles`,
+        name: 'Five Principles, One Way of Living',
+        description:
+          'Embracing the whole human being through awareness, stillness, and conscious action.',
+        numberOfItems: 5,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Awareness',
+            description: 'See yourself clearly without illusion or reaction.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Stillness',
+            description: 'Create space within amidst worldly noise.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'Balance',
+            description: 'Bring every dimension of life (body, mind, work) into harmony.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 4,
+            name: 'Oneness',
+            description: 'Experience connection beyond the individual ego-self.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 5,
+            name: 'Conscious Living',
+            description: 'Let awareness guide everyday choices, speech, and actions.',
+          },
+        ],
+      },
+      {
+        '@type': 'ItemList',
+        '@id': `https://www.arawindhan.com/${lang}/inner-journey#phases`,
+        name: 'From Knowing More to Becoming More: Twenty-Five Years, One Direction',
+        description:
+          'Seven phases bringing the outer journey (education, human potential, leadership, wellbeing) and the inner journey (meditation, consciousness, Divya Yogam) into harmony.',
+        numberOfItems: 7,
+        itemListOrder: 'https://schema.org/ItemListOrderAscending',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Phase I: Education (Outer Journey)',
+            description: 'Learning reimagined: reimagining learning beyond academics into life mastery.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Phase II: Human Potential (Outer Journey)',
+            description: 'Possibilities expanded: unlocking intelligence, creativity, memory, emotional and life skills.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'Phase III: Leadership (Outer Journey)',
+            description: 'People empowered: creating conscious, capable, and value-driven individuals.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 4,
+            name: 'Phase IV: Wellbeing (Outer Journey)',
+            description: 'Life harmonised: bringing deep balance to body, mind, emotion, and everyday life.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 5,
+            name: 'Phase V: Meditation (Inner Journey)',
+            description: 'The journey turns inward through stillness, breath, and pure awareness.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 6,
+            name: 'Phase VI: Consciousness (Inner Journey)',
+            description: 'Awareness deepens: exploring the deeper spiritual dimensions of human existence.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 7,
+            name: 'Phase VII: Divya Yogam (Inner Journey)',
+            description: 'The journey within: bringing the outer journey and the inner journey into sacred harmony.',
+          },
+        ],
+      },
+      {
+        '@type': 'ItemList',
+        '@id': `https://www.arawindhan.com/${lang}/inner-journey#mission`,
+        name: 'Awaken the Inner Being. Elevate the Human Experience.',
+        description:
+          'To nurture a world of conscious, balanced and awakened individuals who recognise their inner potential, live with greater awareness and contribute to the wellbeing of the world around them.',
+        numberOfItems: 6,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Awaken',
+            description: 'Become conscious of the true self.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Align',
+            description: 'Bring body, mind, emotion and intellect into harmony.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'Experience',
+            description: 'Discover the transformative power of stillness.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 4,
+            name: 'Evolve',
+            description: 'Grow beyond limitation into higher possibilities.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 5,
+            name: 'Express',
+            description: 'Carry inner clarity into relationships and work.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 6,
+            name: 'Contribute',
+            description: 'Transform personal awakening into collective wellbeing.',
+          },
+        ],
+      },
+      {
+        '@type': 'OfferCatalog',
+        '@id': `https://www.arawindhan.com/${lang}/inner-journey#paths`,
+        name: 'Choose Your Path Within',
+        description:
+          'Different practices. Different starting points. One deeper purpose: to experience life more consciously.',
+        numberOfItems: 5,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            item: {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Yoga: Awaken the Body',
+                serviceType: 'Yoga',
+                description:
+                  'Cultivate physical awareness, balance, and disciplined movement as a sacred foundation for inner wellbeing.',
+                provider: {
+                  '@id': `https://www.arawindhan.com/${lang}/inner-journey#divya-yogam`,
+                },
+              },
+            },
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            item: {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Golden Smile Meditation: Quiet the Mind',
+                serviceType: 'Meditation',
+                description:
+                  'Create an inward space for stillness, joy, and deeper awareness. Includes AOM (Achariya Only Meditation) and Oneness Meditation.',
+                provider: {
+                  '@id': `https://www.arawindhan.com/${lang}/inner-journey#divya-yogam`,
+                },
+              },
+            },
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            item: {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Retreats: Step Away. Go Within.',
+                serviceType: 'Spiritual retreat',
+                description:
+                  'Immersive residential experiences that create quiet space for reflection, practice, renewal, and profound inner connection.',
+                provider: {
+                  '@id': `https://www.arawindhan.com/${lang}/inner-journey#divya-yogam`,
+                },
+              },
+            },
+          },
+          {
+            '@type': 'ListItem',
+            position: 4,
+            item: {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Courses: Learn. Practise. Transform.',
+                serviceType: 'Spiritual and conscious-living courses',
+                description:
+                  'Structured modules that translate spiritual wisdom into practical tools for conscious daily living, family, and leadership.',
+                provider: {
+                  '@id': `https://www.arawindhan.com/${lang}/inner-journey#divya-yogam`,
+                },
+              },
+            },
+          },
+          {
+            '@type': 'ListItem',
+            position: 5,
+            item: {
+              '@type': 'Offer',
+              itemOffered: {
+                '@id': `https://www.arawindhan.com/${lang}/inner-journey#avadhani-program`,
+              },
+            },
+          },
+        ],
+      },
+      {
+        '@type': 'ItemList',
+        '@id': `https://www.arawindhan.com/${lang}/inner-journey#soul-evolution-path`,
+        name: 'The Soul Evolution Path (The Sacred Ascent)',
+        numberOfItems: 6,
+        itemListOrder: 'https://schema.org/ItemListOrderAscending',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Avadhani',
+            description: 'Foundation & Sensory Integration',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Ayngara',
+            description: 'Transformation of Instinct to Consciousness',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'Anantha',
+            description: 'Expansion of Mind & Infinite Stillness',
+          },
+          {
+            '@type': 'ListItem',
+            position: 4,
+            name: 'Amirtha',
+            description: 'Pranic Vitality & Nectar of Immortality',
+          },
+          {
+            '@type': 'ListItem',
+            position: 5,
+            name: 'Amogha',
+            description: 'Infallible Spiritual Purpose & Power',
+          },
+          {
+            '@type': 'ListItem',
+            position: 6,
+            name: 'Adwaita',
+            description: 'Non-Dual Realisation & Universal Oneness',
+          },
+        ],
+      },
+      {
+        '@type': 'ItemList',
+        '@id': `https://www.arawindhan.com/${lang}/inner-journey#eleven-thoughts`,
+        name: 'Eleven Thoughts at the Heart of His Teaching',
+        description: 'Eleven foundational reflections with practical guidance on living consciously.',
+        numberOfItems: 11,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            item: {
+              '@type': 'Quotation',
+              text: 'What is the highest possibility within a human being?',
+              description: 'Every learning and growth effort begins by asking what this person could yet become.',
+              creator: {
+                '@id': 'https://www.arawindhan.com/#person',
+              },
+            },
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            item: {
+              '@type': 'Quotation',
+              text: 'Develop the human. Awaken the being.',
+              description:
+                'Two movements held together: outer development of skills and character, with inner awakening of awareness.',
+              creator: {
+                '@id': 'https://www.arawindhan.com/#person',
+              },
+            },
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            item: {
+              '@type': 'Quotation',
+              text: 'Knowledge develops the mind. Experience develops wisdom. Awareness transforms life.',
+              description:
+                'Information changes what we know; lived experience changes how we see; awareness changes how we live.',
+              creator: {
+                '@id': 'https://www.arawindhan.com/#person',
+              },
+            },
+          },
+          {
+            '@type': 'ListItem',
+            position: 4,
+            item: {
+              '@type': 'Quotation',
+              text: 'Beyond achievement. Towards awareness.',
+              description:
+                'Achievement is not rejected; it is placed in a larger frame of how consciously we are living.',
+              creator: {
+                '@id': 'https://www.arawindhan.com/#person',
+              },
+            },
+          },
+          {
+            '@type': 'ListItem',
+            position: 5,
+            item: {
+              '@type': 'Quotation',
+              text: 'The journey is inward. The transformation is timeless.',
+              description: 'Outer change is shaped by circumstance; change that begins within becomes part of who we are.',
+              creator: {
+                '@id': 'https://www.arawindhan.com/#person',
+              },
+            },
+          },
+          {
+            '@type': 'ListItem',
+            position: 6,
+            item: {
+              '@type': 'Quotation',
+              text: 'The Divine is not far away. The journey to experience it begins within.',
+              description: 'The Divine is an experience discovered through stillness, closer than our own breath.',
+              creator: {
+                '@id': 'https://www.arawindhan.com/#person',
+              },
+            },
+          },
+          {
+            '@type': 'ListItem',
+            position: 7,
+            item: {
+              '@type': 'Quotation',
+              text: 'Transformation is not becoming someone else. It is becoming more aware of who you are.',
+              description: 'Growth is a process of uncovering, not imitating or borrowing.',
+              creator: {
+                '@id': 'https://www.arawindhan.com/#person',
+              },
+            },
+          },
+          {
+            '@type': 'ListItem',
+            position: 8,
+            item: {
+              '@type': 'Quotation',
+              text: 'It is not a belief system to be followed. It is an experience to be explored.',
+              description: 'Divya Yogam invites inquiry and direct practice over dogma.',
+              creator: {
+                '@id': 'https://www.arawindhan.com/#person',
+              },
+            },
+          },
+          {
+            '@type': 'ListItem',
+            position: 9,
+            item: {
+              '@type': 'Quotation',
+              text: 'Not an escape from life. A deeper way of experiencing it.',
+              description: 'Spiritual practice is a way of meeting relationships and duties with greater presence.',
+              creator: {
+                '@id': 'https://www.arawindhan.com/#person',
+              },
+            },
+          },
+          {
+            '@type': 'ListItem',
+            position: 10,
+            item: {
+              '@type': 'Quotation',
+              text: 'When we are healthy, we become happy. When we are happy, we become purposeful. When we are purposeful, we become powerful.',
+              description: 'Wellbeing is the first link in a chain that ends in purpose and spiritual power.',
+              creator: {
+                '@id': 'https://www.arawindhan.com/#person',
+              },
+            },
+          },
+          {
+            '@type': 'ListItem',
+            position: 11,
+            item: {
+              '@type': 'Quotation',
+              text: 'Begin where you are. Go as deep as you are ready.',
+              description: 'There is no rigid prerequisite; the path honors each seeker’s natural pace.',
+              creator: {
+                '@id': 'https://www.arawindhan.com/#person',
+              },
+            },
+          },
+        ],
+      },
+      {
+        '@type': 'Event',
+        '@id': `https://www.arawindhan.com/${lang}/inner-journey#maha-shambala`,
+        name: 'Maha Shambala Puducherry 2026',
+        description:
+          'The annual flagship spiritual convergence, held since 2012, gathering thousands of seekers, teachers and families in Puducherry. Features mass Oneness Meditation, Seven Chakra pyramid energy activation, and discourses on conscious living by Santoshi Shri Arawindhan.',
+        startDate: '2026-12-21',
+        endDate: '2026-12-21',
+        eventStatus: 'https://schema.org/EventScheduled',
+        eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+        eventSchedule: {
+          '@type': 'Schedule',
+          startDate: '2012-12-21',
+          repeatFrequency: 'P1Y',
+          byMonth: 12,
+          byMonthDay: 21,
+          scheduleTimezone: 'Asia/Kolkata',
+        },
+        location: {
+          '@type': 'Place',
+          name: 'Puducherry',
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Puducherry',
+            addressRegion: 'Puducherry',
+            addressCountry: 'IN',
+          },
+        },
+        image: 'https://www.arawindhan.com/images/shambala_book.jpg',
+        organizer: {
+          '@id': `https://www.arawindhan.com/${lang}/inner-journey#divya-yogam`,
+        },
+        performer: {
+          '@id': 'https://www.arawindhan.com/#person',
+        },
+        url: `https://www.arawindhan.com/${lang}/inner-journey`,
+      },
+      {
+        '@type': 'Book',
+        '@id': `https://www.arawindhan.com/${lang}/inner-journey#book-maha-shambala`,
+        name: 'Maha Shambala: The Mystery Behind Awakening',
+        image: 'https://www.arawindhan.com/images/shambala_book.jpg',
+        author: {
+          '@id': 'https://www.arawindhan.com/#person',
+        },
+        about: [
+          {
+            '@id': `https://www.arawindhan.com/${lang}/inner-journey#maha-shambala`,
+          },
+          {
+            '@id': `https://www.arawindhan.com/${lang}/inner-journey#divya-yogam`,
+          },
+        ],
+        inLanguage: lang,
+      },
+      {
+        '@type': 'Service',
+        '@id': `https://www.arawindhan.com/${lang}/inner-journey#avadhani-program`,
+        name: 'Avadhani: A Natural Healthy Lifestyle Program',
+        serviceType: 'Holistic healthcare and natural lifestyle program',
+        description:
+          'A simple, natural daily discipline for students, teachers, parents and families, rooted in traditional Indian wellness practices: early rising before sunrise, oil pulling, Saptha Mahakriya, Kadukkai Podi (Terminalia chebula) and quiet morning meditation.',
+        audience: {
+          '@type': 'Audience',
+          audienceType: 'Students, teachers, parents and families',
+        },
+        provider: {
+          '@id': `https://www.arawindhan.com/${lang}/inner-journey#divya-yogam`,
+        },
+      },
+    ],
+  };
+
   return (
-    <div className="section-py">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(innerJourneySchema) }}
+      />
+      <div className="section-py">
       <div className="container" style={{ maxWidth: '1100px' }}>
         <SectionHeader
           badge={lang === 'ta' ? 'ஆன்மீகத் தத்துவம் & மெய்யறிவு' : 'DIVYA YOGAM & THE INNER JOURNEY'}
@@ -925,5 +1595,7 @@ export default async function InnerJourneyPage({
         </div>
       </div>
     </div>
+    </>
   );
 }
+

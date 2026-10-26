@@ -265,7 +265,7 @@ export function UnifiedSocialHub({ initialPosts = curatedSocialPosts, lang }: Un
                 {/* Platform Header */}
                 <div
                   style={{
-                    padding: '1rem 1.25rem',
+                    padding: '0.75rem 1rem',
                     borderBottom: '1px solid var(--border-light)',
                     display: 'flex',
                     alignItems: 'center',
@@ -273,13 +273,13 @@ export function UnifiedSocialHub({ initialPosts = curatedSocialPosts, lang }: Un
                     background: 'var(--bg-subtle, #FAF8F5)',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
-                    <PlatformIcon platform={post.platform} size={20} />
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.55rem' }}>
+                    <PlatformIcon platform={post.platform} size={18} />
                     <div>
-                      <div style={{ fontWeight: 800, fontSize: '0.88rem', color: 'var(--text-primary)', lineHeight: 1.2 }}>
+                      <div style={{ fontWeight: 800, fontSize: '0.84rem', color: 'var(--text-primary)', lineHeight: 1.2 }}>
                         {post.author.name}
                       </div>
-                      <div style={{ fontSize: '0.76rem', color: 'var(--text-muted)' }}>
+                      <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>
                         {post.author.handle} &bull; {post.date}
                       </div>
                     </div>
@@ -288,9 +288,9 @@ export function UnifiedSocialHub({ initialPosts = curatedSocialPosts, lang }: Un
                   {post.tag && (
                     <span
                       style={{
-                        fontSize: '0.72rem',
+                        fontSize: '0.7rem',
                         fontWeight: 700,
-                        padding: '0.2rem 0.55rem',
+                        padding: '0.15rem 0.5rem',
                         borderRadius: '4px',
                         background: isYT ? '#FEF2F2' : isIG ? '#FDF2F8' : '#EFF6FF',
                         color: isYT ? '#DC2626' : isIG ? '#DB2777' : '#1D4ED8',
@@ -308,7 +308,7 @@ export function UnifiedSocialHub({ initialPosts = curatedSocialPosts, lang }: Un
                     style={{
                       position: 'relative',
                       width: '100%',
-                      aspectRatio: isIG ? '1/1' : '16/9',
+                      aspectRatio: '16/9',
                       background: '#0F172A',
                       overflow: 'hidden',
                       cursor: isYT ? 'pointer' : 'default',
@@ -352,8 +352,8 @@ export function UnifiedSocialHub({ initialPosts = curatedSocialPosts, lang }: Un
                       >
                         <div
                           style={{
-                            width: '56px',
-                            height: '56px',
+                            width: '46px',
+                            height: '46px',
                             borderRadius: '50%',
                             background: '#DC2626',
                             display: 'flex',
@@ -364,7 +364,7 @@ export function UnifiedSocialHub({ initialPosts = curatedSocialPosts, lang }: Un
                             transition: 'transform 0.2s ease',
                           }}
                         >
-                          <Play size={24} fill="#FFFFFF" style={{ marginLeft: '3px' }} />
+                          <Play size={20} fill="#FFFFFF" style={{ marginLeft: '3px' }} />
                         </div>
                       </div>
                     )}
@@ -374,33 +374,33 @@ export function UnifiedSocialHub({ initialPosts = curatedSocialPosts, lang }: Un
                       <div
                         style={{
                           position: 'absolute',
-                          bottom: '10px',
-                          right: '12px',
+                          bottom: '8px',
+                          right: '10px',
                           display: 'flex',
                           alignItems: 'center',
-                          gap: '0.65rem',
+                          gap: '0.55rem',
                           background: 'rgba(0, 0, 0, 0.75)',
                           backdropFilter: 'blur(4px)',
-                          padding: '0.25rem 0.65rem',
+                          padding: '0.2rem 0.55rem',
                           borderRadius: '6px',
                           color: '#FFFFFF',
-                          fontSize: '0.74rem',
+                          fontSize: '0.72rem',
                           fontWeight: 700,
                         }}
                       >
                         {post.metrics.views && (
                           <span style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
-                            <Eye size={12} /> {post.metrics.views}
+                            <Eye size={11} /> {post.metrics.views}
                           </span>
                         )}
                         {post.metrics.likes && (
                           <span style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
-                            <Heart size={12} fill="#EF4444" color="#EF4444" /> {post.metrics.likes}
+                            <Heart size={11} fill="#EF4444" color="#EF4444" /> {post.metrics.likes}
                           </span>
                         )}
                         {post.metrics.comments && (
                           <span style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
-                            <MessageSquare size={12} /> {post.metrics.comments}
+                            <MessageSquare size={11} /> {post.metrics.comments}
                           </span>
                         )}
                       </div>
@@ -409,14 +409,19 @@ export function UnifiedSocialHub({ initialPosts = curatedSocialPosts, lang }: Un
                 )}
 
                 {/* Content Section */}
-                <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flex: 1 }}>
+                <div style={{ padding: '1.15rem 1.25rem', display: 'flex', flexDirection: 'column', flex: 1 }}>
                   <h3
                     style={{
-                      fontSize: '1.1rem',
+                      fontSize: '1.02rem',
                       fontWeight: 800,
-                      lineHeight: 1.4,
-                      marginBottom: '0.65rem',
+                      lineHeight: 1.35,
+                      marginBottom: '0.45rem',
                       color: 'var(--text-primary)',
+                      display: '-webkit-box',
+                      WebkitLineClamp: 2,
+                      WebkitBoxOrient: 'vertical',
+                      overflow: 'hidden',
+                      minHeight: '2.7em',
                     }}
                   >
                     {post.title[lang]}
@@ -424,12 +429,15 @@ export function UnifiedSocialHub({ initialPosts = curatedSocialPosts, lang }: Un
 
                   <p
                     style={{
-                      fontSize: '0.88rem',
+                      fontSize: '0.85rem',
                       color: 'var(--text-secondary)',
-                      lineHeight: 1.65,
-                      marginBottom: '1.25rem',
-                      whiteSpace: 'pre-line',
-                      flex: 1,
+                      lineHeight: 1.55,
+                      marginBottom: '0.85rem',
+                      display: '-webkit-box',
+                      WebkitLineClamp: 3,
+                      WebkitBoxOrient: 'vertical',
+                      overflow: 'hidden',
+                      minHeight: '4.65em',
                     }}
                   >
                     {post.content[lang]}
@@ -439,7 +447,7 @@ export function UnifiedSocialHub({ initialPosts = curatedSocialPosts, lang }: Un
                   <div
                     style={{
                       borderTop: '1px solid var(--border-light)',
-                      paddingTop: '1rem',
+                      paddingTop: '0.75rem',
                       marginTop: 'auto',
                       display: 'flex',
                       alignItems: 'center',
@@ -454,15 +462,15 @@ export function UnifiedSocialHub({ initialPosts = curatedSocialPosts, lang }: Un
                           border: 'none',
                           color: '#DC2626',
                           fontWeight: 800,
-                          fontSize: '0.86rem',
+                          fontSize: '0.84rem',
                           cursor: 'pointer',
                           display: 'inline-flex',
                           alignItems: 'center',
-                          gap: '0.4rem',
+                          gap: '0.35rem',
                           padding: 0,
                         }}
                       >
-                        <Play size={15} fill="#DC2626" />
+                        <Play size={14} fill="#DC2626" />
                         <span>{lang === 'ta' ? 'வீடியோவை இயக்குக' : 'Play Broadcast'}</span>
                       </button>
                     ) : (
@@ -473,19 +481,23 @@ export function UnifiedSocialHub({ initialPosts = curatedSocialPosts, lang }: Un
                         style={{
                           color: isIG ? '#DB2777' : '#0A66C2',
                           fontWeight: 800,
-                          fontSize: '0.86rem',
+                          fontSize: '0.84rem',
                           textDecoration: 'none',
                           display: 'inline-flex',
                           alignItems: 'center',
-                          gap: '0.4rem',
+                          gap: '0.35rem',
                         }}
                       >
                         <span>
                           {isIG
-                            ? (lang === 'ta' ? 'இன்ஸ்டாகிராமில் காண்க' : 'View on Instagram')
-                            : (lang === 'ta' ? 'முழு கட்டுரை (LinkedIn)' : 'Read on LinkedIn')}
+                            ? lang === 'ta'
+                              ? 'இன்ஸ்டாகிராமில் காண்க'
+                              : 'View on Instagram'
+                            : lang === 'ta'
+                            ? 'லிங்க்ட்இனில் படிக்க'
+                            : 'Read on LinkedIn'}
                         </span>
-                        <ExternalLink size={14} />
+                        <ExternalLink size={13} />
                       </a>
                     )}
 

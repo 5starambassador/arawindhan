@@ -9,6 +9,7 @@ import { StructuredData } from '@/components/StructuredData';
 import { OpenReaderButton } from '@/components/OpenReaderButton';
 import { Language } from '@/types';
 import type { Metadata } from 'next';
+import { getBookSchema } from '@/data/bookSchemas';
 
 export async function generateStaticParams() {
   const params: { lang: string; slug: string }[] = [];
@@ -90,9 +91,18 @@ export default async function BookDetailPage({
     notFound();
   }
 
+  const bookSchema = getBookSchema(book.slug, lang);
+
   return (
     <div className="section-py">
-      <StructuredData type="Book" data={{ book }} />
+      {bookSchema ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(bookSchema) }}
+        />
+      ) : (
+        <StructuredData type="Book" data={{ book }} />
+      )}
       <div className="container" style={{ maxWidth: '960px' }}>
         {/* Back Link */}
         <div style={{ marginBottom: '2rem' }}>

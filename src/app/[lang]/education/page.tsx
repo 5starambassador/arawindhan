@@ -72,14 +72,342 @@ export default async function EducationPage({
   const resolved = await params;
   const lang: Language = resolved.lang === 'ta' ? 'ta' : 'en';
 
+  const educationSchema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'CollectionPage',
+        '@id': `https://arawindhan.com/${lang}/education#webpage`,
+        url: `https://arawindhan.com/${lang}/education`,
+        name:
+          lang === 'ta'
+            ? '10 கல்விப் புத்தாக்கங்கள் & கற்பித்தல் முறைகள் | முனைவர் ஜே. அரவிந்தன்'
+            : 'Ten Original Educational Creations | Dr. J. Arawindhan',
+        headline:
+          lang === 'ta'
+            ? '10 கல்விப் புத்தாக்கங்கள் & கற்பித்தல் முறைகள்'
+            : 'Ten Original Educational Creations',
+        description:
+          lang === 'ta'
+            ? 'முனைவர் ஜே. அரவிந்தன் (Arawindhan) அவர்களின் 10 கல்விப் புத்தாக்கங்கள், தசாவதானி பாடத்திட்டம், மற்றும் முழு-மூளை வளர்ச்சி அமைப்புகள்.'
+            : 'Proprietary curricula, frameworks, and whole-brain learning systems designed by Dr. J. Arawindhan and run across ACHARIYA campuses — from the Dasavadani Curriculum to WOW Parenting.',
+        inLanguage: lang,
+        isPartOf: {
+          '@id': 'https://arawindhan.com/#website',
+        },
+        about: [
+          {
+            '@id': 'https://arawindhan.com/#person',
+          },
+          {
+            '@id': 'https://arawindhan.com/#achariya',
+          },
+        ],
+        author: {
+          '@id': 'https://arawindhan.com/#person',
+        },
+        publisher: {
+          '@id': 'https://arawindhan.com/#person',
+        },
+        primaryImageOfPage: {
+          '@id': `https://arawindhan.com/${lang}/education#primaryimage`,
+        },
+        image: {
+          '@id': `https://arawindhan.com/${lang}/education#primaryimage`,
+        },
+        breadcrumb: {
+          '@id': `https://arawindhan.com/${lang}/education#breadcrumb`,
+        },
+        mainEntity: {
+          '@id': `https://arawindhan.com/${lang}/education#itemlist`,
+        },
+        workTranslation: {
+          '@type': 'WebPage',
+          url: `https://arawindhan.com/${lang === 'en' ? 'ta' : 'en'}/education`,
+          inLanguage: lang === 'en' ? 'ta' : 'en',
+        },
+        keywords:
+          'Dasavadani Curriculum, multiple intelligence, whole-brain learning, Brain Activity over Ability, Q-Math, TRACK assessment, Power Teaching, LABS, WOW Supplements, Heguru, WOW Parenting, ACHARIYA, MIWAY',
+      },
+      {
+        '@type': 'ImageObject',
+        '@id': `https://arawindhan.com/${lang}/education#primaryimage`,
+        url: 'https://arawindhan.com/images/education_hero.jpg',
+        contentUrl: 'https://arawindhan.com/images/education_hero.jpg',
+        caption: 'Whole-Brain Modern Learning Architecture across ACHARIYA Classrooms',
+        inLanguage: lang,
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `https://arawindhan.com/${lang}/education#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: lang === 'ta' ? 'முகப்பு' : 'Home',
+            item: `https://arawindhan.com/${lang}`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: lang === 'ta' ? 'கல்விப் புத்தாக்கங்கள்' : 'Educational Innovations',
+            item: `https://arawindhan.com/${lang}/education`,
+          },
+        ],
+      },
+      {
+        '@type': 'ItemList',
+        '@id': `https://arawindhan.com/${lang}/education#itemlist`,
+        name: lang === 'ta' ? '10 கல்விப் புத்தாக்கங்கள்' : 'Ten Original Educational Creations',
+        description:
+          'Collection A: proprietary curricula, frameworks, and whole-brain learning systems pioneered by Dr. J. Arawindhan.',
+        numberOfItems: 10,
+        itemListOrder: 'https://schema.org/ItemListOrderAscending',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            item: {
+              '@type': 'LearningResource',
+              '@id': `https://arawindhan.com/${lang}/education/dasavadani-curriculum#creation`,
+              name: 'The Dasavadani Curriculum',
+              alternativeHeadline: 'Ten Intelligences, One Integrated Curriculum',
+              url: `https://arawindhan.com/${lang}/education/dasavadani-curriculum`,
+              identifier: 'CLM-014',
+              description:
+                "ACHARIYA's proprietary multiple-intelligence curriculum, named after the classical Indian art of Avadhanam. It uses eight of Howard Gardner's intelligences and adds Financial Intelligence and Emotional Intelligence, with Quantum Intelligence training children as 'Suprasapiens'. Children progress from Panchavadhani (5 tasks) to Ashtavadhani (8) towards Dasavadhani (10).",
+              learningResourceType: 'Curriculum',
+              teaches: [
+                'Multi-tasking',
+                'Financial Intelligence',
+                'Emotional Intelligence',
+                'Life skills',
+              ],
+              creator: {
+                '@id': 'https://arawindhan.com/#person',
+              },
+              inLanguage: lang,
+            },
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            item: {
+              '@type': 'LearningResource',
+              '@id': `https://arawindhan.com/${lang}/education/k12-journey-ican-to-icon#creation`,
+              name: 'The K12 Journey: From I CAN to ICON',
+              alternativeHeadline: 'Schooling Mapped as a Journey of Growing Speed & Independence',
+              url: `https://arawindhan.com/${lang}/education/k12-journey-ican-to-icon`,
+              identifier: 'CLM-015',
+              description:
+                'A complete K12 educational design across three domains — Knowing, Doing, and Being — delivered through MiWay, with stages from Walking (Toddler–Mont 2) through Cycling (Grades 1–5) to Bike Riding (Grades 6–8), and an ICAN foundation course for Grades 6–9 with NEET, JEE, and CA pathways.',
+              learningResourceType: 'Curriculum framework',
+              educationalLevel: 'K-12',
+              creator: {
+                '@id': 'https://arawindhan.com/#person',
+              },
+              inLanguage: lang,
+            },
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            item: {
+              '@type': 'LearningResource',
+              '@id': `https://arawindhan.com/${lang}/education/brain-activity-system#creation`,
+              name: 'The Brain Activity System',
+              alternativeHeadline: 'Training Attention, Memory, Courage & Multi-tasking Through the Body',
+              url: `https://arawindhan.com/${lang}/education/brain-activity-system`,
+              identifier: 'CLM-016',
+              description:
+                "Dr. Arawindhan's 'Brain Activity over Ability' philosophy made practical, combining five arts (Silambam, Malkhamb, Yoga, Chess, Golden Smile Meditation) with an invisible curriculum of juggling, cup stacking, rope knots and Rubik's cube, progressing from single-tasking to true multi-tasking.",
+              learningResourceType: 'Learning system',
+              teaches: [
+                'Attention',
+                'Memory',
+                'Courage',
+                'Multi-tasking',
+              ],
+              creator: {
+                '@id': 'https://arawindhan.com/#person',
+              },
+              inLanguage: lang,
+            },
+          },
+          {
+            '@type': 'ListItem',
+            position: 4,
+            item: {
+              '@type': 'LearningResource',
+              '@id': `https://arawindhan.com/${lang}/education/q-math-and-q-school#creation`,
+              name: 'Q-Math and Q School',
+              alternativeHeadline: 'You Can Experience Maths',
+              url: `https://arawindhan.com/${lang}/education/q-math-and-q-school`,
+              identifier: 'CLM-017',
+              description:
+                "A reversal of rote maths teaching built on five verbs — see it, touch it, think it, solve it, apply it — with daily periods of Mental Maths, Abacus, and Quantum Computing foundations. Q School scales the approach as ACHARIYA's EduTech division.",
+              learningResourceType: 'Mathematics pedagogy',
+              about: [
+                'Mathematics',
+                'Vedic Maths',
+                'Abacus',
+                'Mental arithmetic',
+              ],
+              educationalLevel: 'Classes 1–12',
+              creator: {
+                '@id': 'https://arawindhan.com/#person',
+              },
+              inLanguage: lang,
+            },
+          },
+          {
+            '@type': 'ListItem',
+            position: 5,
+            item: {
+              '@type': 'LearningResource',
+              '@id': `https://arawindhan.com/${lang}/education/track-assessment-model#creation`,
+              name: 'The TRACK Model of Assessment',
+              alternativeHeadline: 'An Exam that Records Learning Instead of Causing It — Zero Anxiety',
+              url: `https://arawindhan.com/${lang}/education/track-assessment-model`,
+              identifier: 'CLM-018',
+              description:
+                'An assessment architecture where diagnostic revision tests precede formal evaluation, practical and theory are equally weighted, and AI pinpoints specific learning gaps so parents, children and teachers review the same evidence.',
+              learningResourceType: 'Assessment framework',
+              educationalUse: 'Assessment',
+              creator: {
+                '@id': 'https://arawindhan.com/#person',
+              },
+              inLanguage: lang,
+            },
+          },
+          {
+            '@type': 'ListItem',
+            position: 6,
+            item: {
+              '@type': 'LearningResource',
+              '@id': `https://arawindhan.com/${lang}/education/power-teaching-toolkit#creation`,
+              name: 'The Power Teaching Toolkit',
+              alternativeHeadline: 'Multi-Angle Classroom Pedagogy: Every Child Owns the Concept',
+              url: `https://arawindhan.com/${lang}/education/power-teaching-toolkit`,
+              identifier: 'CLM-019',
+              description:
+                'A family of high-engagement classroom methods — Link & Story with the Jolly Box, Power Teaching, and Sequence Boards — that engage every chapter from several cognitive angles before formal study begins.',
+              learningResourceType: 'Teaching methodology',
+              audience: {
+                '@type': 'EducationalAudience',
+                educationalRole: 'teacher',
+              },
+              creator: {
+                '@id': 'https://arawindhan.com/#person',
+              },
+              inLanguage: lang,
+            },
+          },
+          {
+            '@type': 'ListItem',
+            position: 7,
+            item: {
+              '@type': 'LearningResource',
+              '@id': `https://arawindhan.com/${lang}/education/labs-learning-activity-based-system#creation`,
+              name: 'LABS: Learning Activity Based System',
+              alternativeHeadline: '73+ Labs & Clubs Where Thinking, Leadership & Innovation Have Dedicated Space',
+              url: `https://arawindhan.com/${lang}/education/labs-learning-activity-based-system`,
+              identifier: 'CLM-020',
+              description:
+                "ACHARIYA's network of 73+ experiential labs and clubs graded across six domains (Basic, Enriching, Lifting, Progressive, Advanced, WOW), including the Five ICONS Labs, Robotics, AI Innovation, Atal Tinkering, Kids IAS and Student Profit Labs.",
+              learningResourceType: 'Experiential learning system',
+              teaches: [
+                'Leadership',
+                'Public speaking',
+                'Scientific experimentation',
+                'Entrepreneurship',
+              ],
+              creator: {
+                '@id': 'https://arawindhan.com/#person',
+              },
+              inLanguage: lang,
+            },
+          },
+          {
+            '@type': 'ListItem',
+            position: 8,
+            item: {
+              '@type': 'LearningResource',
+              '@id': `https://arawindhan.com/${lang}/education/wow-supplements-and-workouts#creation`,
+              name: 'WOW Supplements & WOW Work-outs',
+              alternativeHeadline: '154+ Small, Named Practices that Make Growth Visible Every Day',
+              url: `https://arawindhan.com/${lang}/education/wow-supplements-and-workouts`,
+              identifier: 'CLM-021',
+              description:
+                'Two families of daily neuro-cognitive and behavioural practices — 74+ Work-outs and 80+ Supplements — organised in colour-coded WOW Books and tracked with tools such as My Habitometer, Happiness Chart and Smart Goal Sheet.',
+              learningResourceType: 'Daily practice programme',
+              creator: {
+                '@id': 'https://arawindhan.com/#person',
+              },
+              inLanguage: lang,
+            },
+          },
+          {
+            '@type': 'ListItem',
+            position: 9,
+            item: {
+              '@type': 'LearningResource',
+              '@id': `https://arawindhan.com/${lang}/education/heguru-and-early-years#creation`,
+              name: 'Heguru and the Early Years',
+              alternativeHeadline: 'The Real Foundation is Laid Before Age Six — Starting from 6 Months',
+              url: `https://arawindhan.com/${lang}/education/heguru-and-early-years`,
+              identifier: 'CLM-022',
+              description:
+                "ACHARIYA's early-learning programme pairing the Japanese-origin Heguru right-brain method with Divya practices (Divya Janani & Sukha Janani), high-speed flashcard exposure, sensory awakening and a Montessori sensory lab, delivered through 9 Heguru Centres.",
+              learningResourceType: 'Early childhood programme',
+              educationalLevel: 'Early childhood (6 months to 6 years)',
+              creator: {
+                '@id': 'https://arawindhan.com/#person',
+              },
+              inLanguage: lang,
+            },
+          },
+          {
+            '@type': 'ListItem',
+            position: 10,
+            item: {
+              '@type': 'LearningResource',
+              '@id': `https://arawindhan.com/${lang}/education/wow-parenting#creation`,
+              name: 'WOW Parenting',
+              alternativeHeadline: 'School & Family Working as One: Learning Ends at Home',
+              url: `https://arawindhan.com/${lang}/education/wow-parenting`,
+              identifier: 'CLM-005',
+              description:
+                "ACHARIYA's flagship parent-enablement initiative, with Happy Parenting, Power Parenting and consciousness workshops plus Rich Mom and Enriching Mom/Dad community sessions, engaging over 10,000 parents.",
+              learningResourceType: 'Parent education programme',
+              audience: {
+                '@type': 'Audience',
+                audienceType: 'Parents',
+              },
+              creator: {
+                '@id': 'https://arawindhan.com/#person',
+              },
+              inLanguage: lang,
+            },
+          },
+        ],
+      },
+    ],
+  };
+
   return (
-    <div className="section-py">
-      <div className="container">
-        <SectionHeader
-          badge={lang === 'ta' ? 'கல்வியியலாளரின் படைப்புகள்' : 'COLLECTION A: EDUCATIONAL CREATIONS'}
-          title={lang === 'ta' ? '10 கல்விப் புத்தாக்கங்கள் & கற்பித்தல் முறைகள்' : 'Ten Original Educational Creations'}
-          subtitle={lang === 'ta' ? 'ஒவ்வொரு குழந்தையையும் அவர்களின் தனித்துவமான நுண்ணறிவு சாம்ராஜ்யத்தில் ஆளுமை பெறச் செய்யும் தனித்துவ அமைப்புகள்.' : 'Proprietary curricula, frameworks, and whole-brain learning systems designed and run across ACHARIYA campuses.'}
-        />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(educationSchema) }}
+      />
+      <div className="section-py">
+        <div className="container">
+          <SectionHeader
+            badge={lang === 'ta' ? 'கல்வியியலாளரின் படைப்புகள்' : 'COLLECTION A: EDUCATIONAL CREATIONS'}
+            title={lang === 'ta' ? '10 கல்விப் புத்தாக்கங்கள் & கற்பித்தல் முறைகள்' : 'Ten Original Educational Creations'}
+            subtitle={lang === 'ta' ? 'ஒவ்வொரு குழந்தையையும் அவர்களின் தனித்துவமான நுண்ணறிவு சாம்ராஜ்யத்தில் ஆளுமை பெறச் செய்யும் தனித்துவ அமைப்புகள்.' : 'Proprietary curricula, frameworks, and whole-brain learning systems designed and run across ACHARIYA campuses.'}
+          />
 
         {/* Bespoke Whole-Brain Classroom Visual Showcase */}
         <div
@@ -446,5 +774,6 @@ export default async function EducationPage({
         </div>
       </div>
     </div>
-  );
+  </>
+);
 }
