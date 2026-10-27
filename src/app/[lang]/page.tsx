@@ -41,9 +41,9 @@ export async function generateMetadata({
 
   if (lang === 'ta') {
     return {
-      title: 'முனைவர் ஜே. அரவிந்தன் | அதிகாரப்பூர்வ தளம் — கல்வியியலாளர் & நிறுவனர் (Arawindhan)',
+      title: 'முனைவர் ஜே. அரவிந்தன் | அதிகாரப்பூர்வ தளம் — கல்வியியலாளர், நூலாசிரியர் & ஆன்மீக குரு (Arawindhan)',
       description:
-        'முனைவர் ஜே. அரவிந்தன் (Arawindhan) அவர்களின் அதிகாரப்பூர்வ தளம். ஆச்சாரியா கல்வி நிறுவனங்களின் நிறுவனர், கல்வியியலாளர், மற்றும் 18 கல்லூரிகள், 35 பள்ளிகள், 61+ நிறுவனங்களின் தலைவர்.',
+        'முனைவர் ஜே. அரவிந்தன் (Arawindhan) அவர்களின் அதிகாரப்பூர்வ தளம். ஆச்சாரியா கல்வி நிறுவனங்களின் நிறுவனர், கல்வியியலாளர், நூலாசிரியர் மற்றும் ஆன்மீக குரு.',
       alternates: {
         canonical: 'https://www.arawindhan.com/ta',
         languages: {
@@ -53,9 +53,9 @@ export async function generateMetadata({
         },
       },
       openGraph: {
-        title: 'முனைவர் ஜே. அரவிந்தன் | அதிகாரப்பூர்வ தளம் (Dr. J. Arawindhan)',
+        title: 'முனைவர் ஜே. அரவிந்தன் | அதிகாரப்பூர்வ தளம் — கல்வியியலாளர், நூலாசிரியர் & ஆன்மீக குரு',
         description:
-          'முனைவர் ஜே. அரவிந்தன் அவர்களின் அதிகாரப்பூர்வ தளம். ஆச்சாரியா கல்வி நிறுவனங்களின் நிறுவனர், கல்வியியலாளர், நூலாசிரியர்.',
+          'முனைவர் ஜே. அரவிந்தன் அவர்களின் அதிகாரப்பூர்வ தளம். ஆச்சாரியா கல்வி நிறுவனங்களின் நிறுவனர், கல்வியியலாளர், நூலாசிரியர் மற்றும் ஆன்மீக குரு.',
         url: 'https://www.arawindhan.com/ta',
         siteName: 'Dr. J. Arawindhan Official Platform',
         images: [
@@ -71,9 +71,9 @@ export async function generateMetadata({
   }
 
   return {
-    title: 'Dr. J. Arawindhan | Official Website — Educationist, Founder & Visionary Leader',
+    title: 'Dr. J. Arawindhan | Official Website — Educationist, Author & Spiritual Master',
     description:
-      'Official website and authority platform of Dr. J. Arawindhan (Arawindhan): Educationist, entrepreneur, author, and founder of ACHARIYA World Class Education (18 colleges, 35 schools, 61+ companies, 600+ world records).',
+      'Official website of Dr. J. Arawindhan (Arawindhan): Indian educationist, entrepreneur, author, and spiritual master. Founder of ACHARIYA World Class Education (18 colleges, 101 schools, 61+ companies, 600+ world records).',
     alternates: {
       canonical: 'https://www.arawindhan.com/en',
       languages: {
@@ -83,9 +83,9 @@ export async function generateMetadata({
       },
     },
     openGraph: {
-      title: 'Dr. J. Arawindhan | Official Website — Educationist & Founder',
+      title: 'Dr. J. Arawindhan | Official Website — Educationist, Author & Spiritual Master',
       description:
-        'Official website of Dr. J. Arawindhan: Educationist, entrepreneur, author, and founder of ACHARIYA World Class Education.',
+        'Official website of Dr. J. Arawindhan: Educationist, entrepreneur, author, and spiritual master. Founder of ACHARIYA World Class Education.',
       url: 'https://www.arawindhan.com/en',
       siteName: 'Dr. J. Arawindhan Official Platform',
       images: [

@@ -15,8 +15,8 @@ export const faqsList: FAQItem[] = [
       ta: 'முனைவர் ஜே. அரவிந்தன் யார்?',
     },
     answer: {
-      en: 'Dr. J. Arawindhan is an Indian educationist, entrepreneur, author, and spiritual guide. Trained as a Mechanical Engineer, he founded ACHARIYA World Class Education in Puducherry in 2000. Over 25 years, he has built an ecosystem of 18 higher education colleges, 35 schools, 61+ companies, and over 302 educational initiatives across Tamil Nadu, Puducherry, Kerala, and Andhra Pradesh.',
-      ta: 'முனைவர் ஜே. அரவிந்தன் ஒரு இந்திய கல்வியியலாளர், தொழில்முனைவோர், எழுத்தாளர் மற்றும் ஆன்மீக வழிகாட்டி ஆவார். மெக்கானிக்கல் பொறியாளரான இவர், 2000-ஆம் ஆண்டு புதுச்சேரியில் ஆச்சாரியா கல்வி நிறுவனத்தை நிறுவினார். 25 ஆண்டுகளில் 18 கல்லூரிகள், 35 பள்ளிகள், 61+ நிறுவனங்கள் மற்றும் 302+ கல்வி முன்முயற்சிகளைக் கொண்ட மாபெரும் அமைப்பை உருவாக்கியுள்ளார்.',
+      en: 'Dr. J. Arawindhan is an Indian educationist, entrepreneur, author, and spiritual master. Trained as a Mechanical Engineer, he founded ACHARIYA World Class Education in Puducherry in 2000. Over 25 years, he has built an ecosystem of 18 higher education colleges, 35 schools, 61+ companies, and over 302 educational initiatives across Tamil Nadu, Puducherry, Kerala, and Andhra Pradesh.',
+      ta: 'முனைவர் ஜே. அரவிந்தன் ஒரு இந்திய கல்வியியலாளர், தொழில்முனைவோர், நூலாசிரியர் மற்றும் ஆன்மீக குரு (Spiritual Master) ஆவார். மெக்கானிக்கல் பொறியாளரான இவர், 2000-ஆம் ஆண்டு புதுச்சேரியில் ஆச்சாரியா கல்வி நிறுவனத்தை நிறுவினார். 25 ஆண்டுகளில் 18 கல்லூரிகள், 35 பள்ளிகள், 61+ நிறுவனங்கள் மற்றும் 302+ கல்வி முன்முயற்சிகளைக் கொண்ட மாபெரும் அமைப்பை உருவாக்கியுள்ளார்.',
     },
     relatedLink: '/biography',
   },
