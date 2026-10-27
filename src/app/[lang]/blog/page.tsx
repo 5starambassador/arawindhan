@@ -272,6 +272,81 @@ export default async function BlogPage({
             articleSection: 'AI & Child Development',
             author: { '@id': 'https://arawindhan.com/#person' },
           },
+          {
+            '@type': 'BlogPosting',
+            '@id': `https://arawindhan.com/${lang}/blog/how-achariyas-innovative-curriculum-transforms-student-learning-and-academic-excellence#post`,
+            url: `https://arawindhan.com/${lang}/blog/how-achariyas-innovative-curriculum-transforms-student-learning-and-academic-excellence`,
+            mainEntityOfPage: `https://arawindhan.com/${lang}/blog/how-achariyas-innovative-curriculum-transforms-student-learning-and-academic-excellence`,
+            headline:
+              'How Achariya’s Innovative Curriculum Transforms Student Learning and Academic Excellence',
+            description:
+              'Explore how Achariya’s innovative curriculum, MiWay books, practical experience, coaching, and the four parameters transform student learning.',
+            datePublished: '2026-10-27',
+            inLanguage: lang,
+            keywords: 'Achariya Innovative Curriculum, MiWay books, Practical Learning, Four Parameters',
+            articleSection: 'Curriculum Innovation & Academic Excellence',
+            author: { '@id': 'https://arawindhan.com/#person' },
+          },
+          {
+            '@type': 'BlogPosting',
+            '@id': `https://arawindhan.com/${lang}/blog/how-dr-j-arawindhan-set-a-new-benchmark-in-indian-education-through-achariya#post`,
+            url: `https://arawindhan.com/${lang}/blog/how-dr-j-arawindhan-set-a-new-benchmark-in-indian-education-through-achariya`,
+            mainEntityOfPage: `https://arawindhan.com/${lang}/blog/how-dr-j-arawindhan-set-a-new-benchmark-in-indian-education-through-achariya`,
+            headline:
+              'How Dr. J. Arawindhan Set a New Benchmark in Indian Education Through ACHARIYA',
+            description:
+              'Discover how Dr. J. Arawindhan established a new benchmark in Indian education through ACHARIYA, championing Brain Activity over Ability, Multiple Intelligences, and I CAN to ICON.',
+            datePublished: '2026-10-27',
+            inLanguage: lang,
+            keywords: 'Dr. J. Arawindhan, Achariya World Class Education, Indian education benchmark, Brain Activity over Ability',
+            articleSection: 'Educational Leadership & Benchmarks',
+            author: { '@id': 'https://arawindhan.com/#person' },
+          },
+          {
+            '@type': 'BlogPosting',
+            '@id': `https://arawindhan.com/${lang}/blog/5-reasons-to-choose-achariya-school-for-your-childs-bright-future#post`,
+            url: `https://arawindhan.com/${lang}/blog/5-reasons-to-choose-achariya-school-for-your-childs-bright-future`,
+            mainEntityOfPage: `https://arawindhan.com/${lang}/blog/5-reasons-to-choose-achariya-school-for-your-childs-bright-future`,
+            headline:
+              '5 Reasons to Choose Achariya School for Your Child’s Bright Future',
+            description:
+              'Discover 5 compelling reasons to choose Achariya School: Guinness World Records legacy, future-ready skills, strong CBSE learning, innovative benchmarks, and holistic sports and arts.',
+            datePublished: '2026-10-27',
+            inLanguage: lang,
+            keywords: 'Choose Achariya School, CBSE School Pondicherry, Guinness World Records, Future-Ready Skills',
+            articleSection: 'Schooling & Holistic Development',
+            author: { '@id': 'https://arawindhan.com/#person' },
+          },
+          {
+            '@type': 'BlogPosting',
+            '@id': `https://arawindhan.com/${lang}/blog/why-parents-trust-achariya-real-experiences-and-inspiring-stories#post`,
+            url: `https://arawindhan.com/${lang}/blog/why-parents-trust-achariya-real-experiences-and-inspiring-stories`,
+            mainEntityOfPage: `https://arawindhan.com/${lang}/blog/why-parents-trust-achariya-real-experiences-and-inspiring-stories`,
+            headline:
+              'Why Parents Trust Achariya: Real Experiences and Inspiring Stories',
+            description:
+              'Discover why parents trust Achariya: a nurturing learning environment, holistic development, innovative MiWay methods, remarkable achievements, and genuine parent video testimonials.',
+            datePublished: '2026-10-27',
+            inLanguage: lang,
+            keywords: 'Why Parents Trust Achariya, Achariya parent testimonials, school reviews, holistic child growth',
+            articleSection: 'Parent Perspectives & Community Trust',
+            author: { '@id': 'https://arawindhan.com/#person' },
+          },
+          {
+            '@type': 'BlogPosting',
+            '@id': `https://arawindhan.com/${lang}/blog/what-makes-achariya-different-from-traditional-schools#post`,
+            url: `https://arawindhan.com/${lang}/blog/what-makes-achariya-different-from-traditional-schools`,
+            mainEntityOfPage: `https://arawindhan.com/${lang}/blog/what-makes-achariya-different-from-traditional-schools`,
+            headline:
+              'What Makes Achariya Different from Traditional Schools?',
+            description:
+              'Explore what makes Achariya different from traditional schools: parenting workshops, deep conceptual knowledge, Power Teaching & Prior Teaching, and transforming students into Supra Sapiens.',
+            datePublished: '2026-10-27',
+            inLanguage: lang,
+            keywords: 'What Makes Achariya Different, Power Teaching, Prior Teaching, Supra Sapiens, Dr. J. Arawindhan',
+            articleSection: 'Pedagogy & Educational Transformation',
+            author: { '@id': 'https://arawindhan.com/#person' },
+          },
         ],
       },
     ],
