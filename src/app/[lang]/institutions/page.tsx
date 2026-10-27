@@ -90,9 +90,9 @@ export default async function InstitutionsPage({
         '@type': 'WebSite',
         '@id': 'https://arawindhan.com/#website',
         url: `https://arawindhan.com/${lang}`,
-        name: 'Dr. J. Arawindhan — Global Digital Authority Platform',
+        name: 'Dr. J. Arawindhan — Educationist, Author & Spiritual Master',
         description:
-          'Official digital authority platform for Dr. J. Arawindhan: Educationist, entrepreneur, and founder of ACHARIYA World Class Education (18 colleges, 101 schools, 61+ companies, 600+ world records).',
+          'Official website of Dr. J. Arawindhan: Educationist, entrepreneur, author, and spiritual master. Founder of ACHARIYA World Class Education (18 colleges, 101 schools, 61+ companies, 600+ world records).',
         inLanguage: ['en', 'ta'],
         publisher: { '@id': 'https://arawindhan.com/#person' },
         about: { '@id': 'https://arawindhan.com/#person' },

@@ -20,10 +20,10 @@ export const StructuredData: React.FC<StructuredDataProps> = ({
       '@type': 'WebSite',
       '@id': 'https://arawindhan.com/#website',
       url: 'https://arawindhan.com/',
-      name: 'Dr. J. Arawindhan — Global Digital Authority Platform',
+      name: 'Dr. J. Arawindhan — Educationist, Author & Spiritual Master',
       alternateName: ['Dr. J. Arawindhan', 'Arawindhan.com'],
       description:
-        'Official digital knowledge platform documenting the educational systems, enterprises, publications, and philosophies founded and led by Dr. J. Arawindhan.',
+        'Official website of Dr. J. Arawindhan: Indian educationist, entrepreneur, author, and spiritual master. Founder of ACHARIYA World Class Education.',
       inLanguage: ['en', 'ta'],
       publisher: { '@id': 'https://arawindhan.com/#person' },
       copyrightHolder: { '@id': 'https://arawindhan.com/#person' },
@@ -33,9 +33,9 @@ export const StructuredData: React.FC<StructuredDataProps> = ({
       '@type': 'ProfilePage',
       '@id': 'https://arawindhan.com/en#webpage',
       url: 'https://arawindhan.com/en',
-      name: 'Dr. J. Arawindhan — Global Digital Authority Platform',
+      name: 'Dr. J. Arawindhan — Educationist, Author & Spiritual Master',
       description:
-        'Official digital authority platform for Dr. J. Arawindhan: Educationist, entrepreneur, and founder of ACHARIYA World Class Education (18 colleges, 101 schools, 61+ companies, 600+ world records).',
+        'Official website of Dr. J. Arawindhan: Indian educationist, entrepreneur, author, and spiritual master. Founder of ACHARIYA World Class Education (18 colleges, 101 schools, 61+ companies, 600+ world records).',
       inLanguage: 'en',
       isPartOf: { '@id': 'https://arawindhan.com/#website' },
       about: { '@id': 'https://arawindhan.com/#person' },
@@ -109,10 +109,10 @@ export const StructuredData: React.FC<StructuredDataProps> = ({
       mainEntityOfPage: { '@id': 'https://arawindhan.com/en#webpage' },
       image: { '@id': 'https://arawindhan.com/#portrait' },
       description:
-        'Educationist, entrepreneur and spiritual mentor. A trained Mechanical Engineer, he founded ACHARIYA World Class Education in Puducherry in 2000; it has grown to 18 colleges, 101 schools, 61+ companies and 302+ educational initiatives, educating over 14,000 students who hold 600+ world records.',
+        'Educationist, entrepreneur, author and spiritual master. A trained Mechanical Engineer, he founded ACHARIYA World Class Education in Puducherry in 2000; it has grown to 18 colleges, 101 schools, 61+ companies and 302+ educational initiatives, educating over 14,000 students who hold 600+ world records.',
       disambiguatingDescription:
-        'Founder, Chief Mentor & Managing Director of ACHARIYA World Class Education, Puducherry, India; creator of the Dasavadani multiple-intelligence curriculum.',
-      jobTitle: ['Founder', 'Chief Mentor', 'Managing Director'],
+        'Founder, Chief Mentor & Managing Director of ACHARIYA World Class Education, Puducherry, India; author and spiritual master.',
+      jobTitle: ['Founder & Educationist', 'Author', 'Spiritual Master', 'Managing Director'],
       worksFor: { '@id': 'https://arawindhan.com/#achariya' },
       affiliation: [
         { '@id': 'https://arawindhan.com/#achariya' },
@@ -127,6 +127,18 @@ export const StructuredData: React.FC<StructuredDataProps> = ({
         },
         {
           '@type': 'Occupation',
+          name: 'Author',
+          description:
+            'Author of 21+ published books on parenting, multiple intelligences, mind power, and conscious living.',
+        },
+        {
+          '@type': 'Occupation',
+          name: 'Spiritual Master',
+          description:
+            'Spiritual Master and Mahaavadhani guiding Divya Yogam and the annual Maha Shambala Puducherry.',
+        },
+        {
+          '@type': 'Occupation',
           name: 'Entrepreneur',
           description:
             'Builds scalable institutional vehicles: 18 colleges, 101 schools (Owned, Powered, Partnered, Parented), and 61+ diversified companies across 8 sectors.',
@@ -136,12 +148,6 @@ export const StructuredData: React.FC<StructuredDataProps> = ({
           name: 'Business Leader',
           description:
             "Applies an engineer's rigor: Centre of Excellence (Approved → Enriched → Enabled → Executed → Ensured), 6 Engines of Leadership, and the 77 ConCardios training hierarchy.",
-        },
-        {
-          '@type': 'Occupation',
-          name: 'Spiritual Guide',
-          description:
-            'Spiritual Master and Mahaavadhani guiding Divya Yogam and the annual Maha Shambala Puducherry.',
         },
       ],
       hasCredential: {

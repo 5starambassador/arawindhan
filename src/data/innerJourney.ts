@@ -5,7 +5,7 @@ export const innerJourneyData = {
   },
   spiritualRoles: {
     en: 'Spiritual Master • Mahaavadhani • Spiritual Guide to Inner Transformation',
-    ta: 'ஆன்மீக வழிகாட்டி • மகாவதானி • உள்முக உருமாற்றத்திற்கான ஞான ஆசிரியர்',
+    ta: 'ஆன்மீக குரு • மகாவதானி • உள்முக உருமாற்றத்திற்கான ஞான ஆசிரியர்',
   },
   centralCreed: {
     en: '“Develop the human. Awaken the being.”',

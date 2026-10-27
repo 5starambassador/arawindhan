@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { Metadata } from 'next';
 import { HelpCircle, ArrowRight, ShieldCheck, CheckCircle2 } from 'lucide-react';
 import { faqsList } from '@/data/faqs';
 import { SectionHeader } from '@/components/SectionHeader';
@@ -8,6 +9,75 @@ import { Language } from '@/types';
 
 export async function generateStaticParams() {
   return [{ lang: 'en' }, { lang: 'ta' }];
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const resolved = await params;
+  const lang = resolved.lang === 'ta' ? 'ta' : 'en';
+
+  if (lang === 'ta') {
+    return {
+      title: 'அடிக்கடி கேட்கப்படும் கேள்விகள் (FAQ) | முனைவர் ஜே. அரவிந்தன் — கல்வியியலாளர், நூலாசிரியர் & ஆன்மீக குரு',
+      description:
+        'முனைவர் ஜே. அரவிந்தன் (Arawindhan): கல்வியியலாளர், தொழில்முனைவோர், நூலாசிரியர் மற்றும் ஆன்மீக குரு (Spiritual Master) குறித்த சரிபார்க்கப்பட்ட தகவல்கள் மற்றும் அதிகாரப்பூர்வ பதில்கள்.',
+      alternates: {
+        canonical: 'https://www.arawindhan.com/ta/faq',
+        languages: {
+          en: 'https://www.arawindhan.com/en/faq',
+          ta: 'https://www.arawindhan.com/ta/faq',
+          'x-default': 'https://www.arawindhan.com/en/faq',
+        },
+      },
+      openGraph: {
+        title: 'அடிக்கடி கேட்கப்படும் கேள்விகள் (FAQ) | முனைவர் ஜே. அரவிந்தன் — கல்வியியலாளர், நூலாசிரியர் & ஆன்மீக குரு',
+        description:
+          'முனைவர் ஜே. அரவிந்தன்: கல்வியியலாளர், தொழில்முனைவோர், நூலாசிரியர் மற்றும் ஆன்மீக குரு குறித்த அதிகாரப்பூர்வ பதில்கள்.',
+        url: 'https://www.arawindhan.com/ta/faq',
+        siteName: 'Dr. J. Arawindhan Official Platform',
+        images: [
+          {
+            url: 'https://www.arawindhan.com/images/portrait_spiritual_authentic.jpg',
+            width: 1200,
+            height: 630,
+            alt: 'Dr. J. Arawindhan FAQ',
+          },
+        ],
+      },
+    };
+  }
+
+  return {
+    title: 'Frequently Asked Questions (FAQ) | Dr. J. Arawindhan — Educationist, Author & Spiritual Master',
+    description:
+      'Authoritative answers and verified facts about Dr. J. Arawindhan: Indian educationist, entrepreneur, author, spiritual master, and founder of ACHARIYA World Class Education.',
+    alternates: {
+      canonical: 'https://www.arawindhan.com/en/faq',
+      languages: {
+        en: 'https://www.arawindhan.com/en/faq',
+        ta: 'https://www.arawindhan.com/ta/faq',
+        'x-default': 'https://www.arawindhan.com/en/faq',
+      },
+    },
+    openGraph: {
+      title: 'Frequently Asked Questions (FAQ) | Dr. J. Arawindhan — Educationist, Author & Spiritual Master',
+      description:
+        'Authoritative answers and verified facts about Dr. J. Arawindhan: Indian educationist, entrepreneur, author, spiritual master, and founder of ACHARIYA World Class Education.',
+      url: 'https://www.arawindhan.com/en/faq',
+      siteName: 'Dr. J. Arawindhan Official Platform',
+      images: [
+        {
+          url: 'https://www.arawindhan.com/images/portrait_spiritual_authentic.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Dr. J. Arawindhan FAQ',
+        },
+      ],
+    },
+  };
 }
 
 export default async function FAQPage({

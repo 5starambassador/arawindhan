@@ -4,11 +4,11 @@ import './globals.css';
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.arawindhan.com'),
   title: {
-    default: 'Arawindhan | Official Website of Dr. J. Arawindhan',
+    default: 'Dr. J. Arawindhan | Official Website — Educationist, Author & Spiritual Master',
     template: '%s | Dr. J. Arawindhan',
   },
   description:
-    'Official website and digital authority platform documenting the biography, educational innovations, books, institutions, and spiritual work of Dr. J. Arawindhan (Arawindhan).',
+    'Official website of Dr. J. Arawindhan: Indian educationist, entrepreneur, author, and spiritual master. Founder of ACHARIYA World Class Education.',
   applicationName: 'Dr. J. Arawindhan',
   keywords: [
     'Arawindhan',
