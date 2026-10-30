@@ -25,6 +25,13 @@ import {
 import { booksList } from '@/data/books';
 import { Language } from '@/types';
 import { playPageFlipAudio } from '@/utils/pageFlipSound';
+import {
+  trackBookMetric,
+  getBaselineBookMetric,
+  getCachedBookMetrics,
+  BookMetricEntry,
+  BookMetricsMap,
+} from '@/lib/bookMetrics';
 
 interface BookReaderModalProps {
   language?: Language;
@@ -55,6 +62,7 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
   const [flipDirection, setFlipDirection] = useState<'next' | 'prev' | null>(null);
   const [isMuted, setIsMuted] = useState<boolean>(false);
   const [isMobile, setIsMobile] = useState<boolean>(false);
+  const [bookMetric, setBookMetric] = useState<BookMetricEntry>({ reads: 0, downloads: 0 });
 
   const containerRef = useRef<HTMLDivElement>(null);
   const textScrollRef = useRef<HTMLDivElement>(null);
@@ -87,6 +95,12 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
         setRequested(false);
         setZoomLevel(1.0);
         setShowThumbnails(false);
+
+        const initial = getCachedBookMetrics()[e.detail.slug] || getBaselineBookMetric(e.detail.slug);
+        setBookMetric(initial);
+        trackBookMetric(e.detail.slug, 'read').then((updated) => {
+          setBookMetric(updated);
+        });
 
         const targetBook = booksList.find((b) => b.slug === e.detail.slug);
 
@@ -361,6 +375,11 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
     setIsSubmitting(false);
     setRequested(true);
     setHasUnlocked(true);
+    if (activeBookSlug) {
+      trackBookMetric(activeBookSlug, 'download').then((updated) => {
+        setBookMetric(updated);
+      });
+    }
   };
 
   // Flipbook Spread Calculations
@@ -446,8 +465,13 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
               <div style={{ fontWeight: 800, fontSize: '0.94rem', lineHeight: 1.2, color: readerMode === 'flipbook' ? '#FFFFFF' : themeStyles.text }}>
                 {book.title[language]}
               </div>
-              <div style={{ fontSize: '0.72rem', opacity: 0.75, marginTop: '2px', color: readerMode === 'flipbook' ? '#94A3B8' : themeStyles.text }}>
-                {book.author[language]} &bull; {totalFlipPages > 0 ? `${totalFlipPages} Pages` : 'Curated Edition'}
+              <div style={{ fontSize: '0.72rem', opacity: 0.85, marginTop: '2px', color: readerMode === 'flipbook' ? '#94A3B8' : themeStyles.text, display: 'flex', alignItems: 'center', gap: '6px', flexWrap: 'wrap' }}>
+                <span>{book.author[language]} &bull; {totalFlipPages > 0 ? `${totalFlipPages} Pages` : 'Curated Edition'}</span>
+                {bookMetric.reads > 0 && (
+                  <span style={{ color: '#F59E0B', fontWeight: 700 }}>
+                    &bull; 📖 {bookMetric.reads.toLocaleString('en-IN')} {language === 'ta' ? 'வாசிப்புகள்' : 'Reads'} &bull; ⬇ {bookMetric.downloads.toLocaleString('en-IN')} {language === 'ta' ? 'பதிவிறக்கங்கள்' : 'Downloads'}
+                  </span>
+                )}
               </div>
             </div>
           </div>
@@ -673,6 +697,9 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
                 type="button"
                 onClick={() => {
                   if (hasUnlocked) {
+                    if (activeBookSlug) {
+                      trackBookMetric(activeBookSlug, 'download').then((u) => setBookMetric(u));
+                    }
                     const link = document.createElement('a');
                     link.href = book.epubUrl!;
                     link.download = '';
@@ -708,6 +735,9 @@ export const BookReaderModal: React.FC<BookReaderModalProps> = ({ language = 'en
                 type="button"
                 onClick={() => {
                   if (hasUnlocked) {
+                    if (activeBookSlug) {
+                      trackBookMetric(activeBookSlug, 'download').then((u) => setBookMetric(u));
+                    }
                     window.open(book.pdfUrl, '_blank');
                   } else {
                     setShowRequestForm(true);

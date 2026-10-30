@@ -3,8 +3,16 @@
 import React, { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import Link from 'next/link';
-import { Maximize2, X, ExternalLink } from 'lucide-react';
+import { Maximize2, X, ExternalLink, BookOpen, Download } from 'lucide-react';
 import { Language } from '@/types';
+import {
+  getBaselineBookMetric,
+  getCachedBookMetrics,
+  fetchAllBookMetrics,
+  formatCompactCount,
+  BookMetricEntry,
+  BookMetricsMap,
+} from '@/lib/bookMetrics';
 
 interface BookCoverCardImageProps {
   coverImage: string;
@@ -28,10 +36,33 @@ export const BookCoverCardImage: React.FC<BookCoverCardImageProps> = ({
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [metric, setMetric] = useState<BookMetricEntry>(() => getBaselineBookMetric(slug));
 
   useEffect(() => {
     setMounted(true);
-  }, []);
+    const cached = getCachedBookMetrics()[slug];
+    if (cached) {
+      setMetric(cached);
+    }
+
+    fetchAllBookMetrics().then((map) => {
+      if (map[slug]) {
+        setMetric(map[slug]);
+      }
+    });
+
+    const handleMetricsUpdated = (e: Event) => {
+      const custom = e as CustomEvent<BookMetricsMap>;
+      if (custom.detail && custom.detail[slug]) {
+        setMetric(custom.detail[slug]);
+      }
+    };
+
+    window.addEventListener('book-metrics-updated', handleMetricsUpdated);
+    return () => {
+      window.removeEventListener('book-metrics-updated', handleMetricsUpdated);
+    };
+  }, [slug]);
 
   // Close lightbox on Escape key
   useEffect(() => {
@@ -171,6 +202,64 @@ export const BookCoverCardImage: React.FC<BookCoverCardImageProps> = ({
               PDF
             </span>
           )}
+        </div>
+
+        {/* Reading & Download Count Frosted Pill Overlay (Bottom-Right) */}
+        <div
+          title={
+            lang === 'ta'
+              ? `${metric.reads.toLocaleString('en-IN')} வாசிப்புகள் • ${metric.downloads.toLocaleString('en-IN')} பதிவிறக்கங்கள்`
+              : `${metric.reads.toLocaleString('en-IN')} Reads • ${metric.downloads.toLocaleString('en-IN')} Downloads`
+          }
+          style={{
+            position: 'absolute',
+            bottom: '10px',
+            right: '10px',
+            background: isHovered ? 'rgba(15, 23, 42, 0.92)' : 'rgba(255, 255, 255, 0.94)',
+            color: isHovered ? '#F8FAFC' : '#1E293B',
+            border: isHovered ? '1px solid rgba(245, 158, 11, 0.45)' : '1px solid rgba(226, 232, 240, 0.95)',
+            backdropFilter: 'blur(8px)',
+            borderRadius: '999px',
+            padding: '3px 9px',
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '7px',
+            fontSize: '0.69rem',
+            fontWeight: 800,
+            letterSpacing: '0.01em',
+            boxShadow: '0 4px 12px rgba(15, 23, 42, 0.14)',
+            zIndex: 3,
+            transition: 'all 0.2s ease',
+            lineHeight: 1,
+          }}
+        >
+          <span
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '3.5px',
+            }}
+          >
+            <BookOpen size={11} style={{ color: isHovered ? '#FBBF24' : '#D97706', flexShrink: 0 }} />
+            <span>{formatCompactCount(metric.reads)}</span>
+          </span>
+          <span
+            style={{
+              width: '1px',
+              height: '10px',
+              background: isHovered ? 'rgba(255, 255, 255, 0.22)' : '#CBD5E1',
+            }}
+          />
+          <span
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '3px',
+            }}
+          >
+            <Download size={11} style={{ color: isHovered ? '#34D399' : '#059669', flexShrink: 0 }} />
+            <span>{formatCompactCount(metric.downloads)}</span>
+          </span>
         </div>
       </div>
 

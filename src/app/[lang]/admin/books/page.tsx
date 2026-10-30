@@ -18,6 +18,13 @@ import {
 } from 'lucide-react';
 import { booksList } from '@/data/books';
 import { Language } from '@/types';
+import {
+  INITIAL_BOOK_METRICS,
+  BookMetricsMap,
+  fetchAllBookMetrics,
+  getCachedBookMetrics,
+  getBaselineBookMetric,
+} from '@/lib/bookMetrics';
 
 interface LeadRecord {
   bookSlug: string;
@@ -37,9 +44,12 @@ export default function AdminBooksPage({
   const [lang, setLang] = useState<Language>('en');
   const [leads, setLeads] = useState<LeadRecord[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
+  const [metricsMap, setMetricsMap] = useState<BookMetricsMap>(INITIAL_BOOK_METRICS);
 
   useEffect(() => {
     params.then((p) => setLang(p.lang || 'en'));
+    setMetricsMap(getCachedBookMetrics());
+    fetchAllBookMetrics().then((map) => setMetricsMap(map));
     try {
       const stored = localStorage.getItem('arawindhan_book_leads');
       if (stored) {
@@ -49,6 +59,9 @@ export default function AdminBooksPage({
       // ignore
     }
   }, [params]);
+
+  const totalReads = booksList.reduce((acc, b) => acc + (metricsMap[b.slug]?.reads ?? getBaselineBookMetric(b.slug).reads), 0);
+  const totalDownloads = booksList.reduce((acc, b) => acc + (metricsMap[b.slug]?.downloads ?? getBaselineBookMetric(b.slug).downloads), 0);
 
   const readyBooks = booksList.filter((b) => b.flipbookPages && b.flipbookPages.length > 0);
   const pendingBooks = booksList.filter((b) => !b.flipbookPages || b.flipbookPages.length === 0);
@@ -144,10 +157,14 @@ export default function AdminBooksPage({
           <div style={{ background: '#FFFFFF', padding: '1.5rem', borderRadius: '16px', border: '1px solid #E2E8F0', boxShadow: '0 1px 3px rgba(0,0,0,0.05)' }}>
             <div style={{ color: '#2563EB', fontSize: '0.82rem', fontWeight: 700, textTransform: 'uppercase', display: 'flex', alignItems: 'center', gap: '4px' }}>
               <Users size={14} />
-              <span>Registered Reader Leads</span>
+              <span>Total Reads & Downloads</span>
             </div>
-            <div style={{ fontSize: '2rem', fontWeight: 900, color: '#2563EB', marginTop: '0.25rem' }}>{leads.length}</div>
-            <div style={{ fontSize: '0.78rem', color: '#64748B', marginTop: '0.25rem' }}>Parents, Principals & Educators</div>
+            <div style={{ fontSize: '1.65rem', fontWeight: 900, color: '#2563EB', marginTop: '0.25rem' }}>
+              {totalReads.toLocaleString('en-IN')} <span style={{ fontSize: '0.95rem', color: '#059669' }}>/ {totalDownloads.toLocaleString('en-IN')} ⬇</span>
+            </div>
+            <div style={{ fontSize: '0.78rem', color: '#64748B', marginTop: '0.25rem' }}>
+              {leads.length} Permission Leads Recorded Locally
+            </div>
           </div>
         </div>
 
@@ -215,6 +232,7 @@ export default function AdminBooksPage({
                   <th style={{ padding: '0.75rem 1rem' }}>Book Details</th>
                   <th style={{ padding: '0.75rem 1rem' }}>3D Flipbook Status</th>
                   <th style={{ padding: '0.75rem 1rem' }}>Pages</th>
+                  <th style={{ padding: '0.75rem 1rem' }}>Reads / Downloads</th>
                   <th style={{ padding: '0.75rem 1rem' }}>Downloads Ready</th>
                   <th style={{ padding: '0.75rem 1rem', textAlign: 'right' }}>Actions</th>
                 </tr>
@@ -222,6 +240,7 @@ export default function AdminBooksPage({
               <tbody>
                 {filteredBooks.map((b) => {
                   const hasFlipbook = b.flipbookPages && b.flipbookPages.length > 0;
+                  const metric = metricsMap[b.slug] || getBaselineBookMetric(b.slug);
                   return (
                     <tr key={b.id} style={{ borderBottom: '1px solid #F1F5F9' }}>
                       <td style={{ padding: '1rem' }}>
@@ -247,6 +266,20 @@ export default function AdminBooksPage({
 
                       <td style={{ padding: '1rem', fontWeight: 700 }}>
                         {hasFlipbook ? `${b.flipbookPages!.length} Pages` : '—'}
+                      </td>
+
+                      <td style={{ padding: '1rem' }}>
+                        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#F8FAFC', border: '1px solid #E2E8F0', padding: '4px 10px', borderRadius: '999px', fontSize: '0.78rem', fontWeight: 800 }}>
+                          <span style={{ color: '#D97706', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                            <BookOpen size={12} />
+                            {metric.reads.toLocaleString('en-IN')}
+                          </span>
+                          <span style={{ color: '#CBD5E1' }}>|</span>
+                          <span style={{ color: '#059669', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                            <Download size={12} />
+                            {metric.downloads.toLocaleString('en-IN')}
+                          </span>
+                        </div>
                       </td>
 
                       <td style={{ padding: '1rem' }}>
