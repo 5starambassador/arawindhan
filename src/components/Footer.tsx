@@ -99,8 +99,8 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
               }}
             >
               {lang === 'ta'
-                ? 'ஆச்சாரியா உலகத் தரம் வாய்ந்த கல்வி அமைப்பின் நிறுவனர். 25 ஆண்டுகால கல்விப் புத்தாக்கங்கள், மனித நுண்ணறிவு மற்றும் ஆன்மீகப் பாதையை ஆவணப்படுத்தும் அதிகாரப்பூர்வ தளம்.'
-                : 'Founder of ACHARIYA World Class Education (Estd. 2000). Official authority platform documenting 25 years of educational innovations, human intelligence, and spiritual mentorship.'}
+                ? 'ஆச்சாரியா கல்வி நிறுவனங்கள் (2000 முதல்), ஹெகுரு இந்தியா மற்றும் க்யூ ஸ்கூல் (Q School) ஆகியவற்றின் நிறுவனர். புஷிடோ (Bushido) ஒழுக்கவியல் மற்றும் சுப்ரசேபியன்ஸ் (Suprasapiens) ஆளுமைத் தத்துவத்தின் வழி 25+ ஆண்டுகால கல்விப் புத்தாக்கங்களை முன்னெடுத்துச் செல்லும் அதிகாரப்பூர்வ தளம்.'
+                : 'Founder & Chief Mentor of ACHARIYA World Class Education (Estd. 2000), Heguru India, and Q School. Pioneering whole-brain pedagogy, Bushido character architecture, and the Suprasapiens philosophy across 25+ years of transformative leadership.'}
             </p>
 
             {/* Minimalist Executive Social Links */}
