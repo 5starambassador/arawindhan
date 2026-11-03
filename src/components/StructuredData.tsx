@@ -64,7 +64,6 @@ export const StructuredData: React.FC<StructuredDataProps> = ({
         'https://arawindhan.com/en/institutions',
         'https://arawindhan.com/en/recognition',
         'https://arawindhan.com/en/inner-journey',
-        'https://arawindhan.com/en/governance',
         'https://arawindhan.com/en/media',
         'https://arawindhan.com/en/faq',
         'https://arawindhan.com/en/contact',

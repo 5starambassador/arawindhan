@@ -114,7 +114,7 @@ export default async function ContactPage({
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
               <div style={{ background: 'var(--bg-subtle)', padding: '0.75rem 1rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-light)', fontSize: '0.88rem', color: 'var(--text-secondary)' }}>
-                ✉️ <strong>{lang === 'ta' ? 'முதன்மை மின்னஞ்சல்:' : 'Official Email:'}</strong> <a href="mailto:mdoffice@achariya.org" style={{ color: '#B45309', fontWeight: 700, textDecoration: 'none' }}>mdoffice@achariya.org</a>
+                ✉️ <strong>{lang === 'ta' ? 'முதன்மை மின்னஞ்சல்:' : 'Official Email:'}</strong> <a href="mailto:pa.md@achariya.org" style={{ color: '#B45309', fontWeight: 700, textDecoration: 'none' }}>pa.md@achariya.org</a>
               </div>
               <div style={{ background: 'var(--bg-subtle)', padding: '0.75rem 1rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-light)', fontSize: '0.88rem', color: 'var(--text-secondary)' }}>
                 🌐 <strong>{lang === 'ta' ? 'அதிகாரப்பூர்வ தளம்:' : 'Official Portal:'}</strong> <a href="https://www.arawindhan.com" target="_blank" rel="noopener noreferrer" style={{ color: '#059669', fontWeight: 700, textDecoration: 'none' }}>www.arawindhan.com</a>

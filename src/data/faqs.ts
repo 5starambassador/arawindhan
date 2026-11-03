@@ -122,7 +122,7 @@ export const faqsList: FAQItem[] = [
       en: 'ConCardios is ACHARIYA\'s proprietary teacher professional development system comprising 77 training modules across six developmental phases: Nestling (institutional onboarding), Fledgling (classroom basics), Juvenile (multi-intelligence lesson design), Matured (mentorship and parent counselling), Soaring (campus leadership and curriculum innovation), and WOW (master mentor embodying the 21 levels of Airavatha consciousness). Guided by the mantra "Change, Evolve, Transcend," the programme treats teaching as a craft that must be continuously honed — not a fixed credential earned once.',
       ta: 'கான்கார்டியோஸ் என்பது ஆச்சாரியாவின் தனியுரிம ஆசிரியர் தொழில்மேம்பாட்டு அமைப்பாகும். இது 6 வளர்ச்சி நிலைகளில் 77 பயிற்சித் தொகுதிகளை உள்ளடக்கியது: கூட்டுப் பருவம் (நிறுவன அறிமுகம்), இறகுப் பருவம் (வகுப்பறை அடிப்படைகள்), இளமைப் பருவம் (பாடத் திட்டமிடல்), முதிர்ச்சிப் பருவம் (வழிகாட்டல்), உயர் பறத்தல் (வளாகத் தலைமை), மற்றும் வாவ் (ஐராவத தத்துவத்தின் 21 நிலைகளை அடைந்த குரு நிலை). "மாறு, பரிணமி, உன்னத நிலையை அடை" என்ற மந்திரத்தின் கீழ் இயங்கும் இத்திட்டம் கற்பிக்கும் கலையை தொடர்ந்து செம்மைப்படுத்துகிறது.',
     },
-    relatedLink: '/governance',
+    relatedLink: '/education',
   },
   {
     id: 'FAQ-10',

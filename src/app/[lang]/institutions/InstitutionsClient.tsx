@@ -556,16 +556,16 @@ export function InstitutionsClient({ lang }: InstitutionsClientProps) {
               {lang === 'ta' ? 'தொடர்ந்து அறிய' : 'CONTINUE THE JOURNEY'}
             </div>
             <div style={{ fontSize: '1.1rem', fontWeight: 800, color: '#0F172A', marginBottom: '0.25rem' }}>
-              {lang === 'ta' ? 'நிர்வாகக் கட்டமைப்பு' : 'The Governance System'}
+              {lang === 'ta' ? 'விருதுகள் & உலக சாதனைகள்' : 'Honours & World Records'}
             </div>
             <div style={{ fontSize: '0.88rem', color: '#64748B' }}>
               {lang === 'ta'
-                ? 'ஒவ்வொரு வளாகத்திலும் தினமும் ஒரே தரத்தை உறுதிசெய்யும் ஐந்து படிநிலை கட்டமைப்பையும் 77 கான்கார்டியோஸ் பயிற்சிகளையும் அறியுங்கள்.'
-                : 'Discover the 5-step accountability chain, 6 engines of excellence, and the ConCardios faculty development system that keeps quality consistent across every campus.'}
+                ? '540+ தேசிய மற்றும் சர்வதேச விருதுகள் மற்றும் 222 கின்னஸ் உலக சாதனை மைல்கற்களைப் பார்வையிடுங்கள்.'
+                : 'Explore 540+ national and international accolades and 222 Guinness World Records achieved across 25 years.'}
             </div>
           </div>
-          <Link href={`/${lang}/governance`} className="btn-gold" style={{ flexShrink: 0 }}>
-            <span>{lang === 'ta' ? 'நிர்வாக முறையை காண்க' : 'See the Governance Model'}</span>
+          <Link href={`/${lang}/recognition`} className="btn-gold" style={{ flexShrink: 0 }}>
+            <span>{lang === 'ta' ? 'சாதனைகளைக் காண்க' : 'Explore Honours & Records'}</span>
             <ArrowRight size={16} />
           </Link>
         </div>

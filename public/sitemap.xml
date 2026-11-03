@@ -144,20 +144,6 @@
     <priority>0.85</priority>
   </url>
 
-  <!-- Governance -->
-  <url>
-    <loc>https://www.arawindhan.com/en/governance</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.arawindhan.com/en/governance" />
-    <xhtml:link rel="alternate" hreflang="ta" href="https://www.arawindhan.com/ta/governance" />
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.arawindhan.com/ta/governance</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.arawindhan.com/en/governance" />
-    <xhtml:link rel="alternate" hreflang="ta" href="https://www.arawindhan.com/ta/governance" />
-    <priority>0.8</priority>
-  </url>
-
   <!-- FAQs -->
   <url>
     <loc>https://www.arawindhan.com/en/faq</loc>
