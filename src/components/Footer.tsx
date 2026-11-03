@@ -99,8 +99,8 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
               }}
             >
               {lang === 'ta'
-                ? 'ஆச்சாரியா கல்வி நிறுவனங்கள் (2000 முதல்), ஹெகுரு இந்தியா மற்றும் க்யூ ஸ்கூல் (Q School) ஆகியவற்றின் நிறுவனர். புஷிடோ (Bushido) ஒழுக்கவியல் மற்றும் சுப்ரசேபியன்ஸ் (Suprasapiens) ஆளுமைத் தத்துவத்தின் வழி 25+ ஆண்டுகால கல்விப் புத்தாக்கங்களை முன்னெடுத்துச் செல்லும் அதிகாரப்பூர்வ தளம்.'
-                : 'Founder & Chief Mentor of ACHARIYA World Class Education (Estd. 2000), Heguru India, and Q School. Pioneering whole-brain pedagogy, Bushido character architecture, and the Suprasapiens philosophy across 25+ years of transformative leadership.'}
+                ? '25+ ஆண்டுகளுக்கும் மேலாக கல்விப் புத்தாக்கங்கள், நிறுவன உருவாக்கம் மற்றும் ஆன்மீக வழிகாட்டலை முன்னெடுப்பவர். ஆச்சாரியா கல்வி நிறுவனங்கள் (2000 முதல்), ஹெகுரு இந்தியா மற்றும் க்யூ ஸ்கூல் (Q School) ஆகியவற்றின் நிறுவனர் — புஷிடோ (Bushido) ஒழுக்கவியல் மற்றும் சுப்ரசேபியன்ஸ் (Suprasapiens) ஆளுமைத் தத்துவத்தின் சிற்பி.'
+                : 'Pioneering transformative education, institution building, and spiritual mentorship across 25+ years. Founder & Chief Mentor of ACHARIYA World Class Education (Estd. 2000), Heguru India, and Q School — championing Bushido character architecture and the Suprasapiens philosophy.'}
             </p>
 
             {/* Minimalist Executive Social Links */}
